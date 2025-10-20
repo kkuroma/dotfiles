@@ -1,0 +1,100 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Numix-Circle";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+    font: "JetBrainsMono Nerd Font 12";
+
+    /* Performance */
+    lazy-grab: true;
+    dpi: 1;
+}
+
+@import "colors.rasi"
+
+* {
+    background-color: transparent;
+    text-color: @on-surface;
+}
+
+window {
+    background-color: @surface-container;
+    border: 2px solid;
+    border-color: @primary;
+    border-radius: 16px;
+    padding: 16px;
+    width: 600px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    spacing: 16px;
+}
+
+inputbar {
+    background-color: @surface-container-high;
+    border-radius: 12px;
+    padding: 12px 16px;
+    children: [ prompt, entry ];
+    spacing: 12px;
+}
+
+prompt {
+    text-color: @primary;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-color: @outline;
+    text-color: @on-surface;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+    spacing: 8px;
+    scrollbar: false;
+    fixed-height: true;
+    border: 0;
+}
+
+element {
+    background-color: @surface-container-high;
+    text-color: @on-surface;
+    border-radius: 12px;
+    padding: 10px 12px;
+    spacing: 12px;
+    orientation: horizontal;
+    children: [ element-icon, element-text ];
+}
+
+element-icon {
+    size: 24px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}
+
+element selected {
+    background-color: @primary;
+    text-color: @on-primary;
+}
+
+element selected.active {
+    background-color: @secondary;
+    text-color: @on-secondary;
+}
+
+element-text selected {
+    text-color: inherit;
+}

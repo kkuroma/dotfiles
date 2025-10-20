@@ -1,0 +1,190 @@
+@import "colors.css";
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+/* Fix icon alignment - add extra left padding to center icons */
+#custom-launcher {
+    font-size: 18px;
+    padding: 5px 12px;
+}
+
+#custom-clipboard,
+#custom-screenshot {
+    padding: 5px 12px;
+}
+
+#custom-power {
+    font-size: 16px;
+    padding: 5px 12px;
+}
+
+window#waybar {
+    background: rgba(20, 18, 24, 0.7); /* @surface with opacity */
+    color: @on_surface;
+}
+
+/* Left modules */
+#custom-launcher {
+    background: @primary;
+    color: @on_primary;
+    padding: 5px 15px;
+    margin: 5px 0 5px 5px;
+    border-radius: 16px;
+    font-size: 18px;
+    min-height: 24px;
+}
+
+#custom-wallpaper {
+    background: @secondary;
+    color: @on_secondary;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 16px;
+    font-size: 16px;
+}
+
+#cpu,
+#memory,
+#network,
+#custom-gpu,
+#disk {
+    background: @surface_container_high;
+    color: @on_surface;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 16px;
+}
+
+#cpu {
+    color: @secondary;
+}
+
+#memory {
+    color: @tertiary;
+}
+
+#network {
+    color: @primary_fixed;
+}
+
+#custom-gpu {
+    color: @error;
+}
+
+#disk {
+    color: @primary;
+}
+
+/* Center modules */
+#workspaces {
+    background: transparent;
+    margin: 5px;
+}
+
+#workspaces button {
+    background: @surface_container_high;
+    color: @outline;
+    padding: 5px 10px;
+    margin: 0 3px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+    background: @surface_container_highest;
+    color: @on_surface;
+    font-weight: 700;
+    border: none;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    background: @primary;
+    color: @on_primary;
+    font-weight: 700;
+}
+
+#workspaces button.active:hover {
+    background: @primary;
+    color: @on_primary;
+    font-weight: 700;
+}
+
+/* Right modules */
+#custom-ime,
+#clock,
+#custom-weather,
+#custom-clipboard,
+#custom-screenshot,
+#network.wifi,
+#pulseaudio,
+#custom-power {
+    background: @surface_container_high;
+    color: @on_surface;
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 16px;
+}
+
+#custom-ime {
+    color: @secondary;
+    font-weight: 600;
+}
+
+#clock {
+    color: @tertiary_fixed;
+    font-weight: 600;
+}
+
+#custom-weather {
+    color: @secondary_fixed;
+    }
+
+#custom-clipboard {
+    color: @primary_fixed_dim;
+}
+
+#custom-screenshot {
+    color: @tertiary_fixed_dim;
+}
+
+#network.wifi {
+    color: @primary;
+}
+
+#pulseaudio {
+    color: @tertiary;
+}
+
+#pulseaudio.muted {
+    color: @outline;
+}
+
+#custom-power {
+    background: @error;
+    color: @on_error;
+    margin-right: 5px;
+    padding: 0 12px;
+    font-size: 16px;
+}
+
+/* Tooltips */
+tooltip {
+    background: @surface_container;
+    border: 2px solid @primary;
+    border-radius: 16px;
+    color: @on_surface;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 5px;
+}

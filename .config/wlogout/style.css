@@ -1,0 +1,71 @@
+@import "colors.css";
+
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background-color: rgba(26, 18, 14, 0.9); /* @surface with transparency */
+}
+
+button {
+    border-radius: 8px;
+    border: 2px solid @primary;
+    background-color: @surface_container;
+    color: @on_surface;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    margin: 20px;
+    min-width: 200px;
+    min-height: 200px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: @surface_container_highest;
+    border-color: @primary;
+}
+
+button:focus {
+    background-color: @surface_container;
+    border-color: @primary;
+    color: @on_surface;
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"));
+    background-color: @surface_container;
+}
+
+#lock:hover {
+    background-color: @surface_container_highest;
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"));
+    background-color: @surface_container;
+}
+
+#logout:hover {
+    background-color: @surface_container_highest;
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"));
+    background-color: @surface_container;
+}
+
+#shutdown:hover {
+    background-color: @surface_container_highest;
+}
+
+#reboot {
+    background-image: image(url("/usr/share/wlogout/icons/reboot.png"));
+    background-color: @surface_container;
+}
+
+#reboot:hover {
+    background-color: @surface_container_highest;
+}

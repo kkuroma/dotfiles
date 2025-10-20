@@ -1,0 +1,160 @@
+2025-10-19 12:02:56.019 [info] Claude code extension is now active?
+2025-10-19 12:02:56.019 [info] MCP Server running on port 64197 (localhost only)
+2025-10-19 12:02:56.019 [info] AuthManager initialized
+2025-10-19 12:02:56.305 [info] Received message from webview: {"type":"request","requestId":"o1s57mlp61g","request":{"type":"init"}}
+2025-10-19 12:02:56.306 [info] Getting authentication status
+2025-10-19 12:02:56.306 [info] OAuth tokens found in secure storage
+2025-10-19 12:02:56.306 [info] Auth status: method=claudeai
+2025-10-19 12:02:56.316 [info] Received message from webview: {"type":"request","requestId":"z7jykgkfyzn","request":{"type":"rename_tab","title":"Claude Code"}}
+2025-10-19 12:02:56.317 [info] Received message from webview: {"type":"request","requestId":"ye61uc5sfy","request":{"type":"get_claude_state"}}
+2025-10-19 12:02:56.331 [info] Loading config cache by launching Claude...
+2025-10-19 12:02:56.331 [info] Spawning Claude with SDK query function - cwd: /home/kuroma, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: undefined
+2025-10-19 12:02:56.331 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-19 12:02:56.331 [info] Received message from webview: {"type":"request","requestId":"j5vmiq7ila","request":{"type":"get_current_selection"}}
+2025-10-19 12:02:56.332 [info] Received message from webview: {"type":"request","requestId":"xe0rcbihsvq","request":{"type":"get_asset_uris"}}
+2025-10-19 12:02:56.332 [info] Received message from webview: {"type":"request","requestId":"gqw3vmg1v2k","request":{"type":"list_sessions_request"}}
+2025-10-19 12:02:56.332 [info] Received message from webview: {"type":"request","requestId":"di2nawx17cu","request":{"type":"list_sessions_request"}}
+2025-10-19 12:02:56.332 [info] Received message from webview: {"type":"request","requestId":"puz1ct3xjlq","request":{"type":"list_sessions_request"}}
+2025-10-19 12:02:56.334 [info] Received message from webview: {"type":"request","requestId":"o1qwduruckp","request":{"type":"rename_tab","title":"Claude Code"}}
+2025-10-19 12:02:56.334 [info] Received message from webview: {"type":"launch_claude","channelId":"tpr1g4dfte","cwd":"/home/kuroma","model":"default","permissionMode":"default","thinkingLevel":"off"}
+2025-10-19 12:02:56.346 [info] Launching Claude on channel: tpr1g4dfte
+2025-10-19 12:02:56.346 [info] Spawning Claude with SDK query function - cwd: /home/kuroma, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: undefined
+2025-10-19 12:02:56.346 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-19 12:02:56.731 [info] From claude: [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-19 12:02:56.737 [info] From claude: [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-19 12:02:56.737 [info] From claude: [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/.claude/skills
+
+2025-10-19 12:02:56.737 [info] From claude: [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-19 12:02:56.745 [info] From claude: [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+
+2025-10-19 12:02:56.745 [info] From claude: [DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+
+2025-10-19 12:02:56.745 [info] From claude: [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-19 12:02:56.753 [info] From claude: [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-19 12:02:56.753 [info] From claude: [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+
+2025-10-19 12:02:56.753 [info] From claude: [DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760893376752-1w1i5q.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-19 12:02:56.754 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/97f6944c-ec16-4e11-b746-8cf8fc31afe9-agent-97f6944c-ec16-4e11-b746-8cf8fc31afe9.json.tmp.966849.1760893376754
+
+2025-10-19 12:02:56.758 [info] From claude: [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/97f6944c-ec16-4e11-b746-8cf8fc31afe9-agent-97f6944c-ec16-4e11-b746-8cf8fc31afe9.json.tmp.966849.1760893376754 to /home/kuroma/.claude/todos/97f6944c-ec16-4e11-b746-8cf8fc31afe9-agent-97f6944c-ec16-4e11-b746-8cf8fc31afe9.json
+
+2025-10-19 12:02:56.758 [info] From claude: [DEBUG] File /home/kuroma/.claude/todos/97f6944c-ec16-4e11-b746-8cf8fc31afe9-agent-97f6944c-ec16-4e11-b746-8cf8fc31afe9.json written atomically
+
+2025-10-19 12:02:56.796 [info] From claude: [DEBUG] Total plugin agents loaded: 0
+
+2025-10-19 12:02:56.925 [info] From claude: [DEBUG] Shell snapshot created successfully (51616 bytes)
+
+2025-10-19 12:02:56.979 [info] From claude: [DEBUG] "rg error (signal=null, code=2, stderr: rg: Resource temporarily unavailable (os error 11)\n), 5862 results"
+
+2025-10-19 12:02:56.982 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 12:02:56.982 [info] From claude: [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 12:02:56.983 [info] From claude: [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-19 12:02:57.523 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.966849.1760893377523
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 12:02:57.526 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.966849.1760893377523 to /home/kuroma/.claude.json
+
+2025-10-19 12:02:57.526 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 12:02:57.529 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.966849.1760893377529
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 12:02:57.532 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.966849.1760893377529 to /home/kuroma/.claude.json
+
+2025-10-19 12:02:57.532 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 12:02:57.555 [info] From claude: [DEBUG] Failed to fetch Grove notice config: AxiosError: Request failed with status code 401
+
+2025-10-19 12:02:57.556 [info] From claude: [DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+
+2025-10-19 12:02:57.556 [info] From claude: [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+
+2025-10-19 12:02:57.565 [info] From claude: [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 12:02:57.594 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.966849.1760893377593
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 12:02:57.596 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.966849.1760893377593 to /home/kuroma/.claude.json
+
+2025-10-19 12:02:57.596 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 12:02:57.597 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.966849.1760893377597
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 12:02:57.600 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.966849.1760893377597 to /home/kuroma/.claude.json
+
+2025-10-19 12:02:57.600 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 12:03:04.664 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CUGvDJD7YAVE9xMUpgJCm"}
+
+2025-10-19 12:03:04.794 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth token has expired. Please obtain a new token or refresh your existing token.\"},\"request_id\":\"req_011CUGvDKmseruM3RZHWBtGZ\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 12:03:08.037 [info] From claude: [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 12:03:09.881 [info] From claude: [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 12:03:10.193 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CUGvDhrfC3nPsF3wM5iWF"}
+
+2025-10-19 12:03:10.193 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth token has expired. Please obtain a new token or refresh your existing token.\"},\"request_id\":\"req_011CUGvDhrfC3nPsF3wM5iWF\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 12:03:10.195 [info] From claude: [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+

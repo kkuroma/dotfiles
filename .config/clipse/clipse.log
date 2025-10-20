@@ -1,0 +1,7 @@
+2025/10/18 00:52:17 logger.go:19: ERROR: could not open a new TTY: open /dev/tty: no such device or address
+2025/10/18 00:52:18 logger.go:19: ERROR: could not open a new TTY: open /dev/tty: no such device or address
+2025/10/18 00:52:19 logger.go:19: ERROR: could not open a new TTY: open /dev/tty: no such device or address
+2025/10/18 00:52:49 logger.go:19: ERROR: could not open a new TTY: open /dev/tty: no such device or address
+2025/10/18 00:53:03 logger.go:19: ERROR: could not open a new TTY: open /dev/tty: no such device or address
+2025/10/18 00:53:04 logger.go:19: ERROR: could not open a new TTY: open /dev/tty: no such device or address
+2025/10/18 00:53:31 logger.go:19: ERROR: could not open a new TTY: open /dev/tty: no such device or address

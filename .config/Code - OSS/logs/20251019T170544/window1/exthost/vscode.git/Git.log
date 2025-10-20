@@ -1,0 +1,295 @@
+2025-10-19 17:05:45.412 [info] [main] Log level: Info
+2025-10-19 17:05:45.412 [info] [main] Validating found git in: "git"
+2025-10-19 17:05:45.412 [info] [main] Using git "2.51.1.dirty" from "git"
+2025-10-19 17:05:45.412 [info] [Model][doInitialScan] Initial repository scan started
+2025-10-19 17:05:45.412 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-19 17:05:45.412 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.412 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-19 17:05:45.412 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.422 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-19 17:05:45.422 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.425 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.425 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.428 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.428 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.430 [info] > git rev-parse --show-toplevel [0ms]
+2025-10-19 17:05:45.430 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.435 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-19 17:05:45.435 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.440 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-19 17:05:45.440 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.443 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.443 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.445 [info] > git rev-parse --show-toplevel [0ms]
+2025-10-19 17:05:45.445 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.448 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.448 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.451 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.451 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.453 [info] > git rev-parse --show-toplevel [0ms]
+2025-10-19 17:05:45.453 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.456 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.459 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [1ms]
+2025-10-19 17:05:45.464 [info] [Model][openRepository] Opened repository (path): /home/kuroma/.oh-my-zsh
+2025-10-19 17:05:45.464 [info] [Model][openRepository] Opened repository (real path): /home/kuroma/.oh-my-zsh
+2025-10-19 17:05:45.464 [info] [Model][openRepository] Opened repository (kind): repository
+2025-10-19 17:05:45.471 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.471 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.471 [info] > git config --get commit.template [3ms]
+2025-10-19 17:05:45.476 [info] > git rev-parse --show-toplevel [2ms]
+2025-10-19 17:05:45.476 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.479 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2025-10-19 17:05:45.479 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.479 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.486 [info] > git rev-parse --show-toplevel [5ms]
+2025-10-19 17:05:45.486 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.488 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [2ms]
+2025-10-19 17:05:45.489 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.489 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.491 [info] > git rev-parse --show-toplevel [0ms]
+2025-10-19 17:05:45.491 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.494 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.494 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.496 [info] > git rev-parse --show-toplevel [0ms]
+2025-10-19 17:05:45.496 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.499 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.499 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.501 [info] > git rev-parse --show-toplevel [0ms]
+2025-10-19 17:05:45.501 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.504 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.504 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.506 [info] > git status -z -uall [23ms]
+2025-10-19 17:05:45.518 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [3ms]
+2025-10-19 17:05:45.520 [info] > git rev-parse --show-toplevel [15ms]
+2025-10-19 17:05:45.520 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.522 [info] > git config --get commit.template [4ms]
+2025-10-19 17:05:45.523 [info] > git config --get --local branch.master.vscode-merge-base [3ms]
+2025-10-19 17:05:45.538 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/master refs/remotes/origin/master [13ms]
+2025-10-19 17:05:45.541 [info] > git rev-parse --show-toplevel [19ms]
+2025-10-19 17:05:45.541 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.544 [info] > git merge-base refs/heads/master refs/remotes/origin/master [4ms]
+2025-10-19 17:05:45.546 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [8ms]
+2025-10-19 17:05:45.546 [info] > git rev-parse --show-toplevel [3ms]
+2025-10-19 17:05:45.546 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.546 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-10-19 17:05:45.549 [info] > git diff --name-status -z --diff-filter=ADMR d1c04d8a33f9127d03b69617c5367db5ceebc8a7...refs/remotes/origin/master [3ms]
+2025-10-19 17:05:45.554 [info] > git rev-parse --show-toplevel [5ms]
+2025-10-19 17:05:45.554 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.554 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:05:45.573 [info] > git status -z -uall [22ms]
+2025-10-19 17:05:45.701 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.701 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.772 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.772 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.779 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.779 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:45.845 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:45.845 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:46.539 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:46.539 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:05:48.228 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:05:48.228 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:14:34.311 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:14:34.315 [info] > git rev-parse --git-dir --git-common-dir --show-superproject-working-tree [1ms]
+2025-10-19 17:14:34.317 [info] [Model][openRepository] Opened repository (path): /home/kuroma/Storage/Projects/dotfiles
+2025-10-19 17:14:34.317 [info] [Model][openRepository] Opened repository (real path): /home/kuroma/Storage/Projects/dotfiles
+2025-10-19 17:14:34.317 [info] [Model][openRepository] Opened repository (kind): repository
+2025-10-19 17:14:34.328 [info] > git config --get commit.template [8ms]
+2025-10-19 17:14:34.333 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2025-10-19 17:14:34.335 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:14:34.336 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 17:14:34.342 [info] > git status -z -uall [4ms]
+2025-10-19 17:14:34.342 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:14:34.350 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-10-19 17:14:34.352 [info] > git config --get commit.template [3ms]
+2025-10-19 17:14:34.355 [info] > git config --get --local branch.main.vscode-merge-base [2ms]
+2025-10-19 17:14:34.355 [warning] [Git][config] git config failed: Failed to execute git
+2025-10-19 17:14:34.357 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-10-19 17:14:34.359 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:14:34.359 [info] > git reflog main --grep-reflog=branch: Created from *. [2ms]
+2025-10-19 17:14:34.362 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2025-10-19 17:14:34.368 [info] > git status -z -uall [3ms]
+2025-10-19 17:14:34.369 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [7ms]
+2025-10-19 17:14:34.371 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [3ms]
+2025-10-19 17:14:34.372 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [1ms]
+2025-10-19 17:14:34.375 [info] > git config --add --local branch.main.vscode-merge-base origin/main [1ms]
+2025-10-19 17:14:34.380 [info] > git config --get commit.template [2ms]
+2025-10-19 17:14:34.381 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:14:34.383 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:14:34.384 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 17:14:34.388 [info] > git status -z -uall [2ms]
+2025-10-19 17:14:34.389 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:14:34.394 [info] > git merge-base refs/heads/main refs/remotes/origin/main [2ms]
+2025-10-19 17:14:34.397 [info] > git merge-base refs/heads/main refs/remotes/origin/main [3ms]
+2025-10-19 17:14:34.400 [info] > git diff --name-status -z --diff-filter=ADMR faef8b02ac5966e25aabc3df2cdde4aea934708f...refs/remotes/origin/main [3ms]
+2025-10-19 17:14:34.400 [info] > git diff --name-status -z --diff-filter=ADMR faef8b02ac5966e25aabc3df2cdde4aea934708f...refs/remotes/origin/main [1ms]
+2025-10-19 17:14:34.997 [info] > git check-ignore -v -z --stdin [1ms]
+2025-10-19 17:15:10.631 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:15:10.631 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:15:11.825 [info] > git config --get commit.template [2ms]
+2025-10-19 17:15:11.826 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:15:11.828 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:15:11.828 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 17:15:11.834 [info] > git status -z -uall [3ms]
+2025-10-19 17:15:11.834 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:15:25.546 [info] > git config --get commit.template [2ms]
+2025-10-19 17:15:25.547 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:15:25.549 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:15:25.549 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 17:15:25.554 [info] > git status -z -uall [2ms]
+2025-10-19 17:15:25.555 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:15:30.563 [info] > git config --get commit.template [2ms]
+2025-10-19 17:15:30.564 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:15:30.566 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:15:30.566 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 17:15:30.571 [info] > git status -z -uall [3ms]
+2025-10-19 17:15:30.572 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:16:22.345 [info] > git config --get commit.template [2ms]
+2025-10-19 17:16:22.346 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:16:22.348 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:16:22.349 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 17:16:22.353 [info] > git status -z -uall [2ms]
+2025-10-19 17:16:22.354 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:16:27.361 [info] > git config --get commit.template [3ms]
+2025-10-19 17:16:27.361 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:16:27.363 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:16:27.364 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 17:16:27.368 [info] > git status -z -uall [2ms]
+2025-10-19 17:16:27.369 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:16:32.377 [info] > git config --get commit.template [3ms]
+2025-10-19 17:16:32.377 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [0ms]
+2025-10-19 17:16:32.380 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:16:32.380 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 17:16:32.385 [info] > git status -z -uall [3ms]
+2025-10-19 17:16:32.385 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [0ms]
+2025-10-19 17:18:34.228 [info] > git config --get commit.template [3ms]
+2025-10-19 17:18:34.229 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:18:34.231 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:18:34.231 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 17:18:34.236 [info] > git status -z -uall [3ms]
+2025-10-19 17:18:34.237 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:26:41.869 [info] > git config --get commit.template [3ms]
+2025-10-19 17:26:41.870 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:26:41.872 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:26:41.872 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 17:26:41.877 [info] > git status -z -uall [3ms]
+2025-10-19 17:26:41.878 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:28:06.404 [info] > git config --get commit.template [3ms]
+2025-10-19 17:28:06.404 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [0ms]
+2025-10-19 17:28:06.407 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:28:06.407 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 17:28:06.412 [info] > git status -z -uall [3ms]
+2025-10-19 17:28:06.412 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 17:29:51.747 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 17:29:51.747 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 17:30:00.925 [info] > git config --get commit.template [3ms]
+2025-10-19 17:30:00.925 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 17:30:00.927 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 17:30:00.928 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 17:30:00.932 [info] > git status -z -uall [2ms]
+2025-10-19 17:30:00.933 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:13:07.630 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 18:13:07.630 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 18:13:29.542 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 18:13:29.542 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 18:13:32.536 [info] > git config --get commit.template [3ms]
+2025-10-19 18:13:32.536 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [0ms]
+2025-10-19 18:13:32.538 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:13:32.539 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 18:13:32.543 [info] > git status -z -uall [2ms]
+2025-10-19 18:13:32.544 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:13:50.262 [info] > git check-ignore -v -z --stdin [1ms]
+2025-10-19 18:14:14.834 [info] > git rev-parse --show-toplevel [0ms]
+2025-10-19 18:14:14.834 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 18:15:13.810 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 18:15:13.810 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 18:15:14.978 [info] > git config --get commit.template [2ms]
+2025-10-19 18:15:14.979 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 18:15:14.981 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:15:14.981 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 18:15:14.986 [info] > git status -z -uall [3ms]
+2025-10-19 18:15:14.986 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:15:21.901 [info] > git config --get commit.template [2ms]
+2025-10-19 18:15:21.902 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 18:15:21.904 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:15:21.904 [info] > git rev-parse refs/remotes/origin/main [0ms]
+2025-10-19 18:15:21.909 [info] > git status -z -uall [3ms]
+2025-10-19 18:15:21.909 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:15:29.151 [info] > git config --get commit.template [3ms]
+2025-10-19 18:15:29.151 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 18:15:29.153 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:15:29.154 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 18:15:29.158 [info] > git status -z -uall [2ms]
+2025-10-19 18:15:29.159 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:15:42.026 [info] > git check-ignore -v -z --stdin [1ms]
+2025-10-19 18:15:44.502 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 18:15:44.502 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 18:15:45.659 [info] > git config --get commit.template [3ms]
+2025-10-19 18:15:45.659 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [0ms]
+2025-10-19 18:15:45.661 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:15:45.662 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 18:15:45.667 [info] > git status -z -uall [3ms]
+2025-10-19 18:15:45.667 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:15:51.748 [info] > git config --get commit.template [3ms]
+2025-10-19 18:15:51.749 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 18:15:51.751 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:15:51.752 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 18:15:51.756 [info] > git status -z -uall [2ms]
+2025-10-19 18:15:51.757 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:16:05.846 [info] > git config --get commit.template [2ms]
+2025-10-19 18:16:05.847 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 18:16:05.849 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:16:05.850 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 18:16:05.854 [info] > git status -z -uall [3ms]
+2025-10-19 18:16:05.855 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]
+2025-10-19 18:16:12.584 [info] > git check-ignore -v -z --stdin [1ms]
+2025-10-19 18:16:16.287 [info] > git rev-parse --show-toplevel [1ms]
+2025-10-19 18:16:16.287 [info] fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+2025-10-19 18:16:19.041 [info] > git config --get commit.template [4ms]
+2025-10-19 18:16:19.041 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [1ms]
+2025-10-19 18:16:19.043 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/home/kuroma/Storage/Projects/dotfiles/.git/refs/remotes/origin/main'
+2025-10-19 18:16:19.044 [info] > git rev-parse refs/remotes/origin/main [1ms]
+2025-10-19 18:16:19.050 [info] > git status -z -uall [3ms]
+2025-10-19 18:16:19.050 [info] > git for-each-ref --sort -committerdate --format %(refname)%00%(objectname)%00%(*objectname) [1ms]

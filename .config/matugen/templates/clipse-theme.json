@@ -1,0 +1,17 @@
+{
+    "UseCustomTheme": true,
+    "DimmedDesc": "{{colors.outline.default.hex}}",
+    "DimmedTitle": "{{colors.on_surface_variant.default.hex}}",
+    "FilterDateFg": "{{colors.tertiary.default.hex}}",
+    "PinIndicatorFg": "{{colors.primary.default.hex}}",
+    "SelectedBorderFg": "{{colors.primary.default.hex}}",
+    "SelectedDescFg": "{{colors.on_primary.default.hex}}",
+    "SelectedTitleBg": "{{colors.primary.default.hex}}",
+    "SelectedTitleFg": "{{colors.on_primary.default.hex}}",
+    "StatusBarActiveFg": "{{colors.primary.default.hex}}",
+    "StatusBarBg": "{{colors.surface_container.default.hex}}",
+    "StatusBarFg": "{{colors.on_surface.default.hex}}",
+    "TitleFg": "{{colors.on_surface.default.hex}}",
+    "NormalDescFg": "{{colors.on_surface_variant.default.hex}}",
+    "NormalTitleFg": "{{colors.on_surface.default.hex}}"
+}

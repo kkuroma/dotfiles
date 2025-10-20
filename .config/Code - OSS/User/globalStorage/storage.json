@@ -1,0 +1,126 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "4dd4881441d32436e3d909cbe7be5ab32d794b24ccfe349e77197f05aa11b212",
+    "telemetry.devDeviceId": "3cc6a615-29cc-44a8-af96-74a86c6fa8bf",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [
+            {
+                "folderUri": "file:///home/kuroma"
+            },
+            {
+                "folderUri": "file:///home/kuroma/Storage/Projects/dotfiles"
+            },
+            {
+                "folderUri": "file:///home"
+            }
+        ],
+        "emptyWindows": [
+            {
+                "backupFolder": "1760932970029"
+            },
+            {
+                "backupFolder": "1760935268124"
+            },
+            {
+                "backupFolder": "1760936583625"
+            }
+        ]
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {
+            "file:///home/kuroma": "__default__profile__",
+            "file:///home/kuroma/Storage/Projects/ScratchPad": "__default__profile__",
+            "file:///opt/docker-services": "__default__profile__",
+            "file:///home/kuroma/Storage/Projects/resume": "__default__profile__",
+            "file:///home/kuroma/Storage/college/college-comp-sci/CS-537": "__default__profile__",
+            "file:///home/kuroma/Storage/Projects/dotfiles": "__default__profile__",
+            "file:///home": "__default__profile__"
+        },
+        "emptyWindows": {
+            "1760935268124": "__default__profile__",
+            "1760936583625": "__default__profile__"
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "folder": "file:///home/kuroma/Storage/Projects/dotfiles",
+            "backupPath": "/home/kuroma/.config/Code - OSS/Backups/0cd0cf1dc6c1a88f0305564be1259b99",
+            "uiState": {
+                "mode": 1,
+                "x": 22,
+                "y": 67,
+                "width": 1876,
+                "height": 991
+            }
+        },
+        "openedWindows": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1a1112",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#cccccc",
+            "background": "#1a1112",
+            "editorBackground": "#1a1112",
+            "titleBarBackground": "#261d1e",
+            "titleBarBorder": "#2b2b2b",
+            "activityBarBackground": "#261d1e",
+            "activityBarBorder": "#2b2b2b",
+            "sideBarBackground": "#22191a",
+            "sideBarBorder": "#2b2b2b",
+            "statusBarBackground": "#261d1e",
+            "statusBarBorder": "#2b2b2b",
+            "statusBarNoFolderBackground": "#261d1e"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 257,
+            "auxiliaryBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowSplashWorkspaceOverride": {
+        "layoutInfo": {
+            "sideBarWidth": 257,
+            "auxiliaryBarWidth": 232,
+            "workspaces": {
+                "1de302c6f5e6c874550f2d5123d74613": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "f4f36ee5d57dbf0c6bbef2a0949b0990": {
+                    "sideBarVisible": false,
+                    "auxiliaryBarVisible": false
+                },
+                "ed49ff1b7d0e4d8f8377d57e0af6cce8": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "573dc6d695af1bd72cb810feaf40686d": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "8a50d64cf2defc30024d364094d8d3dd": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "e98579941273473a40d06cf42e2ed7a6": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": false
+                },
+                "4b95c4efdd35bf174aa3e1a3fed0e972": {
+                    "sideBarVisible": true,
+                    "auxiliaryBarVisible": true
+                }
+            }
+        }
+    }
+}

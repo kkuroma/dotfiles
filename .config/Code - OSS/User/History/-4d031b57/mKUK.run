@@ -1,0 +1,1 @@
+cd ../solution; ../tests/run-xv6-command.exp CPUS=1 SCHEDULER=STCF Makefile.test test_5 | grep -E 'XV6_TEST'; cd ../tests

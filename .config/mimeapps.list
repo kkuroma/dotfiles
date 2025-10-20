@@ -1,0 +1,9 @@
+[Added Associations]
+image/jpeg=imv-dir-4.desktop;imv-dir-3.desktop;imv-dir-2.desktop;
+image/png=imv-dir-5.desktop;
+video/mp4=mpv-2.desktop;
+
+[Default Applications]
+image/jpeg=imv-dir-4.desktop;
+image/png=imv-dir-5.desktop;
+video/mp4=mpv-2.desktop;

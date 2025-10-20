@@ -1,7 +1,8 @@
 #!/bin/bash
 # Script to pull current system configurations into dotfiles repository
 
-set -e
+# Don't exit on error - we want to continue even if some configs fail
+set +e
 
 # Colors for output
 RED='\033[0;31m'
@@ -27,61 +28,119 @@ echo "Exporting AUR packages..."
 pacman -Qqm > "$REPO_DIR/pacman-aur.txt" || touch "$REPO_DIR/pacman-aur.txt"
 echo -e "${GREEN}✓ Saved $(wc -l < "$REPO_DIR/pacman-aur.txt") AUR packages to pacman-aur.txt${NC}"
 
-# 2. Create symlink in repo pointing to .config
-echo -e "\n${YELLOW}[2/4] Setting up .config symlink in repository...${NC}"
+# 2. Copy rice-related .config directories to repo
+echo -e "\n${YELLOW}[2/4] Copying rice-related .config directories to repository...${NC}"
 
 CONFIG_SOURCE="$HOME/.config"
 CONFIG_TARGET="$REPO_DIR/.config"
 
+# List of rice-related config directories/files to include
+RICE_CONFIGS=(
+    # Hyprland rice
+    "hypr"
+    "waybar"
+    "dunst"
+    "rofi"
+    "wlogout"
+
+    # Theming
+    "gtk-3.0"
+    "gtk-4.0"
+    "kdeglobals"
+    "Kvantum"
+    "qt5ct"
+    "qt6ct"
+    "QtProject.conf"
+    "matugen"
+    "fontconfig"
+
+    # Riced applications
+    "Code - OSS"
+    "GIMP"
+    "mozilla"
+    "fcitx5"
+    "mozc"
+
+    # File manager (Dolphin)
+    "dolphinrc"
+    "filetypesrc"
+    "trashrc"
+    "mimeapps.list"
+
+    # Terminal & utilities
+    "kitty"
+    "fastfetch"
+    "neofetch"
+    "btop"
+    "clipse"
+    "imv"
+    "mpv"
+    "zsh"
+)
+
 if [ ! -d "$CONFIG_SOURCE" ]; then
     echo -e "${RED}✗ .config directory not found at $CONFIG_SOURCE${NC}"
-elif [ -L "$CONFIG_TARGET" ]; then
-    LINK_TARGET=$(readlink -f "$CONFIG_TARGET")
-    if [ "$LINK_TARGET" = "$CONFIG_SOURCE" ]; then
-        echo -e "${GREEN}✓ Symlink already exists and points to ~/.config${NC}"
-    else
-        echo -e "${YELLOW}⚠ Symlink exists but points to: $LINK_TARGET${NC}"
-        echo "  Expected: $CONFIG_SOURCE"
-    fi
-elif [ -e "$CONFIG_TARGET" ]; then
-    echo -e "${YELLOW}⚠ Backing up existing .config in repo${NC}"
-    mv "$CONFIG_TARGET" "$CONFIG_TARGET.backup.$(date +%Y%m%d_%H%M%S)"
-    ln -s "$CONFIG_SOURCE" "$CONFIG_TARGET"
-    echo -e "${GREEN}✓ Created symlink: repo/.config → ~/.config${NC}"
 else
-    ln -s "$CONFIG_SOURCE" "$CONFIG_TARGET"
-    echo -e "${GREEN}✓ Created symlink: repo/.config → ~/.config${NC}"
+    # If target is a symlink, remove it first
+    if [ -L "$CONFIG_TARGET" ]; then
+        echo -e "${YELLOW}⚠ Removing existing symlink${NC}"
+        rm "$CONFIG_TARGET"
+    fi
+
+    # Create .config directory if it doesn't exist
+    mkdir -p "$CONFIG_TARGET"
+
+    # Sync each rice-related config
+    echo "Syncing rice-related configs..."
+    SYNCED_COUNT=0
+    for config in "${RICE_CONFIGS[@]}"; do
+        if [ -e "$CONFIG_SOURCE/$config" ]; then
+            if [ -d "$CONFIG_SOURCE/$config" ]; then
+                mkdir -p "$CONFIG_TARGET/$config"
+                rsync -a --delete "$CONFIG_SOURCE/$config/" "$CONFIG_TARGET/$config/" || {
+                    echo "  ✗ Failed to sync $config"
+                    continue
+                }
+            else
+                cp "$CONFIG_SOURCE/$config" "$CONFIG_TARGET/$config" || {
+                    echo "  ✗ Failed to copy $config"
+                    continue
+                }
+            fi
+            echo "  ✓ $config"
+            ((SYNCED_COUNT++))
+        fi
+    done
+
+    echo -e "${GREEN}✓ Synced $SYNCED_COUNT rice-related configs${NC}"
 fi
 
-echo "  Note: Changes in ~/.config will automatically reflect in the repo"
+echo "  Note: Run this script again to sync future changes from ~/.config"
 
-# 3. Create symlink for .zshrc
-echo -e "\n${YELLOW}[3/4] Setting up .zshrc symlink in repository...${NC}"
+# 3. Copy .zshrc to repo
+echo -e "\n${YELLOW}[3/4] Copying .zshrc to repository...${NC}"
 
 ZSHRC_SOURCE="$HOME/.zshrc"
 ZSHRC_TARGET="$REPO_DIR/.zshrc"
 
 if [ ! -f "$ZSHRC_SOURCE" ]; then
     echo -e "${RED}✗ .zshrc file not found at $ZSHRC_SOURCE${NC}"
-elif [ -L "$ZSHRC_TARGET" ]; then
-    LINK_TARGET=$(readlink -f "$ZSHRC_TARGET")
-    if [ "$LINK_TARGET" = "$ZSHRC_SOURCE" ]; then
-        echo -e "${GREEN}✓ Symlink already exists and points to ~/.zshrc${NC}"
-    else
-        echo -e "${YELLOW}⚠ Symlink exists but points to: $LINK_TARGET${NC}"
-        echo "  Expected: $ZSHRC_SOURCE"
-    fi
-elif [ -e "$ZSHRC_TARGET" ]; then
-    echo -e "${YELLOW}⚠ Backing up existing .zshrc in repo${NC}"
-    mv "$ZSHRC_TARGET" "$ZSHRC_TARGET.backup.$(date +%Y%m%d_%H%M%S)"
-    ln -s "$ZSHRC_SOURCE" "$ZSHRC_TARGET"
-    echo -e "${GREEN}✓ Created symlink: repo/.zshrc → ~/.zshrc${NC}"
 else
-    ln -s "$ZSHRC_SOURCE" "$ZSHRC_TARGET"
-    echo -e "${GREEN}✓ Created symlink: repo/.zshrc → ~/.zshrc${NC}"
+    # If target is a symlink, remove it first
+    if [ -L "$ZSHRC_TARGET" ]; then
+        echo -e "${YELLOW}⚠ Removing existing symlink${NC}"
+        rm "$ZSHRC_TARGET"
+    # If target exists, back it up
+    elif [ -e "$ZSHRC_TARGET" ]; then
+        echo -e "${YELLOW}⚠ Backing up existing .zshrc in repo${NC}"
+        mv "$ZSHRC_TARGET" "$ZSHRC_TARGET.backup.$(date +%Y%m%d_%H%M%S)"
+    fi
+
+    cp "$ZSHRC_SOURCE" "$ZSHRC_TARGET"
+    echo -e "${GREEN}✓ Copied .zshrc to repo${NC}"
 fi
 
-echo "  Note: Changes in ~/.zshrc will automatically reflect in the repo"
+echo "  Note: Run this script again to sync future changes from ~/.zshrc"
 
 # 4. Document system configuration
 echo -e "\n${YELLOW}[4/4] Documenting system configuration...${NC}"

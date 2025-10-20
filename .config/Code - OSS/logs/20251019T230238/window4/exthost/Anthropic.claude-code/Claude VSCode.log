@@ -1,0 +1,825 @@
+2025-10-20 00:03:03.809 [info] Claude code extension is now active?
+2025-10-20 00:03:03.809 [info] MCP Server running on port 60525 (localhost only)
+2025-10-20 00:03:10.352 [info] Claude code extension is now active?
+2025-10-20 00:03:10.352 [info] MCP Server running on port 46455 (localhost only)
+2025-10-20 00:03:10.352 [info] AuthManager initialized
+2025-10-20 00:03:10.615 [info] Received message from webview: {"type":"request","requestId":"poqm8jc5jgg","request":{"type":"init"}}
+2025-10-20 00:03:10.616 [info] Getting authentication status
+2025-10-20 00:03:10.616 [info] OAuth tokens found in secure storage
+2025-10-20 00:03:10.616 [info] Auth status: method=claudeai
+2025-10-20 00:03:10.626 [info] Received message from webview: {"type":"request","requestId":"112houef89u","request":{"type":"rename_tab","title":"Claude Code"}}
+2025-10-20 00:03:10.626 [info] Received message from webview: {"type":"request","requestId":"7itbcz8d25h","request":{"type":"get_claude_state"}}
+2025-10-20 00:03:10.640 [info] Loading config cache by launching Claude...
+2025-10-20 00:03:10.640 [info] Spawning Claude with SDK query function - cwd: /home/kuroma, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: undefined
+2025-10-20 00:03:10.640 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-20 00:03:10.641 [info] Received message from webview: {"type":"request","requestId":"qjcqz9ot2mi","request":{"type":"get_current_selection"}}
+2025-10-20 00:03:10.641 [info] Received message from webview: {"type":"request","requestId":"ywqqpeln4l","request":{"type":"get_asset_uris"}}
+2025-10-20 00:03:10.641 [info] Received message from webview: {"type":"request","requestId":"ivlnqtq1hca","request":{"type":"list_sessions_request"}}
+2025-10-20 00:03:10.641 [info] Received message from webview: {"type":"request","requestId":"tw06rdrcky","request":{"type":"list_sessions_request"}}
+2025-10-20 00:03:10.641 [info] Received message from webview: {"type":"request","requestId":"su6knysimlo","request":{"type":"list_sessions_request"}}
+2025-10-20 00:03:10.780 [info] Received message from webview: {"type":"request","requestId":"by8bjhsqyst","request":{"type":"rename_tab","title":"i am satisfied with my r…"}}
+2025-10-20 00:03:10.781 [info] Received message from webview: {"type":"request","requestId":"tmajw14eun","request":{"type":"rename_tab","title":"i am satisfied with my r…"}}
+2025-10-20 00:03:10.781 [info] Received message from webview: {"type":"request","requestId":"1ylo3yimgn8","request":{"type":"get_session_request","sessionId":"8a972214-adb5-4a5c-8b0a-ed5f4584d346"}}
+2025-10-20 00:03:10.792 [info] Received message from webview: {"type":"launch_claude","channelId":"3qs7a7x42dc","cwd":"/home/kuroma","resume":"8a972214-adb5-4a5c-8b0a-ed5f4584d346","model":"default","permissionMode":"default","thinkingLevel":"off"}
+2025-10-20 00:03:10.803 [info] Launching Claude on channel: 3qs7a7x42dc
+2025-10-20 00:03:10.803 [info] Spawning Claude with SDK query function - cwd: /home/kuroma, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: 8a972214-adb5-4a5c-8b0a-ed5f4584d346
+2025-10-20 00:03:10.803 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --resume 8a972214-adb5-4a5c-8b0a-ed5f4584d346 --permission-mode default --debug
+2025-10-20 00:03:11.208 [info] From claude: [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-20 00:03:11.215 [info] From claude: [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-20 00:03:11.215 [info] From claude: [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/.claude/skills
+
+2025-10-20 00:03:11.216 [info] From claude: [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-20 00:03:11.224 [info] From claude: [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+
+2025-10-20 00:03:11.224 [info] From claude: [DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+
+2025-10-20 00:03:11.224 [info] From claude: [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-20 00:03:11.232 [info] From claude: [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-20 00:03:11.233 [info] From claude: [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+[DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760936591232-5eysfa.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-20 00:03:11.235 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/b9d037d7-8e5d-41d1-8b8f-341a92e7f5af-agent-b9d037d7-8e5d-41d1-8b8f-341a92e7f5af.json.tmp.1783352.1760936591234
+
+2025-10-20 00:03:11.237 [info] From claude: [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/b9d037d7-8e5d-41d1-8b8f-341a92e7f5af-agent-b9d037d7-8e5d-41d1-8b8f-341a92e7f5af.json.tmp.1783352.1760936591234 to /home/kuroma/.claude/todos/b9d037d7-8e5d-41d1-8b8f-341a92e7f5af-agent-b9d037d7-8e5d-41d1-8b8f-341a92e7f5af.json
+
+2025-10-20 00:03:11.237 [info] From claude: [DEBUG] File /home/kuroma/.claude/todos/b9d037d7-8e5d-41d1-8b8f-341a92e7f5af-agent-b9d037d7-8e5d-41d1-8b8f-341a92e7f5af.json written atomically
+
+2025-10-20 00:03:11.278 [info] From claude: [DEBUG] Total plugin agents loaded: 0
+
+2025-10-20 00:03:11.280 [info] From claude: [DEBUG] Shell snapshot created successfully (51652 bytes)
+
+2025-10-20 00:03:11.292 [info] From claude: [DEBUG] Getting matching hook commands for SessionStart with query: resume
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+
+2025-10-20 00:03:11.455 [info] From claude: [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-20 00:03:11.464 [info] From claude: [DEBUG] "rg error (signal=null, code=2, stderr: rg: /home/kuroma/.cache/yay/libastal-cava-git/pkg: Permission denied (os error 13)\nrg: Resource temporarily unavailable (os error 11)\n), 21369 results"
+
+2025-10-20 00:03:11.467 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-20 00:03:11.467 [info] From claude: [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:03:11.630 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1783352.1760936591630
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-20 00:03:11.634 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+
+2025-10-20 00:03:11.634 [info] From claude: [DEBUG] Renaming /home/kuroma/.claude.json.tmp.1783352.1760936591630 to /home/kuroma/.claude.json
+[DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-20 00:03:11.703 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1783352.1760936591703
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-20 00:03:11.706 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1783352.1760936591703 to /home/kuroma/.claude.json
+
+2025-10-20 00:03:11.706 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-20 00:03:11.707 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1783352.1760936591707
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-20 00:03:11.710 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1783352.1760936591707 to /home/kuroma/.claude.json
+
+2025-10-20 00:03:11.710 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-20 00:03:12.985 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:03:13.906 [info] From claude: [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:04:40.619 [info] Received message from webview: {"type":"io_message","channelId":"3qs7a7x42dc","message":{"type":"user","session_id":"","parent_tool_use_id":null,"message":{"role":"user","content":[{"type":"text","text":"<ide_opened_file>The user opened the file /home/kuroma/.config/waybar/config.jsonc in the IDE. This may or may not be related to the current task.</ide_opened_file>"},{"type":"text","text":"is there a reason there's a bit of latency when i click on it"}]}},"done":false}
+2025-10-20 00:04:40.627 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-20 00:04:40.627 [info] From claude: [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:04:40.629 [info] From claude: [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:04:40.631 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:04:44.229 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:04:47.529 [info] From claude: [DEBUG] executePreToolHooks called for tool: TodoWrite
+
+2025-10-20 00:04:47.529 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-20 00:04:47.533 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-20 00:04:47.533 [info] From claude: [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-20 00:04:47.533 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-20 00:04:47.533 [info] From claude: [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:04:47.535 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:04:49.963 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:05:06.055 [info] From claude: [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-20 00:05:06.055 [info] From claude: [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-20 00:05:06.056 [info] [DiagnosticTracking] Captured baseline diagnostics for /home/kuroma/.config/waybar/scripts/weather.sh: 1 files
+2025-10-20 00:05:06.058 [info] From claude: [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-20 00:05:06.099 [info] Received message from webview: {"type":"request","requestId":"8fjy760pcnw","request":{"type":"show_notification","message":"Claude is requesting permission to use Edit","severity":"info","buttons":["View"],"onlyIfNotVisible":true}}
+2025-10-20 00:05:06.100 [info] Received message from webview: {"type":"request","requestId":"q46s4di1m8a","request":{"type":"open_diff","originalFilePath":"/home/kuroma/.config/waybar/scripts/weather.sh","newFilePath":"/home/kuroma/.config/waybar/scripts/weather.sh","edits":[{"oldString":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in the appropriate unit\nif [ \"$unit\" = \"f\" ]; then\n    temperature=$(curl -s 'wttr.in/?format=%t&u' 2>/dev/null | sed 's/+//g')\nelse\n    temperature=$(curl -s 'wttr.in/?format=%t&m' 2>/dev/null | sed 's/+//g')\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","newString":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\nCACHE_FILE=\"/tmp/waybar_weather_cache\"\nCACHE_TIME=3600  # Cache for 1 hour\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Check if cache is still valid\ncache_valid=false\nif [ -f \"$CACHE_FILE\" ]; then\n    cache_age=$(($(date +%s) - $(stat -c %Y \"$CACHE_FILE\" 2>/dev/null || echo 0)))\n    if [ $cache_age -lt $CACHE_TIME ]; then\n        cache_valid=true\n    fi\nfi\n\n# Fetch weather data if cache is invalid\nif [ \"$cache_valid\" = false ]; then\n    weather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n    temp_c=$(curl -s 'wttr.in/?format=%t&m' 2>/dev/null | sed 's/+//g')\n    temp_f=$(curl -s 'wttr.in/?format=%t&u' 2>/dev/null | sed 's/+//g')\n\n    # Save to cache\n    echo \"$weather_code|$temp_c|$temp_f\" > \"$CACHE_FILE\"\nelse\n    # Read from cache\n    IFS='|' read -r weather_code temp_c temp_f < \"$CACHE_FILE\"\nfi\n\n# Select temperature based on unit\nif [ \"$unit\" = \"f\" ]; then\n    temperature=\"$temp_f\"\nelse\n    temperature=\"$temp_c\"\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","replaceAll":false}],"supportMultiEdits":false}}
+2025-10-20 00:05:06.100 [info] diff from /home/kuroma/.config/waybar/scripts/weather.sh to /home/kuroma/.config/waybar/scripts/weather.sh as Claude‘s edit: weather.sh (efpysj)
+2025-10-20 00:05:06.106 [info] Closing all diff tabs in the editor...
+2025-10-20 00:05:06.106 [info] Closed 0 diff tabs.
+2025-10-20 00:05:06.173 [info] diff result undefined Claude‘s edit: weather.sh (efpysj) {"$mid":1,"external":"file:///home/kuroma/.config/waybar/scripts/weather.sh","path":"/home/kuroma/.config/waybar/scripts/weather.sh","scheme":"file"} {"$mid":1,"external":"_claude_vscode_fs_right:/home/kuroma/.config/waybar/scripts/weather.sh","path":"/home/kuroma/.config/waybar/scripts/weather.sh","scheme":"_claude_vscode_fs_right"} {"preview":false,"preserveFocus":true}
+2025-10-20 00:05:06.272 [info] files.autoSave is off, waiting for file save
+2025-10-20 00:05:09.368 [info] Received message from webview: {"type":"cancel_request","targetRequestId":"q46s4di1m8a"}
+2025-10-20 00:05:09.378 [info] tab_closed Claude‘s edit: weather.sh (efpysj)
+2025-10-20 00:05:09.379 [info] diff operation completed undefined
+2025-10-20 00:05:09.411 [info] Received message from webview: {"type":"response","requestId":"0292eb352e2bb2efd7680966e789b672","response":{"type":"tool_permission_response","result":{"behavior":"deny","message":"The user doesn't want to proceed with this tool use. The tool use was rejected (eg. if it was a file edit, the new_string was NOT written to the file). STOP what you are doing and wait for the user to tell you how to proceed.","interrupt":true}}}
+2025-10-20 00:05:41.345 [info] Received message from webview: {"type":"io_message","channelId":"3qs7a7x42dc","message":{"type":"user","session_id":"","parent_tool_use_id":null,"message":{"role":"user","content":[{"type":"text","text":"<ide_opened_file>The user opened the file /home/kuroma/.config/waybar/scripts/weather.sh in the IDE. This may or may not be related to the current task.</ide_opened_file>"},{"type":"text","text":"okay how bout this. do the curl request once using F (like what it was before) and just do the math lol"}]}},"done":false}
+2025-10-20 00:05:41.348 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:05:41.350 [info] From claude: [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:05:41.351 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:05:43.523 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:05:55.206 [info] From claude: [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-20 00:05:55.206 [info] From claude: [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-20 00:05:55.207 [info] [DiagnosticTracking] Captured baseline diagnostics for /home/kuroma/.config/waybar/scripts/weather.sh: 1 files
+2025-10-20 00:05:55.208 [info] From claude: [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-20 00:05:55.246 [info] Received message from webview: {"type":"request","requestId":"5jcdtu26i9n","request":{"type":"show_notification","message":"Claude is requesting permission to use Edit","severity":"info","buttons":["View"],"onlyIfNotVisible":true}}
+2025-10-20 00:05:55.246 [info] Received message from webview: {"type":"request","requestId":"rvyzl4a42q8","request":{"type":"open_diff","originalFilePath":"/home/kuroma/.config/waybar/scripts/weather.sh","newFilePath":"/home/kuroma/.config/waybar/scripts/weather.sh","edits":[{"oldString":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in the appropriate unit\nif [ \"$unit\" = \"f\" ]; then\n    temperature=$(curl -s 'wttr.in/?format=%t&u' 2>/dev/null | sed 's/+//g')\nelse\n    temperature=$(curl -s 'wttr.in/?format=%t&m' 2>/dev/null | sed 's/+//g')\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","newString":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in Celsius (always fetch in C)\ntemp_c=$(curl -s 'wttr.in/?format=%t' 2>/dev/null | sed 's/+//g' | sed 's/°C//g')\n\n# Convert to Fahrenheit if needed\nif [ \"$unit\" = \"f\" ]; then\n    temp_f=$(echo \"$temp_c\" | awk '{printf \"%.0f\", ($1 * 9/5) + 32}')\n    temperature=\"${temp_f}°F\"\nelse\n    temperature=\"${temp_c}°C\"\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","replaceAll":false}],"supportMultiEdits":false}}
+2025-10-20 00:05:55.246 [info] diff from /home/kuroma/.config/waybar/scripts/weather.sh to /home/kuroma/.config/waybar/scripts/weather.sh as Claude‘s edit: weather.sh (gpztqe)
+2025-10-20 00:05:55.247 [info] Closing all diff tabs in the editor...
+2025-10-20 00:05:55.247 [info] Closed 0 diff tabs.
+2025-10-20 00:05:55.299 [info] diff result undefined Claude‘s edit: weather.sh (gpztqe) {"$mid":1,"external":"file:///home/kuroma/.config/waybar/scripts/weather.sh","path":"/home/kuroma/.config/waybar/scripts/weather.sh","scheme":"file"} {"$mid":1,"external":"_claude_vscode_fs_right:/home/kuroma/.config/waybar/scripts/weather.sh","path":"/home/kuroma/.config/waybar/scripts/weather.sh","scheme":"_claude_vscode_fs_right"} {"preview":false,"preserveFocus":true}
+2025-10-20 00:05:55.400 [info] files.autoSave is off, waiting for file save
+2025-10-20 00:06:02.841 [info] Received message from webview: {"type":"cancel_request","targetRequestId":"rvyzl4a42q8"}
+2025-10-20 00:06:02.890 [info] Received message from webview: {"type":"response","requestId":"af7756bd42cc72ebede7d4da22f72122","response":{"type":"tool_permission_response","result":{"behavior":"allow","updatedInput":{"file_path":"/home/kuroma/.config/waybar/scripts/weather.sh","old_string":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in the appropriate unit\nif [ \"$unit\" = \"f\" ]; then\n    temperature=$(curl -s 'wttr.in/?format=%t&u' 2>/dev/null | sed 's/+//g')\nelse\n    temperature=$(curl -s 'wttr.in/?format=%t&m' 2>/dev/null | sed 's/+//g')\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","new_string":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in Celsius (always fetch in C)\ntemp_c=$(curl -s 'wttr.in/?format=%t' 2>/dev/null | sed 's/+//g' | sed 's/°C//g')\n\n# Convert to Fahrenheit if needed\nif [ \"$unit\" = \"f\" ]; then\n    temp_f=$(echo \"$temp_c\" | awk '{printf \"%.0f\", ($1 * 9/5) + 32}')\n    temperature=\"${temp_f}°F\"\nelse\n    temperature=\"${temp_c}°C\"\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\""},"updatedPermissions":[]}}}
+2025-10-20 00:06:02.893 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.config/waybar/scripts/weather.sh.tmp.1783352.1760936762893
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-20 00:06:02.897 [info] From claude: [DEBUG] Temp file written successfully, size: 1487 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.config/waybar/scripts/weather.sh.tmp.1783352.1760936762893 to /home/kuroma/.config/waybar/scripts/weather.sh
+
+2025-10-20 00:06:02.897 [info] From claude: [DEBUG] File /home/kuroma/.config/waybar/scripts/weather.sh written atomically
+
+2025-10-20 00:06:02.900 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-20 00:06:02.911 [info] tab_closed Claude‘s edit: weather.sh (gpztqe)
+2025-10-20 00:06:02.911 [info] diff operation completed undefined
+2025-10-20 00:06:03.901 [info] [DiagnosticTracking] No new diagnostics found for /home/kuroma/.config/waybar/scripts/weather.sh
+2025-10-20 00:06:03.903 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:06:03.905 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:06:06.574 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:06:08.105 [info] From claude: [DEBUG] executePreToolHooks called for tool: TodoWrite
+
+2025-10-20 00:06:08.105 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-20 00:06:08.108 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-20 00:06:08.108 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:06:08.110 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:06:10.566 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:06:13.026 [info] From claude: [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+
+2025-10-20 00:06:13.026 [info] From claude: [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:07:33.535 [info] Received message from webview: {"type":"io_message","channelId":"3qs7a7x42dc","message":{"type":"user","session_id":"","parent_tool_use_id":null,"message":{"role":"user","content":[{"type":"text","text":"<ide_opened_file>The user opened the file /home/kuroma/.config/waybar/scripts/weather.sh in the IDE. This may or may not be related to the current task.</ide_opened_file>"},{"type":"text","text":"okay so wttr gives 44 deg F (it gives in F) and  (it literally shows 44 deg F deg C) and when i click it shows 111 deg F"}]}},"done":false}
+2025-10-20 00:07:33.538 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:07:33.539 [info] From claude: [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:07:33.540 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:07:36.493 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:07:38.740 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-20 00:07:38.740 [info] From claude: [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-20 00:07:39.046 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHsTyuMWhHk1YVgsnpGU"}
+
+2025-10-20 00:07:39.115 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHsU1A1iqqwaquYzKehU"}
+
+2025-10-20 00:07:39.115 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHsU1A1iqqwaquYzKehU\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-20 00:07:39.117 [info] From claude: [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"curl -s 'wttr.in/?format=%t'\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-20 00:07:39.120 [info] Received message from webview: {"type":"request","requestId":"g301f6ws9yl","request":{"type":"show_notification","message":"Claude is requesting permission to use Bash","severity":"info","buttons":["View"],"onlyIfNotVisible":true}}
+2025-10-20 00:07:45.304 [info] Received message from webview: {"type":"response","requestId":"4e5a1d4237282518d34f7cf388dc98dc","response":{"type":"tool_permission_response","result":{"behavior":"deny","message":"The user doesn't want to proceed with this tool use. The tool use was rejected (eg. if it was a file edit, the new_string was NOT written to the file). STOP what you are doing and wait for the user to tell you how to proceed.","interrupt":true}}}
+2025-10-20 00:07:58.113 [info] Received message from webview: {"type":"io_message","channelId":"3qs7a7x42dc","message":{"type":"user","session_id":"","parent_tool_use_id":null,"message":{"role":"user","content":[{"type":"text","text":"revert back to the high latency version at least that works"}]}},"done":false}
+2025-10-20 00:07:58.116 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:07:58.118 [info] From claude: [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:07:58.119 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:08:00.240 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:08:12.227 [info] From claude: [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-20 00:08:12.227 [info] From claude: [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-20 00:08:12.228 [info] [DiagnosticTracking] Captured baseline diagnostics for /home/kuroma/.config/waybar/scripts/weather.sh: 1 files
+2025-10-20 00:08:12.228 [info] From claude: [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-20 00:08:12.271 [info] Received message from webview: {"type":"request","requestId":"advcyhccx7l","request":{"type":"show_notification","message":"Claude is requesting permission to use Edit","severity":"info","buttons":["View"],"onlyIfNotVisible":true}}
+2025-10-20 00:08:12.271 [info] Received message from webview: {"type":"request","requestId":"dqvvh8h6ew","request":{"type":"open_diff","originalFilePath":"/home/kuroma/.config/waybar/scripts/weather.sh","newFilePath":"/home/kuroma/.config/waybar/scripts/weather.sh","edits":[{"oldString":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in Celsius (always fetch in C)\ntemp_c=$(curl -s 'wttr.in/?format=%t' 2>/dev/null | sed 's/+//g' | sed 's/°C//g')\n\n# Convert to Fahrenheit if needed\nif [ \"$unit\" = \"f\" ]; then\n    temp_f=$(echo \"$temp_c\" | awk '{printf \"%.0f\", ($1 * 9/5) + 32}')\n    temperature=\"${temp_f}°F\"\nelse\n    temperature=\"${temp_c}°C\"\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","newString":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in the appropriate unit\nif [ \"$unit\" = \"f\" ]; then\n    temperature=$(curl -s 'wttr.in/?format=%t&u' 2>/dev/null | sed 's/+//g')\nelse\n    temperature=$(curl -s 'wttr.in/?format=%t&m' 2>/dev/null | sed 's/+//g')\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","replaceAll":false}],"supportMultiEdits":false}}
+2025-10-20 00:08:12.272 [info] diff from /home/kuroma/.config/waybar/scripts/weather.sh to /home/kuroma/.config/waybar/scripts/weather.sh as Claude‘s edit: weather.sh (evdxvv)
+2025-10-20 00:08:12.274 [info] Closing all diff tabs in the editor...
+2025-10-20 00:08:12.274 [info] Closed 0 diff tabs.
+2025-10-20 00:08:12.322 [info] diff result undefined Claude‘s edit: weather.sh (evdxvv) {"$mid":1,"external":"file:///home/kuroma/.config/waybar/scripts/weather.sh","path":"/home/kuroma/.config/waybar/scripts/weather.sh","scheme":"file"} {"$mid":1,"external":"_claude_vscode_fs_right:/home/kuroma/.config/waybar/scripts/weather.sh","path":"/home/kuroma/.config/waybar/scripts/weather.sh","scheme":"_claude_vscode_fs_right"} {"preview":false,"preserveFocus":true}
+2025-10-20 00:08:12.421 [info] files.autoSave is off, waiting for file save
+2025-10-20 00:08:39.747 [info] Received message from webview: {"type":"cancel_request","targetRequestId":"dqvvh8h6ew"}
+2025-10-20 00:08:39.768 [info] tab_closed Claude‘s edit: weather.sh (evdxvv)
+2025-10-20 00:08:39.768 [info] diff operation completed undefined
+2025-10-20 00:08:39.794 [info] Received message from webview: {"type":"response","requestId":"fbdbefae696652e39b7b20870e8f5fb2","response":{"type":"tool_permission_response","result":{"behavior":"allow","updatedInput":{"file_path":"/home/kuroma/.config/waybar/scripts/weather.sh","old_string":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in Celsius (always fetch in C)\ntemp_c=$(curl -s 'wttr.in/?format=%t' 2>/dev/null | sed 's/+//g' | sed 's/°C//g')\n\n# Convert to Fahrenheit if needed\nif [ \"$unit\" = \"f\" ]; then\n    temp_f=$(echo \"$temp_c\" | awk '{printf \"%.0f\", ($1 * 9/5) + 32}')\n    temperature=\"${temp_f}°F\"\nelse\n    temperature=\"${temp_c}°C\"\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\"","new_string":"#!/bin/bash\n\nSTATE_FILE=\"/tmp/waybar_weather_unit\"\n\n# Handle toggle\nif [ \"$1\" = \"toggle\" ]; then\n    if [ -f \"$STATE_FILE\" ] && [ \"$(cat \"$STATE_FILE\")\" = \"f\" ]; then\n        echo \"c\" > \"$STATE_FILE\"\n    else\n        echo \"f\" > \"$STATE_FILE\"\n    fi\n    # Force waybar to update\n    pkill -RTMIN+8 waybar\n    exit 0\nfi\n\n# Get current unit preference (default to Celsius)\nif [ -f \"$STATE_FILE\" ]; then\n    unit=$(cat \"$STATE_FILE\")\nelse\n    unit=\"c\"\n    echo \"c\" > \"$STATE_FILE\"\nfi\n\n# Get weather condition code from wttr.in\nweather_code=$(curl -s 'wttr.in/?format=%c' 2>/dev/null)\n\n# Get temperature in the appropriate unit\nif [ \"$unit\" = \"f\" ]; then\n    temperature=$(curl -s 'wttr.in/?format=%t&u' 2>/dev/null | sed 's/+//g')\nelse\n    temperature=$(curl -s 'wttr.in/?format=%t&m' 2>/dev/null | sed 's/+//g')\nfi\n\n# Map weather conditions to Nerd Font icons\ncase \"$weather_code\" in\n    \"✨\"|\"Clear\") icon=\"󰖙\" ;;           # Clear/Sunny\n    \"⛅\"|\"Partly cloudy\") icon=\"󰖕\" ;;  # Partly cloudy\n    \"☁️\"|\"Cloudy\") icon=\"󰖐\" ;;         # Cloudy\n    \"🌫️\"|\"Fog\") icon=\"󰖑\" ;;            # Fog\n    \"🌧️\"|\"Rain\"|\"Light rain\") icon=\"󰖖\" ;; # Rain\n    \"⛈️\"|\"Thunderstorm\") icon=\"󰙾\" ;;   # Thunderstorm\n    \"🌨️\"|\"Snow\") icon=\"󰖘\" ;;           # Snow\n    \"🌦️\"|\"Light showers\") icon=\"󰼳\" ;; # Light showers\n    *) icon=\"󰖙\" ;;                     # Default to sunny\nesac\n\necho \"$icon $temperature\""},"updatedPermissions":[]}}}
+2025-10-20 00:08:39.796 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.config/waybar/scripts/weather.sh.tmp.1783352.1760936919796
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-20 00:08:39.800 [info] From claude: [DEBUG] Temp file written successfully, size: 1387 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.config/waybar/scripts/weather.sh.tmp.1783352.1760936919796 to /home/kuroma/.config/waybar/scripts/weather.sh
+
+2025-10-20 00:08:39.800 [info] From claude: [DEBUG] File /home/kuroma/.config/waybar/scripts/weather.sh written atomically
+
+2025-10-20 00:08:39.803 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-20 00:08:41.305 [info] [DiagnosticTracking] No new diagnostics found for /home/kuroma/.config/waybar/scripts/weather.sh
+2025-10-20 00:08:41.306 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-20 00:08:41.308 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:08:43.568 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:08:45.542 [info] From claude: [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:10:38.084 [info] Claude code extension is now active?
+2025-10-20 00:10:38.084 [info] MCP Server running on port 50234 (localhost only)
+2025-10-20 00:11:51.049 [info] AuthManager initialized
+2025-10-20 00:11:51.316 [info] Received message from webview: {"type":"request","requestId":"69atvm46j9","request":{"type":"init"}}
+2025-10-20 00:11:51.316 [info] Getting authentication status
+2025-10-20 00:11:51.316 [info] OAuth tokens found in secure storage
+2025-10-20 00:11:51.316 [info] Auth status: method=claudeai
+2025-10-20 00:11:51.332 [info] Received message from webview: {"type":"request","requestId":"n0xan1u0cnc","request":{"type":"rename_tab","title":"Claude Code"}}
+2025-10-20 00:11:51.333 [info] Received message from webview: {"type":"request","requestId":"t44cgvpl18","request":{"type":"get_claude_state"}}
+2025-10-20 00:11:51.346 [info] Loading config cache by launching Claude...
+2025-10-20 00:11:51.346 [info] Spawning Claude with SDK query function - cwd: /home/kuroma/Storage/Projects/dotfiles, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: undefined
+2025-10-20 00:11:51.346 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-20 00:11:51.346 [info] Received message from webview: {"type":"request","requestId":"bguewxnnikr","request":{"type":"get_current_selection"}}
+2025-10-20 00:11:51.347 [info] Received message from webview: {"type":"request","requestId":"4xl6qfnes94","request":{"type":"get_asset_uris"}}
+2025-10-20 00:11:51.347 [info] Received message from webview: {"type":"request","requestId":"cj7ml015dn","request":{"type":"list_sessions_request"}}
+2025-10-20 00:11:51.347 [warning] Failed to load sessions from /home/kuroma/Storage/Projects/dotfiles: Error: ENOENT: no such file or directory, scandir '/home/kuroma/.claude/projects/-home-kuroma-Storage-Projects-dotfiles'
+2025-10-20 00:11:51.348 [info] Received message from webview: {"type":"request","requestId":"57lgw0kp6nd","request":{"type":"list_sessions_request"}}
+2025-10-20 00:11:51.348 [info] Received message from webview: {"type":"request","requestId":"1eku0vmnp2a","request":{"type":"list_sessions_request"}}
+2025-10-20 00:11:51.348 [info] Received message from webview: {"type":"request","requestId":"8zqpu5zjwlp","request":{"type":"rename_tab","title":"Claude Code"}}
+2025-10-20 00:11:51.348 [info] Received message from webview: {"type":"launch_claude","channelId":"0ijc4z31nam","cwd":"/home/kuroma/Storage/Projects/dotfiles","model":"default","permissionMode":"default","thinkingLevel":"off"}
+2025-10-20 00:11:51.360 [info] Launching Claude on channel: 0ijc4z31nam
+2025-10-20 00:11:51.360 [info] Spawning Claude with SDK query function - cwd: /home/kuroma/Storage/Projects/dotfiles, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: undefined
+2025-10-20 00:11:51.360 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-20 00:11:51.360 [warning] Failed to load sessions from /home/kuroma/Storage/Projects/dotfiles: Error: ENOENT: no such file or directory, scandir '/home/kuroma/.claude/projects/-home-kuroma-Storage-Projects-dotfiles'
+2025-10-20 00:11:51.360 [warning] Failed to load sessions from /home/kuroma/Storage/Projects/dotfiles: Error: ENOENT: no such file or directory, scandir '/home/kuroma/.claude/projects/-home-kuroma-Storage-Projects-dotfiles'
+2025-10-20 00:11:51.770 [info] From claude: [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-20 00:11:51.776 [info] From claude: [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-20 00:11:51.776 [info] From claude: [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/Storage/Projects/dotfiles/.claude/skills
+
+2025-10-20 00:11:51.776 [info] From claude: [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-20 00:11:51.783 [info] From claude: [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+
+2025-10-20 00:11:51.784 [info] From claude: [DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+[DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-20 00:11:51.797 [info] From claude: [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-20 00:11:51.797 [info] From claude: [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+
+2025-10-20 00:11:51.797 [info] From claude: [DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760937111797-3asn7k.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-20 00:11:51.798 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/3fabf73c-33dc-479e-8e92-7ddc3ace1c13-agent-3fabf73c-33dc-479e-8e92-7ddc3ace1c13.json.tmp.1795492.1760937111798
+
+2025-10-20 00:11:51.800 [info] From claude: [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/3fabf73c-33dc-479e-8e92-7ddc3ace1c13-agent-3fabf73c-33dc-479e-8e92-7ddc3ace1c13.json.tmp.1795492.1760937111798 to /home/kuroma/.claude/todos/3fabf73c-33dc-479e-8e92-7ddc3ace1c13-agent-3fabf73c-33dc-479e-8e92-7ddc3ace1c13.json
+
+2025-10-20 00:11:51.800 [info] From claude: [DEBUG] File /home/kuroma/.claude/todos/3fabf73c-33dc-479e-8e92-7ddc3ace1c13-agent-3fabf73c-33dc-479e-8e92-7ddc3ace1c13.json written atomically
+
+2025-10-20 00:11:51.809 [info] From claude: [DEBUG] Total plugin agents loaded: 0
+
+2025-10-20 00:11:51.810 [info] From claude: [DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+
+2025-10-20 00:11:51.966 [info] From claude: [DEBUG] Shell snapshot created successfully (51616 bytes)
+
+2025-10-20 00:11:51.977 [info] From claude: [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-20 00:11:51.991 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-20 00:11:51.992 [info] From claude: [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-20 00:11:52.012 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHsneMeSF5Zyiismdu7T"}
+
+2025-10-20 00:11:52.056 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1795492.1760937112056
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-20 00:11:52.060 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+
+2025-10-20 00:11:52.060 [info] From claude: [DEBUG] Renaming /home/kuroma/.claude.json.tmp.1795492.1760937112056 to /home/kuroma/.claude.json
+[DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-20 00:11:52.080 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1795492.1760937112080
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-20 00:11:52.083 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1795492.1760937112080 to /home/kuroma/.claude.json
+
+2025-10-20 00:11:52.083 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-20 00:11:52.083 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1795492.1760937112083
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-20 00:11:52.086 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1795492.1760937112083 to /home/kuroma/.claude.json
+
+2025-10-20 00:11:52.086 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-20 00:11:52.087 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHsnefVvePJfRq7NYnwB"}
+
+2025-10-20 00:11:52.088 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHsnefVvePJfRq7NYnwB\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-20 00:11:52.898 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-20 00:11:54.650 [info] From claude: [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:11:56.556 [info] Received message from webview: {"type":"interrupt_claude","channelId":"0ijc4z31nam"}
+2025-10-20 00:11:56.557 [info] Interrupted Claude for requestId: 0ijc4z31nam
+2025-10-20 00:12:03.203 [info] Closing Claude on channel: 0ijc4z31nam
+2025-10-20 00:12:03.205 [info] From claude: [DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-20 00:12:03.205 [info] From claude: [DEBUG] Cleaned up session snapshot: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760937111797-3asn7k.sh
+
+2025-10-20 00:12:03.217 [info] Closing Claude on channel: 0ijc4z31nam
+2025-10-20 00:12:09.155 [info] New WS connection from: /
+2025-10-20 00:12:09.156 [info] MCP server connected to transport
+2025-10-20 00:12:09.156 [info] [DiagnosticStreamManager] Started streaming diagnostics
+2025-10-20 00:12:09.156 [info] Registered diagnostic client: client_0
+2025-10-20 00:12:17.119 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:12:17.319 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:17.520 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:17.721 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:17.922 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:18.121 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:18.322 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:18.522 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:18.722 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:18.922 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:19.123 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:19.323 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:12:48.296 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:48.597 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:48.882 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:49.057 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:49.311 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:12:49.611 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:13:17.578 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:13:17.885 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:13:18.633 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:13:18.753 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:13:19.049 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:13:19.348 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:14:27.523 [info] Closing all diff tabs in the editor...
+2025-10-20 00:14:27.523 [info] Closed 0 diff tabs.
+2025-10-20 00:14:32.463 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:14:43.970 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (5b17a2) ⧉
+2025-10-20 00:14:43.975 [info] Closing all diff tabs in the editor...
+2025-10-20 00:14:43.975 [info] Closed 0 diff tabs.
+2025-10-20 00:14:44.035 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (5b17a2) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:14:44.057 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:14:48.043 [info] tab_closed ✻ [Claude Code] pull-configs.sh (5b17a2) ⧉
+2025-10-20 00:14:48.083 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:14:51.727 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (a7188b) ⧉
+2025-10-20 00:14:51.727 [info] Closing all diff tabs in the editor...
+2025-10-20 00:14:51.727 [info] Closed 0 diff tabs.
+2025-10-20 00:14:51.761 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (a7188b) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:14:51.811 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:14:51.981 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:14:56.570 [info] tab_closed ✻ [Claude Code] pull-configs.sh (a7188b) ⧉
+2025-10-20 00:14:56.600 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:06.374 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (f130ea) ⧉
+2025-10-20 00:15:06.374 [info] Closing all diff tabs in the editor...
+2025-10-20 00:15:06.374 [info] Closed 0 diff tabs.
+2025-10-20 00:15:06.413 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (f130ea) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:15:06.464 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:06.628 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:11.516 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:11.524 [info] tab_closed ✻ [Claude Code] pull-configs.sh (f130ea) ⧉
+2025-10-20 00:15:33.102 [info] diff from /home/kuroma/Storage/Projects/dotfiles/README.md to /home/kuroma/Storage/Projects/dotfiles/README.md as ✻ [Claude Code] README.md (e0c092) ⧉
+2025-10-20 00:15:33.104 [info] Closing all diff tabs in the editor...
+2025-10-20 00:15:33.104 [info] Closed 0 diff tabs.
+2025-10-20 00:15:33.157 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:33.167 [info] diff result undefined ✻ [Claude Code] README.md (e0c092) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/README.md","path":"/home/kuroma/Storage/Projects/dotfiles/README.md","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/README.md","path":"/home/kuroma/Storage/Projects/dotfiles/README.md","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:15:33.217 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:33.357 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:33.455 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:38.475 [info] tab_closed ✻ [Claude Code] README.md (e0c092) ⧉
+2025-10-20 00:15:38.499 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:15:38.735 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:15:39.034 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:44.283 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:44.497 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:44.798 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:45.002 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:45.301 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:45.602 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:45.903 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:46.474 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:46.774 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:46.865 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:47.153 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:47.273 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:47.353 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:47.520 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:47.821 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:47.888 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:48.032 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:48.152 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:48.289 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:48.496 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:48.797 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:49.272 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:49.545 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:49.649 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:49.705 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:49.881 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:50.033 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:50.136 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:50.436 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:51.833 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.000 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.121 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.215 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.352 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.496 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.680 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.775 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.887 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:52.999 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:53.193 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:53.248 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:53.440 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:53.648 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:53.903 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:54.079 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:54.175 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:54.368 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:54.599 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:54.900 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.032 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.128 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.256 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.367 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.424 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.584 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.664 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.759 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.880 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:55.968 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:56.088 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:56.183 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:56.303 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:56.566 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:56.694 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:56.831 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:56.966 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:57.087 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:57.271 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:57.571 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:57.808 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:57.935 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.046 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.167 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.271 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.398 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.510 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.582 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.655 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:58.954 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:59.038 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:59.263 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:59.383 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:59.681 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:16:59.944 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:00.119 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:00.231 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:00.390 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:00.558 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:00.687 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:00.767 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:00.830 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:01.095 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:01.230 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:01.537 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:01.887 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:01.997 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:02.298 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:02.471 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:02.670 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:02.969 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:06.342 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:06.642 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:07.349 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:07.648 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:08.590 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:08.803 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:09.102 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:11.061 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:11.271 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:11.570 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:11.992 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:27.147 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:27.448 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:27.883 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:28.170 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:28.469 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:28.682 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:28.982 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:29.889 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:30.189 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:31.578 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:35.435 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:35.734 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:36.060 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:17:44.027 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:18:33.154 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:27.555 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:27.855 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:30.034 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:30.233 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:30.369 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:30.537 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:30.634 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:30.849 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:31.114 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:31.412 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:32.130 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:32.431 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:33.872 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:34.000 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:34.128 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:34.265 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:34.564 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:34.924 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:37.030 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:39.745 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:19:44.581 [info] WS client disconnected
+2025-10-20 00:19:44.581 [info] [DiagnosticStreamManager] Unregistered client client_0. Total clients: 0
+2025-10-20 00:19:44.581 [info] [DiagnosticStreamManager] Stopped streaming diagnostics
+2025-10-20 00:19:44.581 [info] Unregistered diagnostic client: client_0
+2025-10-20 00:23:07.883 [info] New WS connection from: /
+2025-10-20 00:23:07.883 [info] MCP server connected to transport
+2025-10-20 00:23:07.883 [info] [DiagnosticStreamManager] Started streaming diagnostics
+2025-10-20 00:23:07.883 [info] Registered diagnostic client: client_1
+2025-10-20 00:23:28.485 [info] Closing all diff tabs in the editor...
+2025-10-20 00:23:28.485 [info] Closed 0 diff tabs.
+2025-10-20 00:24:34.985 [info] Closing all diff tabs in the editor...
+2025-10-20 00:24:34.985 [info] Closed 0 diff tabs.
+2025-10-20 00:25:15.624 [info] Closing all diff tabs in the editor...
+2025-10-20 00:25:15.624 [info] Closed 0 diff tabs.
+2025-10-20 00:28:13.861 [info] Closing all diff tabs in the editor...
+2025-10-20 00:28:13.861 [info] Closed 0 diff tabs.
+2025-10-20 00:28:33.814 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (9569c4) ⧉
+2025-10-20 00:28:33.822 [info] Closing all diff tabs in the editor...
+2025-10-20 00:28:33.822 [info] Closed 0 diff tabs.
+2025-10-20 00:28:33.896 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (9569c4) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:28:33.946 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:28:34.077 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:28:36.000 [info] tab_closed ✻ [Claude Code] pull-configs.sh (9569c4) ⧉
+2025-10-20 00:28:36.011 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:28:36.227 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (a0451d) ⧉
+2025-10-20 00:28:36.227 [info] Closing all diff tabs in the editor...
+2025-10-20 00:28:36.227 [info] Closed 0 diff tabs.
+2025-10-20 00:28:36.275 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (a0451d) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:28:36.325 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:28:36.485 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:28:37.577 [info] tab_closed ✻ [Claude Code] pull-configs.sh (a0451d) ⧉
+2025-10-20 00:28:37.614 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:31:09.970 [info] Closing all diff tabs in the editor...
+2025-10-20 00:31:09.970 [info] Closed 0 diff tabs.
+2025-10-20 00:31:33.871 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:31:38.237 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (6b0baa) ⧉
+2025-10-20 00:31:38.241 [info] Closing all diff tabs in the editor...
+2025-10-20 00:31:38.242 [info] Closed 0 diff tabs.
+2025-10-20 00:31:38.282 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (6b0baa) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:31:38.331 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:31:38.497 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:31:39.184 [info] tab_closed ✻ [Claude Code] pull-configs.sh (6b0baa) ⧉
+2025-10-20 00:31:39.245 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:33:04.900 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:33:05.085 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:33:09.154 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:33:20.897 [info] Closing all diff tabs in the editor...
+2025-10-20 00:33:20.897 [info] Closed 0 diff tabs.
+2025-10-20 00:33:39.009 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (81ebcb) ⧉
+2025-10-20 00:33:39.009 [info] Closing all diff tabs in the editor...
+2025-10-20 00:33:39.009 [info] Closed 0 diff tabs.
+2025-10-20 00:33:39.044 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (81ebcb) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:33:39.094 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:33:39.264 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:33:51.773 [info] tab_closed ✻ [Claude Code] pull-configs.sh (81ebcb) ⧉
+2025-10-20 00:33:51.794 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:34:38.291 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:34:42.016 [info] Closing all diff tabs in the editor...
+2025-10-20 00:34:42.016 [info] Closed 0 diff tabs.
+2025-10-20 00:34:55.506 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (fc051c) ⧉
+2025-10-20 00:34:55.511 [info] Closing all diff tabs in the editor...
+2025-10-20 00:34:55.511 [info] Closed 0 diff tabs.
+2025-10-20 00:34:55.546 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (fc051c) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:34:55.597 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:34:55.764 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:34:59.756 [info] tab_closed ✻ [Claude Code] pull-configs.sh (fc051c) ⧉
+2025-10-20 00:34:59.801 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:35:22.741 [info] Closing all diff tabs in the editor...
+2025-10-20 00:35:22.741 [info] Closed 0 diff tabs.
+2025-10-20 00:35:27.781 [info] diff from /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh to /home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh as ✻ [Claude Code] pull-configs.sh (f5c672) ⧉
+2025-10-20 00:35:27.781 [info] Closing all diff tabs in the editor...
+2025-10-20 00:35:27.781 [info] Closed 0 diff tabs.
+2025-10-20 00:35:27.810 [info] diff result undefined ✻ [Claude Code] pull-configs.sh (f5c672) ⧉ {"$mid":1,"external":"file:///home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"file"} {"$mid":1,"external":"_claude_fs_right:/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","path":"/home/kuroma/Storage/Projects/dotfiles/scripts/pull-configs.sh","scheme":"_claude_fs_right"} {"preview":false}
+2025-10-20 00:35:27.860 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:35:28.036 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:35:29.313 [info] tab_closed ✻ [Claude Code] pull-configs.sh (f5c672) ⧉
+2025-10-20 00:35:29.342 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:35:47.324 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:35:47.479 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:36:01.673 [info] Closing all diff tabs in the editor...
+2025-10-20 00:36:01.673 [info] Closed 0 diff tabs.
+2025-10-20 00:36:14.202 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:36:16.891 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 2 files
+2025-10-20 00:36:22.046 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:36:22.229 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 1 files
+2025-10-20 00:36:27.502 [info] [DiagnosticStreamManager] Notifying 1 clients about diagnostics change for 3 files

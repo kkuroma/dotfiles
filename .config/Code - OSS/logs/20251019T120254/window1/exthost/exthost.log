@@ -1,0 +1,21 @@
+2025-10-19 12:02:55.478 [info] Extension host with pid 966608 started
+2025-10-19 12:02:55.478 [info] Skipping acquiring lock for /home/kuroma/.config/Code - OSS/User/workspaceStorage/1de302c6f5e6c874550f2d5123d74613.
+2025-10-19 12:02:55.620 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-19 12:02:55.633 [info] ExtensionService#_doActivateExtension bungcip.better-toml, startup: false, activationEvent: 'onLanguage:toml'
+2025-10-19 12:02:55.699 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-19 12:02:55.705 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-10-19 12:02:55.743 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-10-19 12:02:55.882 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-10-19 12:02:55.951 [info] Eager extensions activated
+2025-10-19 12:02:55.951 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 12:02:55.952 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 12:02:55.961 [info] ExtensionService#_doActivateExtension Anthropic.claude-code, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 12:02:56.464 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2025-10-19 12:03:00.192 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-19 12:03:00.197 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-19 12:03:00.226 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-19 12:03:01.029 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2025-10-19 12:03:06.148 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-10-19 12:03:18.499 [info] ExtensionService#_doActivateExtension vscode.css-language-features, startup: false, activationEvent: 'onLanguage:css'
+2025-10-19 12:55:36.623 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-19 12:55:36.631 [info] Extension host with pid 966608 exiting with code 0

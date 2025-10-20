@@ -1,0 +1,17 @@
+2025-10-19 17:05:45.127 [info] Extension host with pid 1226085 started
+2025-10-19 17:05:45.127 [info] Skipping acquiring lock for /home/kuroma/.config/Code - OSS/User/workspaceStorage/1de302c6f5e6c874550f2d5123d74613.
+2025-10-19 17:05:45.259 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-19 17:05:45.323 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-19 17:05:45.332 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-10-19 17:05:45.372 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-10-19 17:05:45.525 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-10-19 17:05:45.589 [info] Eager extensions activated
+2025-10-19 17:05:45.589 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 17:05:45.590 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 17:05:45.600 [info] ExtensionService#_doActivateExtension Anthropic.claude-code, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 17:05:45.710 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2025-10-19 17:14:34.126 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2025-10-19 17:14:34.134 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2025-10-19 17:14:34.495 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+2025-10-19 18:19:20.349 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-19 18:19:20.354 [info] Extension host with pid 1226085 exiting with code 0

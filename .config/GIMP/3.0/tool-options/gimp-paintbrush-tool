@@ -1,0 +1,13 @@
+# GIMP gimp-paintbrush-tool options
+
+(opacity 0.68000000000000005)
+(brush "2. Hardness 050")
+(dynamics "Pressure Size")
+(pattern "Pine")
+(gradient "FG to BG (RGB)")
+(palette "Color History")
+(brush-size 48)
+(brush-aspect-ratio 0.29999999999999999)
+(brush-hardness 0.5)
+
+# end of gimp-paintbrush-tool options

@@ -1,0 +1,17 @@
+2025-10-19 23:00:08.428 [info] Extension host with pid 1581503 started
+2025-10-19 23:00:08.428 [info] Skipping acquiring lock for /home/kuroma/.config/Code - OSS/User/workspaceStorage/1de302c6f5e6c874550f2d5123d74613.
+2025-10-19 23:00:08.778 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-10-19 23:00:08.852 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-10-19 23:00:08.868 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-10-19 23:00:08.907 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-10-19 23:00:09.081 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-10-19 23:00:09.130 [info] Eager extensions activated
+2025-10-19 23:00:09.131 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 23:00:09.133 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 23:00:09.143 [info] ExtensionService#_doActivateExtension Anthropic.claude-code, startup: false, activationEvent: 'onStartupFinished'
+2025-10-19 23:00:09.267 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2025-10-19 23:00:10.727 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-19 23:00:10.733 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-19 23:00:10.772 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-10-19 23:02:35.467 [info] Extension host terminating: renderer closed the MessagePort
+2025-10-19 23:02:35.474 [info] Extension host with pid 1581503 exiting with code 0

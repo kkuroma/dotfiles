@@ -1,0 +1,2276 @@
+2025-10-19 00:11:05.258 [info] Started local extension host with pid 6456.
+2025-10-19 00:11:05.312 [error] Extension 'ms-azuretools.vscode-containers CANNOT USE these API proposals 'authenticationChallenges'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 00:11:05.313 [error] Extension 'ms-python.debugpy CANNOT USE these API proposals 'portsAttributes, debugVisualization, contribViewsWelcome'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 00:11:05.313 [error] Extension 'ms-python.python CANNOT USE these API proposals 'contribEditorContentMenu, quickPickSortByLabel, testObserver, quickPickItemTooltip, terminalDataWriteEvent, terminalExecuteCommandEvent, codeActionAI, notebookReplDocument, notebookVariableProvider'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 00:11:05.313 [error] Extension 'ms-python.vscode-python-envs CANNOT USE these API proposals 'terminalShellEnv'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 00:11:05.313 [error] Extension 'ms-toolsai.jupyter CANNOT USE these API proposals 'notebookDeprecated, notebookMessaging, notebookMime, contribNotebookStaticPreloads, portsAttributes, quickPickSortByLabel, notebookKernelSource, interactiveWindow, quickPickItemTooltip, notebookExecution, notebookCellExecution, notebookVariableProvider, notebookReplDocument'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 00:11:05.313 [error] Extension 'ms-toolsai.jupyter-renderers CANNOT USE these API proposals 'contribNotebookStaticPreloads'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 00:11:05.329 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2025-10-19 00:11:06.304 [error] [Extension Host] Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --resume 5b09b03f-9be6-47ce-95eb-2d01ac6601f1 --permission-mode default --debug
+2025-10-19 00:11:06.686 [error] [Extension Host] [DEBUG] Watching for changes in setting files /home/kuroma/Storage/college/college-comp-sci/CS-537/.claude/settings.local.json...
+
+2025-10-19 00:11:06.701 [error] [Extension Host] [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(grep:*)"]
+
+2025-10-19 00:11:06.702 [error] [Extension Host] [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-19 00:11:06.710 [error] [Extension Host] [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-19 00:11:06.710 [error] [Extension Host] [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/Storage/college/college-comp-sci/CS-537/.claude/skills
+
+2025-10-19 00:11:06.710 [error] [Extension Host] [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-19 00:11:06.719 [error] [Extension Host] [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+[DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+
+2025-10-19 00:11:06.719 [error] [Extension Host] [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-19 00:11:06.736 [error] [Extension Host] [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-19 00:11:06.736 [error] [Extension Host] [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+
+2025-10-19 00:11:06.737 [error] [Extension Host] [DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760850666736-034trd.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-19 00:11:06.738 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/267264be-c285-4f27-9033-0ac6711ffd62-agent-267264be-c285-4f27-9033-0ac6711ffd62.json.tmp.6678.1760850666738
+
+2025-10-19 00:11:06.741 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/267264be-c285-4f27-9033-0ac6711ffd62-agent-267264be-c285-4f27-9033-0ac6711ffd62.json.tmp.6678.1760850666738 to /home/kuroma/.claude/todos/267264be-c285-4f27-9033-0ac6711ffd62-agent-267264be-c285-4f27-9033-0ac6711ffd62.json
+
+2025-10-19 00:11:06.742 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude/todos/267264be-c285-4f27-9033-0ac6711ffd62-agent-267264be-c285-4f27-9033-0ac6711ffd62.json written atomically
+
+2025-10-19 00:11:06.770 [error] [Extension Host] [DEBUG] Total plugin agents loaded: 0
+
+2025-10-19 00:11:06.916 [error] [Extension Host] [DEBUG] Shell snapshot created successfully (51616 bytes)
+
+2025-10-19 00:11:06.943 [error] [Extension Host] [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-19 00:11:06.952 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 00:11:06.952 [error] [Extension Host] [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:11:07.663 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.6678.1760850667662
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 00:11:07.667 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.6678.1760850667662 to /home/kuroma/.claude.json
+
+2025-10-19 00:11:07.667 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 00:11:07.668 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.6678.1760850667668
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 00:11:07.671 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.6678.1760850667668 to /home/kuroma/.claude.json
+
+2025-10-19 00:11:07.671 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 00:11:07.804 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyvU89x1sAkcxrkwPgk"}
+
+2025-10-19 00:11:07.849 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.6678.1760850667848
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 00:11:07.851 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.6678.1760850667848 to /home/kuroma/.claude.json
+
+2025-10-19 00:11:07.851 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 00:11:07.879 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyvUTkG4pvt8iHndtXr"}
+
+2025-10-19 00:11:07.880 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyvUTkG4pvt8iHndtXr\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:11:07.949 [error] [Extension Host] [DEBUG] Getting matching hook commands for SessionStart with query: resume
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+
+2025-10-19 00:11:08.512 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:11:08.559 [info] [perf] Render performance baseline is 13ms
+2025-10-19 00:11:09.326 [error] Error while getting the latest version for the extension ms-python.python. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:10.049 [error] Error while getting the latest version for the extension ms-azuretools.vscode-docker. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:10.357 [error] Error while getting the latest version for the extension ms-python.debugpy. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:10.663 [error] Error while getting the latest version for the extension james-yu.latex-workshop. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:10.906 [error] Error while getting the latest version for the extension ms-toolsai.vscode-jupyter-slideshow. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:10.974 [error] Error while getting the latest version for the extension ms-toolsai.jupyter-renderers. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:11.070 [error] Error while getting the latest version for the extension ms-toolsai.vscode-jupyter-cell-tags. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:11.281 [error] Error while getting the latest version for the extension ms-python.vscode-python-envs. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:11.360 [error] Error while getting the latest version for the extension anthropic.claude-code. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:11.902 [error] [Extension Host] [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:11:11.993 [error] Error while getting the latest version for the extension ms-toolsai.jupyter. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:12.095 [error] Error while getting the latest version for the extension ms-azuretools.vscode-containers. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:12.220 [error] Error while getting the latest version for the extension ms-toolsai.jupyter-keymap. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:11:12.305 [error] Error while getting the latest version for the extension bungcip.better-toml. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 00:13:09.582 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 00:13:09.582 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:13:09.585 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:13:09.587 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:13:12.043 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:13:13.379 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:13:13.380 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:13:13.382 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:13:13.384 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:13:13.387 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:13:15.437 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:13:18.500 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:13:18.501 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:13:18.503 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:13:18.506 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:13:20.355 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:13:35.497 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:13:35.497 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:13:35.500 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:13:44.502 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_multi.c.tmp.6678.1760850824501
+
+2025-10-19 00:13:44.504 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1046 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_multi.c.tmp.6678.1760850824501 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_multi.c
+
+2025-10-19 00:13:44.504 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_multi.c written atomically
+
+2025-10-19 00:13:44.508 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:13:45.511 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:13:45.511 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:13:45.514 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:13:47.991 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:13:56.901 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:13:56.904 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:13:58.740 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:13:59.152 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:13:59.152 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:13:59.153 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:13:59.155 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:13:59.156 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:14:01.089 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:14:03.831 [error] spawn xterm ENOENT: Error: spawn xterm ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:285:19)
+    at onErrorNT (node:internal/child_process:483:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-10-19 00:14:07.964 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+
+2025-10-19 00:14:07.964 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:14:07.966 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:14:24.753 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c.tmp.6678.1760850864750
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:14:24.815 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2971 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c.tmp.6678.1760850864750 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c
+
+2025-10-19 00:14:24.815 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c written atomically
+
+2025-10-19 00:14:24.819 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:14:25.821 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:14:25.823 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:14:28.541 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:14:33.255 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:14:33.255 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:14:33.256 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:14:36.372 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_simple.c.tmp.6678.1760850876363
+
+2025-10-19 00:14:36.432 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 516 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_simple.c.tmp.6678.1760850876363 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_simple.c
+
+2025-10-19 00:14:36.432 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_simple.c written atomically
+
+2025-10-19 00:14:36.434 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:14:37.436 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:14:37.438 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:14:40.217 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:14:47.899 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:14:47.899 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:14:47.900 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:14:53.572 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_complex.c.tmp.6678.1760850893564
+
+2025-10-19 00:14:53.575 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1685 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_complex.c.tmp.6678.1760850893564 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_complex.c
+
+2025-10-19 00:14:53.575 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/test_exec2_complex.c written atomically
+
+2025-10-19 00:14:53.576 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:14:54.578 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:14:54.581 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 00:14:54.581 [error] [Extension Host] [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:14:57.320 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:14:58.953 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Grep
+
+2025-10-19 00:14:58.953 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Grep
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+
+2025-10-19 00:14:59.134 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Grep
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Grep" (0 before deduplication)
+
+2025-10-19 00:14:59.135 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:14:59.138 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:15:01.707 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:15:02.344 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:15:02.345 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:15:02.347 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:15:02.349 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:15:04.470 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:15:32.429 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:15:32.429 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:15:32.431 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:15:32.753 [error] [Extension Host] (node:6456) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-10-19 00:15:43.972 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/DEBUG_NOTES.md.tmp.6678.1760850943965
+
+2025-10-19 00:15:43.973 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 4382 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/DEBUG_NOTES.md.tmp.6678.1760850943965 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/DEBUG_NOTES.md
+[DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/DEBUG_NOTES.md written atomically
+
+2025-10-19 00:15:43.973 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:15:43.974 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:15:44.976 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:15:44.978 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:15:46.859 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:15:54.233 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:15:56.855 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:15:56.857 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:15:56.859 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:15:59.766 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:16:00.713 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:16:00.713 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:16:00.715 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:16:00.718 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:16:02.834 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:16:05.609 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:16:05.610 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:16:18.064 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile.tmp.6678.1760850978060
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:16:18.068 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 9376 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile.tmp.6678.1760850978060 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile
+
+2025-10-19 00:16:18.068 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile written atomically
+
+2025-10-19 00:16:18.070 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:16:19.071 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:16:19.073 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:16:21.159 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:16:27.307 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:16:27.307 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:16:27.308 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:16:33.455 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/run_my_tests.sh.tmp.6678.1760850993455
+
+2025-10-19 00:16:33.460 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 287 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/run_my_tests.sh.tmp.6678.1760850993455 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/run_my_tests.sh
+
+2025-10-19 00:16:33.461 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/run_my_tests.sh written atomically
+
+2025-10-19 00:16:33.464 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:16:33.464 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:16:34.468 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:16:34.470 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:16:36.319 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:16:37.127 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:16:37.127 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:16:37.241 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFzLkKuB2wSH9SWB7XnA"}
+
+2025-10-19 00:16:37.548 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFzLksdr8bYeAP6fiWEf"}
+
+2025-10-19 00:16:37.548 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFzLksdr8bYeAP6fiWEf\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:16:37.549 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"chmod +x /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/run_my_tests.sh\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 00:16:39.376 [error] [Extension Host] [DEBUG] No hook environment files found
+
+2025-10-19 00:16:39.393 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:16:39.393 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:16:39.395 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:16:39.494 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFzLuza7pmYFuZvb5qVf"}
+
+2025-10-19 00:16:39.595 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFzLvU6Ko1y4JTeHUWVc"}
+
+2025-10-19 00:16:39.595 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFzLvU6Ko1y4JTeHUWVc\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:16:41.850 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:16:49.126 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:17:42.174 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:17:42.176 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:17:42.178 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:17:44.520 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:17:48.821 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:17:48.821 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:17:48.822 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:17:48.823 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:17:48.825 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:17:51.072 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:18:07.565 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+
+2025-10-19 00:18:07.565 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:20:29.547 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:20:29.549 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:20:29.551 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:20:32.206 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:20:34.973 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:25:16.050 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:16.052 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:25:16.053 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:18.277 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:25:20.736 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:25:20.736 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:20.752 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:20.756 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:20.758 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:21.047 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG11LwK6PZ1j4tgX84Jf"}
+
+2025-10-19 00:25:21.121 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG11NCxpRMCzX26RP73t"}
+
+2025-10-19 00:25:21.122 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG11NCxpRMCzX26RP73t\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:25:23.212 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:25:24.718 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:25:24.718 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:24.735 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:24.738 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:25:24.738 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:24.742 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:24.883 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG11dxkd6p1Lr4Y2JWeQ"}
+
+2025-10-19 00:25:25.041 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG11ecC2JuxhmCVpRLVv"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG11ecC2JuxhmCVpRLVv\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:25:27.152 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:25:28.421 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:25:28.421 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:28.724 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG11uinViQsUtTctBYV6"}
+
+2025-10-19 00:25:28.792 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG11w2Qz2NqQxVLAEkdC"}
+
+2025-10-19 00:25:28.793 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG11w2Qz2NqQxVLAEkdC\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:25:28.794 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"rm -f ./solution/test_exec2_*.c ./solution/run_my_tests.sh ./DEBUG_NOTES.md\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 00:25:38.316 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:38.316 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:38.319 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:38.435 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG12eEtvaPxtAzndRxJV"}
+
+2025-10-19 00:25:38.501 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG12eX1vSpzdAjiGwQSJ"}
+
+2025-10-19 00:25:38.501 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG12eX1vSpzdAjiGwQSJ\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:25:40.397 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:25:41.937 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:25:41.937 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:25:41.937 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:25:41.939 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:41.942 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:44.392 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:25:47.075 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:25:47.075 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:25:47.076 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:25:48.493 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile.tmp.6678.1760851548492
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:25:48.498 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 9313 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile.tmp.6678.1760851548492 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile
+
+2025-10-19 00:25:48.498 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/Makefile written atomically
+
+2025-10-19 00:25:48.505 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:25:49.504 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:49.506 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:51.766 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:25:53.361 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:53.375 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:53.377 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:25:53.377 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:53.380 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:53.614 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG13kR15xn2w2vhYPvGX"}
+
+2025-10-19 00:25:53.686 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG13mRmfbeW93dtwm1bm"}
+
+2025-10-19 00:25:53.686 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG13mRmfbeW93dtwm1bm\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:25:55.075 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:25:56.999 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:25:56.999 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:57.013 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:25:57.017 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:25:57.019 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:25:57.079 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG141wePQhaT24RJakf7"}
+
+2025-10-19 00:25:57.150 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG142E1dmSFzUwBRcwUb"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG142E1dmSFzUwBRcwUb\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:25:59.025 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:26:17.376 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:26:17.377 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:26:17.378 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:26:25.334 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c.tmp.6678.1760851585334
+
+2025-10-19 00:26:25.335 [error] [Extension Host] [DEBUG] Failed to write file atomically: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c.tmp.6678.1760851585334'
+[ERROR] "Error: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c.tmp.6678.1760851585334'\n    at openSync (unknown)\n    at writeFileSync (/$bunfs/root/claude:12:744)\n    at WE (/$bunfs/root/claude:3543:605)\n    at G00 (/$bunfs/root/claude:3539:6)\n    at call (/$bunfs/root/claude:1327:2875)\n    at processTicksAndRejections (native:7:39)"
+[DEBUG] Falling back to non-atomic write for /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c
+[DEBUG] Non-atomic write also failed: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c'
+
+2025-10-19 00:26:25.335 [error] [Extension Host] [ERROR] "Error: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c'\n    at openSync (unknown)\n    at writeFileSync (/$bunfs/root/claude:12:744)\n    at WE (/$bunfs/root/claude:3543:1194)\n    at G00 (/$bunfs/root/claude:3539:6)\n    at call (/$bunfs/root/claude:1327:2875)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:26:25.340 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:26:25.340 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:26:25.340 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:26:26.584 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c.tmp.6678.1760851586584
+
+2025-10-19 00:26:26.585 [error] [Extension Host] [DEBUG] Failed to write file atomically: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c.tmp.6678.1760851586584'
+[ERROR] "Error: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c.tmp.6678.1760851586584'\n    at openSync (unknown)\n    at writeFileSync (/$bunfs/root/claude:12:744)\n    at WE (/$bunfs/root/claude:3543:605)\n    at G00 (/$bunfs/root/claude:3539:6)\n    at call (/$bunfs/root/claude:1327:2875)\n    at processTicksAndRejections (native:7:39)"
+[DEBUG] Falling back to non-atomic write for /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c
+[DEBUG] Non-atomic write also failed: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c'
+
+2025-10-19 00:26:26.585 [error] [Extension Host] [ERROR] "Error: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c'\n    at openSync (unknown)\n    at writeFileSync (/$bunfs/root/claude:12:744)\n    at WE (/$bunfs/root/claude:3543:1194)\n    at G00 (/$bunfs/root/claude:3539:6)\n    at call (/$bunfs/root/claude:1327:2875)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:26:26.588 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:26:26.588 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:26:26.589 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:26:27.763 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c.tmp.6678.1760851587762
+
+2025-10-19 00:26:27.763 [error] [Extension Host] [DEBUG] Failed to write file atomically: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c.tmp.6678.1760851587762'
+[ERROR] "Error: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c.tmp.6678.1760851587762'\n    at openSync (unknown)\n    at writeFileSync (/$bunfs/root/claude:12:744)\n    at WE (/$bunfs/root/claude:3543:605)\n    at G00 (/$bunfs/root/claude:3539:6)\n    at call (/$bunfs/root/claude:1327:2875)\n    at processTicksAndRejections (native:7:39)"
+[DEBUG] Falling back to non-atomic write for /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c
+[DEBUG] Non-atomic write also failed: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c'
+[ERROR] "Error: Error: EACCES: permission denied, open '/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c'\n    at openSync (unknown)\n    at writeFileSync (/$bunfs/root/claude:12:744)\n    at WE (/$bunfs/root/claude:3543:1194)\n    at G00 (/$bunfs/root/claude:3539:6)\n    at call (/$bunfs/root/claude:1327:2875)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:26:27.766 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+
+2025-10-19 00:26:27.766 [error] [Extension Host] [DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:26:27.770 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:26:30.802 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:26:34.078 [error] [Extension Host] [DEBUG] Streaming aborted by user: Request was aborted.
+[ERROR] Error in non-streaming fallback: Request was aborted.
+
+2025-10-19 00:26:34.078 [error] [Extension Host] [ERROR] "Error: Error: Request was aborted.\n    at _createMessage (/$bunfs/root/claude:203:4506)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:27:27.747 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:27:27.749 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:27:27.751 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:27:30.698 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:27:44.831 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:27:44.831 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:27:44.833 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:27:55.203 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c.tmp.6678.1760851675202
+
+2025-10-19 00:27:55.268 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 516 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c.tmp.6678.1760851675202 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c
+
+2025-10-19 00:27:55.268 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_simple.c written atomically
+
+2025-10-19 00:27:55.271 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:27:55.271 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:27:56.273 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:27:56.273 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:27:56.274 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:27:57.614 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c.tmp.6678.1760851677614
+
+2025-10-19 00:27:57.619 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1046 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c.tmp.6678.1760851677614 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c
+
+2025-10-19 00:27:57.620 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_multi.c written atomically
+
+2025-10-19 00:27:57.623 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:27:58.624 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:27:58.624 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:27:58.625 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:27:59.764 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c.tmp.6678.1760851679764
+
+2025-10-19 00:27:59.771 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1685 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c.tmp.6678.1760851679764 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c
+
+2025-10-19 00:27:59.771 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_complex.c written atomically
+
+2025-10-19 00:27:59.771 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:28:00.773 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 00:28:00.773 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:28:00.776 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 00:28:00.776 [error] [Extension Host] [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:28:02.632 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:28:04.186 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:28:04.186 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:28:04.187 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:28:04.189 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:28:04.191 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:28:06.324 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:28:09.088 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+
+2025-10-19 00:28:09.088 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:28:09.089 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:28:10.441 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760851690441
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:28:10.447 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 9376 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760851690441 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile
+
+2025-10-19 00:28:10.447 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile written atomically
+
+2025-10-19 00:28:10.450 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:28:11.452 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:28:11.455 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:28:13.384 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:28:15.843 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:28:15.843 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:28:15.858 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:28:15.862 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:28:15.862 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:28:15.865 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:28:16.151 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG1EFbTcG4ZcZ45eYoDH"}
+
+2025-10-19 00:28:16.215 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG1EGpNzGeYSPuv2dKjo"}
+
+2025-10-19 00:28:16.215 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG1EGpNzGeYSPuv2dKjo\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:28:18.299 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:28:19.244 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:28:19.257 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:28:19.259 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:28:19.259 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:28:19.262 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:28:19.530 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG1EW85CcEre2HZvk4Qk"}
+
+2025-10-19 00:28:19.597 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG1EXHXR3TGPEofxQQjy"}
+
+2025-10-19 00:28:19.597 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG1EXHXR3TGPEofxQQjy\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:28:21.369 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:28:35.808 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:28:35.809 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:28:35.810 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:28:48.323 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/TEST_INSTRUCTIONS.md.tmp.6678.1760851728323
+
+2025-10-19 00:28:48.328 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1714 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/TEST_INSTRUCTIONS.md.tmp.6678.1760851728323 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/TEST_INSTRUCTIONS.md
+
+2025-10-19 00:28:48.329 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/TEST_INSTRUCTIONS.md written atomically
+
+2025-10-19 00:28:48.332 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:28:48.332 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:28:49.335 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+
+2025-10-19 00:28:49.335 [error] [Extension Host] [DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:28:49.338 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:28:51.782 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:28:57.614 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:30:35.083 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:30:35.086 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:30:35.088 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 00:30:35.088 [error] [Extension Host] [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:30:37.760 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:30:40.530 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:30:40.530 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:30:40.532 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:30:40.532 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:30:40.533 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:30:40.533 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:30:40.536 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:30:42.363 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:31:08.483 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:31:08.483 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:31:08.485 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:31:11.935 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_yield.c.tmp.6678.1760851871932
+
+2025-10-19 00:31:11.936 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1181 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_yield.c.tmp.6678.1760851871932 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_yield.c
+
+2025-10-19 00:31:11.936 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_yield.c written atomically
+
+2025-10-19 00:31:11.939 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:31:11.939 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:31:12.941 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+
+2025-10-19 00:31:12.941 [error] [Extension Host] [DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:31:12.942 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:31:14.370 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_scheduling.c.tmp.6678.1760851874369
+
+2025-10-19 00:31:14.374 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1262 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_scheduling.c.tmp.6678.1760851874369 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_scheduling.c
+
+2025-10-19 00:31:14.374 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_exec2_scheduling.c written atomically
+
+2025-10-19 00:31:14.376 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:31:15.379 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:31:15.379 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:31:15.382 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:31:17.803 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:31:19.064 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:31:19.064 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:31:19.064 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:31:19.066 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:31:19.066 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:31:19.069 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:31:21.078 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:31:22.615 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:31:22.615 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:31:22.616 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:31:24.410 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760851884409
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:31:24.414 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 9421 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760851884409 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile
+
+2025-10-19 00:31:24.414 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile written atomically
+
+2025-10-19 00:31:24.417 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:31:25.419 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:31:25.421 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:31:28.141 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:31:41.358 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:32:26.051 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:32:26.053 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:32:26.055 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:32:29.579 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:32:42.485 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:34:07.538 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:34:07.540 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:34:07.542 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:34:09.218 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:34:24.480 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:38:22.375 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:38:22.377 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:38:22.379 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:38:25.151 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:39:20.985 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:39:20.985 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:39:20.988 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:40:31.177 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_stress.c.tmp.6678.1760852431177
+
+2025-10-19 00:40:31.246 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2228 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_stress.c.tmp.6678.1760852431177 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_stress.c
+
+2025-10-19 00:40:31.246 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_stress.c written atomically
+
+2025-10-19 00:40:31.250 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:40:31.250 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:32.253 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:40:32.253 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:32.254 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:40:34.192 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_tiebreak.c.tmp.6678.1760852434191
+
+2025-10-19 00:40:34.256 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1431 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_tiebreak.c.tmp.6678.1760852434191 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_tiebreak.c
+
+2025-10-19 00:40:34.256 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_tiebreak.c written atomically
+
+2025-10-19 00:40:34.259 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:35.261 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:40:35.262 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:35.262 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:40:37.685 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_chain.c.tmp.6678.1760852437685
+
+2025-10-19 00:40:37.689 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1222 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_chain.c.tmp.6678.1760852437685 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_chain.c
+
+2025-10-19 00:40:37.689 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_chain.c written atomically
+
+2025-10-19 00:40:37.692 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:38.694 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:40:38.694 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:38.695 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:40:40.570 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_rapid.c.tmp.6678.1760852440569
+
+2025-10-19 00:40:40.634 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 1469 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_rapid.c.tmp.6678.1760852440569 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_rapid.c
+
+2025-10-19 00:40:40.634 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_rapid.c written atomically
+
+2025-10-19 00:40:40.637 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:41.640 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:40:41.640 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:41.640 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:40:43.421 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_edge.c.tmp.6678.1760852443421
+
+2025-10-19 00:40:43.425 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2318 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_edge.c.tmp.6678.1760852443421 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_edge.c
+
+2025-10-19 00:40:43.425 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_edge.c written atomically
+
+2025-10-19 00:40:43.428 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:44.431 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:40:44.431 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:44.431 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:40:46.265 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_interleave.c.tmp.6678.1760852446265
+
+2025-10-19 00:40:46.330 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2126 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_interleave.c.tmp.6678.1760852446265 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_interleave.c
+
+2025-10-19 00:40:46.330 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/test_stcf_interleave.c written atomically
+
+2025-10-19 00:40:46.333 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:40:47.335 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 00:40:47.335 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:40:47.338 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:40:50.078 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:40:51.206 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:40:51.207 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:40:51.209 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+
+2025-10-19 00:40:51.209 [error] [Extension Host] [DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:40:51.211 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:40:53.253 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:40:55.511 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:40:55.511 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:41:44.018 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760852504017
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:41:44.022 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 9543 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760852504017 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile
+
+2025-10-19 00:41:44.022 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile written atomically
+
+2025-10-19 00:41:44.025 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:41:45.028 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:41:45.030 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:41:47.840 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:42:22.565 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+
+2025-10-19 00:42:22.566 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:42:22.567 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:44:23.153 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/ADVANCED_TESTS.md.tmp.6678.1760852663153
+
+2025-10-19 00:44:23.222 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 5512 bytes
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/ADVANCED_TESTS.md.tmp.6678.1760852663153 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/ADVANCED_TESTS.md
+
+2025-10-19 00:44:23.222 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/ADVANCED_TESTS.md written atomically
+
+2025-10-19 00:44:23.225 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:44:23.225 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 00:44:24.228 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 00:44:24.228 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:44:24.230 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:44:26.996 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:44:34.673 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:45:56.225 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:45:56.226 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:45:56.228 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:45:59.778 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:46:01.010 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:46:01.010 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:46:01.081 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG2amC7ELNcY3jAjz4sF"}
+
+2025-10-19 00:46:01.157 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG2amTz35XSazE8BzM2i"}
+
+2025-10-19 00:46:01.157 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG2amTz35XSazE8BzM2i\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:46:01.211 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG2amkM9FRCnjV6k97wa"}
+
+2025-10-19 00:46:01.220 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG2amn5eDVq1UeWypaSz"}
+
+2025-10-19 00:46:01.283 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG2an3DERcaZT8oK6sb1"}
+
+2025-10-19 00:46:01.284 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG2an3DERcaZT8oK6sb1\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:46:01.294 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUG2an6vsS9xnAUPtPoom"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUG2an6vsS9xnAUPtPoom\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:46:01.296 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"make clean\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 00:46:22.458 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:46:22.460 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:46:24.966 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:46:37.260 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:47:13.478 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:47:13.480 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:47:13.483 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:47:15.660 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:47:17.508 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:47:17.508 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:47:17.509 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:47:17.511 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:47:17.511 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:47:17.514 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:47:20.065 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:47:24.266 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+
+2025-10-19 00:47:24.266 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:47:24.267 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:48:14.537 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760852894537
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:48:14.542 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 9482 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile.tmp.6678.1760852894537 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile
+
+2025-10-19 00:48:14.542 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-old/solution/Makefile written atomically
+
+2025-10-19 00:48:14.545 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:48:15.546 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:48:15.548 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:48:17.721 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:48:22.026 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:54:06.471 [error] [Extension Host] [DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+
+2025-10-19 00:54:06.471 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:54:06.471 [error] [Extension Host] [DEBUG] Cleaned up session snapshot: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760850666736-034trd.sh
+

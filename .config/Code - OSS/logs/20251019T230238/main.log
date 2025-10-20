@@ -1,0 +1,19 @@
+2025-10-19 23:02:38.451 [info] update#setState disabled
+2025-10-19 23:02:38.451 [info] update#ctor - updates are disabled as there is no update URL
+2025-10-19 23:02:51.290 [info] Extension host with pid 1586211 exited with code: 0, signal: unknown.
+2025-10-19 23:42:42.867 [info] Extension host with pid 1585474 exited with code: 0, signal: unknown.
+2025-10-19 23:42:42.913 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 1585605]: crashed with code 15 and reason 'killed'
+2025-10-19 23:52:51.519 [info] Extension host with pid 1649354 exited with code: 0, signal: unknown.
+2025-10-19 23:59:18.303 [info] Extension host with pid 1756035 exited with code: 0, signal: unknown.
+2025-10-19 23:59:18.361 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 1756121]: crashed with code 15 and reason 'killed'
+2025-10-20 00:00:18.062 [info] Extension host with pid 1770652 exited with code: 0, signal: unknown.
+2025-10-20 00:00:29.385 [info] Extension host with pid 1773559 exited with code: 0, signal: unknown.
+2025-10-20 00:00:29.423 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 1773545]: crashed with code 15 and reason 'killed'
+2025-10-20 00:02:47.952 [info] Extension host with pid 1777140 exited with code: 0, signal: unknown.
+2025-10-20 00:02:47.996 [error] [UtilityProcess id: 1, type: fileWatcher, pid: 1777228]: crashed with code 15 and reason 'killed'
+2025-10-20 00:03:09.057 [info] Extension host with pid 1780539 exited with code: 0, signal: unknown.
+2025-10-20 00:03:09.072 [error] [UtilityProcess id: 4, type: fileWatcher, pid: 1780525]: crashed with code 15 and reason 'killed'
+2025-10-20 00:10:37.119 [info] Extension host with pid 1783112 exited with code: 0, signal: unknown.
+2025-10-20 00:10:37.176 [error] [UtilityProcess id: 4, type: fileWatcher, pid: 1783217]: crashed with code 15 and reason 'killed'
+2025-10-20 00:18:19.735 [info] Extension host with pid 1629435 exited with code: 0, signal: unknown.
+2025-10-20 00:18:19.759 [error] [UtilityProcess id: 3, type: fileWatcher, pid: 1629418]: crashed with code 15 and reason 'killed'

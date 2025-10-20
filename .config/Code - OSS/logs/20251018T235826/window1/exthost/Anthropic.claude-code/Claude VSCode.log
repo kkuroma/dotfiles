@@ -1,0 +1,621 @@
+2025-10-18 23:58:27.430 [info] Claude code extension is now active?
+2025-10-18 23:58:27.430 [info] MCP Server running on port 59385 (localhost only)
+2025-10-18 23:58:53.508 [info] Claude code extension is now active?
+2025-10-18 23:58:53.508 [info] MCP Server running on port 22154 (localhost only)
+2025-10-19 00:03:53.135 [info] AuthManager initialized
+2025-10-19 00:03:53.387 [info] Received message from webview: {"type":"request","requestId":"5dsm2taezft","request":{"type":"init"}}
+2025-10-19 00:03:53.388 [info] Getting authentication status
+2025-10-19 00:03:53.388 [info] OAuth tokens found in secure storage
+2025-10-19 00:03:53.388 [info] Auth status: method=claudeai
+2025-10-19 00:03:53.399 [info] Received message from webview: {"type":"request","requestId":"9tp3hjzobat","request":{"type":"rename_tab","title":"Claude Code"}}
+2025-10-19 00:03:53.400 [info] Received message from webview: {"type":"request","requestId":"1k65d38bj3q","request":{"type":"get_claude_state"}}
+2025-10-19 00:03:53.413 [info] Loading config cache by launching Claude...
+2025-10-19 00:03:53.413 [info] Spawning Claude with SDK query function - cwd: /home/kuroma/Storage/college/college-comp-sci/CS-537, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: undefined
+2025-10-19 00:03:53.413 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-19 00:03:53.414 [info] Received message from webview: {"type":"request","requestId":"6m67mbhyvz","request":{"type":"get_current_selection"}}
+2025-10-19 00:03:53.414 [info] Received message from webview: {"type":"request","requestId":"1rjz4qp944i","request":{"type":"get_asset_uris"}}
+2025-10-19 00:03:53.414 [info] Received message from webview: {"type":"request","requestId":"9094g4w0dkq","request":{"type":"list_sessions_request"}}
+2025-10-19 00:03:53.414 [info] Received message from webview: {"type":"request","requestId":"8wov94bcbsj","request":{"type":"list_sessions_request"}}
+2025-10-19 00:03:53.415 [info] Received message from webview: {"type":"request","requestId":"9ieaqm4r9rd","request":{"type":"list_sessions_request"}}
+2025-10-19 00:03:53.415 [info] Received message from webview: {"type":"request","requestId":"grdv702fi6","request":{"type":"rename_tab","title":"Claude Code"}}
+2025-10-19 00:03:53.415 [warning] Failed to load sessions from /home/kuroma/Storage/college/college-comp-sci/CS-537: Error: ENOENT: no such file or directory, scandir '/home/kuroma/.claude/projects/-home-kuroma-Storage-college-college-comp-sci-CS-537'
+2025-10-19 00:03:53.415 [warning] Failed to load sessions from /home/kuroma/Storage/college/college-comp-sci/CS-537: Error: ENOENT: no such file or directory, scandir '/home/kuroma/.claude/projects/-home-kuroma-Storage-college-college-comp-sci-CS-537'
+2025-10-19 00:03:53.415 [warning] Failed to load sessions from /home/kuroma/Storage/college/college-comp-sci/CS-537: Error: ENOENT: no such file or directory, scandir '/home/kuroma/.claude/projects/-home-kuroma-Storage-college-college-comp-sci-CS-537'
+2025-10-19 00:03:53.415 [info] Received message from webview: {"type":"launch_claude","channelId":"s9srjkrzlsr","cwd":"/home/kuroma/Storage/college/college-comp-sci/CS-537","model":"default","permissionMode":"default","thinkingLevel":"off"}
+2025-10-19 00:03:53.427 [info] Launching Claude on channel: s9srjkrzlsr
+2025-10-19 00:03:53.427 [info] Spawning Claude with SDK query function - cwd: /home/kuroma/Storage/college/college-comp-sci/CS-537, permission mode: default, version: 2.0.22, /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude, resume: undefined
+2025-10-19 00:03:53.427 [info] From claude: Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-19 00:03:53.819 [info] From claude: [DEBUG] Watching for changes in setting files /home/kuroma/Storage/college/college-comp-sci/CS-537/.claude/settings.local.json...
+
+2025-10-19 00:03:53.832 [info] From claude: [DEBUG] Applying permission update: Adding 1 allow rule(s) to destination 'localSettings': ["Bash(grep:*)"]
+
+2025-10-19 00:03:53.834 [info] From claude: [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-19 00:03:53.839 [info] From claude: [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-19 00:03:53.840 [info] From claude: [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/Storage/college/college-comp-sci/CS-537/.claude/skills
+
+2025-10-19 00:03:53.840 [info] From claude: [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-19 00:03:53.848 [info] From claude: [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+
+2025-10-19 00:03:53.848 [info] From claude: [DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+
+2025-10-19 00:03:53.848 [info] From claude: [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-19 00:03:53.857 [info] From claude: [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-19 00:03:53.858 [info] From claude: [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+
+2025-10-19 00:03:53.858 [info] From claude: [DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760850233857-6450v8.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-19 00:03:53.859 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/5b09b03f-9be6-47ce-95eb-2d01ac6601f1-agent-5b09b03f-9be6-47ce-95eb-2d01ac6601f1.json.tmp.159904.1760850233858
+
+2025-10-19 00:03:53.861 [info] From claude: [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/5b09b03f-9be6-47ce-95eb-2d01ac6601f1-agent-5b09b03f-9be6-47ce-95eb-2d01ac6601f1.json.tmp.159904.1760850233858 to /home/kuroma/.claude/todos/5b09b03f-9be6-47ce-95eb-2d01ac6601f1-agent-5b09b03f-9be6-47ce-95eb-2d01ac6601f1.json
+
+2025-10-19 00:03:53.861 [info] From claude: [DEBUG] File /home/kuroma/.claude/todos/5b09b03f-9be6-47ce-95eb-2d01ac6601f1-agent-5b09b03f-9be6-47ce-95eb-2d01ac6601f1.json written atomically
+
+2025-10-19 00:03:53.873 [info] From claude: [DEBUG] Total plugin agents loaded: 0
+
+2025-10-19 00:03:54.034 [info] From claude: [DEBUG] Shell snapshot created successfully (51616 bytes)
+
+2025-10-19 00:03:54.045 [info] From claude: [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-19 00:03:54.059 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 00:03:54.059 [info] From claude: [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:03:54.241 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyNWpjfTYwN6k2WKVYq"}
+
+2025-10-19 00:03:54.251 [info] From claude: [ERROR] Failed to save config with lock: Error: Lock file is already being held
+
+2025-10-19 00:03:54.251 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.159904.1760850234251
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 00:03:54.254 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+
+2025-10-19 00:03:54.255 [info] From claude: [DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.159904.1760850234251 to /home/kuroma/.claude.json
+[DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 00:03:54.311 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.159904.1760850234311
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 00:03:54.314 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.159904.1760850234311 to /home/kuroma/.claude.json
+
+2025-10-19 00:03:54.314 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 00:03:54.315 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.159904.1760850234315
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 00:03:54.318 [info] From claude: [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.159904.1760850234315 to /home/kuroma/.claude.json
+
+2025-10-19 00:03:54.318 [info] From claude: [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 00:03:54.347 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyNXDoJ1TbMaoAfw6gA"}
+
+2025-10-19 00:03:54.347 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyNXDoJ1TbMaoAfw6gA\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:03:54.429 [info] From claude: [DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+
+2025-10-19 00:03:54.963 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:03:59.679 [info] From claude: [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:04:46.114 [info] Received message from webview: {"type":"request","requestId":"9x5jrzsjd9w","request":{"type":"rename_tab","title":"cs537-projects/p3-THUWAJ…"}}
+2025-10-19 00:04:46.121 [info] Received message from webview: {"type":"io_message","channelId":"s9srjkrzlsr","message":{"type":"user","session_id":"","parent_tool_use_id":null,"message":{"role":"user","content":[{"type":"text","text":"cs537-projects/p3-THUWAJIT/solution and cs537-projects/p3-THUWAJIT/tests (see cs537-projects/p3-THUWAJIT/README.md)\n\nfor whatever reason test 5 failed on a grader but runs fine on my machine, any ideas?"}]}},"done":false}
+2025-10-19 00:04:46.127 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 00:04:46.128 [info] From claude: [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:04:46.129 [info] From claude: [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 00:04:46.130 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:04:46.149 [info] Received message from webview: {"type":"request","requestId":"9li5cl8alyv","request":{"type":"rename_tab","title":"cs537-projects/p3-THUWAJ…"}}
+2025-10-19 00:04:48.046 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:04:50.616 [info] From claude: [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:04:50.616 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Glob
+[DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+
+2025-10-19 00:04:50.623 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:04:50.629 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+
+2025-10-19 00:04:50.632 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+
+2025-10-19 00:04:50.636 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:04:50.636 [info] From claude: [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:04:50.637 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:04:53.684 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:04:54.413 [info] From claude: [DEBUG] executePreToolHooks called for tool: Glob
+
+2025-10-19 00:04:54.413 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Glob
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+
+2025-10-19 00:04:54.415 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Glob
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Glob" (0 before deduplication)
+
+2025-10-19 00:04:54.416 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:04:54.417 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:04:56.244 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:04:57.377 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:04:57.383 [info] From claude: [DEBUG] No hook environment files found
+
+2025-10-19 00:04:57.396 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:04:57.397 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:04:57.398 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:04:57.683 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTAvoJFgHz2gamXiVr"}
+
+2025-10-19 00:04:57.752 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTC9xitX6Dpeakq9jF"}
+
+2025-10-19 00:04:57.753 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyTC9xitX6Dpeakq9jF\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:04:59.527 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:01.677 [info] From claude: [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:05:01.677 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:01.680 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:01.694 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:01.695 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:05:01.696 [info] From claude: [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:01.697 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:01.984 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTVJLwA9gJRF8cwRqK"}
+
+2025-10-19 00:05:02.053 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTWXWX5wCegA5h4CgW"}
+
+2025-10-19 00:05:02.053 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyTWXWX5wCegA5h4CgW\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:03.823 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:05.060 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:05:05.060 [info] From claude: [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:05.078 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:05.080 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:05.081 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:05.363 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTjmVGgcftk1hDis5o"}
+
+2025-10-19 00:05:05.431 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTkyv7FdiuLpHKdCk8"}
+
+2025-10-19 00:05:05.432 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyTkyv7FdiuLpHKdCk8\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:06.900 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:07.824 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:05:07.824 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:07.838 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:07.841 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:07.842 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:07.914 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTwaegLrRjAQJC37im"}
+
+2025-10-19 00:05:07.978 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyTwsWbUSo362ynAu4w"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyTwsWbUSo362ynAu4w\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:09.354 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:10.277 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:05:10.277 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:10.292 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:10.295 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:10.297 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:10.382 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyU82T7bgw6hmEzLGkd"}
+
+2025-10-19 00:05:10.454 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyU8SzuET3HzTAGbnjd"}
+
+2025-10-19 00:05:10.454 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyU8SzuET3HzTAGbnjd\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:12.224 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:13.042 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:05:13.042 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:13.054 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:13.056 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:13.057 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:13.352 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyUKrr1hy3xvXkNP5EX"}
+
+2025-10-19 00:05:13.422 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyUM9jHizK6H7MEjZwJ"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyUM9jHizK6H7MEjZwJ\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:15.808 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:17.041 [info] From claude: [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:05:17.041 [info] From claude: [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:17.042 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:17.044 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:17.046 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:17.047 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:19.496 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:21.952 [info] From claude: [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:05:21.952 [info] From claude: [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:21.952 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:21.954 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:21.955 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:24.714 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:26.871 [info] From claude: [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:05:26.871 [info] From claude: [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:26.871 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:05:26.873 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:26.874 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:29.018 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:31.799 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:32.079 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyVi28J3Xeii49Sd5hP"}
+
+2025-10-19 00:05:32.079 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyVi2sStUfca4XHUtai"}
+
+2025-10-19 00:05:32.080 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyViBYxR6GHq7DufvA8"}
+
+2025-10-19 00:05:32.196 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyVjMVjfefzX8QG3jFb"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyVjMVjfefzX8QG3jFb\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:32.196 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyVjMjmhJ6CygfZM7q9"}
+
+2025-10-19 00:05:32.196 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyVjMjmhJ6CygfZM7q9\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:32.197 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyVjMVWaidjmYTKDDXu"}
+
+2025-10-19 00:05:32.197 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyVjMVWaidjmYTKDDXu\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:32.198 [info] From claude: [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cat run-tests.sh\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 00:05:32.199 [info] Received message from webview: {"type":"request","requestId":"0pkgdwkldz1h","request":{"type":"show_notification","message":"Claude is requesting permission to use Bash","severity":"info","buttons":["View"],"onlyIfNotVisible":true}}
+2025-10-19 00:05:53.860 [info] Received message from webview: {"type":"response","requestId":"b60482bb33a489450aca8ec1b7933ae0","response":{"type":"tool_permission_response","result":{"behavior":"allow","updatedInput":{"command":"cd /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/tests && cat run-tests.sh","description":"Check test runner script"},"updatedPermissions":[]}}}
+2025-10-19 00:05:53.874 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:53.875 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:54.031 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyXLVscHJNhY8R7xPyt"}
+
+2025-10-19 00:05:54.104 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyXM66KvRhMDR7j33a3"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyXM66KvRhMDR7j33a3\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:05:56.357 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:05:58.812 [info] From claude: [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 00:05:58.812 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:58.826 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 00:05:58.827 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:05:58.828 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:05:59.125 [info] From claude: [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyXhZQCENKX5oWFB8hY"}
+
+2025-10-19 00:05:59.195 [info] From claude: [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUFyXir3NFgUNq91yDojn"}
+
+2025-10-19 00:05:59.196 [info] From claude: [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUFyXir3NFgUNq91yDojn\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 00:06:01.269 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:06:03.731 [info] From claude: [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 00:06:03.731 [info] From claude: [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:06:03.733 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:06:03.734 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:06:03.735 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:06:03.737 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 00:06:03.738 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 00:06:03.738 [info] From claude: [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:06:03.739 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:06:06.497 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:06:20.131 [info] From claude: [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 00:06:20.131 [info] From claude: [DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:06:20.132 [info] [DiagnosticTracking] Captured baseline diagnostics for /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c: 1 files
+2025-10-19 00:06:20.134 [info] From claude: [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 00:06:20.202 [info] Received message from webview: {"type":"request","requestId":"309usr43nru","request":{"type":"show_notification","message":"Claude is requesting permission to use Edit","severity":"info","buttons":["View"],"onlyIfNotVisible":true}}
+2025-10-19 00:06:20.202 [info] Received message from webview: {"type":"request","requestId":"rd1g4is94s","request":{"type":"open_diff","originalFilePath":"/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c","newFilePath":"/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c","edits":[{"oldString":"// give_cpu system call, yields cpu and set skip flag\nint sys_give_cpu(void) {\n  struct proc *curproc = myproc();\n  curproc->skip_in_scheduler = 1;\n  yield();\n  curproc->skip_in_scheduler = 0;\n  return 0;\n}","newString":"// give_cpu system call, yields cpu and set skip flag\nint sys_give_cpu(void) {\n  struct proc *curproc = myproc();\n  curproc->skip_in_scheduler = 1;\n  yield();\n  return 0;\n}","replaceAll":false}],"supportMultiEdits":false}}
+2025-10-19 00:06:20.202 [info] diff from /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c as Claude‘s edit: sysproc.c (3z4u8v)
+2025-10-19 00:06:20.226 [info] Closing all diff tabs in the editor...
+2025-10-19 00:06:20.227 [info] Closed 0 diff tabs.
+2025-10-19 00:06:20.326 [info] diff result undefined Claude‘s edit: sysproc.c (3z4u8v) {"$mid":1,"external":"file:///home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c","path":"/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c","scheme":"file"} {"$mid":1,"external":"_claude_vscode_fs_right:/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c","path":"/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c","scheme":"_claude_vscode_fs_right"} {"preview":false,"preserveFocus":true}
+2025-10-19 00:06:20.427 [info] files.autoSave is off, waiting for file save
+2025-10-19 00:06:59.359 [info] Received message from webview: {"type":"cancel_request","targetRequestId":"rd1g4is94s"}
+2025-10-19 00:06:59.381 [info] Received message from webview: {"type":"response","requestId":"1521a3dd3e9646e0251398709df55425","response":{"type":"tool_permission_response","result":{"behavior":"allow","updatedInput":{"file_path":"/home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c","old_string":"// give_cpu system call, yields cpu and set skip flag\nint sys_give_cpu(void) {\n  struct proc *curproc = myproc();\n  curproc->skip_in_scheduler = 1;\n  yield();\n  curproc->skip_in_scheduler = 0;\n  return 0;\n}","new_string":"// give_cpu system call, yields cpu and set skip flag\nint sys_give_cpu(void) {\n  struct proc *curproc = myproc();\n  curproc->skip_in_scheduler = 1;\n  yield();\n  return 0;\n}"},"updatedPermissions":[]}}}
+2025-10-19 00:06:59.384 [info] From claude: [DEBUG] Writing to temp file: /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c.tmp.159904.1760850419384
+[DEBUG] Preserving file permissions: 100755
+
+2025-10-19 00:06:59.392 [info] tab_closed Claude‘s edit: sysproc.c (3z4u8v)
+2025-10-19 00:06:59.392 [info] diff operation completed undefined
+2025-10-19 00:06:59.452 [info] From claude: [DEBUG] Temp file written successfully, size: 2872 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c.tmp.159904.1760850419384 to /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c
+
+2025-10-19 00:06:59.452 [info] From claude: [DEBUG] File /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c written atomically
+
+2025-10-19 00:06:59.455 [info] From claude: [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 00:07:00.456 [info] [DiagnosticTracking] No new diagnostics found for /home/kuroma/Storage/college/college-comp-sci/CS-537/cs537-projects/p3-THUWAJIT/solution/sysproc.c
+2025-10-19 00:07:00.457 [info] From claude: [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 00:07:00.459 [info] From claude: [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 00:07:02.707 [info] From claude: [DEBUG] Stream started - received first chunk
+
+2025-10-19 00:07:10.178 [info] From claude: [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+

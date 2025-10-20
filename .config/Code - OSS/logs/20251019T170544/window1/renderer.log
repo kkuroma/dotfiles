@@ -1,0 +1,2514 @@
+2025-10-19 17:05:44.662 [info] Started local extension host with pid 1226085.
+2025-10-19 17:05:45.096 [error] Extension 'ms-azuretools.vscode-containers CANNOT USE these API proposals 'authenticationChallenges'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 17:05:45.096 [error] Extension 'ms-python.debugpy CANNOT USE these API proposals 'portsAttributes, debugVisualization, contribViewsWelcome'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 17:05:45.097 [error] Extension 'ms-python.python CANNOT USE these API proposals 'contribEditorContentMenu, quickPickSortByLabel, testObserver, quickPickItemTooltip, terminalDataWriteEvent, terminalExecuteCommandEvent, codeActionAI, notebookReplDocument, notebookVariableProvider'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 17:05:45.097 [error] Extension 'ms-python.vscode-python-envs CANNOT USE these API proposals 'terminalShellEnv'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 17:05:45.097 [error] Extension 'ms-toolsai.jupyter CANNOT USE these API proposals 'notebookDeprecated, notebookMessaging, notebookMime, contribNotebookStaticPreloads, portsAttributes, quickPickSortByLabel, notebookKernelSource, interactiveWindow, quickPickItemTooltip, notebookExecution, notebookCellExecution, notebookVariableProvider, notebookReplDocument'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 17:05:45.097 [error] Extension 'ms-toolsai.jupyter-renderers CANNOT USE these API proposals 'contribNotebookStaticPreloads'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
+2025-10-19 17:05:45.123 [error] [ms-python.python]: editor/content is a proposed menu identifier. It requires 'package.json#enabledApiProposals: ["contribEditorContentMenu"]' and is only available when running out of dev or with the following command line switch: --enable-proposed-api ms-python.python
+2025-10-19 17:05:46.004 [error] [Extension Host] Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --permission-mode default --debug
+2025-10-19 17:05:46.355 [error] [Extension Host] [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-19 17:05:46.360 [error] [Extension Host] [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-19 17:05:46.360 [error] [Extension Host] [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/.claude/skills
+
+2025-10-19 17:05:46.361 [error] [Extension Host] [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-19 17:05:46.368 [error] [Extension Host] [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+
+2025-10-19 17:05:46.368 [error] [Extension Host] [DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+
+2025-10-19 17:05:46.368 [error] [Extension Host] [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-19 17:05:46.375 [error] [Extension Host] [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-19 17:05:46.376 [error] [Extension Host] [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+
+2025-10-19 17:05:46.376 [error] [Extension Host] [DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760911546375-fjv496.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-19 17:05:46.376 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/8a972214-adb5-4a5c-8b0a-ed5f4584d346-agent-8a972214-adb5-4a5c-8b0a-ed5f4584d346.json.tmp.1226373.1760911546376
+
+2025-10-19 17:05:46.381 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/8a972214-adb5-4a5c-8b0a-ed5f4584d346-agent-8a972214-adb5-4a5c-8b0a-ed5f4584d346.json.tmp.1226373.1760911546376 to /home/kuroma/.claude/todos/8a972214-adb5-4a5c-8b0a-ed5f4584d346-agent-8a972214-adb5-4a5c-8b0a-ed5f4584d346.json
+
+2025-10-19 17:05:46.381 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude/todos/8a972214-adb5-4a5c-8b0a-ed5f4584d346-agent-8a972214-adb5-4a5c-8b0a-ed5f4584d346.json written atomically
+
+2025-10-19 17:05:46.425 [error] [Extension Host] [DEBUG] Total plugin agents loaded: 0
+
+2025-10-19 17:05:46.550 [error] [Extension Host] [DEBUG] Shell snapshot created successfully (51616 bytes)
+
+2025-10-19 17:05:46.607 [error] [Extension Host] [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-19 17:05:46.610 [error] [Extension Host] [DEBUG] "rg error (signal=null, code=2, stderr: rg: Resource temporarily unavailable (os error 11)\n), 4992 results"
+
+2025-10-19 17:05:46.613 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 17:05:46.613 [error] [Extension Host] [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:05:47.266 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1226373.1760911547266
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:05:47.271 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1226373.1760911547266 to /home/kuroma/.claude.json
+
+2025-10-19 17:05:47.271 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:05:47.310 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1226373.1760911547309
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:05:47.313 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1226373.1760911547309 to /home/kuroma/.claude.json
+
+2025-10-19 17:05:47.313 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:05:47.313 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1226373.1760911547313
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:05:47.316 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1226373.1760911547313 to /home/kuroma/.claude.json
+
+2025-10-19 17:05:47.316 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:05:47.318 [error] [Extension Host] [ERROR] Failed to save config with lock: Error: Lock file is already being held
+
+2025-10-19 17:05:47.318 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1226373.1760911547318
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:05:47.322 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1226373.1760911547318 to /home/kuroma/.claude.json
+
+2025-10-19 17:05:47.322 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:05:47.323 [error] [Extension Host] [DEBUG] Failed to fetch Grove notice config: AxiosError: Request failed with status code 401
+
+2025-10-19 17:05:47.324 [error] [Extension Host] [DEBUG] Getting matching hook commands for SessionStart with query: startup
+[DEBUG] Found 0 hook matchers in settings
+
+2025-10-19 17:05:47.324 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+
+2025-10-19 17:05:47.345 [error] [Extension Host] [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:05:48.318 [info] [perf] Render performance baseline is 12ms
+2025-10-19 17:05:49.950 [error] Error while getting the latest version for the extension anthropic.claude-code. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:50.255 [error] Error while getting the latest version for the extension james-yu.latex-workshop. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:50.571 [error] Error while getting the latest version for the extension ms-toolsai.jupyter-renderers. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:50.870 [error] Error while getting the latest version for the extension ms-toolsai.vscode-jupyter-slideshow. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:51.043 [error] Error while getting the latest version for the extension ms-azuretools.vscode-containers. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:51.380 [error] Error while getting the latest version for the extension ms-toolsai.vscode-jupyter-cell-tags. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:51.688 [error] Error while getting the latest version for the extension ms-python.python. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:51.996 [error] Error while getting the latest version for the extension ms-azuretools.vscode-docker. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:52.633 [error] Error while getting the latest version for the extension ms-toolsai.jupyter-keymap. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:52.922 [error] Error while getting the latest version for the extension ms-toolsai.jupyter. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:53.024 [error] Error while getting the latest version for the extension ms-python.debugpy. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:53.173 [error] Error while getting the latest version for the extension ms-python.vscode-python-envs. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:53.322 [error] Error while getting the latest version for the extension bungcip.better-toml. SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Open VSX Registry</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WLCZXC');</script>
+
+    <!-- Eclipse Cookie Consent -->
+    <link rel="stylesheet" type="text/css"
+        href="//www.eclipse.org/eclipse.org-common/themes/solstice/public/stylesheets/vendor/cookieconsent/cookieconsent.min.css" />
+    <script
+        src="//www.eclipse.org/eclipse.org-common/themes/solstice/public/javascript/vendor/cookieconsent/default.min.js">
+    </script>
+    <style>
+        a.cc-btn.cc-allow {
+            background-color: #c160ef;
+        }
+        a.cc-btn.cc-allow:hover, a.cc-btn.cc-allow:focus {
+            background-color: #444;
+        }
+        .cc-revoke {
+            display: none !important;
+        }
+        @media (prefers-color-scheme: dark) {
+          body {
+            background-color: #121212;
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-5WLCZXC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main"></div>
+    <script src='/bundle.js' ></script>
+</body>
+
+</html>
+
+2025-10-19 17:05:53.836 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CUHKJeZnZo6ADf4pi3U6k"}
+
+2025-10-19 17:05:53.992 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth token has expired. Please obtain a new token or refresh your existing token.\"},\"request_id\":\"req_011CUHKJfZoyGNxFVsxAm2fM\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:05:59.106 [error] [Extension Host] [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:06:00.698 [error] [Extension Host] [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:06:01.010 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CUHKKAuR8FGfduXUGoa22"}
+
+2025-10-19 17:06:01.010 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth token has expired. Please obtain a new token or refresh your existing token.\"},\"request_id\":\"req_011CUHKKAuR8FGfduXUGoa22\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:06:01.012 [error] [Extension Host] [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:10:32.998 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 17:10:32.998 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:10:32.999 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:10:33.001 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:10:33.291 [error] [Extension Host] [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:10:33.479 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CUHKfGe1FU7n8HnFixR69"}
+
+2025-10-19 17:10:33.749 [error] [Extension Host] [ERROR] "AxiosError: Error\n    at HM (/$bunfs/root/claude:27:1142)\n    at <anonymous> (/$bunfs/root/claude:32:9841)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:862:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:34:2146)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:10:34.092 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CUHKfJMhJqwqUQE3KkFac"}
+
+2025-10-19 17:10:34.092 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth token has expired. Please obtain a new token or refresh your existing token.\"},\"request_id\":\"req_011CUHKfJMhJqwqUQE3KkFac\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:10:34.095 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:12:03.985 [error] [Extension Host] [DEBUG] Getting matching hook commands for SessionEnd with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:12:03.985 [error] [Extension Host] [DEBUG] Cleaned up session snapshot: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760911546375-fjv496.sh
+
+2025-10-19 17:12:03.994 [error] [Extension Host] Claude Code process exited with code 1
+2025-10-19 17:12:09.013 [error] [Extension Host] Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --resume 8a972214-adb5-4a5c-8b0a-ed5f4584d346 --permission-mode default --debug
+2025-10-19 17:12:09.399 [error] [Extension Host] [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-19 17:12:09.404 [error] [Extension Host] [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-19 17:12:09.405 [error] [Extension Host] [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/.claude/skills
+
+2025-10-19 17:12:09.405 [error] [Extension Host] [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-19 17:12:09.412 [error] [Extension Host] [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+
+2025-10-19 17:12:09.413 [error] [Extension Host] [DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+
+2025-10-19 17:12:09.413 [error] [Extension Host] [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-19 17:12:09.419 [error] [Extension Host] [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-19 17:12:09.420 [error] [Extension Host] [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+
+2025-10-19 17:12:09.420 [error] [Extension Host] [DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760911929419-xi6nxr.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-19 17:12:09.421 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/56af7c5c-af14-487a-ae53-2e5487596180-agent-56af7c5c-af14-487a-ae53-2e5487596180.json.tmp.1232874.1760911929420
+
+2025-10-19 17:12:09.425 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/56af7c5c-af14-487a-ae53-2e5487596180-agent-56af7c5c-af14-487a-ae53-2e5487596180.json.tmp.1232874.1760911929420 to /home/kuroma/.claude/todos/56af7c5c-af14-487a-ae53-2e5487596180-agent-56af7c5c-af14-487a-ae53-2e5487596180.json
+
+2025-10-19 17:12:09.425 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude/todos/56af7c5c-af14-487a-ae53-2e5487596180-agent-56af7c5c-af14-487a-ae53-2e5487596180.json written atomically
+
+2025-10-19 17:12:09.464 [error] [Extension Host] [DEBUG] Total plugin agents loaded: 0
+
+2025-10-19 17:12:09.467 [error] [Extension Host] [DEBUG] Shell snapshot created successfully (51652 bytes)
+
+2025-10-19 17:12:09.471 [error] [Extension Host] [DEBUG] Getting matching hook commands for SessionStart with query: resume
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+
+2025-10-19 17:12:09.479 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 17:12:09.479 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:12:09.479 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+
+2025-10-19 17:12:09.480 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:12:09.483 [error] [Extension Host] [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:12:09.484 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 17:12:09.642 [error] [Extension Host] [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-19 17:12:09.648 [error] [Extension Host] [DEBUG] "rg error (signal=null, code=2, stderr: rg: Resource temporarily unavailable (os error 11)\n), 7984 results"
+
+2025-10-19 17:12:09.649 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:12:09.719 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1232874.1760911929719
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:12:09.724 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1232874.1760911929719 to /home/kuroma/.claude.json
+
+2025-10-19 17:12:09.724 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:12:09.775 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1232874.1760911929775
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:12:09.778 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1232874.1760911929775 to /home/kuroma/.claude.json
+
+2025-10-19 17:12:09.778 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:12:09.812 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1232874.1760911929812
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:12:09.815 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1232874.1760911929812 to /home/kuroma/.claude.json
+
+2025-10-19 17:12:09.815 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:12:09.815 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1232874.1760911929815
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 17:12:09.818 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1232874.1760911929815 to /home/kuroma/.claude.json
+
+2025-10-19 17:12:09.818 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 17:12:10.547 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:12:11.075 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:12:12.082 [error] [Extension Host] [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:12:17.308 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 17:12:17.308 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:12:17.311 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 17:12:17.311 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:12:17.312 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:12:17.312 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:12:19.145 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:12:22.877 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:22.881 [error] [Extension Host] [DEBUG] No hook environment files found
+
+2025-10-19 17:12:22.895 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:22.896 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:23.141 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKoLzfpqvv9fLvkTnYd"}
+
+2025-10-19 17:12:23.142 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKoM3Q77KWbvxx5q8jt"}
+
+2025-10-19 17:12:23.215 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKoN3B2Vv1ZJPx7Y51m"}
+
+2025-10-19 17:12:23.215 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKoN3B2Vv1ZJPx7Y51m\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:12:23.245 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKoNBcFYQfUNb8FVkRF"}
+
+2025-10-19 17:12:23.245 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKoNBcFYQfUNb8FVkRF\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:12:23.246 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"pacman -Qqe\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:12:34.234 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:34.235 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//usr/share/fonts/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:12:34.247 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:34.590 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpCfteAsrdd7Hmtdqs"}
+
+2025-10-19 17:12:34.592 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpChd1mRrRsNbWU6Lg"}
+
+2025-10-19 17:12:34.667 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpD1yS5Qw4UcGF8XMM"}
+
+2025-10-19 17:12:34.667 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKpD1yS5Qw4UcGF8XMM\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:12:34.669 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpD1jFjtZAfFpQJCWq"}
+
+2025-10-19 17:12:34.670 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKpD1jFjtZAfFpQJCWq\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:12:36.439 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:36.440 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:12:36.441 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:12:36.733 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpMq48Sdb3qtktN3pP"}
+
+2025-10-19 17:12:36.807 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpNA9cAJ4xJKxEpVWV"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKpNA9cAJ4xJKxEpVWV\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:12:38.504 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:12:42.086 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:42.100 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:42.101 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:12:42.174 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpm638TZAd7yYmoqYK"}
+
+2025-10-19 17:12:42.196 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpmCEMH6r2w2rC1zPh"}
+
+2025-10-19 17:12:42.290 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpmZ4WFE42gjGy71MF"}
+
+2025-10-19 17:12:42.290 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKpmZ4WFE42gjGy71MF\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:12:42.291 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"systemctl list-unit-files --state=enabled --no-pager\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:12:42.801 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKpmU6v9Xq5dvwzrK4H"}
+
+2025-10-19 17:12:42.801 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKpmU6v9Xq5dvwzrK4H\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:13:46.156 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:13:46.390 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKuVAxrvEPtNvkpWKKf"}
+
+2025-10-19 17:13:46.696 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKuVzpdCtYreg8cAN3V"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKuVzpdCtYreg8cAN3V\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:13:46.697 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"systemctl --user list-unit-files --state=enabled --no-pager\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:13:46.697 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKuWEThZLZgwyUWf7XD"}
+
+2025-10-19 17:13:47.007 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKuXLC7TiDvqkyXWKgQ"}
+
+2025-10-19 17:13:47.007 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKuXLC7TiDvqkyXWKgQ\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:13:49.560 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:13:49.561 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:13:49.845 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKukTiqXL5PVvxYShfw"}
+
+2025-10-19 17:13:49.941 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKuknKSqNkmAaG5DBqw"}
+
+2025-10-19 17:13:49.942 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKuknKSqNkmAaG5DBqw\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:13:51.613 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:13:56.524 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:13:56.525 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:13:56.527 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:13:59.002 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:14:11.883 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:14:11.976 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwP1CBEhekJtpFeRLq"}
+
+2025-10-19 17:14:11.976 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwP3frZPtsqfaP8kNx"}
+
+2025-10-19 17:14:11.987 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwP2gQoEj6XxM3aso6"}
+
+2025-10-19 17:14:12.055 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwPRzP5giysrRXCTEV"}
+
+2025-10-19 17:14:12.056 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKwPRzP5giysrRXCTEV\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:14:12.056 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwPQztebZPp4JeDNLM"}
+
+2025-10-19 17:14:12.056 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKwPQztebZPp4JeDNLM\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:14:12.075 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwPSjNpoG2gPvidPAr"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKwPSjNpoG2gPvidPAr\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:14:12.076 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"mkdir -p .config home etc/systemd/system fonts scripts\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:14:17.639 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:14:17.641 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:14:17.641 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:14:17.812 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwp2qWogcjJ5Xd53AD"}
+
+2025-10-19 17:14:17.928 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKwpT8s4LA7njJ92oVt"}
+
+2025-10-19 17:14:17.928 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKwpT8s4LA7njJ92oVt\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:14:19.867 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:14:20.790 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 17:14:20.790 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:14:20.803 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:14:20.804 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:14:20.805 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:14:21.105 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKx38dKZCC7FuFAPHW6"}
+
+2025-10-19 17:14:21.199 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHKx4RmbexTSfp5vciym"}
+
+2025-10-19 17:14:21.199 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHKx4RmbexTSfp5vciym\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:14:22.940 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:14:23.145 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+
+2025-10-19 17:14:23.145 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 17:14:23.146 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 17:14:23.148 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:14:23.149 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:14:25.193 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:14:34.030 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Edit
+[DEBUG] Getting matching hook commands for PreToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 17:14:34.035 [error] [Extension Host] [DEBUG] "Permission suggestions for Edit: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 17:14:34.492 [error] [Extension Host] (node:1226085) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `exe --trace-deprecation ...` to show where the warning was created)
+2025-10-19 17:15:10.659 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/Projects/dotfiles/README.md.tmp.1232874.1760912110652
+[DEBUG] Preserving file permissions: 100644
+
+2025-10-19 17:15:10.661 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2209 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/Projects/dotfiles/README.md.tmp.1232874.1760912110652 to /home/kuroma/Storage/Projects/dotfiles/README.md
+
+2025-10-19 17:15:10.662 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/Projects/dotfiles/README.md written atomically
+
+2025-10-19 17:15:10.667 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Edit
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Edit" (1 before deduplication)
+
+2025-10-19 17:15:11.663 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:15:11.664 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:15:13.317 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:15:18.236 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+
+2025-10-19 17:15:18.236 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:15:18.238 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:15:18.238 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:15:18.238 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:15:19.771 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:15:23.051 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:15:23.051 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:24.410 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:24.766 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL2kFGdsEqpJQSQLyis"}
+
+2025-10-19 17:15:24.833 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL2kbr4KWFLCRBiG1RX"}
+
+2025-10-19 17:15:24.833 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL2kbr4KWFLCRBiG1RX\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:25.661 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:25.679 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:25.679 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:15:25.681 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:15:25.748 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL2pSXmHapVYKCdACWq"}
+
+2025-10-19 17:15:25.768 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL2pYEewEHUo2NdMx1q"}
+
+2025-10-19 17:15:25.822 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL2pq6hVtnTMMRwXCyn"}
+
+2025-10-19 17:15:25.822 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL2pq6hVtnTMMRwXCyn\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:25.865 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL2pz2LFEfnCbbWxW5s"}
+
+2025-10-19 17:15:25.865 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL2pz2LFEfnCbbWxW5s\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:27.243 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:15:28.063 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:15:28.063 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:28.137 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL2zhfxU7SKEy6h7hiE"}
+
+2025-10-19 17:15:28.205 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL312WoqDU4ykbMdrCy"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL312WoqDU4ykbMdrCy\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:28.206 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"mv packages.txt packages-aur.txt /home/kuroma/Storage/Projects/dotfiles/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:15:31.181 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:15:31.181 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:15:33.058 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:15:35.743 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:15:35.743 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:35.755 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:35.757 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:35.760 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:36.053 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3ZbqNotoBs2ydSxNq"}
+
+2025-10-19 17:15:36.053 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3ZcqB5K6smmZsvcMD"}
+
+2025-10-19 17:15:36.054 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3ZiHhD9aMtnjwRzbb"}
+
+2025-10-19 17:15:36.126 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3asjdHeJA9fit2GP2"}
+
+2025-10-19 17:15:36.127 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL3asjdHeJA9fit2GP2\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:36.128 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3atyMrRjza1DadUy5"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL3atyMrRjza1DadUy5\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:36.129 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cat /home/kuroma/Storage/Projects/dotfiles/packages-aur.txt\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:15:36.163 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3avi1LzFaVKffkKqN"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL3avi1LzFaVKffkKqN\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:37.387 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:15:37.387 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:15:37.896 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3hRszG7EY2vJ3TjXM"}
+
+2025-10-19 17:15:37.970 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL3imVXHyX5DhQJ3Hf6"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL3imVXHyX5DhQJ3Hf6\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:39.436 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:15:44.350 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 17:15:44.350 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:15:44.352 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:15:44.353 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:15:45.885 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:15:51.716 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:15:51.716 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:15:52.028 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4jszaKDLUCTEkp8AU"}
+
+2025-10-19 17:15:52.028 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4jvUZVaSt7xEu1iFZ"}
+
+2025-10-19 17:15:52.028 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4jwDYDY6jb46aQHUC"}
+
+2025-10-19 17:15:52.028 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4jyT3MakLbkyqbtCu"}
+
+2025-10-19 17:15:52.031 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4k1w2VwmBJPoKuARE"}
+
+2025-10-19 17:15:52.031 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4k4AHiE9qgXc7mmSL"}
+
+2025-10-19 17:15:52.100 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4mC8GWGpkD5xDXBaH"}
+
+2025-10-19 17:15:52.101 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL4mC8GWGpkD5xDXBaH\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:52.107 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4mCs9Wm5DGRzN74gv"}
+
+2025-10-19 17:15:52.107 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL4mCs9Wm5DGRzN74gv\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:52.108 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4mDMxFAHej7BdAdkZ"}
+
+2025-10-19 17:15:52.108 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL4mDMxFAHej7BdAdkZ\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:52.128 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4mJpgmMvDxVyQJ5Nd"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL4mJpgmMvDxVyQJ5Nd\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:52.130 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4mF6tjLPKmF2vzibR"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL4mF6tjLPKmF2vzibR\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:52.162 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL4mHaed2z4hzV9MQLh"}
+
+2025-10-19 17:15:52.162 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL4mHaed2z4hzV9MQLh\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:15:52.163 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/hypr .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/kitty .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/dunst .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/btop .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/fastfetch .config/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:16:21.211 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:16:21.307 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6v2ViSRL2Kjzg6tsh"}
+
+2025-10-19 17:16:21.307 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6v1kd5zQiPX46NUcp"}
+
+2025-10-19 17:16:21.312 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6v1FfQem6uHiMPV1V"}
+
+2025-10-19 17:16:21.320 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6v6DNMY8N23tkmwYd"}
+
+2025-10-19 17:16:21.397 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6vQpMX57Sire2WX7q"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL6vQpMX57Sire2WX7q\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:21.404 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6vV2bdwyotuVcjLC7"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL6vV2bdwyotuVcjLC7\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:21.407 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6v3jUmvKT2RJ6Sgym"}
+
+2025-10-19 17:16:21.416 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6vUHNSdQW1fnzRRph"}
+
+2025-10-19 17:16:21.417 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL6vUHNSdQW1fnzRRph\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:21.417 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6vXWddYaDFATmJsip"}
+
+2025-10-19 17:16:21.518 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6vqcTv6BW9Aj5hm1g"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL6vqcTv6BW9Aj5hm1g\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:21.521 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6vSo8dBWWY3rNyQA7"}
+
+2025-10-19 17:16:21.521 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL6vSo8dBWWY3rNyQA7\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:21.550 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL6vyJFs17AEVn76Ght"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL6vyJFs17AEVn76Ght\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:21.551 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/gtk-3.0 .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/gtk-4.0 .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/Kvantum .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/fcitx5 .config/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:16:23.930 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:16:24.280 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL77qQGeTyvdfrRXzjx"}
+
+2025-10-19 17:16:24.281 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL77ouqopNvf7DyNDDn"}
+
+2025-10-19 17:16:24.281 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL77pQgDcsqcAAMZToy"}
+
+2025-10-19 17:16:24.281 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL77tdUXTiTX4zz3L5d"}
+
+2025-10-19 17:16:24.281 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL77zac68pYdRpNCZbR"}
+
+2025-10-19 17:16:24.351 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL795oxNK7CSck2tXH6"}
+
+2025-10-19 17:16:24.351 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL795oxNK7CSck2tXH6\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:24.351 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7954qM9ExjkvNaWpW"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7954qM9ExjkvNaWpW\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:24.369 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL797YbJa2MLut9VGUf"}
+
+2025-10-19 17:16:24.369 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL797YbJa2MLut9VGUf\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:24.371 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL797JWbw9AUNUsEhsz"}
+
+2025-10-19 17:16:24.371 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL797JWbw9AUNUsEhsz\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:24.398 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL799XrPKGCnsMV9XuP"}
+
+2025-10-19 17:16:24.398 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL799XrPKGCnsMV9XuP\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:24.400 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/clipse .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/matugen .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp -r ~/.config/imv .config/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:16:26.733 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:16:27.049 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7KaqS4auewDW1munv"}
+
+2025-10-19 17:16:27.049 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7Kab9gJwTfeKnSxBP"}
+
+2025-10-19 17:16:27.050 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7KabPr5km4oALApz7"}
+
+2025-10-19 17:16:27.050 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7KdZsadG1GqcB8CRX"}
+
+2025-10-19 17:16:27.050 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7Kf4GjC3yPyWC56Qd"}
+
+2025-10-19 17:16:27.050 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7KiGzsUP9Eo81deDF"}
+
+2025-10-19 17:16:27.148 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7LuTfEweky261NfXf"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7LuTfEweky261NfXf\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:27.148 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7LuxYyVLWzCtjCLWG"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7LuxYyVLWzCtjCLWG\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:27.148 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7LwCVznzrjtMvDw6p"}
+
+2025-10-19 17:16:27.148 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7LwCVznzrjtMvDw6p\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:27.149 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7LyRwDS8dSqCH9Z2r"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7LyRwDS8dSqCH9Z2r\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:27.149 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7LxSQrthohWHXiNvx"}
+
+2025-10-19 17:16:27.149 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7LxSQrthohWHXiNvx\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:27.149 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7LyRwpEm2qGZWkziN"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7LyRwpEm2qGZWkziN\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:27.151 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp ~/.config/dolphinrc .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp ~/.config/kdeglobals .config/\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp ~/.config/mimeapps.list .config/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:16:30.898 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:16:30.899 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:16:31.105 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7dZ5CwCvPXKLRHgzt"}
+
+2025-10-19 17:16:31.240 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7eHj56d4au4oGrXQK"}
+
+2025-10-19 17:16:31.240 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7eHj56d4au4oGrXQK\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:32.878 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:16:34.415 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 17:16:34.415 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:16:34.728 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7tRXv37YRukXGiDXA"}
+
+2025-10-19 17:16:34.799 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHL7uketNKfETM9Xpd3N"}
+
+2025-10-19 17:16:34.799 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHL7uketNKfETM9Xpd3N\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:16:34.800 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"awk '{print $9}'\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:17:28.628 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:17:28.629 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:17:29.195 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLBu1NLmL7G6oTU5R69"}
+
+2025-10-19 17:17:29.275 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLBvfq61iKFn24WCAG6"}
+
+2025-10-19 17:17:29.276 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLBvfq61iKFn24WCAG6\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:17:31.651 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:17:33.058 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:17:33.133 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDAmPqzcURaTSxLPF"}
+
+2025-10-19 17:17:33.145 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDDFP5WLNPmkMABXb"}
+
+2025-10-19 17:17:33.151 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDDVikExPr56Q8MNS"}
+
+2025-10-19 17:17:33.156 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDFE5iV6SwzYgx4hM"}
+
+2025-10-19 17:17:33.171 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDDzK3yZzPxan51jz"}
+
+2025-10-19 17:17:33.211 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDVNJNoyAeKmFXLRK"}
+
+2025-10-19 17:17:33.211 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLCDVNJNoyAeKmFXLRK\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:17:33.222 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDZL1qCJaGTpW7rcE"}
+
+2025-10-19 17:17:33.223 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLCDZL1qCJaGTpW7rcE\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:17:33.235 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDZL5S8yksN5YKqpc"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLCDZL5S8yksN5YKqpc\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:17:33.236 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDcohXMmrvEeVV9N5"}
+
+2025-10-19 17:17:33.236 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLCDcohXMmrvEeVV9N5\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:17:33.238 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLCDcZCvQLeWCGHY61v"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLCDcZCvQLeWCGHY61v\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:17:33.239 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp ~/.bashrc home/.bashrc\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp ~/.bash_profile home/.bash_profile\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"cp ~/.zshrc home/.zshrc\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:18:33.161 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:18:33.161 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:18:33.298 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLGe9JCrMmPhZLysYHu"}
+
+2025-10-19 17:18:33.401 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLGenzWMTjcHBTdESy4"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLGenzWMTjcHBTdESy4\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:18:35.244 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:18:40.360 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 17:18:40.360 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:18:40.362 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:18:40.362 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:18:40.363 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:18:42.222 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:18:45.890 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:18:45.891 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:18:45.891 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//etc/X11/xorg.conf.d/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+[DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//etc/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:23:03.411 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:23:03.719 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLcaaJEQjXwcmyJTyGD"}
+
+2025-10-19 17:23:03.797 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLcayMZRXtbgpRRFP7L"}
+
+2025-10-19 17:23:03.798 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLcayMZRXtbgpRRFP7L\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:23:04.051 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:23:04.051 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//etc/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:23:05.409 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:23:05.409 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//etc/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:23:05.550 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLciS58zP3thY2SDZgQ"}
+
+2025-10-19 17:23:05.657 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLcioegeTDC7r3Fy9K4"}
+
+2025-10-19 17:23:05.657 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLcioegeTDC7r3Fy9K4\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:23:06.547 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:23:06.548 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:23:06.550 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:23:06.999 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLcoipXfidL24wewdqi"}
+
+2025-10-19 17:23:07.125 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLcq7ueh5HDkSHgTd95"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLcq7ueh5HDkSHgTd95\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:23:09.767 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:23:11.914 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 17:23:11.914 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:23:12.008 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLdC5UmxfYGMUziD2su"}
+
+2025-10-19 17:23:12.008 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLdC4V7eeQ6wW6Np5zm"}
+
+2025-10-19 17:23:12.102 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLdCTJU1TtCDsLpbawe"}
+
+2025-10-19 17:23:12.102 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLdCTJU1TtCDsLpbawe\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:23:12.132 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLdCW2sDEiN2znc43X2"}
+
+2025-10-19 17:23:12.146 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLdCgh49EE4ZZdPCdq2"}
+
+2025-10-19 17:23:12.146 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLdCgh49EE4ZZdPCdq2\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:23:12.208 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLdCvL641FHZhxvfyd6"}
+
+2025-10-19 17:23:12.208 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLdCvL641FHZhxvfyd6\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:23:12.209 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"sudo mkdir -p etc/X11/xorg.conf.d\"\n      },\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"sudo cp /etc/X11/xorg.conf.d/00-keyboard.conf etc/X11/xorg.conf.d/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:24:38.255 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:24:38.338 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLjZB9xNhMcmESQGPQm"}
+
+2025-10-19 17:24:38.428 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHLjZYj3eVbAamJTLkHA"}
+
+2025-10-19 17:24:38.428 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHLjZYj3eVbAamJTLkHA\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:24:38.428 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"sudo cp /etc/pacman.conf etc/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:25:02.146 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:25:02.146 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//etc/modprobe.d/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:25:48.515 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:25:48.515 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:25:48.516 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:25:50.621 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:25:59.678 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:28:38.226 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:28:38.228 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:28:38.229 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:28:40.601 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:28:52.585 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+
+2025-10-19 17:28:52.585 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:28:52.587 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 17:28:52.587 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:28:52.588 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:28:54.112 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:28:56.265 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:28:56.265 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:28:56.267 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Read\",\n        \"ruleContent\": \"//usr/share/fonts/**\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:29:05.515 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:29:05.516 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:29:05.517 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:29:05.683 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHM5GDF6HWfh9X25jpXw"}
+
+2025-10-19 17:29:05.788 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHM5GcZK8Xnr4YFMVfET"}
+
+2025-10-19 17:29:05.789 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHM5GcZK8Xnr4YFMVfET\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:29:09.189 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:29:10.400 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:29:10.400 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:29:10.503 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHM5csDU3unqMi5M4J4Z"}
+
+2025-10-19 17:29:10.590 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHM5dCZ1q8Mye9zKjp45"}
+
+2025-10-19 17:29:10.590 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHM5dCZ1q8Mye9zKjp45\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:29:10.591 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"sudo cp -r /usr/share/fonts/MapleMono-NF-CN fonts/\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 17:29:43.979 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:29:43.981 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:29:46.030 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:29:48.179 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:31:53.347 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 17:31:53.348 [error] [Extension Host] [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 17:31:53.349 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 17:31:55.051 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 17:31:57.410 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 17:31:57.410 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 17:31:57.502 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHMHvt1j5C53WXHCcm4k"}
+
+2025-10-19 17:31:57.583 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHMHwH5XN6v6rpvtye9G"}
+
+2025-10-19 17:31:57.584 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHMHwH5XN6v6rpvtye9G\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 17:31:57.584 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"rm -rf /home/kuroma/Storage/Projects/dotfiles/fonts/MapleMono-NF-CN\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 18:13:12.416 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:13:12.418 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:13:14.771 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:13:22.754 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+
+2025-10-19 18:13:22.755 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 18:13:22.756 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 18:13:22.757 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:13:22.757 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:13:24.600 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:13:26.134 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 18:13:26.134 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:13:26.443 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQTN1xQWqh7Zj3AXRgL"}
+
+2025-10-19 18:13:26.746 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQTPK6TDN74i7Zx7aER"}
+
+2025-10-19 18:13:26.746 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQTPK6TDN74i7Zx7aER\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:13:26.747 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"touch /home/kuroma/Storage/Projects/dotfiles/install.sh\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 18:13:31.468 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:13:31.468 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 18:13:31.468 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 18:13:31.469 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 18:13:31.470 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:13:31.471 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:13:31.561 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQTktNwgiori95gPk3T"}
+
+2025-10-19 18:13:31.643 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQTmDxrxCSkzVfaEB4Q"}
+
+2025-10-19 18:13:31.643 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQTmDxrxCSkzVfaEB4Q\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:13:33.198 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:13:49.690 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 18:13:49.693 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 18:15:13.845 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/Projects/dotfiles/install.sh.tmp.1232874.1760915713831
+
+2025-10-19 18:15:13.845 [error] [Extension Host] [DEBUG] Preserving file permissions: 100644
+
+2025-10-19 18:15:13.845 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 3812 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/Projects/dotfiles/install.sh.tmp.1232874.1760915713831 to /home/kuroma/Storage/Projects/dotfiles/install.sh
+
+2025-10-19 18:15:13.845 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/Projects/dotfiles/install.sh written atomically
+
+2025-10-19 18:15:13.846 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 18:15:13.847 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 18:15:14.842 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 18:15:14.843 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:15:14.844 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:15:16.695 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:15:17.307 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 18:15:17.308 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:15:17.507 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQbZbCWaw36VerAHZa6"}
+
+2025-10-19 18:15:17.922 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQbaN5khGKQXZTJMJm6"}
+
+2025-10-19 18:15:17.923 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQbaN5khGKQXZTJMJm6\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:15:17.923 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"chmod +x /home/kuroma/Storage/Projects/dotfiles/install.sh\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 18:15:20.836 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:15:20.837 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:15:21.092 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQbqEYSGd3LBnMvUPjT"}
+
+2025-10-19 18:15:21.170 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQbqeM3wRFKMsRuWBN8"}
+
+2025-10-19 18:15:21.171 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQbqeM3wRFKMsRuWBN8\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:15:22.529 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:15:24.692 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 18:15:24.692 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:15:24.987 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQc75nWiH3kgFoPLHeh"}
+
+2025-10-19 18:15:25.084 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQc8LShsqoVkTSkPtrr"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQc8LShsqoVkTSkPtrr\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:15:25.085 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"touch /home/kuroma/Storage/Projects/dotfiles/scripts/update-dotfiles.sh\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 18:15:28.083 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:15:28.083 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 18:15:28.083 [error] [Extension Host] [DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 18:15:28.084 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 18:15:28.085 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:15:28.086 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:15:28.436 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQcNi8fJRsxfCJxgBpi"}
+
+2025-10-19 18:15:28.521 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQcP3UVXRV8qqDQnapw"}
+
+2025-10-19 18:15:28.521 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQcP3UVXRV8qqDQnapw\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:15:30.203 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:15:41.475 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 18:15:41.476 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 18:15:44.525 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/Projects/dotfiles/scripts/update-dotfiles.sh.tmp.1232874.1760915744517
+[DEBUG] Preserving file permissions: 100644
+
+2025-10-19 18:15:44.526 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2264 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/Projects/dotfiles/scripts/update-dotfiles.sh.tmp.1232874.1760915744517 to /home/kuroma/Storage/Projects/dotfiles/scripts/update-dotfiles.sh
+
+2025-10-19 18:15:44.527 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/Projects/dotfiles/scripts/update-dotfiles.sh written atomically
+
+2025-10-19 18:15:44.527 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 18:15:45.527 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 18:15:45.527 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:15:45.528 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:15:47.107 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:15:47.724 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 18:15:47.724 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:15:48.032 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQdoVBC2T8ybby3YuC8"}
+
+2025-10-19 18:15:48.134 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQdpuVwNofp2w1reZRm"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQdpuVwNofp2w1reZRm\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:15:48.135 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"chmod +x /home/kuroma/Storage/Projects/dotfiles/scripts/update-dotfiles.sh\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 18:15:50.681 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+[DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:15:50.682 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:15:50.804 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQe2AfpTiF76BespEcv"}
+
+2025-10-19 18:15:50.879 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQe2dTAnZSiEcpigmPs"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQe2dTAnZSiEcpigmPs\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:15:52.655 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:15:57.665 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: TodoWrite
+[DEBUG] Getting matching hook commands for PreToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 18:15:57.667 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: TodoWrite
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "TodoWrite" (0 before deduplication)
+
+2025-10-19 18:15:57.667 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+
+2025-10-19 18:15:57.667 [error] [Extension Host] [DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:15:57.668 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:15:59.100 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:16:00.947 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 18:16:00.947 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:16:01.258 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQemxvXhkKbwhbR4BZN"}
+
+2025-10-19 18:16:01.332 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQeoGJdwNmehh4QKupP"}
+
+2025-10-19 18:16:01.332 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQeoGJdwNmehh4QKupP\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:16:01.333 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"touch /home/kuroma/Storage/Projects/dotfiles/.gitignore\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 18:16:04.708 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:16:04.708 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Read
+[DEBUG] Getting matching hook commands for PreToolUse with query: Read
+
+2025-10-19 18:16:04.708 [error] [Extension Host] [DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 18:16:04.708 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Read
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Read" (0 before deduplication)
+
+2025-10-19 18:16:04.710 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 18:16:04.710 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:16:04.711 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:16:05.255 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQf5HiQVg9GHNiPLvod"}
+
+2025-10-19 18:16:05.335 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQf6KUckU3WG39RSo94"}
+[ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQf6KUckU3WG39RSo94\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:16:06.789 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:16:12.024 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Write
+[DEBUG] Getting matching hook commands for PreToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+
+2025-10-19 18:16:12.024 [error] [Extension Host] [DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 18:16:12.025 [error] [Extension Host] [DEBUG] "Permission suggestions for Write: [\n  {\n    \"type\": \"setMode\",\n    \"mode\": \"acceptEdits\",\n    \"destination\": \"session\"\n  }\n]"
+
+2025-10-19 18:16:16.308 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/Storage/Projects/dotfiles/.gitignore.tmp.1232874.1760915776300
+[DEBUG] Preserving file permissions: 100644
+
+2025-10-19 18:16:16.369 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 628 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/Storage/Projects/dotfiles/.gitignore.tmp.1232874.1760915776300 to /home/kuroma/Storage/Projects/dotfiles/.gitignore
+
+2025-10-19 18:16:16.369 [error] [Extension Host] [DEBUG] File /home/kuroma/Storage/Projects/dotfiles/.gitignore written atomically
+
+2025-10-19 18:16:16.371 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Write
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 1 unique hooks for query "Write" (1 before deduplication)
+
+2025-10-19 18:16:17.373 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:16:17.374 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:16:19.098 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:16:20.218 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 18:16:20.218 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:16:20.322 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQgCHBg7okCCmn48h6D"}
+
+2025-10-19 18:16:20.322 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQgCKR43rTuawK5GPQ4"}
+
+2025-10-19 18:16:20.393 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQgCfzekUVRd8WSFpHH"}
+
+2025-10-19 18:16:20.394 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQgCfzekUVRd8WSFpHH\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:16:20.421 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQgCjiXBBnnMeyEajnh"}
+
+2025-10-19 18:16:20.422 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQgCjiXBBnnMeyEajnh\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:16:20.423 [error] [Extension Host] [DEBUG] "Permission suggestions for Bash: [\n  {\n    \"type\": \"addRules\",\n    \"rules\": [\n      {\n        \"toolName\": \"Bash\",\n        \"ruleContent\": \"tree -L 2 -a -I '.git'\"\n      }\n    ],\n    \"behavior\": \"allow\",\n    \"destination\": \"localSettings\"\n  }\n]"
+
+2025-10-19 18:16:27.809 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:16:27.810 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:16:29.848 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:16:31.087 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+
+2025-10-19 18:16:31.087 [error] [Extension Host] [DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:16:31.102 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:16:31.105 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+
+2025-10-19 18:16:31.105 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+[DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:16:31.107 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:16:31.402 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQh12nfe94wZbVyQrE4"}
+
+2025-10-19 18:16:31.493 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQh25YJ6KS9JE2H8mU2"}
+
+2025-10-19 18:16:31.494 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQh25YJ6KS9JE2H8mU2\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:16:33.231 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:16:34.768 [error] [Extension Host] [DEBUG] executePreToolHooks called for tool: Bash
+[DEBUG] Getting matching hook commands for PreToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:16:34.781 [error] [Extension Host] [DEBUG] Getting matching hook commands for PostToolUse with query: Bash
+[DEBUG] Found 1 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "Bash" (0 before deduplication)
+
+2025-10-19 18:16:34.782 [error] [Extension Host] [DEBUG] Hooks: getAsyncHookResponseAttachments called
+[DEBUG] Hooks: checkForNewResponses called
+[DEBUG] Hooks: Found 0 total hooks in registry
+
+2025-10-19 18:16:34.783 [error] [Extension Host] [DEBUG] Hooks: checkForNewResponses returning 0 responses
+
+2025-10-19 18:16:34.784 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+[DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:16:34.885 [error] [Extension Host] [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQhGbRJk8RuzZRQK62L"}
+
+2025-10-19 18:16:34.961 [error] [Extension Host] [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth authentication is currently not supported."},"request_id":"req_011CUHQhGumdXeEQmfoN7iHW"}
+
+2025-10-19 18:16:34.961 [error] [Extension Host] [ERROR] "Error: Error: 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"OAuth authentication is currently not supported.\"},\"request_id\":\"req_011CUHQhGumdXeEQmfoN7iHW\"}\n    at generate (/$bunfs/root/claude:199:83061)\n    at makeRequest (/$bunfs/root/claude:353:5345)\n    at processTicksAndRejections (native:7:39)"
+
+2025-10-19 18:16:36.304 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:16:46.474 [error] [Extension Host] [DEBUG] Getting matching hook commands for Stop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
+2025-10-19 18:19:16.287 [error] [Extension Host] Spawning Claude Code native binary: /home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude --output-format stream-json --verbose --input-format stream-json --append-system-prompt 
+# VSCode Extension Context
+
+You are running inside a VSCode native extension environment.
+
+## Code References in Text
+IMPORTANT: When referencing files or code locations, use markdown link syntax to make them clickable:
+- For files: [filename.ts](src/filename.ts)
+- For specific lines: [filename.ts:42](src/filename.ts#L42)
+- For a range of lines: [filename.ts:42-51](src/filename.ts#L42-L51)
+- For folders: [src/utils/](src/utils/)
+Unless explicitly asked for by the user, DO NOT USE backtickets ` or HTML tags like code for file references - always use markdown [text](link) format.
+The URL links should be relative paths from the root of  the user's workspace.
+
+## User Selection Context
+The user's IDE selection (if any) is included in the conversation context and marked with ide_selection tags. This represents code or text the user has highlighted in their editor and may or may not be relevant to their request. --max-thinking-tokens 0 --model default --debug-to-stderr --permission-prompt-tool stdio --resume 2ca72b45-74e2-41d7-9698-be94f83889b8 --permission-mode default --debug
+2025-10-19 18:19:16.699 [error] [Extension Host] [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+
+2025-10-19 18:19:16.705 [error] [Extension Host] [DEBUG] >>>>> getSkillsIfEnabled() CALLED <<<<<
+[DEBUG] ENABLE_SKILLS value: true, type: boolean
+[DEBUG] ENABLE_SKILLS check passed, loading skills...
+
+2025-10-19 18:19:16.706 [error] [Extension Host] [DEBUG] Loading skills from directories: managed=/etc/claude-code/.claude/skills, user=/home/kuroma/.claude/skills, project=/home/kuroma/.claude/skills
+
+2025-10-19 18:19:16.706 [error] [Extension Host] [DEBUG] >>>>> getPluginSkills CALLED <<<<<
+
+2025-10-19 18:19:16.713 [error] [Extension Host] [DEBUG] getPluginSkills: Processing 0 enabled plugins
+[DEBUG] Total plugin skills loaded: 0
+[DEBUG] Total plugin commands loaded: 0
+
+2025-10-19 18:19:16.714 [error] [Extension Host] [DEBUG] Registered 0 hooks from 0 plugins
+[DEBUG] Loaded 0 skills total (managed: 0, user: 0, project: 0)
+
+2025-10-19 18:19:16.714 [error] [Extension Host] [DEBUG] getSkillsIfEnabled returning: 0 skill dir commands, 0 plugin skills
+
+2025-10-19 18:19:16.721 [error] [Extension Host] [DEBUG] Creating shell snapshot for zsh (/usr/bin/zsh)
+
+2025-10-19 18:19:16.722 [error] [Extension Host] [DEBUG] Looking for shell config file: /home/kuroma/.zshrc
+[DEBUG] Snapshots directory: /home/kuroma/.claude/shell-snapshots
+
+2025-10-19 18:19:16.722 [error] [Extension Host] [DEBUG] Creating snapshot at: /home/kuroma/.claude/shell-snapshots/snapshot-zsh-1760915956721-ls1v0p.sh
+[DEBUG] Shell binary exists: true
+[DEBUG] Execution timeout: 10000ms
+
+2025-10-19 18:19:16.722 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude/todos/9914583f-5288-4fbe-ae6c-403917a754ed-agent-9914583f-5288-4fbe-ae6c-403917a754ed.json.tmp.1297628.1760915956722
+
+2025-10-19 18:19:16.726 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 2 bytes
+[DEBUG] Renaming /home/kuroma/.claude/todos/9914583f-5288-4fbe-ae6c-403917a754ed-agent-9914583f-5288-4fbe-ae6c-403917a754ed.json.tmp.1297628.1760915956722 to /home/kuroma/.claude/todos/9914583f-5288-4fbe-ae6c-403917a754ed-agent-9914583f-5288-4fbe-ae6c-403917a754ed.json
+
+2025-10-19 18:19:16.727 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude/todos/9914583f-5288-4fbe-ae6c-403917a754ed-agent-9914583f-5288-4fbe-ae6c-403917a754ed.json written atomically
+
+2025-10-19 18:19:16.767 [error] [Extension Host] [DEBUG] Total plugin agents loaded: 0
+
+2025-10-19 18:19:16.770 [error] [Extension Host] [DEBUG] Shell snapshot created successfully (51652 bytes)
+
+2025-10-19 18:19:16.774 [error] [Extension Host] [DEBUG] Getting matching hook commands for SessionStart with query: resume
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+
+2025-10-19 18:19:16.939 [error] [Extension Host] [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/home/kuroma/.vscode-oss/extensions/anthropic.claude-code-2.0.22-linux-x64/resources/native-binary/claude)
+
+2025-10-19 18:19:16.950 [error] [Extension Host] [DEBUG] "rg error (signal=null, code=2, stderr: rg: Resource temporarily unavailable (os error 11)\n), 9011 results"
+
+2025-10-19 18:19:16.953 [error] [Extension Host] [DEBUG] Skills and commands included in Skill tool:
+
+2025-10-19 18:19:16.953 [error] [Extension Host] [DEBUG] Slash commands included in SlashCommand tool:
+
+2025-10-19 18:19:17.106 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1297628.1760915957105
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 18:19:17.110 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+
+2025-10-19 18:19:17.110 [error] [Extension Host] [DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1297628.1760915957105 to /home/kuroma/.claude.json
+
+2025-10-19 18:19:17.110 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 18:19:17.160 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1297628.1760915957159
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 18:19:17.162 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1297628.1760915957159 to /home/kuroma/.claude.json
+
+2025-10-19 18:19:17.163 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 18:19:17.163 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1297628.1760915957163
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 18:19:17.166 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1297628.1760915957163 to /home/kuroma/.claude.json
+
+2025-10-19 18:19:17.166 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 18:19:17.183 [error] [Extension Host] [DEBUG] Writing to temp file: /home/kuroma/.claude.json.tmp.1297628.1760915957182
+[DEBUG] Preserving file permissions: 100600
+
+2025-10-19 18:19:17.185 [error] [Extension Host] [DEBUG] Temp file written successfully, size: 33068 bytes
+[DEBUG] Applied original permissions to temp file
+[DEBUG] Renaming /home/kuroma/.claude.json.tmp.1297628.1760915957182 to /home/kuroma/.claude.json
+
+2025-10-19 18:19:17.186 [error] [Extension Host] [DEBUG] File /home/kuroma/.claude.json written atomically
+
+2025-10-19 18:19:17.856 [error] [Extension Host] [DEBUG] Stream started - received first chunk
+
+2025-10-19 18:19:19.167 [error] [Extension Host] [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+[DEBUG] Found 0 hook matchers in settings
+[DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+
