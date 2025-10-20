@@ -57,7 +57,6 @@ RICE_CONFIGS=(
     # Riced applications
     "Code - OSS"
     "GIMP"
-    "mozilla"
     "fcitx5"
     "mozc"
 

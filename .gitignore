@@ -1,30 +1,10 @@
 # Exclude cache and temporary files from version control
 
 # VS Code cache and temporary files
-.config/Code - OSS/Cache/
-.config/Code - OSS/CachedData/
-.config/Code - OSS/CachedExtensionVSIXs/
-.config/Code - OSS/CachedProfilesData/
-.config/Code - OSS/Code Cache/
-.config/Code - OSS/Cookies*
-.config/Code - OSS/Crashpad/
-.config/Code - OSS/DIPS*
-.config/Code - OSS/Dawn*/
-.config/Code - OSS/GPUCache/
-.config/Code - OSS/Local Storage/
-.config/Code - OSS/Network Persistent State
-.config/Code - OSS/Service Worker/
-.config/Code - OSS/Session Storage/
-.config/Code - OSS/Shared*/
-.config/Code - OSS/TransportSecurity
-.config/Code - OSS/Trust Tokens*
-.config/Code - OSS/.org.chromium.*
-.config/Code - OSS/User/History/
-.config/Code - OSS/User/workspaceStorage/
-.config/Code - OSS/User/globalStorage/
-.config/Code - OSS/logs/
-.config/Code - OSS/Preferences
-.config/Code - OSS/Dictionaries/
+.config/Code - OSS/*
+!.config/Code - OSS/User/themes
+!.config/Code - OSS/User/settings.json
+!.config/Code - OSS/User/vscode-colors.json
 
 # Mozilla/Firefox cache
 .config/mozilla/firefox/*/cache*/

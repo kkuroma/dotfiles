@@ -64,25 +64,25 @@ submenu_delay=250
 click_behavior=0
 
 [GeneralColors]
-window.color=#1a1112
-base.color=#e5bdc0
-alt.base.color=#413737
-button.color=#312828
-light.color=#413737
-mid.light.color=#312828
-dark.color=#1a1112
-mid.color=#261d1e
-highlight.color=#ffb2bb
-inactive.highlight.color=#524344
-text.color=#43292c
-window.text.color=#f0dedf
-button.text.color=#f0dedf
-disabled.text.color=#9f8c8e
-tooltip.text.color=#f0dedf
-highlight.text.color=#561d28
-link.color=#ffb2bb
-link.visited.color=#e9bf8f
-progress.indicator.text.color=#561d28
+window.color=#1a1110
+base.color=#e7bdb8
+alt.base.color=#423735
+button.color=#322826
+light.color=#423735
+mid.light.color=#322826
+dark.color=#1a1110
+mid.color=#271d1c
+highlight.color=#ffb3ac
+inactive.highlight.color=#534341
+text.color=#442927
+window.text.color=#f1dedc
+button.text.color=#f1dedc
+disabled.text.color=#a08c8a
+tooltip.text.color=#f1dedc
+highlight.text.color=#571e1a
+link.color=#ffb3ac
+link.visited.color=#e1c38c
+progress.indicator.text.color=#571e1a
 
 [Hacks]
 transparent_ktitle_label=true
@@ -113,10 +113,10 @@ frame.right=3
 interior=true
 interior.element=button
 indicator.size=8
-text.normal.color=#f0dedf
-text.focus.color=#561d28
-text.press.color=#561d28
-text.toggle.color=#561d28
+text.normal.color=#f1dedc
+text.focus.color=#571e1a
+text.press.color=#571e1a
+text.toggle.color=#571e1a
 text.shadow=0
 text.margin=1
 text.iconspacing=4
@@ -129,10 +129,10 @@ frame.expansion=0
 
 [PanelButtonTool]
 inherits=PanelButtonCommand
-text.normal.color=#f0dedf
-text.focus.color=#561d28
-text.press.color=#561d28
-text.toggle.color=#561d28
+text.normal.color=#f1dedc
+text.focus.color=#571e1a
+text.press.color=#571e1a
+text.toggle.color=#571e1a
 indicator.element=arrow
 
 [ToolbarButton]
@@ -153,20 +153,20 @@ frame.left=3
 frame.right=3
 frame.element=menu
 interior.element=menu
-text.normal.color=#f0dedf
-text.focus.color=#561d28
-text.press.color=#561d28
-text.toggle.color=#561d28
+text.normal.color=#f1dedc
+text.focus.color=#571e1a
+text.press.color=#571e1a
+text.toggle.color=#571e1a
 
 [MenuItem]
 frame=true
 frame.element=menuitem
 interior=true
 interior.element=menuitem
-text.normal.color=#f0dedf
-text.focus.color=#561d28
-text.press.color=#561d28
-text.toggle.color=#561d28
+text.normal.color=#f1dedc
+text.focus.color=#571e1a
+text.press.color=#571e1a
+text.toggle.color=#571e1a
 indicator.element=menuitem
 
 [ItemView]
@@ -182,10 +182,10 @@ text.margin.top=2
 text.margin.bottom=2
 text.margin.left=4
 text.margin.right=4
-text.normal.color=#f0dedf
-text.focus.color=#f0dedf
-text.press.color=#561d28
-text.toggle.color=#561d28
+text.normal.color=#f1dedc
+text.focus.color=#f1dedc
+text.press.color=#571e1a
+text.toggle.color=#571e1a
 min_width=+0.3font
 min_height=+0.3font
 frame.expansion=0
@@ -196,13 +196,13 @@ interior.element=header
 frame.element=header
 frame.top=1
 frame.bottom=1
-text.normal.color=#f0dedf
-text.focus.color=#561d28
-text.press.color=#561d28
-text.toggle.color=#561d28
+text.normal.color=#f1dedc
+text.focus.color=#571e1a
+text.press.color=#571e1a
+text.toggle.color=#571e1a
 
 [TreeExpander]
 inherits=PanelButtonCommand
 indicator.size=12
 indicator.element=tree
-text.normal.color=#f0dedf
+text.normal.color=#f1dedc
