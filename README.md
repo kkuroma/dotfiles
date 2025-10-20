@@ -15,7 +15,7 @@ Follow these steps to replicate this setup on another Arch Linux system:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url> ~/dotfiles
+git clone https://github.com/kkuroma/dotfiles ~/dotfiles
 cd ~/dotfiles
 ```
 
