@@ -2,7 +2,7 @@
 
 This repository contains my Arch Linux Hyprland rice configuration, including packages, dotfiles, and system settings.
 
-![](assets/2025-10-18_23-36-51.mp4)
+<video src="assets/2025-10-18_23-36-51.mp4" controls></video>
 
 ## Pulling Configs from Current System
 
