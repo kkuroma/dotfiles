@@ -1,29 +1,29 @@
 /* Keep sidebar dark with light text */
 QDockWidget, QDockWidget * {
-    color: #f1dedc !important;
-    background-color: #1a1110 !important;
+    color: #f0dedf !important;
+    background-color: #1a1112 !important;
 }
 
 /* Toolbars dark */
 QToolBar, QToolBar *, QMenuBar, QMenuBar * {
-    color: #f1dedc !important;
-    background-color: #271d1c !important;
+    color: #f0dedf !important;
+    background-color: #261d1e !important;
 }
 
 /* Address bar dark */
 QLineEdit, QComboBox {
-    color: #f1dedc !important;
-    background-color: #271d1c !important;
+    color: #f0dedf !important;
+    background-color: #261d1e !important;
 }
 
 /* Status bar dark */
 QStatusBar, QStatusBar * {
-    color: #f1dedc !important;
-    background-color: #1a1110 !important;
+    color: #f0dedf !important;
+    background-color: #1a1112 !important;
 }
 
 /* Selected items */
 *:selected {
-    color: #571e1a !important;
-    background-color: #ffb3ac !important;
+    color: #561d28 !important;
+    background-color: #ffb2bb !important;
 }

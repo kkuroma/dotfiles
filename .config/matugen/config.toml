@@ -47,13 +47,14 @@ input_path = '~/.config/matugen/templates/fcitx5-theme.conf'
 output_path = '~/.local/share/fcitx5/themes/material-you/theme.conf'
 post_hook = 'killall fcitx5; fcitx5 -d &'
 
-[templates.gtk3]
-input_path = '~/.config/matugen/templates/gtk-3.css'
-output_path = '~/.config/gtk-3.0/gtk.css'
+[templates.gtk3-colors]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
 
-[templates.gtk4]
-input_path = '~/.config/matugen/templates/gtk-3.css'
-output_path = '~/.config/gtk-4.0/gtk.css'
+[templates.gtk4-colors]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+post_hook = 'bash -c "gsettings set org.gnome.desktop.interface gtk-theme Adwaita && sleep 0.1 && gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && killall xdg-desktop-portal-gtk 2>/dev/null; xsettingsd-restart 2>/dev/null || true"'
 
 [templates.kvantum]
 input_path = '~/.config/matugen/templates/kvantum.kvconfig'

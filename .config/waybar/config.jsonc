@@ -149,6 +149,6 @@
     "custom/power": {
         "format": "󰐥",
         "tooltip": false,
-        "on-click": "wlogout --buttons-per-row 2"
+        "on-click": "wlogout --buttons-per-row 3"
     }
 }

@@ -69,3 +69,21 @@ button:focus {
 #reboot:hover {
     background-color: @surface_container_highest;
 }
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"));
+    background-color: @surface_container;
+}
+
+#suspend:hover {
+    background-color: @surface_container_highest;
+}
+
+#hibernate {
+    background-image: image(url("/usr/share/wlogout/icons/hibernate.png"));
+    background-color: @surface_container;
+}
+
+#hibernate:hover {
+    background-color: @surface_container_highest;
+}

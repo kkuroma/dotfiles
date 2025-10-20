@@ -1,49 +1,226 @@
-/* GTK3 Material You Colors */
+/* Import Matugen generated Material You colors */
+@import url("colors.css");
 
-@define-color theme_bg_color #1a1110;
-@define-color theme_fg_color #f1dedc;
-@define-color theme_base_color #271d1c;
-@define-color theme_text_color #f1dedc;
-@define-color theme_selected_bg_color #ffb3ac;
-@define-color theme_selected_fg_color #571e1a;
-@define-color insensitive_bg_color #1a1110;
-@define-color insensitive_fg_color #a08c8a;
-@define-color insensitive_base_color #231918;
-@define-color borders #534341;
-@define-color warning_color #e1c38c;
-@define-color error_color #ffb4ab;
-@define-color success_color #e7bdb8;
+/* Set JetBrains Mono for GTK apps only */
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
 
-/* Additional Material You colors */
-@define-color accent_bg_color #ffb3ac;
-@define-color accent_fg_color #571e1a;
-@define-color accent_color #ffb3ac;
-@define-color destructive_bg_color #ffb4ab;
-@define-color destructive_fg_color #690005;
-@define-color destructive_color #ffb4ab;
-@define-color success_bg_color #e7bdb8;
-@define-color success_fg_color #442927;
-@define-color success_color #e7bdb8;
-@define-color warning_bg_color #e1c38c;
-@define-color warning_fg_color #3f2d04;
-@define-color warning_color #e1c38c;
-@define-color error_bg_color #ffb4ab;
-@define-color error_fg_color #690005;
-@define-color window_bg_color #1a1110;
-@define-color window_fg_color #f1dedc;
-@define-color view_bg_color #271d1c;
-@define-color view_fg_color #f1dedc;
-@define-color headerbar_bg_color #322826;
-@define-color headerbar_fg_color #f1dedc;
-@define-color headerbar_border_color #534341;
-@define-color headerbar_backdrop_color #1a1110;
-@define-color headerbar_shade_color #000000;
-@define-color card_bg_color #322826;
-@define-color card_fg_color #f1dedc;
-@define-color card_shade_color #000000;
-@define-color dialog_bg_color #322826;
-@define-color dialog_fg_color #f1dedc;
-@define-color popover_bg_color #322826;
-@define-color popover_fg_color #f1dedc;
-@define-color shade_color #000000;
-@define-color scrollbar_outline_color #534341;
+/* Apply Material You colors to GTK3 widgets - using !important to override Adwaita */
+window {
+    background-color: @surface;
+    color: @on_surface;
+}
+
+.background {
+    background-color: @surface;
+    color: @on_surface;
+}
+
+/* Override Adwaita's @theme_bg_color with dark values */
+@define-color theme_bg_color @surface;
+@define-color theme_fg_color @on_surface;
+@define-color theme_base_color @surface_container;
+@define-color theme_text_color @on_surface;
+@define-color theme_selected_bg_color @primary;
+@define-color theme_selected_fg_color @on_primary;
+@define-color insensitive_bg_color @surface_dim;
+@define-color insensitive_fg_color @outline;
+@define-color insensitive_base_color @surface_container_low;
+@define-color theme_unfocused_bg_color @surface;
+@define-color theme_unfocused_fg_color @on_surface;
+@define-color theme_unfocused_base_color @surface_container;
+@define-color theme_unfocused_text_color @on_surface;
+@define-color theme_unfocused_selected_bg_color @primary_container;
+@define-color theme_unfocused_selected_fg_color @on_primary_container;
+@define-color borders @outline_variant;
+@define-color unfocused_borders @outline;
+
+/* Force dark mode on headerbar - use higher specificity */
+window headerbar,
+window .titlebar,
+headerbar,
+.titlebar,
+headerbar.default-decoration,
+.titlebar.default-decoration {
+    background-color: @surface_container_high;
+    background-image: none;
+    color: @on_surface;
+    border-color: @outline_variant;
+    box-shadow: none;
+}
+
+/* Ensure dark mode persists on hover and backdrop states */
+window headerbar:hover,
+window .titlebar:hover,
+window headerbar:backdrop,
+window .titlebar:backdrop,
+headerbar:hover,
+.titlebar:hover,
+headerbar:backdrop,
+.titlebar:backdrop {
+    background-color: @surface_container_high;
+    background-image: none;
+    color: @on_surface;
+    border-color: @outline_variant;
+}
+
+headerbar button,
+headerbar button:hover,
+headerbar button:backdrop {
+    background-color: transparent;
+    background-image: none;
+}
+
+.view, textview text {
+    background-color: @surface_container;
+    color: @on_surface;
+}
+
+entry {
+    background-color: @surface_container;
+    color: @on_surface;
+    border-color: @outline_variant;
+}
+
+entry:focus {
+    border-color: @primary;
+}
+
+button {
+    background-color: @surface_container;
+    background-image: none;
+    color: @on_surface;
+    border-color: @outline_variant;
+}
+
+button:hover {
+    background-color: @primary;
+    background-image: none;
+    color: @on_primary;
+    border-color: @primary;
+}
+
+button:active {
+    background-color: @primary_container;
+    background-image: none;
+    color: @on_primary_container;
+}
+
+/* File chooser dialog buttons */
+filechooser button,
+dialog button {
+    background-color: @surface_container;
+    background-image: none;
+    color: @on_surface;
+    border-color: @outline_variant;
+}
+
+filechooser button:hover,
+dialog button:hover {
+    background-color: @primary;
+    background-image: none;
+    color: @on_primary;
+}
+
+.card {
+    background-color: @surface_container_high;
+    color: @on_surface;
+}
+
+popover, popover.background {
+    background-color: @surface_container_high;
+    color: @on_surface;
+}
+
+.dialog-vbox, dialog {
+    background-color: @surface_container_high;
+    color: @on_surface;
+}
+
+/* Selection colors */
+selection,
+*:selected {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+/* Scrollbars */
+scrollbar {
+    background-color: @surface;
+}
+
+scrollbar slider {
+    background-color: @outline;
+}
+
+scrollbar slider:hover {
+    background-color: @primary;
+}
+
+/* Menus */
+menu,
+.menu {
+    background-color: @surface_container_high;
+    color: @on_surface;
+}
+
+menuitem:hover {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: @surface_container_low;
+    color: @on_surface;
+}
+
+/* Toolbar */
+toolbar {
+    background-color: @surface_container;
+    color: @on_surface;
+}
+
+/* Tooltips */
+tooltip {
+    background-color: @inverse_surface;
+    color: @inverse_on_surface;
+}
+
+/* Notebook tabs */
+notebook {
+    background-color: @surface;
+}
+
+notebook header {
+    background-color: @surface_container;
+}
+
+notebook tab {
+    background-color: @surface_container;
+    color: @on_surface;
+}
+
+notebook tab:checked {
+    background-color: @surface_container_high;
+    border-bottom: 2px solid @primary;
+}
+
+/* List rows */
+list,
+row {
+    background-color: @surface_container;
+    color: @on_surface;
+}
+
+row:selected {
+    background-color: @primary;
+    color: @on_primary;
+}
+
+/* Remove CSD padding/gaps */
+decoration {
+    margin: 0;
+    padding: 0;
+}

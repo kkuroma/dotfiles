@@ -48,12 +48,15 @@ if [ -n "$selected" ]; then
 
     # Check if file exists
     if [ -f "$wallpaper_path" ]; then
+        # Update hyprlock config with new wallpaper path
+        sed -i "s|path = .*|path = $wallpaper_path|" "$HOME/.config/hypr/hyprlock.conf"
+
         # Apply wallpaper and generate colors system-wide using matugen
         matugen image "$wallpaper_path" &
         # Reset notification style and send notification
         sleep 0.5
         killall dunst; dunst &
-        notify-send "Applying Wallpaper & Theme" "$selected" -i "$wallpaper_path" 
+        notify-send "Applying Wallpaper & Theme" "$selected" -i "$wallpaper_path"
     else
         notify-send "Error" "Wallpaper file not found: $wallpaper_path"
     fi
