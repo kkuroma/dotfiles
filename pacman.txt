@@ -28,6 +28,7 @@ fcitx5-qt
 firefox
 gimp
 git
+gnome-disk-utility
 grim
 grub
 grub-btrfs
