@@ -67,7 +67,7 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
-polkit-kde-agent
+polkit-gnome
 qt5-wayland
 qt5ct
 qt6-wayland
@@ -117,6 +117,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-utils
 xorg-server
+xorg-xhost
 xorg-xinit
 zram-generator
 zsh
