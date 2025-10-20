@@ -1,4 +1,0 @@
-[options]
-overlay = true
-overlay_text = [$imv_current_index/$imv_file_count] [$imv_width x $imv_height] $(basename $imv_current_file) 
-overlay_font = monospace:12

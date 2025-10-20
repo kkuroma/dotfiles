@@ -1,1 +1,0 @@
-2025-10-19 00:11:06.101 [error] Failed to set sticky bit on /tmp/kuroma-code-oss-zsh: Error: ENOENT: no such file or directory, chmod '/tmp/kuroma-code-oss-zsh'
