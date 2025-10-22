@@ -1,5 +1,7 @@
 clipse
 clipse-debug
+gslapper
+gslapper-debug
 hyprgraphics-git
 hyprgraphics-git-debug
 hyprlang-git
@@ -17,6 +19,7 @@ matugen-bin
 matugen-bin-debug
 minecraft-launcher
 minecraft-launcher-debug
+mpvpaper-debug
 neofetch
 numix-circle-icon-theme-git
 numix-icon-theme-git
@@ -27,6 +30,7 @@ pwvucontrol
 pwvucontrol-debug
 python-nvidia-ml-py
 python-pynvml
+sddm-sugar-dark
 wlogout
 wlogout-debug
 yay-git

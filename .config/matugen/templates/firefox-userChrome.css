@@ -1,145 +1,64 @@
-/* Material You Firefox Theme */
+/*    __            __  ____            */
+/*   / /____  _  __/ /_/ __/___  _  __  */
+/*  / __/ _ \| |/_/ __/ /_/ __ \| |/_/  */
+/* / /_/  __/>  </ /_/ __/ /_/ />  <    */
+/* \__/\___/_/|_|\__/_/  \____/_/|_|    */
+/* Material You colors via matugen */
 
-:root {
-    --matu-surface: {{colors.surface.default.hex}};
-    --matu-surface-container: {{colors.surface_container.default.hex}};
-    --matu-surface-container-high: {{colors.surface_container_high.default.hex}};
-    --matu-surface-container-highest: {{colors.surface_container_highest.default.hex}};
-    --matu-on-surface: {{colors.on_surface.default.hex}};
-    --matu-on-surface-variant: {{colors.on_surface_variant.default.hex}};
-    --matu-primary: {{colors.primary.default.hex}};
-    --matu-on-primary: {{colors.on_primary.default.hex}};
-    --matu-primary-container: {{colors.primary_container.default.hex}};
-    --matu-secondary: {{colors.secondary.default.hex}};
-    --matu-tertiary: {{colors.tertiary.default.hex}};
-    --matu-outline: {{colors.outline.default.hex}};
-    --matu-outline-variant: {{colors.outline_variant.default.hex}};
+@import url("browser.css");
+@import url("findbar.css");
+@import url("icons.css");
+@import url("menus.css");
+@import url("navbar.css");
+@import url("overwrites.css");
+@import url("sidebar.css");
+@import url("tabs.css");
+@import url("urlbar.css");
+
+/* configurations - DO NOT CHANGE ORDER */
+@import url("defaults.css");
+@import url("config.css");
+
+* {
+  font-family: var(--tf-font-family);
+  font-size: var(--tf-font-size);
 }
 
-/* Toolbar background */
+body {
+  background-color: var(--tf-bg);
+}
+
+::placeholder {
+  text-transform: var(--tf-text-transform);
+}
+
+/* Move bookmarks toolbar to bottom */
 #navigator-toolbox {
-    background-color: var(--matu-surface-container) !important;
-    border: none !important;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Tab bar background */
-#TabsToolbar {
-    background-color: var(--matu-surface-container) !important;
-}
-
-/* Active tab */
-.tabbrowser-tab[selected="true"] .tab-background {
-    background-color: var(--matu-surface-container-highest) !important;
-}
-
-/* Inactive tabs */
-.tabbrowser-tab:not([selected="true"]) .tab-background {
-    background-color: var(--matu-surface-container-high) !important;
-}
-
-/* Tab hover */
-.tabbrowser-tab:hover .tab-background {
-    background-color: var(--matu-surface-container-highest) !important;
-}
-
-/* Tab text color */
-.tab-label {
-    color: var(--matu-on-surface) !important;
-}
-
-/* URL bar */
-#urlbar {
-    background-color: var(--matu-surface-container-highest) !important;
-    color: var(--matu-on-surface) !important;
-    border: 1px solid var(--matu-outline-variant) !important;
-    border-radius: 12px !important;
-}
-
-#urlbar:focus-within {
-    background-color: var(--matu-surface-container-highest) !important;
-    border-color: var(--matu-primary) !important;
-    box-shadow: 0 0 0 1px var(--matu-primary) !important;
-}
-
-/* Search bar */
-#searchbar {
-    background-color: var(--matu-surface-container-highest) !important;
-    color: var(--matu-on-surface) !important;
-    border: 1px solid var(--matu-outline-variant) !important;
-    border-radius: 12px !important;
-}
-
-/* Sidebar */
-#sidebar-box {
-    background-color: var(--matu-surface) !important;
-}
-
-/* Context menu */
-menupopup {
-    background-color: var(--matu-surface-container-high) !important;
-    color: var(--matu-on-surface) !important;
-    border: 1px solid var(--matu-outline) !important;
-    border-radius: 8px !important;
-}
-
-menuitem:hover {
-    background-color: var(--matu-primary-container) !important;
-    color: var(--matu-on-surface) !important;
-}
-
-/* Buttons */
-toolbarbutton {
-    color: var(--matu-on-surface) !important;
-}
-
-toolbarbutton:hover {
-    background-color: var(--matu-surface-container-highest) !important;
-    border-radius: 8px !important;
-}
-
-/* Active/pressed buttons */
-toolbarbutton[open="true"],
-toolbarbutton:active {
-    background-color: var(--matu-primary-container) !important;
-}
-
-/* Bookmarks bar */
 #PersonalToolbar {
-    background-color: var(--matu-surface-container) !important;
+  order: 100 !important; /* Move to bottom */
+  margin: 2px 8px 8px !important; /* Adjust margin for bottom position */
 }
 
-.bookmark-item {
-    color: var(--matu-on-surface) !important;
+/* Enhanced selected tab highlighting - entire box */
+.tabbrowser-tab[selected="true"] {
+  background-color: {{colors.primary_container.default.hex}} !important;
+  border-radius: 4px !important;
 }
 
-.bookmark-item:hover {
-    background-color: var(--matu-surface-container-highest) !important;
-    border-radius: 6px !important;
+.tab-background[selected="true"] {
+  background-color: {{colors.primary_container.default.hex}} !important;
+  box-shadow: inset 0 0 0 2px {{colors.primary.default.hex}} !important;
 }
 
-/* Remove tab separators */
-.tabbrowser-tab::after,
-.tabbrowser-tab::before {
-    display: none !important;
+.tabbrowser-tab[selected="true"] .tab-label {
+  color: {{colors.on_primary_container.default.hex}} !important;
+  font-weight: bold !important;
 }
 
-/* Scrollbar styling */
-scrollbar {
-    background-color: var(--matu-surface) !important;
-}
-
-thumb {
-    background-color: var(--matu-outline) !important;
-    border-radius: 8px !important;
-}
-
-thumb:hover {
-    background-color: var(--matu-primary) !important;
-}
-
-/* Findbar */
-.findbar-textbox {
-    background-color: var(--matu-surface-container-highest) !important;
-    color: var(--matu-on-surface) !important;
-    border: 1px solid var(--matu-outline-variant) !important;
+.tabbrowser-tab[selected="true"] .tab-icon-image {
+  opacity: 1 !important;
 }

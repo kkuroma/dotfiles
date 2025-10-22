@@ -57,7 +57,7 @@
     },
 
     "network": {
-        "format": "󰛳 {bandwidthDownBits}",
+        "format": "󰇚 {bandwidthDownBits} 󰕒 {bandwidthUpBits}",
         "format-disconnected": "󰛳 Disconnected",
         "tooltip-format": "Down: {bandwidthDownBits} Up: {bandwidthUpBits}",
         "interval": 2,
@@ -77,7 +77,7 @@
         "path": "/",
         "tooltip-format": "{used} / {total} used ({percentage_used}%)",
         "interval": 30,
-        "on-click": "kitty --class floating --title floating -e btop"
+        "on-click": "kitty --class floating --title floating -e watch duf"
     },
 
     // Center modules
@@ -103,27 +103,27 @@
         "exec": "~/.config/waybar/scripts/weather.sh",
         "interval": 3600,
         "format": "{}",
-        "tooltip": false,
+        "tooltip-format": "Toggle C/F",
         "on-click": "~/.config/waybar/scripts/weather.sh toggle",
         "signal": 8
     },
 
     "custom/clipboard": {
         "format": "󰅇",
-        "tooltip": false,
-        "on-click": "kitty --class floating --title 'Clipboard Manager' -e clipse"
+        "tooltip-format": "Open Clipboard",
+        "on-click": "kitty --class floating --title 'Clipboargd Manager' -e clipse"
     },
 
     "custom/screenshot": {
         "format": "󰹑",
-        "tooltip": false,
-        "on-click": "grim -g \"$(slurp)\" - | wl-copy && notify-send 'Screenshot copied to clipboard'"
+        "tooltip-format": "Take a Screenshot",
+        "on-click": "REGION=$(slurp); [ $? -eq 0 ] && grim -g \"$REGION\" - | wl-copy && notify-send 'Screenshot copied to clipboard' || notify-send 'Cancelled Screenshot'"
     },
 
     "network#wifi": {
         "format-wifi": "󰤨 {signalStrength}%",
         "format-disconnected": "󰤭 Disconnected",
-        "tooltip-format": "{essid} ({signalStrength}%)",
+        "tooltip-format": "Wifi: {essid} ({signalStrength}%)",
         "on-click": "~/.config/waybar/scripts/wifi-menu.sh"
     },
 
@@ -134,7 +134,7 @@
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "hyprctl dispatch exec pwvucontrol",
-        "tooltip-format": "{desc}"
+        "tooltip-format": "Current volume = {volume}"
     },
 
     "custom/ime": {
@@ -148,7 +148,7 @@
 
     "custom/power": {
         "format": "󰐥",
-        "tooltip": false,
+        "tooltip-format": "Power Buttons",
         "on-click": "wlogout --buttons-per-row 3"
     }
 }

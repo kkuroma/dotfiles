@@ -1,0 +1,76 @@
+/*
+* GTK Colors
+* Generated with Matugen
+*/
+
+/* Accent colors */
+@define-color accent_color {{colors.primary_fixed_dim.default.hex}};
+@define-color accent_fg_color {{colors.on_primary_fixed.default.hex}};
+@define-color accent_bg_color {{colors.primary_fixed_dim.default.hex}};
+
+/* Window colors */
+@define-color window_bg_color {{colors.surface.default.hex}};
+@define-color window_fg_color {{colors.on_surface.default.hex}};
+
+/* Headerbar colors */
+@define-color headerbar_bg_color {{colors.surface_container_high.default.hex}};
+@define-color headerbar_fg_color {{colors.on_surface.default.hex}};
+@define-color headerbar_border_color {{colors.outline_variant.default.hex}};
+@define-color headerbar_backdrop_color {{colors.surface_container.default.hex}};
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+
+/* Popover colors */
+@define-color popover_bg_color {{colors.surface_container_high.default.hex}};
+@define-color popover_fg_color {{colors.on_surface.default.hex}};
+
+/* View colors */
+@define-color view_bg_color {{colors.surface_container.default.hex}};
+@define-color view_fg_color {{colors.on_surface.default.hex}};
+
+/* Card colors */
+@define-color card_bg_color {{colors.surface_container_high.default.hex}};
+@define-color card_fg_color {{colors.on_surface.default.hex}};
+@define-color card_shade_color rgba(0, 0, 0, 0.36);
+
+/* Dialog colors */
+@define-color dialog_bg_color {{colors.surface_container_high.default.hex}};
+@define-color dialog_fg_color {{colors.on_surface.default.hex}};
+
+/* Sidebar colors */
+@define-color sidebar_bg_color {{colors.surface_container_low.default.hex}};
+@define-color sidebar_fg_color {{colors.on_surface.default.hex}};
+@define-color sidebar_border_color {{colors.outline_variant.default.hex}};
+@define-color sidebar_backdrop_color {{colors.surface_container_low.default.hex}};
+
+/* Additional semantic colors for GTK3/4 */
+@define-color destructive_bg_color {{colors.error.default.hex}};
+@define-color destructive_fg_color {{colors.on_error.default.hex}};
+@define-color success_bg_color #26a269;
+@define-color success_fg_color #ffffff;
+@define-color warning_bg_color #e5a50a;
+@define-color warning_fg_color #ffffff;
+@define-color error_bg_color {{colors.error.default.hex}};
+@define-color error_fg_color {{colors.on_error.default.hex}};
+
+/* Legacy GTK theme colors */
+@define-color theme_bg_color {{colors.surface.default.hex}};
+@define-color theme_fg_color {{colors.on_surface.default.hex}};
+@define-color theme_base_color {{colors.surface_container.default.hex}};
+@define-color theme_text_color {{colors.on_surface.default.hex}};
+@define-color theme_selected_bg_color {{colors.primary.default.hex}};
+@define-color theme_selected_fg_color {{colors.on_primary.default.hex}};
+@define-color insensitive_bg_color {{colors.surface_dim.default.hex}};
+@define-color insensitive_fg_color {{colors.outline.default.hex}};
+@define-color insensitive_base_color {{colors.surface_container_low.default.hex}};
+@define-color theme_unfocused_bg_color {{colors.surface.default.hex}};
+@define-color theme_unfocused_fg_color {{colors.on_surface.default.hex}};
+@define-color theme_unfocused_base_color {{colors.surface_container.default.hex}};
+@define-color theme_unfocused_text_color {{colors.on_surface.default.hex}};
+@define-color theme_unfocused_selected_bg_color {{colors.primary_container.default.hex}};
+@define-color theme_unfocused_selected_fg_color {{colors.on_primary_container.default.hex}};
+@define-color borders {{colors.outline_variant.default.hex}};
+@define-color unfocused_borders {{colors.outline.default.hex}};
+
+/* Additional utility colors */
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);

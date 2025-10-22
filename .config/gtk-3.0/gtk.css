@@ -1,4 +1,4 @@
-/* Import Matugen generated Material You colors */
+/* Import Matugen generated GTK-specific Material You colors */
 @import url("colors.css");
 
 /* Set JetBrains Mono for GTK apps only */
@@ -8,33 +8,14 @@
 
 /* Apply Material You colors to GTK3 widgets - using !important to override Adwaita */
 window {
-    background-color: @surface;
-    color: @on_surface;
+    background-color: @window_bg_color;
+    color: @window_fg_color;
 }
 
 .background {
-    background-color: @surface;
-    color: @on_surface;
+    background-color: @window_bg_color;
+    color: @window_fg_color;
 }
-
-/* Override Adwaita's @theme_bg_color with dark values */
-@define-color theme_bg_color @surface;
-@define-color theme_fg_color @on_surface;
-@define-color theme_base_color @surface_container;
-@define-color theme_text_color @on_surface;
-@define-color theme_selected_bg_color @primary;
-@define-color theme_selected_fg_color @on_primary;
-@define-color insensitive_bg_color @surface_dim;
-@define-color insensitive_fg_color @outline;
-@define-color insensitive_base_color @surface_container_low;
-@define-color theme_unfocused_bg_color @surface;
-@define-color theme_unfocused_fg_color @on_surface;
-@define-color theme_unfocused_base_color @surface_container;
-@define-color theme_unfocused_text_color @on_surface;
-@define-color theme_unfocused_selected_bg_color @primary_container;
-@define-color theme_unfocused_selected_fg_color @on_primary_container;
-@define-color borders @outline_variant;
-@define-color unfocused_borders @outline;
 
 /* Force dark mode on headerbar - use higher specificity */
 window headerbar,
@@ -43,11 +24,11 @@ headerbar,
 .titlebar,
 headerbar.default-decoration,
 .titlebar.default-decoration {
-    background-color: @surface_container_high;
+    background-color: @headerbar_bg_color;
     background-image: none;
-    color: @on_surface;
-    border-color: @outline_variant;
+    color: @headerbar_fg_color;
     box-shadow: none;
+    border-color: @headerbar_border_color;
 }
 
 /* Ensure dark mode persists on hover and backdrop states */
@@ -58,11 +39,21 @@ window .titlebar:backdrop,
 headerbar:hover,
 .titlebar:hover,
 headerbar:backdrop,
-.titlebar:backdrop {
-    background-color: @surface_container_high;
-    background-image: none;
-    color: @on_surface;
-    border-color: @outline_variant;
+.titlebar:backdrop,
+.background headerbar:backdrop,
+.background .titlebar:backdrop {
+    background-color: @headerbar_bg_color !important;
+    background-image: none !important;
+    color: @headerbar_fg_color !important;
+    border-color: @headerbar_border_color !important;
+}
+
+/* Specifically target LibreOffice and other stubborn apps */
+* headerbar:backdrop,
+* .titlebar:backdrop {
+    background-color: @headerbar_bg_color !important;
+    background-image: none !important;
+    color: @headerbar_fg_color !important;
 }
 
 headerbar button,
@@ -73,150 +64,146 @@ headerbar button:backdrop {
 }
 
 .view, textview text {
-    background-color: @surface_container;
-    color: @on_surface;
+    background-color: @view_bg_color;
+    color: @view_fg_color;
 }
 
 entry {
-    background-color: @surface_container;
-    color: @on_surface;
-    border-color: @outline_variant;
+    background-color: @view_bg_color;
+    color: @view_fg_color;
+    border-color: @borders;
 }
 
 entry:focus {
-    border-color: @primary;
+    border-color: @accent_bg_color;
 }
 
 button {
-    background-color: @surface_container;
+    background-color: @view_bg_color;
     background-image: none;
-    color: @on_surface;
-    border-color: @outline_variant;
+    color: @window_fg_color;
+    border-color: @borders;
 }
 
 button:hover {
-    background-color: @primary;
+    background-color: @accent_bg_color;
     background-image: none;
-    color: @on_primary;
-    border-color: @primary;
+    color: @accent_fg_color;
+    border-color: @accent_bg_color;
 }
 
 button:active {
-    background-color: @primary_container;
+    background-color: @theme_unfocused_selected_bg_color;
     background-image: none;
-    color: @on_primary_container;
+    color: @theme_unfocused_selected_fg_color;
 }
 
 /* File chooser dialog buttons */
 filechooser button,
 dialog button {
-    background-color: @surface_container;
+    background-color: @view_bg_color;
     background-image: none;
-    color: @on_surface;
-    border-color: @outline_variant;
+    color: @window_fg_color;
+    border-color: @borders;
 }
 
 filechooser button:hover,
 dialog button:hover {
-    background-color: @primary;
+    background-color: @accent_bg_color;
     background-image: none;
-    color: @on_primary;
+    color: @accent_fg_color;
 }
 
 .card {
-    background-color: @surface_container_high;
-    color: @on_surface;
+    background-color: @card_bg_color;
+    color: @card_fg_color;
 }
 
 popover, popover.background {
-    background-color: @surface_container_high;
-    color: @on_surface;
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
 }
 
 .dialog-vbox, dialog {
-    background-color: @surface_container_high;
-    color: @on_surface;
+    background-color: @dialog_bg_color;
+    color: @dialog_fg_color;
+}
+
+/* Scrollbars */
+scrollbar {
+    background-color: @window_bg_color;
+}
+
+scrollbar slider {
+    background-color: @borders;
 }
 
 /* Selection colors */
 selection,
 *:selected {
-    background-color: @primary;
-    color: @on_primary;
-}
-
-/* Scrollbars */
-scrollbar {
-    background-color: @surface;
-}
-
-scrollbar slider {
-    background-color: @outline;
-}
-
-scrollbar slider:hover {
-    background-color: @primary;
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
 }
 
 /* Menus */
 menu,
 .menu {
-    background-color: @surface_container_high;
-    color: @on_surface;
+    background-color: @popover_bg_color;
+    color: @popover_fg_color;
 }
 
 menuitem:hover {
-    background-color: @primary;
-    color: @on_primary;
-}
-
-/* Sidebar */
-.sidebar {
-    background-color: @surface_container_low;
-    color: @on_surface;
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
 }
 
 /* Toolbar */
 toolbar {
-    background-color: @surface_container;
-    color: @on_surface;
+    background-color: @view_bg_color;
+    color: @window_fg_color;
 }
 
 /* Tooltips */
 tooltip {
-    background-color: @inverse_surface;
-    color: @inverse_on_surface;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 /* Notebook tabs */
 notebook {
-    background-color: @surface;
+    background-color: @window_bg_color;
 }
 
 notebook header {
-    background-color: @surface_container;
+    background-color: @view_bg_color;
 }
 
 notebook tab {
-    background-color: @surface_container;
-    color: @on_surface;
+    background-color: @view_bg_color;
+    color: @window_fg_color;
 }
 
+/* Sidebar */
+.sidebar {
+    background-color: @sidebar_bg_color;
+    color: @sidebar_fg_color;
+}
+
+/* Notebook tabs */
 notebook tab:checked {
-    background-color: @surface_container_high;
-    border-bottom: 2px solid @primary;
+    border-bottom: 2px solid @accent_bg_color;
 }
 
 /* List rows */
 list,
 row {
-    background-color: @surface_container;
-    color: @on_surface;
+    background-color: @view_bg_color;
+    color: @window_fg_color;
 }
 
 row:selected {
-    background-color: @primary;
-    color: @on_primary;
+    background-color: @accent_bg_color;
+    color: @accent_fg_color;
 }
 
 /* Remove CSD padding/gaps */
