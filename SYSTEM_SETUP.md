@@ -22,6 +22,7 @@ cronie.service                     enabled disabled
 docker.service                     enabled disabled
 getty@.service                     enabled enabled
 grub-btrfsd.service                enabled disabled
+iwd.service                        enabled disabled
 NetworkManager-dispatcher.service  enabled disabled
 NetworkManager-wait-online.service enabled disabled
 NetworkManager.service             enabled disabled
@@ -41,7 +42,7 @@ systemd-resolved-monitor.socket    enabled disabled
 systemd-resolved-varlink.socket    enabled disabled
 systemd-userdbd.socket             enabled enabled
 remote-fs.target                   enabled enabled
-24 unit files listed.
+25 unit files listed.
 ```
 
 ## Network Configuration

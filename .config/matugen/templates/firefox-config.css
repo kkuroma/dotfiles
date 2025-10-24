@@ -2,7 +2,7 @@
 
 :root {
   /* Font settings */
-  --tf-font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK KR", "Noto Sans CJK SC", "Noto Sans Arabic", monospace;
+  --tf-font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK KR", "Noto Sans CJK SC", "Noto Sans Arabic", "Noto Sans Thai", monospace;
   --tf-font-size: 14px;
 
   /* Color mappings from Material You to textfox */

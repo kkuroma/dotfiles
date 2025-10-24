@@ -1,6 +1,6 @@
 [General]
 Version=202
-ViewPropsTimestamp=2024,1,1,0,0,0
+ViewPropsTimestamp=2025,10,23,0,29,21.628
 
 [IconsMode]
 PreviewSize=96
@@ -11,3 +11,6 @@ Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
+
+[UiSettings]
+ColorScheme=MaterialYou

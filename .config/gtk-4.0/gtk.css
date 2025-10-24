@@ -1,215 +1,80 @@
-/* Import Matugen generated GTK-specific Material You colors */
-@import url("colors.css");
+/*
+* GTK Colors
+* Generated with Matugen
+*/
 
-/* Set JetBrains Mono for GTK apps only */
 * {
-    font-family: "JetBrainsMono Nerd Font", monospace;
+  font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", "Noto Sans", "Noto Sans CJK JP", "Noto Sans CJK KR", "Noto Sans CJK SC", "Noto Sans Arabic", "Noto Sans Thai", monospace;
 }
 
-/* Apply Material You colors to GTK4 widgets */
-window {
-    background-color: @window_bg_color;
-    color: @window_fg_color;
-}
+/* Accent colors */
+@define-color accent_color #cdca75;
+@define-color accent_fg_color #1d1d00;
+@define-color accent_bg_color #cdca75;
 
-.background {
-    background-color: @window_bg_color;
-    color: @window_fg_color;
-}
+/* Window colors */
+@define-color window_bg_color #14140c;
+@define-color window_fg_color #e6e2d5;
 
-/* Force dark mode on headerbar - use higher specificity */
-window headerbar,
-window .titlebar,
-headerbar,
-.titlebar,
-headerbar.default-decoration,
-.titlebar.default-decoration {
-    background-color: @headerbar_bg_color;
-    background-image: none;
-    color: @headerbar_fg_color;
-    box-shadow: none;
-    border-color: @headerbar_border_color;
-}
+/* Headerbar colors */
+@define-color headerbar_bg_color #2b2a22;
+@define-color headerbar_fg_color #e6e2d5;
+@define-color headerbar_border_color #48473a;
+@define-color headerbar_backdrop_color #212018;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
 
-/* Ensure dark mode persists on hover and backdrop states */
-window headerbar:hover,
-window .titlebar:hover,
-window headerbar:backdrop,
-window .titlebar:backdrop,
-headerbar:hover,
-.titlebar:hover,
-headerbar:backdrop,
-.titlebar:backdrop,
-.background headerbar:backdrop,
-.background .titlebar:backdrop {
-    background-color: @headerbar_bg_color !important;
-    background-image: none !important;
-    color: @headerbar_fg_color !important;
-    border-color: @headerbar_border_color !important;
-}
+/* Popover colors */
+@define-color popover_bg_color #2b2a22;
+@define-color popover_fg_color #e6e2d5;
 
-/* Specifically target LibreOffice and other stubborn apps */
-* headerbar:backdrop,
-* .titlebar:backdrop {
-    background-color: @headerbar_bg_color !important;
-    background-image: none !important;
-    color: @headerbar_fg_color !important;
-}
+/* View colors */
+@define-color view_bg_color #212018;
+@define-color view_fg_color #e6e2d5;
 
-headerbar button,
-headerbar button:hover,
-headerbar button:backdrop {
-    background-color: transparent;
-    background-image: none;
-}
+/* Card colors */
+@define-color card_bg_color #2b2a22;
+@define-color card_fg_color #e6e2d5;
+@define-color card_shade_color rgba(0, 0, 0, 0.36);
 
-.view, textview text {
-    background-color: @view_bg_color;
-    color: @view_fg_color;
-}
+/* Dialog colors */
+@define-color dialog_bg_color #2b2a22;
+@define-color dialog_fg_color #e6e2d5;
 
-entry {
-    background-color: @view_bg_color;
-    color: @view_fg_color;
-    border-color: @borders;
-}
+/* Sidebar colors */
+@define-color sidebar_bg_color #1c1c14;
+@define-color sidebar_fg_color #e6e2d5;
+@define-color sidebar_border_color #48473a;
+@define-color sidebar_backdrop_color #1c1c14;
 
-entry:focus {
-    border-color: @accent_bg_color;
-}
+/* Additional semantic colors for GTK3/4 */
+@define-color destructive_bg_color #ffb4ab;
+@define-color destructive_fg_color #690005;
+@define-color success_bg_color #26a269;
+@define-color success_fg_color #ffffff;
+@define-color warning_bg_color #e5a50a;
+@define-color warning_fg_color #ffffff;
+@define-color error_bg_color #ffb4ab;
+@define-color error_fg_color #690005;
 
-button {
-    background-color: @view_bg_color;
-    background-image: none;
-    color: @window_fg_color;
-    border-color: @borders;
-}
+/* Legacy GTK theme colors */
+@define-color theme_bg_color #14140c;
+@define-color theme_fg_color #e6e2d5;
+@define-color theme_base_color #212018;
+@define-color theme_text_color #e6e2d5;
+@define-color theme_selected_bg_color #cdca75;
+@define-color theme_selected_fg_color #333200;
+@define-color insensitive_bg_color #14140c;
+@define-color insensitive_fg_color #939181;
+@define-color insensitive_base_color #1c1c14;
+@define-color theme_unfocused_bg_color #14140c;
+@define-color theme_unfocused_fg_color #e6e2d5;
+@define-color theme_unfocused_base_color #212018;
+@define-color theme_unfocused_text_color #e6e2d5;
+@define-color theme_unfocused_selected_bg_color #4a4900;
+@define-color theme_unfocused_selected_fg_color #eae78e;
+@define-color borders #48473a;
+@define-color unfocused_borders #939181;
 
-button:hover {
-    background-color: @accent_bg_color;
-    background-image: none;
-    color: @accent_fg_color;
-    border-color: @accent_bg_color;
-}
-
-button:active {
-    background-color: @theme_unfocused_selected_bg_color;
-    background-image: none;
-    color: @theme_unfocused_selected_fg_color;
-}
-
-/* File chooser dialog buttons */
-filechooser button,
-dialog button {
-    background-color: @view_bg_color;
-    background-image: none;
-    color: @window_fg_color;
-    border-color: @borders;
-}
-
-filechooser button:hover,
-dialog button:hover {
-    background-color: @accent_bg_color;
-    background-image: none;
-    color: @accent_fg_color;
-}
-
-.card {
-    background-color: @card_bg_color;
-    color: @card_fg_color;
-}
-
-popover, popover.background {
-    background-color: @popover_bg_color;
-    color: @popover_fg_color;
-}
-
-dialog {
-    background-color: @dialog_bg_color;
-    color: @dialog_fg_color;
-}
-
-/* Scrollbars */
-scrollbar {
-    background-color: @window_bg_color;
-}
-
-scrollbar slider {
-    background-color: @borders;
-}
-
-/* Selection colors */
-selection,
-*:selected {
-    background-color: @accent_bg_color;
-    color: @accent_fg_color;
-}
-
-/* Menus */
-menu,
-.menu {
-    background-color: @popover_bg_color;
-    color: @popover_fg_color;
-}
-
-menuitem:hover {
-    background-color: @accent_bg_color;
-    color: @accent_fg_color;
-}
-
-/* Toolbar */
-toolbar {
-    background-color: @view_bg_color;
-    color: @window_fg_color;
-}
-
-/* Tooltips */
-tooltip {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-/* Notebook tabs */
-notebook {
-    background-color: @window_bg_color;
-}
-
-notebook header {
-    background-color: @view_bg_color;
-}
-
-notebook tab {
-    background-color: @view_bg_color;
-    color: @window_fg_color;
-}
-
-/* Sidebar */
-.sidebar {
-    background-color: @sidebar_bg_color;
-    color: @sidebar_fg_color;
-}
-
-/* Notebook tabs */
-notebook tab:checked {
-    border-bottom: 2px solid @accent_bg_color;
-}
-
-/* List rows */
-list,
-row,
-listview row {
-    background-color: @view_bg_color;
-    color: @window_fg_color;
-}
-
-row:selected,
-listview row:selected {
-    background-color: @accent_bg_color;
-    color: @accent_fg_color;
-}
-
-/* Remove CSD padding/gaps */
-decoration {
-    margin: 0;
-    padding: 0;
-}
+/* Additional utility colors */
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);

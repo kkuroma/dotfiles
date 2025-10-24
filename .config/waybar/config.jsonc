@@ -3,6 +3,7 @@
     "position": "top",
     "height": 34,
     "spacing": 4,
+    "reload_style_on_change": true,
 
     "modules-left": [
         "custom/launcher",
@@ -22,10 +23,9 @@
         "custom/ime",
         "clock",
         "custom/weather",
-        "custom/clipboard",
-        "custom/screenshot",
         "network#wifi",
         "pulseaudio",
+        "custom/quick-actions",
         "custom/power"
     ],
 
@@ -33,7 +33,7 @@
     "custom/launcher": {
         "format": "󰣇",
         "tooltip": false,
-        "on-click": "rofi -show drun"
+        "on-click": "rofi -show drun -theme ~/.config/rofi/grid.rasi"
     },
 
     "custom/wallpaper": {
@@ -42,11 +42,12 @@
         "on-click": "~/.config/waybar/scripts/wallpaper-selector.sh"
     },
 
+
     "cpu": {
         "format": "󰻠 {usage}%",
         "tooltip": true,
         "interval": 2,
-        "on-click": "kitty --class floating --title floating -e btop"
+        "on-click": "kitty --class floating --title floating -o initial_window_width=400 -o initial_window_height=300 -e btop"
     },
 
     "memory": {
@@ -93,9 +94,18 @@
     },
 
     // Right modules
+    "custom/ime": {
+        "exec": "~/.config/waybar/scripts/ime-status.sh",
+        "return-type": "json",
+        "interval": 1,
+        "format": "󰇧 {}",
+        "on-click": "~/.config/waybar/scripts/ime-switch.sh",
+        "tooltip": true
+    },
+
     "clock": {
         "format": "{:%y/%m/%d - %H:%M:%S}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>Calendar</big>\n<tt>{calendar}</tt>",
         "interval": 1
     },
 
@@ -106,18 +116,6 @@
         "tooltip-format": "Toggle C/F",
         "on-click": "~/.config/waybar/scripts/weather.sh toggle",
         "signal": 8
-    },
-
-    "custom/clipboard": {
-        "format": "󰅇",
-        "tooltip-format": "Open Clipboard",
-        "on-click": "kitty --class floating --title 'Clipboargd Manager' -e clipse"
-    },
-
-    "custom/screenshot": {
-        "format": "󰹑",
-        "tooltip-format": "Take a Screenshot",
-        "on-click": "REGION=$(slurp); [ $? -eq 0 ] && grim -g \"$REGION\" - | wl-copy && notify-send 'Screenshot copied to clipboard' || notify-send 'Cancelled Screenshot'"
     },
 
     "network#wifi": {
@@ -134,21 +132,19 @@
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "hyprctl dispatch exec pwvucontrol",
-        "tooltip-format": "Current volume = {volume}"
+        "tooltip-format": "Current volume: {volume}%"
     },
 
-    "custom/ime": {
-        "exec": "~/.config/waybar/scripts/ime-status.sh",
-        "return-type": "json",
-        "interval": 1,
-        "format": "󰇧 {}",
-        "on-click": "~/.config/waybar/scripts/ime-switch.sh",
-        "tooltip": true
+    "custom/quick-actions": {
+        "format": "",
+        "tooltip-format": "Quick Actions",
+        "on-click": "~/.config/waybar/scripts/quick-actions.sh"
     },
 
     "custom/power": {
-        "format": "󰐥",
-        "tooltip-format": "Power Buttons",
+        "exec": "~/.config/waybar/scripts/battery-status.sh",
+        "return-type": "json",
+        "interval": 10,
         "on-click": "wlogout --buttons-per-row 3"
     }
 }

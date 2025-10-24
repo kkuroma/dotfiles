@@ -20,10 +20,16 @@ horizontal_padding = 8
 text_icon_padding = 0
 frame_width = 1
 sort = yes
-font = FiraCode 12
+
+# Changed to JetBrains Mono Nerd Font
+font = JetBrainsMono Nerd Font 11
+
 line_height = 0
 markup = full
-format = "<b>%s</b>\n%b"
+
+# Added action button hint to format
+format = "<b>%s</b>\n%b\n<small> Yes, I got it</small>"
+
 alignment = center
 vertical_alignment = center
 show_age_threshold = 60
@@ -47,28 +53,37 @@ corner_radius = 8
 ignore_dbusclose = false
 force_xwayland = false
 force_xinerama = false
-mouse_left_click = close_current
-mouse_middle_click = do_action, close_current
+
+# Mouse actions - left click closes (acts as "accept" button)
+mouse_left_click = do_action, close_current
+mouse_middle_click = close_current
 mouse_right_click = close_all
+
+# You can also add context menu with right-click
+# mouse_right_click = context
+
 separator_color = frame
-frame_color = "#ddb9f8"
-highlight = "#ddb9f8"
-separator_color= "#968e98"
+frame_color = "#cdca75"
+highlight = "#cdca75"
+separator_color= "#939181"
+
 [experimental]
 per_monitor_dpi = false
+
 [urgency_low]
 timeout = 3
-background = "#151217"
-foreground = "#e8e0e8"
-highlight = "#583a6f"
+background = "#14140c"
+foreground = "#e6e2d5"
+highlight = "#4a4900"
+
 [urgency_normal]
 timeout = 6
-background = "#151217"
-foreground = "#e8e0e8"
-highlight = "#583a6f"
+background = "#14140c"
+foreground = "#e6e2d5"
+highlight = "#4a4900"
+
 [urgency_critical]
 timeout = 0
-background = "#151217"
-foreground = "#e8e0e8"
+background = "#14140c"
+foreground = "#e6e2d5"
 highlight = "#ffb4ab"
-

@@ -32,7 +32,6 @@ post_hook = 'kill -SIGUSR1 $(pgrep kitty)'
 [templates.waybar]
 input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/waybar/colors.css'
-post_hook = 'pkill waybar; waybar & disown'
 
 [templates.wlogout]
 input_path = '~/.config/matugen/templates/colors.css'
@@ -49,32 +48,28 @@ post_hook = 'killall fcitx5; fcitx5 -d &'
 
 [templates.gtk3-colors]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
-output_path = '~/.config/gtk-3.0/colors.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
 
 [templates.gtk4-colors]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
-output_path = '~/.config/gtk-4.0/colors.css'
-post_hook = 'bash -c "gsettings set org.gnome.desktop.interface gtk-theme Adwaita && sleep 0.1 && gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && killall xdg-desktop-portal-gtk 2>/dev/null; xsettingsd-restart 2>/dev/null || true"'
-
-[templates.kvantum]
-input_path = '~/.config/matugen/templates/kvantum.kvconfig'
-output_path = '~/.config/Kvantum/MaterialYou/MaterialYou.kvconfig'
+output_path = '~/.config/gtk-4.0/gtk.css'
+post_hook = 'bash -c "gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface icon-theme Numix-Circle-Light && sleep 0.1 && gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark && gsettings set org.gnome.desktop.interface color-scheme prefer-dark && killall xdg-desktop-portal-gtk 2>/dev/null; xsettingsd-restart 2>/dev/null || true"'
 
 [templates.kdeglobals]
 input_path = '~/.config/matugen/templates/kdeglobals'
 output_path = '~/.config/kdeglobals'
 
-[templates.qt5ct-colors]
-input_path = '~/.config/matugen/templates/qt5ct-colors.conf'
-output_path = '~/.config/qt5ct/colors/MaterialYou.conf'
+[templates.qt5ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt5ct/colors/matugen.conf'
 
-[templates.qt6ct-colors]
-input_path = '~/.config/matugen/templates/qt5ct-colors.conf'
-output_path = '~/.config/qt6ct/colors/MaterialYou.conf'
+[templates.qt6ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
 
-[templates.qt6ct-dolphin-qss]
-input_path = '~/.config/matugen/templates/qt6ct-dolphin.qss'
-output_path = '~/.config/qt6ct/qss/dolphin-fix.qss'
+[templates.kdecolors]
+input_path = "~/.config/matugen/templates/kde.colors"
+output_path = '~/.local/share/color-schemes/MaterialYou.colors'
 
 [templates.btop]
 input_path = '~/.config/matugen/templates/btop.theme'
@@ -96,3 +91,12 @@ output_path = '~/.mozilla/firefox/xvm2110c.default-release/chrome/userChrome.css
 [templates.firefox-config]
 input_path = '~/.config/matugen/templates/firefox-config.css'
 output_path = '~/.mozilla/firefox/xvm2110c.default-release/chrome/config.css'
+
+[templates.nwg-lock]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/nwg-dock-hyprland/colors.css'
+
+[templates.nwg-drawer]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/nwg-drawer/colors.css'
+

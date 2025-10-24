@@ -68,8 +68,8 @@ build_menu() {
     done
 }
 
-# Show rofi menu with image previews
-selected=$(build_menu | rofi -dmenu -i -p "Wallpaper" -show-icons -theme-str 'element-icon { size: 3em; }' -me-select-entry '' -me-accept-entry MousePrimary)
+# Show rofi menu with image previews using grid theme
+selected=$(build_menu | rofi -dmenu -i -p "Wallpaper" -show-icons -theme ~/.config/rofi/grid.rasi -theme-str 'element-icon { size: 3em; }' -me-select-entry '' -me-accept-entry MousePrimary)
 
 # If user selected something, set it as wallpaper
 if [ -n "$selected" ]; then
@@ -103,13 +103,14 @@ if [ -n "$selected" ]; then
             matugen image "$thumbnail_path" &
 
             # Wait a bit for matugen to finish
-            sleep 0.5
-
-            # Set animated wallpaper using gslapper
-            gslapper -o "loop" "*" "$wallpaper_path" &
+            sleep 0.5 
+            
             # Reset notification style and send notification
             killall dunst; dunst &
             notify-send "Applying Animated Wallpaper & Theme" "$selected" -i "$thumbnail_path"
+
+            # Set animated wallpaper using gslapper
+            gslapper -o "loop" "*" "$wallpaper_path" &
         else
             # Handle static image wallpaper
             # Convert and save to cache for hyprlock/SDDM (always as JPG)

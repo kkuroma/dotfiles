@@ -1,0 +1,45 @@
+@import url("colors.css");
+
+window {
+	background-color: alpha(@surface_container, 0.8);
+	border-radius: 0px;
+	border-style: none;
+	border-width: 1px;
+	border-color: @outline_variant;
+}
+
+#box {
+	/* Define attributes of the box surrounding icons here */
+	padding: 10px;
+}
+
+#active {
+	/* This is to underline the button representing the currently active window */
+	border-bottom: solid 1px;
+	border-color: @primary;
+}
+
+button,
+image {
+	background: none;
+	border-style: none;
+	box-shadow: none;
+	color: @on_surface_variant;
+}
+
+button {
+	padding: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+	color: @on_surface;
+	font-size: 12px;
+}
+
+button:hover {
+	background-color: @surface_container_high;
+	border-radius: 2px;
+}
+
+button:focus {
+	box-shadow: none;
+}

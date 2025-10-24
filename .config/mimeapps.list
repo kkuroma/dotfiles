@@ -1,9 +1,10 @@
 [Added Associations]
 image/jpeg=imv-dir-4.desktop;imv-dir-3.desktop;imv-dir-2.desktop;
 image/png=imv-dir-5.desktop;
-video/mp4=mpv-4.desktop;mpv-3.desktop;mpv-2.desktop;
+video/mp4=mpv-5.desktop;mpv-4.desktop;mpv-3.desktop;mpv-2.desktop;mpv.desktop;
 
 [Default Applications]
 image/jpeg=imv-dir-4.desktop;
 image/png=imv-dir-5.desktop;
-video/mp4=mpv-4.desktop;
+video/mp4=mpv.desktop
+inode/directory=org.kde.dolphin.desktop

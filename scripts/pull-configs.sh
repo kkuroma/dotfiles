@@ -42,12 +42,12 @@ RICE_CONFIGS=(
     "dunst"
     "rofi"
     "wlogout"
+    "nwg-dock-hyprland"
 
     # Theming
     "gtk-3.0"
     "gtk-4.0"
     "kdeglobals"
-    "Kvantum"
     "qt5ct"
     "qt6ct"
     "QtProject.conf"
