@@ -150,7 +150,7 @@
             "tooltip-format": "CPU Temp: {temperatureC}°C",
             "critical-threshold": 85,
             "interval": 2,
-            "on-click": "kitty --class floating --title floating -e powertop &"
+            "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
         },
 
         "custom/disk": {
@@ -249,9 +249,12 @@
         },
 
         "network#wifi": {
+            "format-ethernet": "󰈀 {ifname}",
             "format-wifi": "󰤨 {signalStrength}%",
             "format-disconnected": "󰤭 Disconnected",
-            "tooltip-format": "Wifi: {essid} ({signalStrength}%)",
+            "tooltip-format-wifi": "<b><span color='#ffae12'><big>󰤨 Connected to Wifi</big></span></b>\nIP: {ipaddr}\nWifi: {essid} ({signalStrength}%)",
+            "tooltip-format-ethernet": "<b><span color='#ffae12'><big>󰈀 Connected to Ethernet</big></span></b>\nIP: {ipaddr}\nConnected via {ifname}",
+            "tooltip-disconnected": "󰤭 Disconnected",
             "on-click": "~/.config/waybar/scripts/wifi-menu.sh"
         },
 
@@ -259,6 +262,15 @@
             "format": "{icon} {volume}%",
             "format-muted": "󰝟 Muted",
             "format-icons": {
+                "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+                "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+                "headphones": "",
+                "handsfree": "",
+                "headset": "",
+                "phone": "",
+                "phone-muted": "",
+                "portable": "",
+                "car": "",
                 "default": ["󰕿", "󰖀", "󰕾"]
             },
             "on-click": "hyprctl dispatch exec pwvucontrol",
