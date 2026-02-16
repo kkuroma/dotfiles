@@ -12,8 +12,8 @@ elif [ -b /dev/sda ]; then
     disk_device="sda"
 else
     # Fallback - just show disk usage without I/O
-    tooltip="󰋊 Disk: /\n"
-    tooltip+="Used: ${used} / ${total} (${percent})"
+    tooltip="<b><span color='#fab387'><big>󰋊 Disk</big></span></b>"
+    tooltip+="\n<span color='#89dceb'>Used:</span> <span color='#cdd6f4'>${used} / ${total} (${percent})</span>"
     echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"
     exit 0
 fi
@@ -50,11 +50,10 @@ fi
 # Save current values
 echo "$read_sectors $write_sectors $(date +%s)" > "$cache_file"
 
-# Build tooltip
-tooltip="󰋊 Disk: root (/)\n"
-tooltip+="Used: ${used} / ${total} (${percent})\n\n"
-tooltip+=" Disk I/O\n"
-tooltip+="󰇚 Read: ${read_speed} MB/s\n"
-tooltip+="󰕒 Write: ${write_speed} MB/s"
+# Build tooltip with Pango markup
+tooltip="<b><span color='#fab387'><big>󰋊 Disk</big></span></b>"
+tooltip+="\n<span color='#89dceb'>Used:</span> <span color='#cdd6f4'>${used} / ${total} (${percent})</span>"
+tooltip+="\n<span color='#89dceb'>Read:</span> <span color='#cdd6f4'>${read_speed} MB/s</span>"
+tooltip+="\n<span color='#89dceb'>Write:</span> <span color='#cdd6f4'>${write_speed} MB/s</span>"
 
 echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"

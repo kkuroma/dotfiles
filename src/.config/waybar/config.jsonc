@@ -12,8 +12,8 @@
         "modules-right": ["clock","custom/weather","custom/power"],
 
         "custom/launcher": {
-            "format": "",
-            "tooltip-format": "Application launcher",
+            "format": "",
+            "tooltip-format": "<b><span color='#fab387'><big> App Launcher</big></span></b>\n<span color='#cdd6f4'>Click to open Rofi</span>",
             "on-click": "rofi -show drun -modi drun -theme ~/.config/rofi/grid.rasi"
         },
         "cpu": {
@@ -39,9 +39,9 @@
             }
         },
         "clock": {
-            "format": "{:%Y/%m/%d  %H:%M:%S}",
+            "format": "{:%Y/%m/%d  %H:%M:%S}",
             "on-click": "kitty --class floating --title 'Calendar' -e calcurse",
-            "tooltip-format": "<b><span color='#ffae12'><big>Click to launch </big></span></b>\n\n<tt>{calendar}</tt>",
+            "tooltip-format": "<b><span color='#fab387'><big> Calendar (󰳽 Launch Calcurse)</big></span></b>\n<tt>{calendar}</tt>",
             "calendar": {
                 "mode"          : "year",
                 "mode-mon-col"  : 3,
@@ -49,11 +49,11 @@
                 "on-scroll"     : 1,
                 "on-click-right": "mode",
                 "format": {
-                    "months":     "<span color='#ffead3'><b>{}</b></span>",
-                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                    "months":     "<span color='#f9e2af'><b>{}</b></span>",
+                    "days":       "<span color='#cdd6f4'><b>{}</b></span>",
+                    "weeks":      "<span color='#a6e3a1'><b>W{}</b></span>",
+                    "weekdays":   "<span color='#fab387'><b>{}</b></span>",
+                    "today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
                 }
             },
             "interval": 1
@@ -109,15 +109,15 @@
 
         // Left modules
         "custom/launcher": {
-            "format": "",
-            "tooltip-format": "Application launcher",
+            "format": "",
+            "tooltip-format": "<b><span color='#fab387'><big> App Launcher</big></span></b>\n<span color='#cdd6f4'>Click to open Rofi</span>",
             "on-click": "rofi -show drun -modi drun -theme ~/.config/rofi/grid.rasi"
         },
 
         "custom/wallpaper": {
             "exec": "ls ~/Pictures/Wallpapers | wc -l",
             "format": "",
-            "tooltip-format": "Pick from {} wallpapers!",
+            "tooltip-format": "<b><span color='#fab387'><big> Wallpaper</big></span></b>\n<span color='#cdd6f4'>Pick from {} wallpapers</span>",
             "on-click": "~/.config/waybar/scripts/wallpaper-selector.sh"
         },
 
@@ -138,7 +138,7 @@
         "network": {
             "format": "󰇚 {bandwidthDownBits} 󰕒 {bandwidthUpBits}",
             "format-disconnected": "󰛳 Disconnected",
-            "tooltip-format": "Down: {bandwidthDownBits} Up: {bandwidthUpBits}",
+            "tooltip-format": "<b><span color='#fab387'><big>󰛳 Network</big></span></b>\n<span color='#89dceb'>Down:</span> <span color='#cdd6f4'>{bandwidthDownBits}</span>\n<span color='#89dceb'>Up:</span> <span color='#cdd6f4'>{bandwidthUpBits}</span>",
             "interval": 2,
             "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
         },
@@ -146,7 +146,7 @@
         "temperature": {
             "hwmon-path": "/sys/class/hwmon/hwmon3/temp3_input",
             "format": "{icon} {temperatureC}°C",
-            "format-icons": ["", "", "", ""],
+            "format-icons": ["", "", "󰈸", ""],
             "tooltip-format": "CPU Temp: {temperatureC}°C",
             "critical-threshold": 85,
             "interval": 2,
@@ -166,16 +166,16 @@
             "format": "{player_icon}",
             "format-paused": "{status_icon}",
             "player-icons": {
-                "default": "",
+                "default": "",
                 "mpv": ""
             },
             "status-icons": {
-                "paused": ""
+                "paused": ""
             },
             "interval":1,
             "tooltip-format": " {player}\n {artist}\n {album} {title}\n [{position}/{length}]"
         },
-        
+
         "hyprland/workspaces": {
             "format": "{id}",
             "on-click": "activate",
@@ -188,7 +188,7 @@
         },
 
         "custom/notification": {
-            "tooltip-format": "Notifications: {}",
+            "tooltip-format": "<b><span color='#fab387'><big>󰂜 Notifications</big></span></b>\n<span color='#cdd6f4'>Unread: {}</span>",
             "format": "{} {icon}",
             "format-icons": {
                 "notification": "󰂚",
@@ -219,9 +219,9 @@
         },
 
         "clock": {
-            "format": "{:%Y/%m/%d  %H:%M:%S}",
+            "format": "{:%Y/%m/%d  %H:%M:%S}",
             "on-click": "kitty --class floating --title 'Calendar' -e calcurse",
-            "tooltip-format": "<b><span color='#ffae12'><big>Click to launch </big></span></b>\n\n<tt>{calendar}</tt>",
+            "tooltip-format": "<b><span color='#fab387'><big> Calendar (󰳽 Launch Calcurse)</big></span></b>\n<tt>{calendar}</tt>",
             "calendar": {
                 "mode"          : "year",
                 "mode-mon-col"  : 3,
@@ -229,11 +229,11 @@
                 "on-scroll"     : 1,
                 "on-click-right": "mode",
                 "format": {
-                    "months":     "<span color='#ffead3'><b>{}</b></span>",
-                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
-                    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
-                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                    "months":     "<span color='#f9e2af'><b>{}</b></span>",
+                    "days":       "<span color='#cdd6f4'><b>{}</b></span>",
+                    "weeks":      "<span color='#a6e3a1'><b>W{}</b></span>",
+                    "weekdays":   "<span color='#fab387'><b>{}</b></span>",
+                    "today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
                 }
             },
             "interval": 1
@@ -252,9 +252,9 @@
             "format-ethernet": "󰈀 {ifname}",
             "format-wifi": "󰤨 {signalStrength}%",
             "format-disconnected": "󰤭 Disconnected",
-            "tooltip-format-wifi": "<b><span color='#ffae12'><big>󰤨 Connected to Wifi</big></span></b>\nIP: {ipaddr}\nWifi: {essid} ({signalStrength}%)",
-            "tooltip-format-ethernet": "<b><span color='#ffae12'><big>󰈀 Connected to Ethernet</big></span></b>\nIP: {ipaddr}\nConnected via {ifname}",
-            "tooltip-disconnected": "󰤭 Disconnected",
+            "tooltip-format-wifi": "<b><span color='#fab387'><big>󰤨 Connected to Wifi</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Wifi:</span> <span color='#cdd6f4'>{essid} ({signalStrength}%)</span>",
+            "tooltip-format-ethernet": "<b><span color='#fab387'><big>󰈀 Connected to Ethernet</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Interface:</span> <span color='#cdd6f4'>{ifname}</span>",
+            "tooltip-disconnected": "<b><span color='#fab387'><big>󰤭 Network</big></span></b>\n<span color='#f38ba8'>Disconnected</span>",
             "on-click": "~/.config/waybar/scripts/wifi-menu.sh"
         },
 
@@ -264,22 +264,22 @@
             "format-icons": {
                 "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
                 "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-                "headphones": "",
-                "handsfree": "",
+                "headphone": "",
+                "hands-free": "",
                 "headset": "",
                 "phone": "",
                 "phone-muted": "",
                 "portable": "",
                 "car": "",
-                "default": ["󰕿", "󰖀", "󰕾"]
+                "default": ["", ""]
             },
             "on-click": "hyprctl dispatch exec pwvucontrol",
-            "tooltip-format": "Current volume: {volume}%"
+            "tooltip-format": "<b><span color='#fab387'><big>󰕾 Audio</big></span></b>\n<span color='#89dceb'>Volume:</span> <span color='#cdd6f4'>{volume}%</span>"
         },
 
         "custom/quick-actions": {
             "format": "",
-            "tooltip-format": "Quick Actions",
+            "tooltip-format": "<b><span color='#fab387'><big> Quick Actions</big></span></b>\n<span color='#cdd6f4'>Click to open menu</span>",
             "on-click": "~/.config/waybar/scripts/quick-actions.sh"
         },
 
