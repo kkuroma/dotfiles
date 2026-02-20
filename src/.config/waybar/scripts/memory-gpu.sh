@@ -25,22 +25,21 @@ if command -v nvidia-smi &> /dev/null; then
         # Display: RAM% | GPU%
         display_text="󰍛 ${mem_percent}% 󰢮 ${gpu_util}%"
 
-        # Tooltip with Pango markup
-        tooltip="<b><span color='#fab387'><big>󰍛 Memory &amp; GPU</big></span></b>"
-        tooltip+="\n<span color='#89dceb'>RAM:</span> <span color='#cdd6f4'>${mem_used} / ${mem_total} (${mem_percent}%)</span>"
-        tooltip+="\n<span color='#89dceb'>GPU Load:</span> <span color='#cdd6f4'>${gpu_util}%</span>"
-        tooltip+="\n<span color='#89dceb'>GPU Temp:</span> <span color='#cdd6f4'>${temp}°C</span>"
-        tooltip+="\n<span color='#89dceb'>VRAM:</span> <span color='#cdd6f4'>${vram_used}GB / ${vram_total}GB</span>"
-        tooltip+="\n<span color='#89dceb'>Power:</span> <span color='#cdd6f4'>${power_draw}W / ${power_limit}W</span>"
+        # Tooltip: RAM info + GPU info
+        tooltip="󰍛 RAM: ${mem_used} / ${mem_total} (${mem_percent}%)\n\n"
+        tooltip+="󰢮 GPU Utilization: ${gpu_util}%\n"
+        tooltip+=" Temperature: ${temp}°C\n"
+        tooltip+="󰍛 VRAM: ${vram_used}GB / ${vram_total}GB\n"
+        tooltip+="󰚥 Power: ${power_draw}W / ${power_limit}W"
     else
         # nvidia-smi exists but failed - show RAM only
         display_text="${mem_percent}%"
-        tooltip="<b><span color='#fab387'><big>󰍛 Memory</big></span></b>\n<span color='#89dceb'>RAM:</span> <span color='#cdd6f4'>${mem_used} / ${mem_total} (${mem_percent}%)</span>"
+        tooltip="󰍛 RAM: ${mem_used} / ${mem_total} (${mem_percent}%)"
     fi
 else
     # No NVIDIA GPU - show RAM only
     display_text="󰍛 ${mem_percent}%"
-    tooltip="<b><span color='#fab387'><big>󰍛 Memory</big></span></b>\n<span color='#89dceb'>RAM:</span> <span color='#cdd6f4'>${mem_used} / ${mem_total} (${mem_percent}%)</span>"
+    tooltip="󰍛 RAM: ${mem_used} / ${mem_total} (${mem_percent}%)"
 fi
 
 echo "{\"text\":\"$display_text\",\"tooltip\":\"$tooltip\"}"

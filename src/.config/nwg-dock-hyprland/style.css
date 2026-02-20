@@ -1,51 +1,45 @@
 @import url("colors.css");
 
-* {
-    font-family: "JetBrainsMono Nerd Font Propo";
-    font-weight: 500;
-}
-
 window {
-    background-color: rgba(19, 19, 24, 0.75);
-    border: 2px solid @primary;
-    border-radius: 8px;
-    border-style: solid;
-    border-width: 2px;
-    border-color: @primary;
+	background-color: alpha(@surface_container, 0.8);
+	border-radius: 15px;
+	border-style: none;
+	border-width: 15px;
+	border-color: @primary;
 }
 
 #box {
-    padding: 10px;
+	/* Define attributes of the box surrounding icons here */
+	padding: 10px;
 }
 
 #active {
-    border-bottom: solid 2px;
-    border-color: @primary;
+	/* This is to underline the button representing the currently active window */
+	border-bottom: solid 1px;
+	border-color: @primary;
 }
 
 button,
 image {
-    background: none;
-    border-style: none;
-    box-shadow: none;
-    color: @on_surface_variant;
+	background: none;
+	border-style: none;
+	box-shadow: none;
+	color: @on_surface_variant;
 }
 
 button {
-    padding: 4px;
-    margin-left: 4px;
-    margin-right: 4px;
-    color: @on_surface;
-    font-size: 12px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+	padding: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+	color: @on_surface;
+	font-size: 12px;
 }
 
 button:hover {
-    background-color: @surface_container_highest;
-    border-radius: 8px;
+	background-color: @surface_container_high;
+	border-radius: 2px;
 }
 
 button:focus {
-    box-shadow: none;
+	box-shadow: none;
 }

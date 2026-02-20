@@ -31,11 +31,6 @@
                                 name: "Perplexica",
                                 key: 'p',
                             ),
-                            (
-                                url: "https://youtube.com/search?q={}",
-                                name: "YouTube",
-                                key: 'y',
-                            ),
                         ],
                     ),
                     calc: (),
