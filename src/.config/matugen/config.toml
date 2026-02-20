@@ -1,15 +1,6 @@
-[config.wallpaper]
-set = true
-command = "swww"
-arguments = [
-    "img",
-    "--transition-type", "grow",
-    "--transition-pos", "0.5,0.5",
-    "--transition-duration", "1.5",
-    "--transition-fps", "60",
-    "--transition-bezier", "0.68,-0.55,0.27,1.55",
-    "--transition-step", "60"
-]
+[config]
+version_check = false 
+fallback_color = '#FFFFFF'
 
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
@@ -90,11 +81,6 @@ post_hook = 'killall nwg-dock-hyprland'
 [templates.nwg-drawer]
 input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/nwg-drawer/colors.css'
-
-[templates.pywalfox]
-input_path = '~/.config/matugen/templates/pywalfox-colors.json'
-output_path = '~/.cache/wal/colors.json'
-post_hook = 'pywalfox update'
 
 [templates.swaync]
 input_path = '~/.config/matugen/templates/colors.css'

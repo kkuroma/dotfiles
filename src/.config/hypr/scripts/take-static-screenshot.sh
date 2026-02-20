@@ -26,6 +26,7 @@ elif [ "$MODE" -eq 1 ]; then
     satty \
         --disable-notifications \
         --filename "$TEMP_FILE" \
+        --floating-hack \
         --output-filename "$SAVE_PATH" \
         --copy-command "wl-copy -t image/png && notify-send -a 'Screenshot' 'Screenshot Copied' 'Copied to clipboard' --icon='$TEMP_FILE'" \
         --early-exit \

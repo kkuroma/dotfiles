@@ -1,14 +1,14 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-  "logo": {
-    "type": "file",
-    "source": "~/.config/fastfetch/arch.txt",
-    "color": {
-      "1": "blue"
-    }
-  },
   "display": {
     "separator": " "
+  },
+  "logo": {
+    "type": "kitty",
+    "source": "~/.cache/last_wallpaper_static_square.jpg",
+    "width": 55,
+    "height": 25,
+    "recache": true
   },
   "modules": [
     {

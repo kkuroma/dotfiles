@@ -1,6 +1,7 @@
 [EmbedSettings]
 embed-application/pdf=false
 embed-audio/flac=false
+embed-image/gif=false
 embed-image/jpeg=false
 embed-image/png=false
 embed-text/plain=false

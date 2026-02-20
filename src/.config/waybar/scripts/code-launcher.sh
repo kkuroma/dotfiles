@@ -1,8 +1,10 @@
 #!/bin/bash
 
-path=$(fd -H -E .git -t f -t d | fzf \
-    --pointer="" \
-    --marker="" \
+search_paths=(~/ /opt)
+
+path=$( fd -H -E .git -t f -t d . "${search_paths[@]}" | fzf \
+    --pointer="" \
+    --marker="" \
     --prompt="Open in VS Code: " \
     --height=100% \
     --reverse \

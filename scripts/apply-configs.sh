@@ -5,7 +5,7 @@ CONFIG_SOURCE="$REPO_DIR/.config"
 
 RICE_CONFIGS=(
     # Main rice
-    "hypr"
+    #"hypr"
     "waybar"
     "swaync"
     #"rofi"

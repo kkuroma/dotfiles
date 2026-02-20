@@ -95,15 +95,13 @@ else
 fi
 
 # Build colorful tooltip
-tooltip="<span color='#ffead3'><b>Weather Information</b></span>\n"
-tooltip+="<span color='#ffae12'>lat: $latitude, lon: $longitude</span>\n\n"
+tooltip="<big><span color='#ffae12'><b>Weather Information (󰳽 °C/°F)</b></span></big>\n"
+tooltip+="<span color='#ffead3'>lat: $latitude, lon: $longitude</span>\n\n"
 tooltip+="<span color='#ff6699'><b> Temperature:</b></span> <span color='#ecc6d9'>${temp_display}</span>\n"
 tooltip+="<span color='#ffcc66'><b> Feels like:</b></span> <span color='#ecc6d9'>${feels_display}</span>\n"
 tooltip+="<span color='#ffcc66'><b>$icon Condition:</b></span> <span color='#ecc6d9'>$condition</span>\n"
 tooltip+="<span color='#99ffdd'><b>󰖌 Humidity:</b></span> <span color='#ecc6d9'>${humidity}${humidity_unit}</span>\n"
 tooltip+="<span color='#99ffdd'><b> Wind:</b></span> <span color='#ecc6d9'>${windspeed} ${windspeed_unit}</span>\n"
 tooltip+="<span color='#82bcdd'><b> Precipitation:</b></span> <span color='#ecc6d9'>${precipitation} ${precipitation_unit}</span>\n"
-tooltip+="<span color='#82bcdd'><b>󱤊 Pressure:</b></span> <span color='#ecc6d9'>${pressure} ${pressure_unit}</span>\n"
-tooltip+="\n<span color='#ffead3'><i>󰳽 Click to toggle °C/°F</i></span>"
-
+tooltip+="<span color='#82bcdd'><b>󱤊 Pressure:</b></span> <span color='#ecc6d9'>${pressure} ${pressure_unit}</span>"
 echo "{\"text\":\"$icon $temp_display\",\"tooltip\":\"$tooltip\"}"

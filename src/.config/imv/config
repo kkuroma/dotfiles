@@ -1,4 +1,8 @@
 [options]
 overlay = true
-overlay_text = [$imv_current_index/$imv_file_count] [$imv_width x $imv_height] $imv_scale% $(basename $imv_current_file) 
+overlay_text = [$imv_current_index/$imv_file_count] [ESC: Quit] [Ctrl-C: Copy Path] [$imv_width x $imv_height] $imv_scale% $(basename "$imv_current_file")
 overlay_font = monospace:12
+
+[binds]
+<Ctrl+c> = exec wl-copy < "$imv_current_file" && notify-send -a "System" "Image Copied" "Copied $imv_current_file to clipboard" -i preferences-desktop
+<Escape> = quit

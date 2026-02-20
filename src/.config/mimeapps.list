@@ -1,23 +1,37 @@
 [Added Associations]
 application/pdf=org.pwmt.zathura.desktop;code-oss.desktop;
+application/rss+xml=vscodium-wayland.desktop;
 application/zip=org.kde.ark.desktop;org.prismlauncher.PrismLauncher.desktop;
 audio/flac=vlc-3.desktop;vlc-2.desktop;
-image/gif=imv-dir.desktop;
+image/gif=imv-dir-2.desktop;imv-dir.desktop;
 image/jpeg=imv-dir.desktop;
 image/png=imv-dir.desktop;
 text/plain=code-oss.desktop;
 video/mp4=mpv.desktop;
 video/x-matroska=mpv.desktop;vlc.desktop;
+x-scheme-handler/chrome=zen.desktop;
+x-scheme-handler/http=zen.desktop;
+x-scheme-handler/https=zen.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
+application/x-extension-htm=zen.desktop
+application/x-extension-html=zen.desktop
+application/x-extension-shtml=zen.desktop
+application/x-extension-xht=zen.desktop
+application/x-extension-xhtml=zen.desktop
+application/xhtml+xml=zen.desktop
 application/zip=org.kde.ark.desktop;
 audio/flac=vlc-3.desktop;
-image/gif=imv-dir.desktop
+image/gif=imv-dir-2.desktop;
 image/jpeg=imv-dir.desktop
 image/png=imv-dir.desktop
 inode/directory=org.kde.dolphin.desktop
+text/html=zen.desktop
 text/plain=code-oss.desktop;
 video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop;
+x-scheme-handler/chrome=zen.desktop
 x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/http=zen.desktop
+x-scheme-handler/https=zen.desktop
