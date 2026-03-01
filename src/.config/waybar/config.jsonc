@@ -177,7 +177,7 @@
         },
 
         "hyprland/workspaces": {
-            "format": "{id}",
+            "format": "{icon}",
             "on-click": "activate",
             "on-scroll-up": "~/.config/waybar/scripts/workspace-scroll.sh up",
             "on-scroll-down": "~/.config/waybar/scripts/workspace-scroll.sh down",
@@ -278,8 +278,9 @@
         },
 
         "custom/quick-actions": {
-            "format": "",
-            "tooltip-format": "<b><span color='#fab387'><big> Quick Actions</big></span></b>\n<span color='#cdd6f4'>Click to open menu</span>",
+            "format": "{}",
+            "exec": "pgrep -x hypridle > /dev/null && echo 󰈈 || echo 󰈉",
+            "tooltip-format": "<b><span color='#fab387'><big> Quick Actions</big></span></b>\n<span color='#cdd6f4'>Click to open menu</span>",
             "on-click": "~/.config/waybar/scripts/quick-actions.sh"
         },
 

@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 
+# Check if hypridle is running
+if pgrep -x hypridle > /dev/null; then
+    timeout_status="󰈈 Active"
+else
+    timeout_status="󰈉 Inactive"
+fi
+
 menu=(
     " Keybinds"
-    " Calculator"
+    "$timeout_status"
+    " Layout"
     "󰹑 Screenshot"
     "󰅇 Clipboard"
-    " Layouts"
     "󰞅 Emojis"
     " Icons"
     " Picker"
@@ -23,6 +30,9 @@ if [ -n "$selected" ]; then
     case "$selected" in
         "󰹑 Screenshot")
             ~/.config/waybar/scripts/take-screenshot.sh
+            ;;
+        " Layout")
+            ~/.config/waybar/scripts/layout-switch-gui.sh
             ;;
         "󰅇 Clipboard")
             clipse-gui
@@ -56,6 +66,14 @@ if [ -n "$selected" ]; then
             ;;
         " Layouts")
             ~/.config/waybar/scripts/layout-switcher.sh
+            ;;
+        "󰈈 Active")
+            pkill hypridle
+            notify-send -a "System" "Screen Timeout" "Screen timeout disabled" -i preferences-desktop
+            ;;
+        "󰈉 Inactive")
+            hypridle &
+            notify-send -a "System" "Screen Timeout" "Screen timeout enabled" -i preferences-desktop
             ;;
     esac
 fi

@@ -90,6 +90,7 @@ ForegroundVisited={{colors.secondary.default.hex}}
 
 [General]
 ColorScheme=MaterialYou
+TerminalApplication=kitty
 
 [UiSettings]
 ColorScheme=MaterialYou

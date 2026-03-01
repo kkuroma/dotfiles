@@ -3,15 +3,8 @@
 # Get current power profile
 current=$(powerprofilesctl get)
 
-# Check if hypridle is running
-if pgrep -x hypridle > /dev/null; then
-    timeout_status="󰈈 Screen Timeout (Active)"
-else
-    timeout_status="󰈉 Screen Timeout (Inactive)"
-fi
-
 # Build menu with icons
-menu=("$timeout_status")
+menu=()
 if [ "$current" = "performance" ]; then
     menu+=("󰓅 Performance (Active)")
 else
@@ -47,14 +40,6 @@ if [ -n "$selected" ]; then
         "󰾆 Power Saver"*|"󰾆 Power Saver (Active)")
             powerprofilesctl set power-saver
             notify-send -a "System" "Power Profile" "Switched to Power Saver mode" -i preferences-desktop
-            ;;
-        "󰈈 Screen Timeout (Active)")
-            pkill hypridle
-            notify-send -a "System" "Screen Timeout" "Screen timeout disabled" -i preferences-desktop
-            ;;
-        "󰈉 Screen Timeout (Inactive)")
-            hypridle &
-            notify-send -a "System" "Screen Timeout" "Screen timeout enabled" -i preferences-desktop
             ;;
     esac
 fi

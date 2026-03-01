@@ -91,8 +91,8 @@ window#waybar > box {
 }
 
 #workspaces button {
-    background: @surface_container_high;
-    color: @outline;
+    background: @inverse_primary;
+    color: @scrim;
     padding: 4px 8px;
     margin: 0;
     border-radius: 0;
@@ -109,6 +109,12 @@ window#waybar > box {
 
 #workspaces button:last-child {
     border-radius: 0 8px 8px 0;
+}
+
+#workspaces button.empty {
+    background: @surface_container_high;
+    color: @outline;
+    font-weight: 700;
 }
 
 #workspaces button:hover {
