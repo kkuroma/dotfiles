@@ -1,7 +1,7 @@
 @import "colors.css";
 
 /* ============================================
-   GLOBAL STYLES
+   GLOBAL STYLES AND THE BAR ITSELF
    ============================================ */
 * {
     border: none;
@@ -18,18 +18,14 @@ window#waybar {
 }
 
 window#waybar > box {
-    background: rgba(20, 18, 24, 0.75);
+    background: rgba(20, 18, 24, 0.6);
     margin: 6px 6px 0 6px;
     border: 2px solid @primary;
     border-radius: 8px;
 }
 
-/* ============================================
-   LEFT SIDE MODULES
-   Color pattern: secondary → tertiary
-   ============================================ */
-
-#custom-launcher {
+/* These modules use the primary color*/
+#custom-launcher, #custom-wallpaper, #custom-quick-actions, #custom-notification, #mpris {
     background: @primary;
     color: @on_primary;
     padding: 4px 10px;
@@ -37,53 +33,26 @@ window#waybar > box {
     border-radius: 8px;
 }
 
-#cpu,
-#custom-memory-gpu,
-#network,
-#temperature,
-#custom-disk {
+/* Color pattern: secondary - tertiary - secondary*/
+
+#cpu, #custom-memory-gpu, #network, #temperature, #custom-disk, #custom-ime, #clock, #custom-weather, #pulseaudio, #network.wifi {
     color: @on_surface;
     padding: 4px 10px;
     margin: 4px 2px;
     border-radius: 8px;
 }
 
-#cpu {
-    background: @surface_container_high;
+#cpu, #network, #custom-disk, #custom-ime, #custom-weather, #network.wifi {
+    background: @on_secondary_fixed;
     color: @secondary;
 }
 
-#custom-memory-gpu {
-    background: @surface_container_highest;
+#custom-memory-gpu, #temperature, #clock, #pulseaudio {
+    background: @on_tertiary_fixed;
     color: @tertiary;
 }
 
-#network {
-    background: @surface_container_high;
-    color: @secondary;
-}
-
-#temperature {
-    background: @surface_container_highest;
-    color: @tertiary;
-}
-
-#custom-disk {
-    background: @surface_container_high;
-    color: @secondary;
-}
-
-#custom-wallpaper {
-    background: @primary;
-    color: @surface_container_high;
-    padding: 4px 10px;
-    margin: 4px 2px;
-    border-radius: 8px;
-}
-
-/* ============================================
-   CENTER MODULES
-   ============================================ */
+/* workspaces */
 
 #workspaces {
     background: transparent;
@@ -96,20 +65,14 @@ window#waybar > box {
     padding: 4px 8px;
     margin: 0;
     border-radius: 0;
-    border: none;
-    box-shadow: none;
     transition: all 0.3s ease;
     min-height: 0;
     min-width: 0;
 }
 
-#workspaces button:first-child {
-    border-radius: 8px 0 0 8px;
-}
-
-#workspaces button:last-child {
-    border-radius: 0 8px 8px 0;
-}
+/* These are here to make the first/last workspace rouned */
+#workspaces button:first-child { border-radius: 8px 0 0 8px; }
+#workspaces button:last-child { border-radius: 0 8px 8px 0; }
 
 #workspaces button.empty {
     background: @surface_container_high;
@@ -118,11 +81,9 @@ window#waybar > box {
 }
 
 #workspaces button:hover {
-    background: @surface_container_highest;
-    color: @on_surface;
+    background: @inverse_surface;
+    color: @shadow;
     font-weight: 700;
-    border: none;
-    box-shadow: none;
 }
 
 #workspaces button.active {
@@ -138,73 +99,7 @@ window#waybar > box {
     font-weight: 700;
 }
 
-#custom-notification,
-#mpris {
-    background: @primary;
-    color: @surface_container_high;
-    padding: 4px 10px;
-    margin: 4px 2px;
-    border-radius: 8px;
-}
-
-/* ============================================
-   RIGHT SIDE MODULES
-   Color pattern: secondary → tertiary
-   ============================================ */
-
-#custom-ime,
-#clock,
-#custom-weather,
-#pulseaudio,
-#network.wifi {
-    color: @on_surface;
-    padding: 4px 10px;
-    margin: 4px 2px;
-    border-radius: 8px;
-}
-
-#custom-ime {
-    background: @surface_container_high;
-    color: @secondary;
-    font-weight: 600;
-}
-
-#clock {
-    background: @surface_container_highest;
-    color: @tertiary;
-    font-weight: 600;
-}
-
-#custom-weather {
-    background: @surface_container_high;
-    color: @secondary;
-}
-
-#pulseaudio {
-    background: @surface_container_highest;
-    color: @tertiary;
-}
-
-#pulseaudio.muted {
-    color: @tertiary;
-}
-
-#network.wifi {
-    background: @surface_container_high;
-    color: @secondary;
-}
-
-#custom-quick-actions {
-    background: @primary;
-    color: @surface_container_high;
-    padding: 4px 10px;
-    margin: 4px 2px;
-    border-radius: 6px;
-}
-
-/* ============================================
-   SPECIAL MODULES
-   ============================================ */
+/* power button */
 
 #custom-power {
     background: #E08290;
@@ -214,9 +109,7 @@ window#waybar > box {
     border-radius: 6px;
 }
 
-/* ============================================
-   TOOLTIPS
-   ============================================ */
+/* tooltips */
 
 tooltip {
     background: @surface_container;

@@ -45,7 +45,7 @@
     background: @surface_container_highest;
     color: @tertiary;
     text-shadow: none;
-    padding: 0 4px;
+    padding: 0 0px;
     border-radius: 100%;
     border: 1px solid @outline_variant;
     transition: all 0.3s ease;

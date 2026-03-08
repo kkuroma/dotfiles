@@ -53,16 +53,13 @@ if [ -n "$selected" ]; then
             ~/.config/waybar/scripts/installer-wrapper.sh
             ;;
         " Bluetooth")
-            ~/.config/waybar/scripts/rofi-bluetooth.sh
+            kitty --class floating --title 'bluetui' -e bluetui
             ;;
         "󰁹 Power")
             ~/.config/waybar/scripts/power-profile.sh
             ;;
         " Keybinds")
             ~/.config/hypr/scripts/cheatsheet.sh
-            ;;
-        " Calculator")
-            rofi -show calc -modi calc -no-show-match -no-sort
             ;;
         " Layouts")
             ~/.config/waybar/scripts/layout-switcher.sh

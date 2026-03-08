@@ -7,7 +7,7 @@ configuration {
     display-window: "Windows";
     drun-display-format: "{name}";
     window-format: "{w} · {c} · {t}";
-    font: "JetBrainsMono Nerd Font 13";
+    font: "JetBrainsMono Nerd Font 12";
 
     /* Performance */
     lazy-grab: true;
@@ -50,7 +50,7 @@ inputbar {
 
 prompt {
     text-color: @primary;
-    font: "JetBrainsMono Nerd Font Bold 13";
+    font: "JetBrainsMono Nerd Font Bold 12";
 }
 
 entry {

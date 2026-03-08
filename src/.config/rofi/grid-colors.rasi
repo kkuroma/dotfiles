@@ -3,7 +3,7 @@
 configuration {
     show-icons: true;
     icon-theme: "Numix-Circle";
-    font: "JetBrainsMono Nerd Font 13";
+    font: "JetBrainsMono Nerd Font 12";
 }
 
 * {
@@ -36,7 +36,7 @@ inputbar {
 
 prompt {
     text-color: @primary;
-    font: "JetBrainsMono Nerd Font Bold 13";
+    font: "JetBrainsMono Nerd Font Bold 12";
 }
 
 entry {

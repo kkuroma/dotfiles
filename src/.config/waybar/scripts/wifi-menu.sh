@@ -1,6 +1,6 @@
 #!/bin/bash
 
-nmcli device wifi rescan --wait 8
+nmcli device wifi rescan --wait 2
 current=$(nmcli -t -f NAME connection show --active | grep -v "lo" | head -n 1)
 wifi_list=$(nmcli -t -f SSID,SECURITY,SIGNAL device wifi list | \
             sort -t: -k3 -rn | \
@@ -17,7 +17,7 @@ display_list=$(echo "$wifi_list" | awk -F: '{
         icon = ""
         sec_text = security
     }
-    printf "%s %-35s %3s%%\n", icon, ssid " (" sec_text ")", signal
+    printf "%s %-30s %3s%%\n", icon, ssid " (" sec_text ")", signal
 }')
 if [ -n "$current" ]; then
     display_list="󰖪 Disconnect from: $current
