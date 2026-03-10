@@ -3,14 +3,22 @@ REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/src"
 CONFIG_TARGET="$HOME/.config"
 CONFIG_SOURCE="$REPO_DIR/.config"
 
+# Files that should NOT be overwritten if they already exist at the destination.
+# Format: "config_name:relative/path/to/file"
+PRESERVE_FILES=(
+    "hypr:monitors.conf"
+    "hypr:workspace.conf"
+)
+
 RICE_CONFIGS=(
     # Main rice
-    #"hypr"
+    "hypr"
     "waybar"
     "swaync"
-    #"rofi"
-    "wlogout"
-    "nwg-dock-hyprland"
+    "swayosd"
+    "systemd"
+    "elephant"
+    "walker"
 
     # Theming
     "kdeglobals"
@@ -36,7 +44,7 @@ RICE_CONFIGS=(
     "kitty"
     "fastfetch"
     "btop"
-
+    
     # Media players
     "mpv"
     "imv"
@@ -46,7 +54,17 @@ for config in "${RICE_CONFIGS[@]}"; do
     if [ -e "$CONFIG_SOURCE/$config" ]; then
         if [ -d "$CONFIG_SOURCE/$config" ]; then
             mkdir -p "$CONFIG_TARGET/$config"
-            rsync -a --delete "$CONFIG_SOURCE/$config/" "$CONFIG_TARGET/$config/" || {
+            # Build --exclude flags for files that should be preserved
+            EXCLUDES=()
+            for entry in "${PRESERVE_FILES[@]}"; do
+                prefix="${entry%%:*}"
+                file="${entry#*:}"
+                if [ "$prefix" = "$config" ] && [ -e "$CONFIG_TARGET/$config/$file" ]; then
+                    EXCLUDES+=(--exclude "$file")
+                    echo "  ~ Preserving $config/$file"
+                fi
+            done
+            rsync -a --delete "${EXCLUDES[@]}" "$CONFIG_SOURCE/$config/" "$CONFIG_TARGET/$config/" || {
                 echo "  ✗ Failed to sync $config"
                 continue
             }
@@ -61,42 +79,16 @@ for config in "${RICE_CONFIGS[@]}"; do
     fi
 done
 
-echo "Part 2: Copying ~/.mozilla"
-MOZILLA_TARGET="$HOME/.mozilla"
-MOZILLA_SOURCE="$REPO_DIR/.mozilla"
-RICE_CONFIGS=(
-    "firefox/xvm2110c.default-release/chrome"
-    "firefox/xvm2110c.default-release/user.js"
-)
-for config in "${RICE_CONFIGS[@]}"; do
-    if [ -e "$MOZILLA_SOURCE/$config" ]; then
-        if [ -d "$MOZILLA_SOURCE/$config" ]; then
-            mkdir -p "$MOZILLA_TARGET/$config"
-            rsync -a --delete "$MOZILLA_SOURCE/$config/" "$MOZILLA_TARGET/$config/" || {
-                echo "  ✗ Failed to sync $config"
-                continue
-            }
-        else
-            cp "$MOZILLA_SOURCE/$config" "$MOZILLA_TARGET/$config" || {
-                echo "  ✗ Failed to copy $config"
-                continue
-            }
-        fi
-        echo "  ✓ Copied $config"
-        ((SYNCED_COUNT++))
-    fi
-done
-
-echo "Part 3: Copying ~/.zshrc"
+echo "Part 2: Copying ~/.zshrc"
 cp "$REPO_DIR/.zshrc" "$HOME/.zshrc"
 cp -r "$REPO_DIR/Scripts" "$HOME"
 
-echo "Part 4: Enabling execution for scripts"
+echo "Part 3: Enabling execution for scripts"
 find ~/.config/waybar -type f -name "*.sh" -exec chmod +x {} \;
 find ~/.config/hypr -type f -name "*.sh" -exec chmod +x {} \;
 find ~/Scripts -type f -name "*.sh" -exec chmod +x {} \;
 
-echo "Part 5: Creating other files/directories"
+echo "Part 4: Creating other files/directories"
 LATITUDE="0.0"
 LONGITUDE="0.0"
 mkdir ~/Pictures

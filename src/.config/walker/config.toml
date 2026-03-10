@@ -1,0 +1,87 @@
+theme = "matugen"
+
+[providers]
+# Providers that search by default without a prefix
+default = ["desktopapplications", "calc", "runner", "websearch"]
+# max_results = 1000
+
+# Define prefixes for manual triggers
+[[providers.prefixes]]
+prefix = "="
+provider = "calc"
+
+[[providers.prefixes]]
+prefix = ">"
+provider = "runner"
+
+[[providers.prefixes]]
+prefix = "?"
+provider = "websearch"
+
+# Wallpaper actions: Return = color picker, Shift+Return = quick apply
+[[providers.actions."menus:choose-wallpaper"]]
+action = "activate"
+bind = "Return"
+label = "select colors"
+default = true
+
+[[providers.actions."menus:choose-wallpaper"]]
+action = "quick_apply"
+bind = "shift Return"
+label = "quick apply"
+
+[placeholders.default]
+input = "Search..."
+list = "No results"
+
+[placeholders."menus:choose-wallpaper"]
+input = "Search wallpapers..."
+list = "No wallpapers found"
+
+[placeholders."menus:apply-wallpaper"]
+input = "Select colors..."
+list = "No colors found"
+
+[placeholders."menus:cheatsheet"]
+input = "Search keybinds..."
+list = "No keybinds found"
+
+[placeholders."menus:quick-actions"]
+input = "Quick actions..."
+list = ""
+
+[placeholders."menus:layout-switcher"]
+input = "Select layout..."
+list = ""
+
+[placeholders."menus:tailscale"]
+input = "Search VPN nodes..."
+list = "No exit nodes found"
+
+[placeholders."menus:power-profile"]
+input = "Select power profile..."
+list = ""
+
+[placeholders."menus:icon-picker"]
+input = "Search nerd font icons..."
+list = "No icons found"
+
+[placeholders."menus:emoji-picker"]
+input = "Search emojis..."
+list = "No emojis found"
+
+[placeholders."menus:wifi"]
+input = "Search networks..."
+list = "No networks found"
+
+[placeholders."menus:packages"]
+input = "Package actions..."
+list = ""
+
+[placeholders."menus:package-list"]
+input = "Search packages (select to copy name)..."
+list = "No packages found"
+
+[placeholders."menus:power-menu"]
+input = "Power menu..."
+list = ""

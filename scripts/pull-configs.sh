@@ -12,11 +12,9 @@ RICE_CONFIGS=(
     "waybar"
     "swaync"
     "swayosd"
-    "rofi"
-    "wlogout"
-    "nwg-dock-hyprland"
     "systemd"
-    "hyprshell"
+    "elephant"
+    "walker"
 
     # Theming
     "kdeglobals"
@@ -67,32 +65,6 @@ for config in "${RICE_CONFIGS[@]}"; do
     fi
 done
 
-echo "Part 2: Copying ~/.mozilla"
-MOZILLA_SOURCE="$HOME/.mozilla"
-MOZILLA_TARGET="$REPO_DIR/.mozilla"
-RICE_CONFIGS=(
-    "firefox/xvm2110c.default-release/chrome"
-    "firefox/xvm2110c.default-release/user.js"
-)
-for config in "${RICE_CONFIGS[@]}"; do
-    if [ -e "$MOZILLA_SOURCE/$config" ]; then
-        if [ -d "$MOZILLA_SOURCE/$config" ]; then
-            mkdir -p "$MOZILLA_TARGET/$config"
-            rsync -a --delete "$MOZILLA_SOURCE/$config/" "$MOZILLA_TARGET/$config/" || {
-                echo "  ✗ Failed to sync $config"
-                continue
-            }
-        else
-            cp "$MOZILLA_SOURCE/$config" "$MOZILLA_TARGET/$config" || {
-                echo "  ✗ Failed to copy $config"
-                continue
-            }
-        fi
-        echo "  ✓ Copied $config"
-        ((SYNCED_COUNT++))
-    fi
-done
-
-echo "Part 3: Copying ~/.zshrc"
+echo "Part 2: Copying ~/.zshrc"
 cp "$HOME/.zshrc" "$REPO_DIR/.zshrc"
 cp -r "$HOME/Scripts" "$REPO_DIR"

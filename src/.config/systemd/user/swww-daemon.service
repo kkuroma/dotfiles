@@ -2,7 +2,7 @@
 Description=SWWW Daemon
 
 [Service]
-ExecStart=/usr/bin/swww-daemon
+ExecStart=killall swww-daemon; /usr/bin/swww-daemon
 Restart=on-failure
 
 [Install]

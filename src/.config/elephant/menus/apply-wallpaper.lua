@@ -1,0 +1,55 @@
+Name = "apply-wallpaper"
+NamePretty = "Pick Color & Scheme"
+Icon = "color-select"
+Cache = false
+
+local state_dir = os.getenv("HOME") .. "/.cache/walker-wallpaper/"
+local color_cache = state_dir .. "colors/"
+
+local schemes = {
+    "scheme-content",
+    "scheme-expressive",
+    "scheme-vibrant",
+    "scheme-tonal-spot",
+    "scheme-monochrome",
+}
+
+local function read_file(path)
+    local f = io.open(path, "r")
+    if not f then return nil end
+    local content = f:read("*a")
+    f:close()
+    return content
+end
+
+local function file_exists(path)
+    local f = io.open(path, "r")
+    if f then f:close() return true end
+    return false
+end
+
+function GetEntries()
+    local entries = {}
+
+    local color_data = read_file(state_dir .. "colors.txt")
+    if not color_data then return entries end
+
+    for hex in color_data:gmatch("#(%x+)") do
+        local swatch = color_cache .. hex .. ".png"
+        local icon = file_exists(swatch) and swatch or ""
+
+        for _, scheme in ipairs(schemes) do
+            local scheme_short = scheme:gsub("scheme%-", "")
+            table.insert(entries, {
+                Text = "#" .. hex .. "|" .. scheme_short,
+                Subtext = scheme,
+                Value = hex .. "|" .. scheme,
+                Icon = icon,
+            })
+        end
+    end
+
+    return entries
+end
+
+Action = os.getenv("HOME") .. "/.config/elephant/scripts/apply-wallpaper.sh '%VALUE%'"

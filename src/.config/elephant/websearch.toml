@@ -1,0 +1,16 @@
+[[entries]]
+default = true
+name = "Search With DuckDuckGo"
+url = "https://duckduckgo.com/?q=%TERM%"
+
+[[entries]]
+name = "Search With SearXNG"
+url = "https://searx.kuroma.dev/search?q=%TERM%"
+
+[[entries]]
+name = "Search With YouTube"
+url = "https://www.youtube.com/results?search_query=%TERM%"
+
+[[entries]]
+name = "Search With GitHub"
+url = "https://github.com/search?q=%TERM%"

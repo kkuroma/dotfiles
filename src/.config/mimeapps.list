@@ -1,4 +1,5 @@
 [Added Associations]
+application/json=nvim.desktop;app.zen_browser.zen.desktop;vscodium-wayland.desktop;vim.desktop;libreoffice-writer.desktop;vscodium.desktop;
 application/pdf=org.pwmt.zathura.desktop;code-oss.desktop;
 application/rss+xml=vscodium-wayland.desktop;
 application/zip=org.kde.ark.desktop;org.prismlauncher.PrismLauncher.desktop;
@@ -14,6 +15,7 @@ x-scheme-handler/http=zen.desktop;
 x-scheme-handler/https=zen.desktop;
 
 [Default Applications]
+application/json=nvim.desktop;
 application/pdf=org.pwmt.zathura.desktop;
 application/x-extension-htm=zen.desktop
 application/x-extension-html=zen.desktop
@@ -31,9 +33,9 @@ text/html=app.zen_browser.zen.desktop
 text/plain=code-oss.desktop;
 video/mp4=mpv.desktop
 video/x-matroska=mpv.desktop;
+x-scheme-handler/about=app.zen_browser.zen.desktop
 x-scheme-handler/chrome=zen.desktop
 x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/http=app.zen_browser.zen.desktop
 x-scheme-handler/https=app.zen_browser.zen.desktop
-x-scheme-handler/about=app.zen_browser.zen.desktop
 x-scheme-handler/unknown=app.zen_browser.zen.desktop

@@ -1,5 +1,80 @@
 [
     {
+        "output": "HDMI-A-1",
+        "layer": "top",
+        "position": "top",
+        "height": 20,
+        "spacing": 4,
+        "reload_style_on_change": true,
+
+        "modules-left": ["custom/launcher", "cpu", "custom/memory-gpu"],
+        "modules-center": ["hyprland/workspaces"],
+        "modules-right": ["clock","custom/weather","custom/power"],
+
+        "custom/launcher": {
+            "format": "",
+            "tooltip-format": "<b><span color='#fab387'><big> App Launcher</big></span></b>\n<span color='#cdd6f4'>Click to open Rofi</span>",
+            "on-click": "rofi -show drun -modi drun -theme ~/.config/rofi/grid.rasi"
+        },
+        "cpu": {
+            "format": "󰻠 {usage}%",
+            "interval": 2,
+            "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
+        },
+        "custom/memory-gpu": {
+            "exec": "~/.config/waybar/scripts/memory-gpu.sh",
+            "format": "{}",
+            "return-type": "json",
+            "interval": 2,
+            "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
+        },
+        "hyprland/workspaces": {
+            "format": "{id}",
+            "on-click": "activate",
+            "on-scroll-up": "~/.config/waybar/scripts/workspace-scroll.sh up",
+            "on-scroll-down": "~/.config/waybar/scripts/workspace-scroll.sh down",
+            "all-outputs": false,
+            "persistent-workspaces": {
+                "HDMI-A-1": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+            }
+        },
+        "clock": {
+            "format": "{:%Y/%m/%d  %H:%M:%S}",
+            "on-click": "kitty --class floating --title 'Calendar' -e calcurse",
+            "tooltip-format": "<b><span color='#fab387'><big> Calendar (󰳽 Launch Calcurse)</big></span></b>\n<tt>{calendar}</tt>",
+            "calendar": {
+                "mode"          : "year",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "right",
+                "on-scroll"     : 1,
+                "on-click-right": "mode",
+                "format": {
+                    "months":     "<span color='#f9e2af'><b>{}</b></span>",
+                    "days":       "<span color='#cdd6f4'><b>{}</b></span>",
+                    "weeks":      "<span color='#a6e3a1'><b>W{}</b></span>",
+                    "weekdays":   "<span color='#fab387'><b>{}</b></span>",
+                    "today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
+                }
+            },
+            "interval": 1
+        },
+        "custom/weather": {
+            "exec": "~/.config/waybar/scripts/weather.sh",
+            "return-type": "json",
+            "interval": 10,
+            "format": "{}",
+            "on-click": "~/.config/waybar/scripts/weather.sh toggle",
+            "signal": 8
+        },
+        "custom/power": {
+            "exec": "~/.config/waybar/scripts/battery-status.sh",
+            "return-type": "json",
+            "interval": 10,
+            "on-click": "walker -m menus:power-menu"
+        }
+    },
+    {
+        "output": ["HDMI-A-2", "eDP-1"], // main monitors
         "layer": "top",
         "position": "top",
         "height": 20,
@@ -43,7 +118,7 @@
             "exec": "ls ~/Pictures/Wallpapers | wc -l",
             "format": "",
             "tooltip-format": "<b><span color='#fab387'><big> Wallpaper</big></span></b>\n<span color='#cdd6f4'>Pick from {} wallpapers</span>",
-            "on-click": "~/.config/waybar/scripts/wallpaper-selector.sh"
+            "on-click": "walker -m menus:choose-wallpaper"
         },
 
         "cpu": {
@@ -108,8 +183,8 @@
             "on-scroll-down": "~/.config/waybar/scripts/workspace-scroll.sh down",
             "all-outputs": false,
             "persistent-workspaces": {
-                "eDP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-                "DP-1": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+                "HDMI-A-2": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                "eDP-1": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
             }
         },
 
@@ -181,7 +256,7 @@
             "tooltip-format-wifi": "<b><span color='#fab387'><big>󰤨 Connected to Wifi</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Wifi:</span> <span color='#cdd6f4'>{essid} ({signalStrength}%)</span>",
             "tooltip-format-ethernet": "<b><span color='#fab387'><big>󰈀 Connected to Ethernet</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Interface:</span> <span color='#cdd6f4'>{ifname}</span>",
             "tooltip-disconnected": "<b><span color='#fab387'><big>󰤭 Network</big></span></b>\n<span color='#f38ba8'>Disconnected</span>",
-            "on-click": "~/.config/waybar/scripts/wifi-menu.sh"
+            "on-click": "walker -m menus:wifi"
         },
 
         "pulseaudio": {
@@ -207,7 +282,7 @@
             "format": "{}",
             "exec": "pgrep -x hypridle > /dev/null && echo 󰈈 || echo 󰈉",
             "tooltip-format": "<b><span color='#fab387'><big> Quick Actions</big></span></b>\n<span color='#cdd6f4'>Click to open menu</span>",
-            "on-click": "~/.config/waybar/scripts/quick-actions.sh",
+            "on-click": "walker -m menus:quick-actions -t grid-actions",
             "interval": 2
         },
 
@@ -215,7 +290,7 @@
             "exec": "~/.config/waybar/scripts/battery-status.sh",
             "return-type": "json",
             "interval": 10,
-            "on-click": "wlogout --buttons-per-row 3"
+            "on-click": "walker -m menus:power-menu"
         }
     }
 ]
