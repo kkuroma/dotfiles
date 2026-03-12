@@ -168,7 +168,7 @@
    ============================================ */
 
 .control-center {
-    background: alpha(@surface_container_low, 0.9);
+    background: alpha(@surface_container_low, 0.95);
     border: 2px solid @primary;
     box-shadow: 0 0 0 2px @shadow;
     border-radius: 12px;

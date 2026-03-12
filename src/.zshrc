@@ -89,7 +89,7 @@ precmd() {
 }
 
 # Two-line prompt with time on first line
-PROMPT=$'%F{cyan}╭──${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV))─}(%B%F{red}%n%b%F{yellow}@%B%F{green}%m%b%F{cyan})%F{reset}[%B%F{blue}%25<…<%~%<<%b%F{reset}][%B%F{magenta}%D{%Y/%m/%d}%b%F{reset}][%B%F{yellow}%D{%H:%M:%S}%b%F{reset}]\n%F{cyan}╰─%B%(#.%F{red}#.%F{green}$)%b%F{reset} '
+PROMPT=$'%F{cyan}╭──${VIRTUAL_ENV:+[$(basename $VIRTUAL_ENV)]─}[%B%F{red}%n%b%F{yellow}@%B%F{green}%m%b%F{cyan}][%B%F{blue}%25<…<%~%<<%b%F{cyan}]──[%B%F{magenta}%D{%Y/%m/%d}%b%F{cyan}][%B%F{yellow}%D{%H:%M:%S}%b%F{cyan}]\n%F{cyan}╰─%B%(#.%F{red}#.%F{green}▶)%b%F{reset} '
 RPROMPT=''
 
 # ============================================================================

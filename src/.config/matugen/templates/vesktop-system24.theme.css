@@ -128,34 +128,34 @@ body {
     --border-hover: var(--accent-2); /* border color of panels when hovered */
     --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
-    /* base colors */
-    --red-1: oklch(75% 0.13 0);
-    --red-2: oklch(70% 0.13 0);
-    --red-3: oklch(65% 0.13 0);
-    --red-4: oklch(60% 0.13 0);
-    --red-5: oklch(55% 0.13 0);
+    /* base colors - derived from matugen palette with forced hues */
+    --red-1: {{colors.secondary.default.hex | set_hue: 0 | lighten: 5}};
+    --red-2: {{colors.secondary.default.hex | set_hue: 0}};
+    --red-3: {{colors.secondary.default.hex | set_hue: 0 | lighten: -5}};
+    --red-4: {{colors.secondary.default.hex | set_hue: 0 | lighten: -10}};
+    --red-5: {{colors.secondary.default.hex | set_hue: 0 | lighten: -15}};
 
-    --green-1: oklch(75% 0.12 170);
-    --green-2: oklch(70% 0.12 170);
-    --green-3: oklch(65% 0.12 170);
-    --green-4: oklch(60% 0.12 170);
-    --green-5: oklch(55% 0.12 160);
+    --green-1: {{colors.tertiary.default.hex | set_hue: 120 | lighten: 5}};
+    --green-2: {{colors.tertiary.default.hex | set_hue: 120}};
+    --green-3: {{colors.tertiary.default.hex | set_hue: 120 | lighten: -5}};
+    --green-4: {{colors.tertiary.default.hex | set_hue: 120 | lighten: -10}};
+    --green-5: {{colors.tertiary.default.hex | set_hue: 120 | lighten: -15}};
 
-    --blue-1: oklch(75% 0.11 215);
-    --blue-2: oklch(70% 0.11 215);
-    --blue-3: oklch(65% 0.11 215);
-    --blue-4: oklch(60% 0.11 215);
-    --blue-5: oklch(55% 0.11 215);
+    --blue-1: {{colors.primary.default.hex | set_hue: 240 | lighten: 5}};
+    --blue-2: {{colors.primary.default.hex | set_hue: 240}};
+    --blue-3: {{colors.primary.default.hex | set_hue: 240 | lighten: -5}};
+    --blue-4: {{colors.primary.default.hex | set_hue: 240 | lighten: -10}};
+    --blue-5: {{colors.primary.default.hex | set_hue: 240 | lighten: -15}};
 
-    --yellow-1: oklch(80% 0.12 90);
-    --yellow-2: oklch(75% 0.12 90);
-    --yellow-3: oklch(70% 0.12 90);
-    --yellow-4: oklch(65% 0.12 90);
-    --yellow-5: oklch(60% 0.12 90);
+    --yellow-1: {{colors.primary.default.hex | set_hue: 60 | lighten: 10}};
+    --yellow-2: {{colors.primary.default.hex | set_hue: 60 | lighten: 5}};
+    --yellow-3: {{colors.primary.default.hex | set_hue: 60}};
+    --yellow-4: {{colors.primary.default.hex | set_hue: 60 | lighten: -5}};
+    --yellow-5: {{colors.primary.default.hex | set_hue: 60 | lighten: -10}};
 
-    --purple-1: oklch(75% 0.12 310);
-    --purple-2: oklch(70% 0.12 310);
-    --purple-3: oklch(65% 0.12 310);
-    --purple-4: oklch(60% 0.12 310);
-    --purple-5: oklch(55% 0.12 310);
+    --purple-1: {{colors.secondary.default.hex | set_hue: 300 | lighten: 5}};
+    --purple-2: {{colors.secondary.default.hex | set_hue: 300}};
+    --purple-3: {{colors.secondary.default.hex | set_hue: 300 | lighten: -5}};
+    --purple-4: {{colors.secondary.default.hex | set_hue: 300 | lighten: -10}};
+    --purple-5: {{colors.secondary.default.hex | set_hue: 300 | lighten: -15}};
 }
