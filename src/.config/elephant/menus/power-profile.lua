@@ -4,9 +4,9 @@ Icon = "battery"
 Cache = false
 
 local profiles = {
-    { name = "performance", label = "Performance", icon = "power-profile-performance" },
-    { name = "balanced",    label = "Balanced",    icon = "power-profile-balanced" },
-    { name = "power-saver", label = "Power Saver", icon = "power-profile-power-saver" },
+    { name = "performance", label = "Performance", icon = "" },
+    { name = "balanced",    label = "Balanced",    icon = "" },
+    { name = "power-saver", label = "Power Saver", icon = "" },
 }
 
 function GetEntries()
@@ -21,7 +21,7 @@ function GetEntries()
     for _, p in ipairs(profiles) do
         local text = p.label
         if p.name == current then
-            text = text .. " (Active)"
+            text = "[Active] " .. text
         end
         table.insert(entries, {
             Text = text,

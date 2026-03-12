@@ -41,8 +41,8 @@ function GetEntries()
         for _, scheme in ipairs(schemes) do
             local scheme_short = scheme:gsub("scheme%-", "")
             table.insert(entries, {
-                Text = "#" .. hex .. "|" .. scheme_short,
-                Subtext = scheme,
+                Text = "#" .. hex,
+                Subtext = scheme_short,
                 Value = hex .. "|" .. scheme,
                 Icon = icon,
             })

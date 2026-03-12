@@ -57,4 +57,4 @@ magick "$HOME/.cache/last_wallpaper_static.jpg" \
     -extent "%[fx:min(w,h)]x%[fx:min(w,h)]" \
     "$HOME/.cache/last_wallpaper_static_square.jpg"
 
-notify-send -a "Wallpaper" "Quick Applied" "$filename — scheme-content (auto color)" -i "$WALLPAPER_PATH"
+notify-send -a "Wallpaper" "Applied Wallpaper" "$filename" -i "$WALLPAPER_PATH"

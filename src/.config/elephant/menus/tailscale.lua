@@ -4,6 +4,7 @@ Icon = "network-vpn"
 Cache = false
 
 local flag_dir = os.getenv("HOME") .. "/Pictures/Flags/"
+local selected_flag = ""
 
 function GetEntries()
     local entries = {}
@@ -31,8 +32,8 @@ function GetEntries()
         end
 
         table.insert(entries, {
-            Text = "Disconnect VPN",
-            Value = "DISABLE",
+            Text = "[Disconnect] from current node",
+            Value = flag,
             Icon = flag,
             Actions = { activate = "lua:Disconnect" },
         })
@@ -51,7 +52,7 @@ function GetEntries()
                 table.insert(entries, {
                     Text = country .. " - " .. city,
                     Subtext = ip,
-                    Value = ip,
+                    Value = country .. " - " .. city .. "|" .. ip .. "|" .. flag,
                     Icon = flag,
                     Actions = { activate = "lua:Connect" },
                 })
@@ -64,13 +65,14 @@ function GetEntries()
 end
 
 function Connect(value)
-    os.execute("tailscale set --exit-node='" .. value .. "' --exit-node-allow-lan-access=true 2>/dev/null")
-    os.execute("notify-send -a 'Tailscale VPN' 'Tailscale VPN' 'Connected to exit node' -i network-vpn")
+    local country_city, ip, flag = value:match("^(.-)|([^|]+)|([^|]*)$")
+    os.execute("tailscale set --exit-node='" .. ip .. "' --exit-node-allow-lan-access=true 2>/dev/null")
+    os.execute("notify-send -i " .. flag .. " -a 'Tailscale VPN' 'Tailscale VPN' 'Connected to exit node: " .. country_city .. "'")
 end
 
-function Disconnect()
+function Disconnect(value)
     os.execute("tailscale set --exit-node='' 2>/dev/null")
-    os.execute("notify-send -a 'Tailscale VPN' 'Tailscale VPN' 'Disconnected from VPN' -i network-vpn")
+    os.execute("notify-send -i " .. value .. " -a 'Tailscale VPN' 'Tailscale VPN' 'Disconnected from VPN'")
 end
 
 Action = ""

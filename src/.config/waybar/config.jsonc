@@ -14,7 +14,7 @@
         "custom/launcher": {
             "format": "",
             "tooltip-format": "<b><span color='#fab387'><big> App Launcher</big></span></b>\n<span color='#cdd6f4'>Click to open Rofi</span>",
-            "on-click": "rofi -show drun -modi drun -theme ~/.config/rofi/grid.rasi"
+            "on-click": "walker"
         },
         "cpu": {
             "format": "󰻠 {usage}%",
@@ -111,7 +111,7 @@
         "custom/launcher": {
             "format": "",
             "tooltip-format": "<b><span color='#fab387'><big> App Launcher</big></span></b>\n<span color='#cdd6f4'>Click to open Rofi</span>",
-            "on-click": "rofi -show drun -modi drun -theme ~/.config/rofi/grid.rasi"
+            "on-click": "walker"
         },
 
         "custom/wallpaper": {

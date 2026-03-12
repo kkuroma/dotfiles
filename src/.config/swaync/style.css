@@ -9,6 +9,7 @@
 * {
     font-family: "JetBrainsMono Nerd Font Propo";
     font-weight: 500;
+    font-size: 16px;
 }
 
 /* ============================================
@@ -21,74 +22,91 @@
 
 .notification-row {
     outline: none;
+    border-radius: 10px;
+    transition: background 0.2s ease;
 }
+
 .notification-row:focus,
 .notification-row:hover {
     background: @bg-focus;
 }
 
 .notification {
-    border-radius: 8px;
-    margin: 6px 12px;
+    border-radius: 10px;
     border: 2px solid @primary;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
     padding: 0;
+    margin: 4px;
+    background: @surface_container;
 }
 
 .notification-content {
     background: transparent;
-    padding: 8px;
-    border-radius: 8px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    /* Fix overlap: ensure minimum height and no conflicting sizing */
+    min-height: 0;
 }
 
 .close-button {
-    background: @surface_container_highest;
-    color: @tertiary;
+    background: transparent;
+    color: @on_surface_variant;
     text-shadow: none;
     border-radius: 100%;
-    border: 1px solid @outline_variant;
-    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    /* Prevent close button from overlapping text */
+    min-width: 24px;
+    min-height: 24px;
 }
+
 .close-button:hover {
-    background: @error;
-    color: @on_error;
-    border-color: @error;
+    background: alpha(@error, 0.15);
+    color: @error;
+    border-color: alpha(@error, 0.4);
 }
 
 .notification-default-action,
 .notification-action {
-    padding: 4px;
+    padding: 6px 10px;
     margin: 0;
     box-shadow: none;
-    background: rgba(20, 18, 24, 0.75);
+    background: transparent;
     border: 1px solid @outline_variant;
-    transition: all 0.3s ease;
+    transition: background 0.2s ease, color 0.2s ease;
+    color: @on_surface;
+    font-size: 0.9em;
 }
 
 .notification-default-action:hover,
 .notification-action:hover {
-    background: @surface_container_highest;
+    background: alpha(@secondary, 0.12);
+    color: @secondary;
 }
 
 .notification-default-action {
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 /* When alternative actions are visible */
 .notification-default-action:not(:only-child) {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    border-bottom: none;
 }
 
 .notification-action {
     border-radius: 0px;
     border-top: none;
     border-right: none;
+    color: @tertiary;
+    font-size: 0.88em;
 }
 
 .notification-action:first-child {
     border-bottom-left-radius: 8px;
 }
+
 .notification-action:last-child {
     border-bottom-right-radius: 8px;
     border-right: 1px solid @outline_variant;
@@ -96,110 +114,153 @@
 
 /* ============================================
    NOTIFICATION TEXT
+   — fixed: use proper on-surface colors so
+     text is always legible against background
    ============================================ */
 
 .summary {
     font-weight: 700;
     color: @primary;
     text-shadow: none;
+    font-size: 1.05em;
+    padding-right: 4px;
 }
 
 .time {
     color: @tertiary;
     text-shadow: none;
+    font-size: 0.85em;
 }
 
 .body {
     background: transparent;
     color: @on_surface;
     text-shadow: none;
+    font-size: 0.95em;
+    margin-top: 3px;
 }
 
 .image {
     border-radius: 8px;
-    margin-right: 4px;
+    margin-right: 8px;
+    /* Keep image from forcing text overlap on small notifications */
+    min-width: 40px;
+    min-height: 40px;
 }
 
 .body-image {
-    margin-top: 6px;
+    margin-top: 8px;
     background-color: @surface_bright;
     border-radius: 8px;
 }
 
+.app-icon {
+    /* Prevent app icon from colliding with content */
+    margin-right: 8px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
 /* ============================================
    CONTROL CENTER
+   — removed hardcoded rgba() backgrounds;
+     using theme surface colors instead
    ============================================ */
 
 .control-center {
-    background: rgba(20, 18, 24, 0.85);
+    background: alpha(@surface_container_low, 0.9);
     border: 2px solid @primary;
-    border-radius: 8px;
-    margin: 6px;
-    padding: 8px;
+    box-shadow: 0 0 0 2px @shadow;
+    border-radius: 12px;
+    margin: 8px;
+    padding: 10px;
 }
 
 .control-center-list {
     background: transparent;
 }
 
+.control-center-list-placeholder {
+    color: @tertiary;
+    font-size: 1em;
+}
+
 /* title bar */
 .widget-title {
     color: @secondary;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 2px 10px 2px;
 }
 
 .widget-title > button {
-    background: @surface_container_high;
-    color: @tertiary;
+    background: @surface_container;
+    color: @on_surface_variant;
     border: 1px solid @outline_variant;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    padding: 5px 12px;
+    font-size: 0.9em;
 }
 
 .widget-title > button:hover {
-    background: @surface_container_highest;
-    color: @on_surface;
+    background: @surface_container_high;
+    color: @secondary;
+    border-color: @secondary;
 }
 
 .top-action-title {
     color: @secondary;
     text-shadow: none;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1em;
 }
 
 /* clear all button */
 .control-center-clear-all {
-    color: @tertiary;
+    color: @on_surface_variant;
     text-shadow: none;
-    background: @surface_container_high;
+    background: @surface_container;
     border: 1px solid @outline_variant;
     box-shadow: none;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    padding: 6px 14px;
+    font-size: 0.9em;
 }
+
 .control-center-clear-all:hover {
-    background: @surface_container_highest;
-    color: @on_surface;
+    background: alpha(@tertiary, 0.12);
+    color: @tertiary;
+    border-color: alpha(@tertiary, 0.5);
 }
 
 /* DND toggle */
 .control-center-dnd {
-    border-radius: 8px;
-    background: @surface_container_high;
+    border-radius: 999px;
+    background: @surface_container;
     border: 1px solid @outline_variant;
     box-shadow: none;
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
 }
 
 .control-center-dnd:checked {
-    background: @primary;
-    color: @on_primary;
+    background: @primary_container;
     border-color: @primary;
 }
 
 .control-center-dnd slider {
-    background: @surface_container_highest;
-    border-radius: 8px;
+    background: @on_surface_variant;
+    border-radius: 999px;
+    min-width: 18px;
+    min-height: 18px;
+    transition: background 0.2s ease;
+}
+
+.control-center-dnd:checked slider {
+    background: @primary;
 }
 
 /* ============================================

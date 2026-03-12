@@ -1,0 +1,182 @@
+@import "colors.css";
+
+* {
+  all: unset;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+}
+
+/* ── Main wrapper ── */
+.box-wrapper {
+  background: alpha(@surface_container, 0.95);
+  border: 2px solid @primary;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 0 0 2px @shadow;
+}
+
+/* ── Search input ── */
+.search-container {
+  border-radius: 12px;
+}
+
+.input {
+  background: @surface_container_high;
+  color: @on_surface;
+  caret-color: @primary;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid @outline_variant;
+}
+
+.input:focus {
+  border: 1px solid @primary;
+}
+
+.input placeholder {
+  color: @outline;
+  opacity: 0.6;
+}
+
+.input selection {
+  background: alpha(@primary, 0.3);
+}
+
+/* ── Results list ── */
+.list {
+  color: @on_surface;
+}
+
+scrollbar {
+  opacity: 0;
+}
+
+/* ── Items ── */
+.item-box {
+  padding: 10px 12px;
+  border-radius: 12px;
+  transition: background 150ms ease;
+}
+
+child:selected .item-box,
+row:selected .item-box {
+  background: @primary;
+  color: @on_primary;
+}
+
+child:selected .item-text,
+row:selected .item-text {
+  color: @on_primary;
+}
+
+child:selected .item-subtext,
+row:selected .item-subtext {
+  color: @on_primary;
+  opacity: 0.8;
+}
+
+child:selected .item-image,
+row:selected .item-image {
+  color: @on_primary;
+}
+
+child:selected .item-image-text,
+row:selected .item-image-text {
+  color: @on_primary;
+}
+
+.item-text {
+  color: @on_surface;
+}
+
+.item-subtext {
+  font-size: 12px;
+  color: @outline;
+}
+
+.item-image {
+  -gtk-icon-size: 24px;
+}
+
+.item-image-text {
+  font-size: 24px;
+}
+
+.normal-icons {
+  -gtk-icon-size: 16px;
+}
+
+.large-icons {
+  -gtk-icon-size: 32px;
+}
+
+.item-quick-activation {
+  background: alpha(@primary_container, 0.4);
+  color: @on_primary_container;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* ── Hints and placeholders ── */
+.placeholder,
+.elephant-hint {
+  color: @outline;
+}
+
+/* ── Preview panel ── */
+.preview-box,
+.preview {
+  color: @on_surface;
+  border: 1px solid @outline_variant;
+  border-radius: 12px;
+}
+
+.preview .large-icons {
+  -gtk-icon-size: 64px;
+}
+
+/* ── Provider tweaks ── */
+.calc .item-text {
+  font-size: 22px;
+  color: @tertiary;
+}
+
+.symbols .item-image {
+  font-size: 24px;
+}
+
+:not(.calc).current {
+  font-style: italic;
+}
+
+/* ── Keybinds bar ── */
+.keybinds {
+  padding-top: 8px;
+  border-top: 1px solid @outline_variant;
+  font-size: 12px;
+  color: @outline;
+}
+
+.keybind-button { opacity: 0.5; }
+.keybind-button:hover { opacity: 0.8; }
+
+.keybind-bind {
+  text-transform: lowercase;
+  opacity: 0.35;
+}
+
+.keybind-label {
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: 1px solid @outline_variant;
+  color: @on_surface;
+}
+
+/* ── Error ── */
+.error {
+  padding: 10px;
+  background: @error_container;
+  color: @on_error_container;
+  border-radius: 8px;
+}

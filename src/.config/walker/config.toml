@@ -3,7 +3,7 @@ theme = "matugen"
 [providers]
 # Providers that search by default without a prefix
 default = ["desktopapplications", "calc", "runner", "websearch"]
-# max_results = 1000
+max_results = 1000
 
 # Define prefixes for manual triggers
 [[providers.prefixes]]

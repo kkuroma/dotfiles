@@ -19,8 +19,9 @@ window#waybar {
 
 window#waybar > box {
     background: rgba(20, 18, 24, 0.6);
-    margin: 6px 6px 0 6px;
+    margin: 6px 6px 3px 6px;
     border: 2px solid @primary;
+    box-shadow: 0 0 0 2px @shadow;
     border-radius: 8px;
 }
 
