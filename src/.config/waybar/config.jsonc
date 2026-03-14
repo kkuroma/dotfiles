@@ -166,13 +166,13 @@
             "format": "{player_icon}",
             "format-paused": "{status_icon}",
             "player-icons": {
-                "default": "",
+                "default": "",
                 "mpv": ""
             },
             "status-icons": {
-                "paused": ""
+                "paused": ""
             },
-            "interval":1,
+            "interval":2,
             "tooltip-format": " {player}\n {artist}\n {album} {title}\n [{position}/{length}]"
         },
 

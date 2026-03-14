@@ -95,13 +95,13 @@ else
 fi
 
 # Build colorful tooltip
-tooltip="<big><span color='#ffae12'><b>Weather Information (󰳽 °C/°F)</b></span></big>\n"
-tooltip+="<span color='#ffead3'>lat: $latitude, lon: $longitude</span>\n\n"
-tooltip+="<span color='#ff6699'><b> Temperature:</b></span> <span color='#ecc6d9'>${temp_display}</span>\n"
-tooltip+="<span color='#ffcc66'><b> Feels like:</b></span> <span color='#ecc6d9'>${feels_display}</span>\n"
-tooltip+="<span color='#ffcc66'><b>$icon Condition:</b></span> <span color='#ecc6d9'>$condition</span>\n"
-tooltip+="<span color='#99ffdd'><b>󰖌 Humidity:</b></span> <span color='#ecc6d9'>${humidity}${humidity_unit}</span>\n"
-tooltip+="<span color='#99ffdd'><b> Wind:</b></span> <span color='#ecc6d9'>${windspeed} ${windspeed_unit}</span>\n"
-tooltip+="<span color='#82bcdd'><b> Precipitation:</b></span> <span color='#ecc6d9'>${precipitation} ${precipitation_unit}</span>\n"
-tooltip+="<span color='#82bcdd'><b>󱤊 Pressure:</b></span> <span color='#ecc6d9'>${pressure} ${pressure_unit}</span>"
+tooltip="<big><span color='#fab387'><b>$icon Weather Information (󰳽 °C/°F)</b></span></big>\n"
+tooltip+="<b><span color='#f9e2af'>lat: $latitude, lon: $longitude</span>\n\n</b>"
+tooltip+="<span color='#89dceb'><b>Temperature:</b></span> <span color='#cdd6f4'>${temp_display}</span>\n"
+tooltip+="<span color='#89dceb'><b>Feels like:</b></span> <span color='#cdd6f4'>${feels_display}</span>\n"
+tooltip+="<span color='#89dceb'><b>Condition:</b></span> <span color='#cdd6f4'>$condition</span>\n"
+tooltip+="<span color='#89dceb'><b>Humidity:</b></span> <span color='#cdd6f4'>${humidity}${humidity_unit}</span>\n"
+tooltip+="<span color='#89dceb'><b>Wind:</b></span> <span color='#cdd6f4'>${windspeed} ${windspeed_unit}</span>\n"
+tooltip+="<span color='#89dceb'><b>Precipitation:</b></span> <span color='#cdd6f4'>${precipitation} ${precipitation_unit}</span>\n"
+tooltip+="<span color='#89dceb'><b>Pressure:</b></span> <span color='#cdd6f4'>${pressure} ${pressure_unit}</span>"
 echo "{\"text\":\"$icon $temp_display\",\"tooltip\":\"$tooltip\"}"
