@@ -135,7 +135,7 @@ function GetEntries()
             Value = "code",
             Subtext = "Launch File in IDE",
             Icon = "",
-            Actions = { activate = "kitty --class floating -e sh -c '~/.config/hypr/scripts/code-launcher.sh'" },
+            Actions = { activate = "kitty --class floating -e sh -c '~/.config/hypr/scripts/code-launcher.sh 0'" },
         },
         {
             Text = "App Launcher",

@@ -8,6 +8,7 @@ CONFIG_SOURCE="$REPO_DIR/.config"
 PRESERVE_FILES=(
     "hypr:monitors.conf"
     "hypr:workspace.conf"
+    "hypr:autostart.conf"
 )
 
 RICE_CONFIGS=(

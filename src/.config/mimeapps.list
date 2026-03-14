@@ -2,6 +2,7 @@
 application/json=nvim.desktop;app.zen_browser.zen.desktop;vscodium-wayland.desktop;vim.desktop;libreoffice-writer.desktop;vscodium.desktop;
 application/pdf=org.pwmt.zathura.desktop;code-oss.desktop;
 application/rss+xml=vscodium-wayland.desktop;
+application/xml=nvim.desktop;app.zen_browser.zen.desktop;libreoffice-writer.desktop;vscodium-wayland.desktop;vim.desktop;vscodium.desktop;
 application/zip=org.kde.ark.desktop;org.prismlauncher.PrismLauncher.desktop;
 audio/flac=vlc-3.desktop;vlc-2.desktop;
 image/gif=imv-dir-2.desktop;imv-dir.desktop;
@@ -23,6 +24,7 @@ application/x-extension-shtml=zen.desktop
 application/x-extension-xht=zen.desktop
 application/x-extension-xhtml=zen.desktop
 application/xhtml+xml=zen.desktop
+application/xml=nvim.desktop;
 application/zip=org.kde.ark.desktop;
 audio/flac=vlc-3.desktop;
 image/gif=imv-dir-2.desktop;

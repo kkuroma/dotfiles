@@ -87,9 +87,10 @@ input_path = '~/.config/matugen/templates/colors.css'
 output_path = '~/.config/swayosd/colors.css'
 post_hook = 'killall swayosd-server; swayosd-server&'
 
-[templates.hyprshell]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/hyprshell/colors.css'
+[templates.tmux]
+input_path = '~/.config/matugen/templates/tmux-colors.conf'
+output_path = '~/.config/tmux/generated.conf'
+post_hook = 'tmux source-file ~/.config/tmux/tmux.conf' 
 
 [templates.yazi]
 input_path = '~/.config/matugen/templates/yazi-theme.toml'
