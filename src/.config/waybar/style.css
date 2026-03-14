@@ -1,69 +1,72 @@
 @import "colors.css";
-
+@import "colors.css";
 /* ============================================
    GLOBAL STYLES AND THE BAR ITSELF
    ============================================ */
 * {
-    border: none;
-    border-radius: 0;
     font-family: "JetBrainsMono Nerd Font Propo";
     font-size: 14px;
     font-weight: 500;
     min-height: 0;
 }
 
-window#waybar {
+window#waybar,
+window#waybar > box {
     background: transparent;
-    color: @on_surface;
+    border: none;
+    box-shadow: none;
 }
 
-window#waybar > box {
+.modules-left,
+.modules-center,
+.modules-right {
     background: alpha(@surface_container_lowest, 0.7);
-    margin: 6px 6px 3px 6px;
+    margin: 4px 6px 2px 6px;
     border: 2px solid @primary;
     box-shadow: 0 0 0 2px @shadow;
     border-radius: 8px;
+    padding: 0 1px;
 }
 
-/* These modules use the primary color*/
+/* These modules use the primary color */
 #custom-launcher, #custom-wallpaper, #custom-quick-actions, #custom-notification, #mpris {
     background: @primary;
     color: @on_primary;
-    padding: 4px 10px;
-    margin: 4px 2px 4px 4px;
-    border-radius: 8px;
+    padding: 0px 8px;
+    margin: 3px 2px 3px 3px;
+    border-radius: 6px;
 }
 
-/* Color pattern: secondary - tertiary - secondary*/
-
+/* Color pattern: secondary - tertiary - secondary */
 #cpu, #custom-memory-gpu, #network, #temperature, #custom-disk, #custom-ime, #clock, #custom-weather, #pulseaudio, #network.wifi {
     color: @on_surface;
-    padding: 4px 10px;
-    margin: 4px 2px;
-    border-radius: 8px;
+    padding: 2px 8px;
+    margin: 3px 2px;
+    border-radius: 6px;
 }
 
 #cpu, #network, #custom-disk, #custom-ime, #custom-weather, #network.wifi {
     background: @on_secondary_fixed;
     color: @secondary;
+    border: 2px solid @secondary;
 }
 
 #custom-memory-gpu, #temperature, #clock, #pulseaudio {
     background: @on_tertiary_fixed;
     color: @tertiary;
+    border: 2px solid @tertiary;
 }
 
 /* workspaces */
-
 #workspaces {
     background: transparent;
-    margin: 4px 2px;
+    margin: 3px 2px;
 }
 
 #workspaces button {
     background: @inverse_primary;
     color: @scrim;
-    padding: 4px 8px;
+    padding: 2px 6px;
     margin: 0;
     border-radius: 0;
     transition: all 0.3s ease;
@@ -71,9 +74,9 @@ window#waybar > box {
     min-width: 0;
 }
 
-/* These are here to make the first/last workspace rouned */
-#workspaces button:first-child { border-radius: 8px 0 0 8px; }
-#workspaces button:last-child { border-radius: 0 8px 8px 0; }
+/* These are here to make the first/last workspace rounded */
+#workspaces button:first-child { border-radius: 6px 0 0 6px; }
+#workspaces button:last-child  { border-radius: 0 6px 6px 0; }
 
 #workspaces button.empty {
     background: @surface_container_high;
@@ -90,7 +93,7 @@ window#waybar > box {
 #workspaces button.active {
     background: @primary;
     color: @on_primary;
-    padding: 4px 12px;
+    padding: 2px 10px;
     font-weight: 700;
 }
 
@@ -101,17 +104,15 @@ window#waybar > box {
 }
 
 /* power button */
-
 #custom-power {
     background: #E08290;
     color: @on_error;
-    padding: 4px 10px;
-    margin: 4px 4px 4px 2px;
+    padding: 2px 8px;
+    margin: 3px 3px 3px 2px;
     border-radius: 6px;
 }
 
 /* tooltips */
-
 tooltip {
     background: @surface_container;
     border: 2px solid @primary;
@@ -121,5 +122,6 @@ tooltip {
 
 tooltip label {
     color: @on_surface;
-    padding: 5px;
+    padding: 4px;
 }
+ 
