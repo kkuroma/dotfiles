@@ -1,5 +1,5 @@
 #!/bin/bash
-
+MODE=${1:-1} # 0 horizontal 1 vertical
 STATE_FILE="/tmp/waybar_weather_unit"
 LOCATION_FILE="$HOME/.weather_location"
 
@@ -86,12 +86,22 @@ case "$weathercode" in
 esac
 
 # Format temperature
-if [ "$unit" = "f" ]; then
-    temp_display="${temperature}°F"
-    feels_display="${feels_like}°F"
+if [ "$MODE" -eq 0 ]; then
+    if [ "$unit" = "f" ]; then
+        temp_display="${temperature}°F"
+        feels_display="${feels_like}°F"
+    else
+        temp_display="${temperature}°C"
+        feels_display="${feels_like}°C"
+    fi
 else
-    temp_display="${temperature}°C"
-    feels_display="${feels_like}°C"
+    temp_int=${temperature%.*}
+    temp_display="${temp_int}°"
+    feels_display="${feels_like%.*}°"
+fi
+
+if [ "$temperature" = "null" ]; then
+    temp_display=N/A
 fi
 
 # Build colorful tooltip
@@ -104,4 +114,8 @@ tooltip+="<span color='#89dceb'><b>Humidity:</b></span> <span color='#cdd6f4'>${
 tooltip+="<span color='#89dceb'><b>Wind:</b></span> <span color='#cdd6f4'>${windspeed} ${windspeed_unit}</span>\n"
 tooltip+="<span color='#89dceb'><b>Precipitation:</b></span> <span color='#cdd6f4'>${precipitation} ${precipitation_unit}</span>\n"
 tooltip+="<span color='#89dceb'><b>Pressure:</b></span> <span color='#cdd6f4'>${pressure} ${pressure_unit}</span>"
-echo "{\"text\":\"$icon $temp_display\",\"tooltip\":\"$tooltip\"}"
+if [ "$MODE" -eq 0 ]; then
+    echo "{\"text\":\"$icon $temp_display\",\"tooltip\":\"$tooltip\"}"
+else
+    echo "{\"text\":\"$temp_display\",\"tooltip\":\"$tooltip\"}"
+fi

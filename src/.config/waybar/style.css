@@ -1,22 +1,55 @@
 @import "colors.css";
-@import "colors.css";
 /* ============================================
-   GLOBAL STYLES AND THE BAR ITSELF
+   SHARED BASE STYLES
    ============================================ */
 * {
     font-family: "JetBrainsMono Nerd Font Propo";
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     min-height: 0;
 }
 
-window#waybar,
+window#waybar {
+    background: transparent;
+}
+
 window#waybar > box {
     background: transparent;
     border: none;
     box-shadow: none;
 }
 
+/* spacers */
+#custom-uparrow, #custom-downarrow {
+    color: @primary;
+}
+
+/* tooltips */
+tooltip {
+    background: @surface_container;
+    border: 2px solid @primary;
+    border-radius: 8px;
+    color: @on_surface;
+}
+
+tooltip label {
+    color: @on_surface;
+    padding: 4px;
+}
+
+/* pulseaudio slider internals */
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* ============================================
+   HORIZONTAL BARS (default)
+   ============================================ */
 .modules-left,
 .modules-center,
 .modules-right {
@@ -28,7 +61,6 @@ window#waybar > box {
     padding: 0 1px;
 }
 
-/* These modules use the primary color */
 #custom-launcher, #custom-wallpaper, #custom-quick-actions, #custom-notification, #mpris {
     background: @primary;
     color: @on_primary;
@@ -37,27 +69,39 @@ window#waybar > box {
     border-radius: 6px;
 }
 
-/* Color pattern: secondary - tertiary - secondary */
-#cpu, #custom-memory-gpu, #network, #temperature, #custom-disk, #custom-ime, #clock, #custom-weather, #pulseaudio, #network.wifi {
+#cpu, #custom-memory-gpu, #network.speed, #temperature, #custom-disk, #custom-ime, #clock, #custom-weather, #pulseaudio, #netbluetooth, #pulseaudio-slider {
     color: @on_surface;
     padding: 2px 8px;
     margin: 3px 2px;
     border-radius: 6px;
 }
 
-#cpu, #network, #custom-disk, #custom-ime, #custom-weather, #network.wifi {
+#cpu, #network.speed, #custom-disk, #custom-ime, #custom-weather, #netbluetooth {
     background: @on_secondary_fixed;
     color: @secondary;
     border: 2px solid @secondary;
 }
 
-#custom-memory-gpu, #temperature, #clock, #pulseaudio {
+#custom-memory-gpu, #temperature, #clock, #pulseaudio, #pulseaudio-slider {
     background: @on_tertiary_fixed;
     color: @tertiary;
     border: 2px solid @tertiary;
 }
 
-/* workspaces */
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background: @tertiary;
+}
+
+#pulseaudio-slider trough {
+    min-height: 60px;
+    min-width: 5px;
+    border-radius: 5px;
+    background: @surface_container_lowest;
+}
+
+/* workspaces - horizontal */
 #workspaces {
     background: transparent;
     margin: 3px 2px;
@@ -74,7 +118,6 @@ window#waybar > box {
     min-width: 0;
 }
 
-/* These are here to make the first/last workspace rounded */
 #workspaces button:first-child { border-radius: 6px 0 0 6px; }
 #workspaces button:last-child  { border-radius: 0 6px 6px 0; }
 
@@ -103,25 +146,203 @@ window#waybar > box {
     font-weight: 700;
 }
 
-/* power button */
 #custom-power {
-    background: #E08290;
+    background: @error;
     color: @on_error;
     padding: 2px 8px;
     margin: 3px 3px 3px 2px;
     border-radius: 6px;
 }
 
-/* tooltips */
-tooltip {
-    background: @surface_container;
-    border: 2px solid @primary;
-    border-radius: 8px;
-    color: @on_surface;
+/* ============================================
+   VERTICAL BARS (overrides)
+   Bar names: minimal-bar-vertical, full-bar-vertical
+   ============================================ */
+window#waybar.minimal-bar-vertical,
+window#waybar.full-bar-vertical {
+    font-size: 13px;
 }
 
-tooltip label {
-    color: @on_surface;
-    padding: 4px;
+window#waybar.minimal-bar-vertical > box,
+window#waybar.full-bar-vertical > box {
+    padding: 4px 0 0 0;
 }
- 
+
+window#waybar.minimal-bar-vertical .modules-left,
+window#waybar.minimal-bar-vertical .modules-center,
+window#waybar.minimal-bar-vertical .modules-right,
+window#waybar.full-bar-vertical .modules-left,
+window#waybar.full-bar-vertical .modules-center,
+window#waybar.full-bar-vertical .modules-right {
+    margin: 0px 2px 0px 4px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px 2px @shadow;
+    padding: 2px 2px;
+}
+
+window#waybar.minimal-bar-vertical .modules-left,
+window#waybar.full-bar-vertical .modules-left {
+    margin-top: 4px;
+}
+
+window#waybar.minimal-bar-vertical .modules-right,
+window#waybar.full-bar-vertical .modules-right {
+    margin-bottom: 4px;
+}
+
+/* Primary modules - vertical */
+window#waybar.minimal-bar-vertical #custom-launcher,
+window#waybar.minimal-bar-vertical #custom-wallpaper,
+window#waybar.minimal-bar-vertical #custom-quick-actions,
+window#waybar.minimal-bar-vertical #custom-notification,
+window#waybar.minimal-bar-vertical #mpris,
+window#waybar.full-bar-vertical #custom-launcher,
+window#waybar.full-bar-vertical #custom-wallpaper,
+window#waybar.full-bar-vertical #custom-quick-actions,
+window#waybar.full-bar-vertical #custom-notification,
+window#waybar.full-bar-vertical #mpris {
+    padding: 4px 4px;
+    margin: 2px 2px;
+    border-radius: 14px;
+}
+
+/* Standalone modules - vertical: secondary */
+window#waybar.minimal-bar-vertical #custom-disk,
+window#waybar.minimal-bar-vertical #custom-weather,
+window#waybar.minimal-bar-vertical #network.wifi,
+window#waybar.full-bar-vertical #custom-disk,
+window#waybar.full-bar-vertical #custom-weather,
+window#waybar.full-bar-vertical #network.wifi {
+    background: @on_secondary_fixed;
+    color: @secondary;
+    border: 2px solid @secondary;
+    padding: 5px 3px;
+    margin: 2px 2px;
+    border-radius: 14px;
+}
+
+/* Standalone modules - vertical: tertiary */
+window#waybar.minimal-bar-vertical #custom-memory-gpu,
+window#waybar.minimal-bar-vertical #clock,
+window#waybar.minimal-bar-vertical #custom-ime,
+window#waybar.full-bar-vertical #custom-memory-gpu,
+window#waybar.full-bar-vertical #clock,
+window#waybar.full-bar-vertical #custom-ime {
+    background: @on_tertiary_fixed;
+    color: @tertiary;
+    border: 2px solid @tertiary;
+    padding: 5px 3px;
+    margin: 2px 2px;
+    border-radius: 14px;
+}
+
+/* Group blobs - vertical: secondary */
+window#waybar.minimal-bar-vertical #cpumon,
+window#waybar.minimal-bar-vertical #netbluetooth,
+window#waybar.full-bar-vertical #cpumon,
+window#waybar.full-bar-vertical #netbluetooth {
+    background: @on_secondary_fixed;
+    border: 2px solid @secondary;
+    border-radius: 14px;
+    margin: 2px 2px;
+    padding: 2px 0px;
+}
+
+/* Group blobs - vertical: tertiary */
+window#waybar.minimal-bar-vertical #audio,
+window#waybar.full-bar-vertical #audio {
+    background: @on_tertiary_fixed;
+    border: 2px solid @tertiary;
+    border-radius: 14px;
+    margin: 2px 2px;
+    padding: 2px 0px;
+}
+
+/* Group children - transparent inside blobs */
+window#waybar.minimal-bar-vertical #cpu,
+window#waybar.minimal-bar-vertical #temperature,
+window#waybar.full-bar-vertical #cpu,
+window#waybar.full-bar-vertical #temperature {
+    background: transparent;
+    color: @secondary;
+    border: none;
+    padding: 3px 3px;
+    margin: 0;
+    border-radius: 0;
+}
+
+window#waybar.minimal-bar-vertical #network,
+window#waybar.minimal-bar-vertical #bluetooth,
+window#waybar.full-bar-vertical #network,
+window#waybar.full-bar-vertical #bluetooth {
+    background: transparent;
+    color: @secondary;
+    border: none;
+    padding: 1px 3px;
+    margin: 0;
+    border-radius: 0;
+}
+
+window#waybar.minimal-bar-vertical #pulseaudio,
+window#waybar.minimal-bar-vertical #pulseaudio-slider,
+window#waybar.full-bar-vertical #pulseaudio,
+window#waybar.full-bar-vertical #pulseaudio-slider {
+    background: transparent;
+    color: @tertiary;
+    border: none;
+    padding: 1px 3px;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* Slider - vertical */
+window#waybar.minimal-bar-vertical #pulseaudio-slider highlight,
+window#waybar.full-bar-vertical #pulseaudio-slider highlight {
+    border-radius: 8px;
+}
+
+window#waybar.minimal-bar-vertical #pulseaudio-slider trough,
+window#waybar.full-bar-vertical #pulseaudio-slider trough {
+    border-radius: 8px;
+    background: @on_surface;
+}
+
+/* Workspaces - vertical */
+window#waybar.minimal-bar-vertical #workspaces,
+window#waybar.full-bar-vertical #workspaces {
+    margin: 2px 2px;
+}
+
+window#waybar.minimal-bar-vertical #workspaces button,
+window#waybar.full-bar-vertical #workspaces button {
+    padding: 2px 4px;
+}
+
+window#waybar.minimal-bar-vertical #workspaces button:first-child,
+window#waybar.full-bar-vertical #workspaces button:first-child {
+    border-radius: 14px 14px 0 0;
+}
+
+window#waybar.minimal-bar-vertical #workspaces button:last-child,
+window#waybar.full-bar-vertical #workspaces button:last-child {
+    border-radius: 0 0 14px 14px;
+}
+
+window#waybar.minimal-bar-vertical #workspaces button.active,
+window#waybar.full-bar-vertical #workspaces button.active {
+    padding: 6px 4px;
+}
+
+/* Power - vertical */
+window#waybar.minimal-bar-vertical #custom-power,
+window#waybar.full-bar-vertical #custom-power {
+    padding: 4px 4px;
+    margin: 2px 2px;
+    border-radius: 14px;
+}
+
+/* Tooltip - vertical */
+window#waybar.minimal-bar-vertical tooltip,
+window#waybar.full-bar-vertical tooltip {
+    border-radius: 16px;
+}

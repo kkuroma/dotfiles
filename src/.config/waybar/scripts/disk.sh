@@ -1,5 +1,7 @@
 #!/bin/bash
 
+MODE=${1:-1} # 0 horizontal 1 vertical
+
 # Get disk usage
 disk_info=$(df -h / | awk 'NR==2 {print $3,$2,$5}')
 read -r used total percent <<< "$disk_info"
@@ -14,7 +16,13 @@ else
     # Fallback - just show disk usage without I/O
     tooltip="<b><span color='#fab387'><big>󰋊 Disk</big></span></b>"
     tooltip+="\n<span color='#89dceb'>Used:</span> <span color='#cdd6f4'>${used} / ${total} (${percent})</span>"
-    echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"
+    if [ "$MODE" -eq 0 ]; then
+        echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"
+    else
+        chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+        index=$percent_num*7/100
+        echo "{\"text\":\"${chars[$index]}\",\"tooltip\":\"$tooltip\"}"
+    fi
     exit 0
 fi
 
@@ -56,4 +64,10 @@ tooltip+="\n<span color='#89dceb'>Used:</span> <span color='#cdd6f4'>${used} / $
 tooltip+="\n<span color='#89dceb'>Read:</span> <span color='#cdd6f4'>${read_speed} MB/s</span>"
 tooltip+="\n<span color='#89dceb'>Write:</span> <span color='#cdd6f4'>${write_speed} MB/s</span>"
 
-echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"
+if [ "$MODE" -eq 0 ]; then
+    echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"
+else
+    chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+    index=$percent_num*7/100
+    echo "{\"text\":\"${chars[$index]}\",\"tooltip\":\"$tooltip\"}"
+fi

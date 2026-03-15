@@ -1,5 +1,7 @@
 #!/bin/bash
 
+MODE=${1:-1} # 0 horizontal 1 vertical
+
 # Get RAM info
 mem_info=$(free -h | awk '/^Mem:/ {print $3,$2}')
 read -r mem_used mem_total <<< "$mem_info"
@@ -23,7 +25,14 @@ if command -v nvidia-smi &> /dev/null; then
         power_limit=$(echo "$power_limit" | awk '{printf "%.0f", $1}')
 
         # Display: RAM% | GPU%
-        display_text="󰍛 ${mem_percent}% 󰢮 ${gpu_util}%"
+        if [ "$MODE" -eq 0 ]; then
+            display_text="󰍛 ${mem_percent}% 󰢮 ${gpu_util}%"
+        else
+            chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+            index_ram=$mem_percent*7/100
+            index_gpu=$gpu_util*7/100
+            display_text="R:${chars[$index_ram]}\nG:${chars[$index_gpu]}"
+        fi
 
         # Tooltip with Pango markup
         tooltip="<b><span color='#fab387'><big>󰍛 Memory &amp; GPU</big></span></b>"
@@ -39,7 +48,13 @@ if command -v nvidia-smi &> /dev/null; then
     fi
 else
     # No NVIDIA GPU - show RAM only
-    display_text="󰍛 ${mem_percent}%"
+    if [ "$MODE" -eq 0 ]; then
+        display_text="󰍛 ${mem_percent}%"
+    else
+        chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+        index_ram=$mem_percent*7/100
+        display_text="R ${chars[$index_ram]}\n"
+    fi
     tooltip="<b><span color='#fab387'><big>󰍛 Memory</big></span></b>\n<span color='#89dceb'>RAM:</span> <span color='#cdd6f4'>${mem_used} / ${mem_total} (${mem_percent}%)</span>"
 fi
 
