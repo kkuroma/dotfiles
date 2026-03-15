@@ -19,7 +19,7 @@ else
     if [ "$MODE" -eq 0 ]; then
         echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"
     else
-        chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+        chars=("󰪞" "󰪟" "󰪠" "󰪡" "󰪢" "󰪣" "󰪤" "󰪥")
         index=$percent_num*7/100
         echo "{\"text\":\"${chars[$index]}\",\"tooltip\":\"$tooltip\"}"
     fi
@@ -67,7 +67,7 @@ tooltip+="\n<span color='#89dceb'>Write:</span> <span color='#cdd6f4'>${write_sp
 if [ "$MODE" -eq 0 ]; then
     echo "{\"text\":\"${percent_num}%\",\"tooltip\":\"$tooltip\"}"
 else
-    chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+    chars=("󰪞" "󰪟" "󰪠" "󰪡" "󰪢" "󰪣" "󰪤" "󰪥")
     index=$percent_num*7/100
     echo "{\"text\":\"${chars[$index]}\",\"tooltip\":\"$tooltip\"}"
 fi

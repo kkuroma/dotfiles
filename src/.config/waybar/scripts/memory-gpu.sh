@@ -28,10 +28,10 @@ if command -v nvidia-smi &> /dev/null; then
         if [ "$MODE" -eq 0 ]; then
             display_text="󰍛 ${mem_percent}% 󰢮 ${gpu_util}%"
         else
-            chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+            chars=("󰪞" "󰪟" "󰪠" "󰪡" "󰪢" "󰪣" "󰪤" "󰪥")
             index_ram=$mem_percent*7/100
             index_gpu=$gpu_util*7/100
-            display_text="R:${chars[$index_ram]}\nG:${chars[$index_gpu]}"
+            display_text="${chars[$index_ram]}\n${chars[$index_gpu]}"
         fi
 
         # Tooltip with Pango markup
@@ -51,9 +51,9 @@ else
     if [ "$MODE" -eq 0 ]; then
         display_text="󰍛 ${mem_percent}%"
     else
-        chars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+        chars=("󰪞" "󰪟" "󰪠" "󰪡" "󰪢" "󰪣" "󰪤" "󰪥")
         index_ram=$mem_percent*7/100
-        display_text="R ${chars[$index_ram]}\n"
+        display_text="${chars[$index_ram]}\n"
     fi
     tooltip="<b><span color='#fab387'><big>󰍛 Memory</big></span></b>\n<span color='#89dceb'>RAM:</span> <span color='#cdd6f4'>${mem_used} / ${mem_total} (${mem_percent}%)</span>"
 fi

@@ -4,7 +4,7 @@
    ============================================ */
 * {
     font-family: "JetBrainsMono Nerd Font Propo";
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     min-height: 0;
 }
@@ -157,17 +157,18 @@ tooltip label {
 /* ============================================
    VERTICAL BARS (overrides)
    Bar names: minimal-bar-vertical, full-bar-vertical
+
+   left:   launcher | clock | cpumon | memory-gpu | disk | wallpaper
+   center: mpris | uparrow | workspaces | downarrow | notification
+   right:  quick-actions | ime | weather | audio | netbluetooth | power
    ============================================ */
-window#waybar.minimal-bar-vertical,
-window#waybar.full-bar-vertical {
-    font-size: 13px;
-}
 
 window#waybar.minimal-bar-vertical > box,
 window#waybar.full-bar-vertical > box {
     padding: 4px 0 0 0;
 }
 
+/* Island containers */
 window#waybar.minimal-bar-vertical .modules-left,
 window#waybar.minimal-bar-vertical .modules-center,
 window#waybar.minimal-bar-vertical .modules-right,
@@ -175,9 +176,9 @@ window#waybar.full-bar-vertical .modules-left,
 window#waybar.full-bar-vertical .modules-center,
 window#waybar.full-bar-vertical .modules-right {
     margin: 0px 2px 0px 4px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0px 0px 0px 2px @shadow;
-    padding: 2px 2px;
+    padding: 0;
 }
 
 window#waybar.minimal-bar-vertical .modules-left,
@@ -190,7 +191,7 @@ window#waybar.full-bar-vertical .modules-right {
     margin-bottom: 4px;
 }
 
-/* Primary modules - vertical */
+/* --- Base: all vertical primary modules (square, flush) --- */
 window#waybar.minimal-bar-vertical #custom-launcher,
 window#waybar.minimal-bar-vertical #custom-wallpaper,
 window#waybar.minimal-bar-vertical #custom-quick-actions,
@@ -201,12 +202,12 @@ window#waybar.full-bar-vertical #custom-wallpaper,
 window#waybar.full-bar-vertical #custom-quick-actions,
 window#waybar.full-bar-vertical #custom-notification,
 window#waybar.full-bar-vertical #mpris {
-    padding: 4px 4px;
-    margin: 2px 2px;
-    border-radius: 14px;
+    padding: 3px 2px;
+    margin: 0;
+    border-radius: 0;
 }
 
-/* Standalone modules - vertical: secondary */
+/* Standalone secondary */
 window#waybar.minimal-bar-vertical #custom-disk,
 window#waybar.minimal-bar-vertical #custom-weather,
 window#waybar.minimal-bar-vertical #network.wifi,
@@ -216,12 +217,12 @@ window#waybar.full-bar-vertical #network.wifi {
     background: @on_secondary_fixed;
     color: @secondary;
     border: 2px solid @secondary;
-    padding: 5px 3px;
-    margin: 2px 2px;
-    border-radius: 14px;
+    padding: 3px 2px;
+    margin: 0;
+    border-radius: 0;
 }
 
-/* Standalone modules - vertical: tertiary */
+/* Standalone tertiary */
 window#waybar.minimal-bar-vertical #custom-memory-gpu,
 window#waybar.minimal-bar-vertical #clock,
 window#waybar.minimal-bar-vertical #custom-ime,
@@ -231,31 +232,31 @@ window#waybar.full-bar-vertical #custom-ime {
     background: @on_tertiary_fixed;
     color: @tertiary;
     border: 2px solid @tertiary;
-    padding: 5px 3px;
-    margin: 2px 2px;
-    border-radius: 14px;
+    padding: 3px 2px;
+    margin: 0;
+    border-radius: 0;
 }
 
-/* Group blobs - vertical: secondary */
+/* Group blobs - secondary */
 window#waybar.minimal-bar-vertical #cpumon,
 window#waybar.minimal-bar-vertical #netbluetooth,
 window#waybar.full-bar-vertical #cpumon,
 window#waybar.full-bar-vertical #netbluetooth {
     background: @on_secondary_fixed;
     border: 2px solid @secondary;
-    border-radius: 14px;
-    margin: 2px 2px;
-    padding: 2px 0px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
 }
 
-/* Group blobs - vertical: tertiary */
+/* Group blobs - tertiary */
 window#waybar.minimal-bar-vertical #audio,
 window#waybar.full-bar-vertical #audio {
     background: @on_tertiary_fixed;
     border: 2px solid @tertiary;
-    border-radius: 14px;
-    margin: 2px 2px;
-    padding: 2px 0px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Group children - transparent inside blobs */
@@ -266,7 +267,7 @@ window#waybar.full-bar-vertical #temperature {
     background: transparent;
     color: @secondary;
     border: none;
-    padding: 3px 3px;
+    padding: 2px 2px;
     margin: 0;
     border-radius: 0;
 }
@@ -278,7 +279,7 @@ window#waybar.full-bar-vertical #bluetooth {
     background: transparent;
     color: @secondary;
     border: none;
-    padding: 1px 3px;
+    padding: 2px 2px;
     margin: 0;
     border-radius: 0;
 }
@@ -290,7 +291,7 @@ window#waybar.full-bar-vertical #pulseaudio-slider {
     background: transparent;
     color: @tertiary;
     border: none;
-    padding: 1px 3px;
+    padding: 2px 2px;
     margin: 0;
     border-radius: 0;
 }
@@ -307,42 +308,106 @@ window#waybar.full-bar-vertical #pulseaudio-slider trough {
     background: @on_surface;
 }
 
+/* Spacers - vertical */
+window#waybar.minimal-bar-vertical #custom-uparrow,
+window#waybar.minimal-bar-vertical #custom-downarrow,
+window#waybar.full-bar-vertical #custom-uparrow,
+window#waybar.full-bar-vertical #custom-downarrow {
+    padding: 1px 2px;
+    margin: 0;
+}
+
 /* Workspaces - vertical */
 window#waybar.minimal-bar-vertical #workspaces,
 window#waybar.full-bar-vertical #workspaces {
-    margin: 2px 2px;
+    margin: 3;
 }
 
 window#waybar.minimal-bar-vertical #workspaces button,
 window#waybar.full-bar-vertical #workspaces button {
-    padding: 2px 4px;
+    padding: 2px 2px;
+    border-radius: 0;
 }
 
 window#waybar.minimal-bar-vertical #workspaces button:first-child,
 window#waybar.full-bar-vertical #workspaces button:first-child {
-    border-radius: 14px 14px 0 0;
+    border-radius: 10px 10px 0 0;
 }
 
 window#waybar.minimal-bar-vertical #workspaces button:last-child,
 window#waybar.full-bar-vertical #workspaces button:last-child {
-    border-radius: 0 0 14px 14px;
+    border-radius: 0 0 10px 10px;
 }
 
-window#waybar.minimal-bar-vertical #workspaces button.active,
-window#waybar.full-bar-vertical #workspaces button.active {
-    padding: 6px 4px;
+/* --- Edge modules: round to match island (10px), equal padding --- */
+/* First in each island → round top */
+window#waybar.minimal-bar-vertical #custom-launcher,
+window#waybar.full-bar-vertical #custom-launcher,
+window#waybar.minimal-bar-vertical #custom-quick-actions,
+window#waybar.full-bar-vertical #custom-quick-actions {
+    border-radius: 4px 4px 0 0;
+    padding: 4px 4px 2px 5px;
 }
 
-/* Power - vertical */
+window#waybar.minimal-bar-vertical #mpris,
+window#waybar.full-bar-vertical #mpris {
+    border-radius: 4px 4px 0 0;
+    padding: 4px 2px;
+}
+
+/* Last in each island → round bottom */
+window#waybar.minimal-bar-vertical #custom-wallpaper,
+window#waybar.full-bar-vertical #custom-wallpaper,
+window#waybar.minimal-bar-vertical #custom-notification,
+window#waybar.full-bar-vertical #custom-notification {
+    border-radius: 0 0 4px 4px;
+    padding: 4px 2px;
+}
+
 window#waybar.minimal-bar-vertical #custom-power,
 window#waybar.full-bar-vertical #custom-power {
-    padding: 4px 4px;
-    margin: 2px 2px;
-    border-radius: 14px;
+    border-radius: 0 0 4px 4px;
+    padding: 4px 2px;
+    margin: 0;
 }
 
-/* Tooltip - vertical */
+window#waybar.minimal-bar-vertical #clock,
+window#waybar.full-bar-vertical #clock,
+window#waybar.minimal-bar-vertical #custom-ime,
+window#waybar.full-bar-vertical #custom-ime {
+    border-radius: 10px 10px 0 0;
+    margin-top: 10px;
+}
+
+window#waybar.minimal-bar-vertical #custom-disk,
+window#waybar.full-bar-vertical #custom-disk,
+window#waybar.minimal-bar-vertical #netbluetooth,
+window#waybar.full-bar-vertical #netbluetooth  {
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 10px;
+}
+
 window#waybar.minimal-bar-vertical tooltip,
 window#waybar.full-bar-vertical tooltip {
     border-radius: 16px;
+}
+
+window#waybar.full-bar-vertical #clock,
+window#waybar.full-bar-vertical #cpumon,
+window#waybar.full-bar-vertical #custom-memory-gpu,
+window#waybar.full-bar-vertical #custom-disk,
+window#waybar.full-bar-vertical #custom-ime,
+window#waybar.full-bar-vertical #custom-weather,
+window#waybar.full-bar-vertical #audio,
+window#waybar.full-bar-vertical #netbluetooth,
+window#waybar.minimal-bar-vertical #clock,
+window#waybar.minimal-bar-vertical #cpumon,
+window#waybar.minimal-bar-vertical #custom-memory-gpu,
+window#waybar.minimal-bar-vertical #custom-disk,
+window#waybar.minimal-bar-vertical #custom-ime,
+window#waybar.minimal-bar-vertical #custom-weather,
+window#waybar.minimal-bar-vertical #audio,
+window#waybar.minimal-bar-vertical #netbluetooth {
+    margin-left: 3px;
+    margin-right: 3px;
 }

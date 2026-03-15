@@ -86,28 +86,35 @@ case "$weathercode" in
 esac
 
 # Format temperature
+if [ "$unit" = "f" ]; then
+    degree="°F"
+else
+    degree="°C"
+fi
+temp_tooltip="${temperature}${degree}"
+feels_display="${feels_like}${degree}"
 if [ "$MODE" -eq 0 ]; then
-    if [ "$unit" = "f" ]; then
-        temp_display="${temperature}°F"
-        feels_display="${feels_like}°F"
-    else
-        temp_display="${temperature}°C"
-        feels_display="${feels_like}°C"
-    fi
+    temp_display="${temperature}${degree}"
 else
     temp_int=${temperature%.*}
-    temp_display="${temp_int}°"
-    feels_display="${feels_like%.*}°"
+    temp_display="${temp_int}\n${degree}"
 fi
 
 if [ "$temperature" = "null" ]; then
-    temp_display=N/A
+    temp_display="TE\nMP"
+    temp_tooltip="N/A"
+    feels_like="N/A"
+    condition="N/A"
+    humidity="N/A"
+    windspeed="N/A"
+    precipitation="N/A"
+    pressure="N/A"
 fi
 
 # Build colorful tooltip
 tooltip="<big><span color='#fab387'><b>$icon Weather Information (󰳽 °C/°F)</b></span></big>\n"
 tooltip+="<b><span color='#f9e2af'>lat: $latitude, lon: $longitude</span>\n\n</b>"
-tooltip+="<span color='#89dceb'><b>Temperature:</b></span> <span color='#cdd6f4'>${temp_display}</span>\n"
+tooltip+="<span color='#89dceb'><b>Temperature:</b></span> <span color='#cdd6f4'>${temp_tooltip}</span>\n"
 tooltip+="<span color='#89dceb'><b>Feels like:</b></span> <span color='#cdd6f4'>${feels_display}</span>\n"
 tooltip+="<span color='#89dceb'><b>Condition:</b></span> <span color='#cdd6f4'>$condition</span>\n"
 tooltip+="<span color='#89dceb'><b>Humidity:</b></span> <span color='#cdd6f4'>${humidity}${humidity_unit}</span>\n"

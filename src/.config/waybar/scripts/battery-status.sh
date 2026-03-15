@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+MODE=${1:-1} # 0 horizontal 1 vertical
+
 # Check if battery exists
 BATTERY_PATH="/sys/class/power_supply/BAT0"
 if [ ! -d "$BATTERY_PATH" ] && [ ! -d "/sys/class/power_supply/BAT1" ]; then
     # No battery found - desktop PC
-    echo '{"text":"󰐥","tooltip":"<b><span color='"'"'#fab387'"'"'><big>󰐥 Power</big></span></b>\n<span color='"'"'#cdd6f4'"'"'>Desktop — Click for power menu</span>","class":"no-battery"}'
+    echo '{"text":"","tooltip":"<b><span color='"'"'#fab387'"'"'><big>󰐥 Power</big></span></b>\n<span color='"'"'#cdd6f4'"'"'>Desktop — Click for power menu</span>","class":"no-battery"}'
     exit 0
 fi
 
@@ -99,5 +101,8 @@ else
     tooltip="<b><span color='#fab387'><big>$icon Battery</big></span></b>\n<span color='#89dceb'>Status:</span> <span color='#cdd6f4'>$status</span>\n<span color='#89dceb'>Level:</span> <span color='#cdd6f4'>${capacity}%</span>"
 fi
 
-# Output JSON for waybar
-echo "{\"text\":\"$icon $capacity%\",\"tooltip\":\"$tooltip\",\"class\":\"$class\"}"
+if [ "$MODE" -eq 0 ]; then
+    echo "{\"text\":\"$icon $capacity%\",\"tooltip\":\"$tooltip\",\"class\":\"$class\"}"
+else
+    echo "{\"text\":\"$icon\",\"tooltip\":\"$tooltip\",\"class\":\"$class\"}"
+fi
