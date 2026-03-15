@@ -277,7 +277,7 @@
         },
 
         "clock": {
-            "format": "{:%m\n%d\n--\n%H\n%M}",
+            "format": "{:%y\n%m\n%d\n%H\n%M}",
             "on-click": "kitty --class floating --title 'Calendar' -e calcurse",
             "tooltip-format": "<b><span color='#fab387'><big> Calendar (󰳽 Launch Calcurse)</big></span></b>\n<tt>{calendar}</tt>",
             "calendar": {

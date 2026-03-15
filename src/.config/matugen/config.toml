@@ -5,11 +5,7 @@ fallback_color = '#FFFFFF'
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/components/colors.conf'
-post_hook = 'hyprctl reload'
-
-[templates.rofi]
-input_path = '~/.config/matugen/templates/rofi-colors.rasi'
-output_path = '~/.config/rofi/colors.rasi'
+post_hook = "is_v=$(cat ~/.config/waybar/is_vertical); [ \"$is_v\" = \"1\" ] && (hyprctl keyword scrolling:direction 'down' & hyprctl keyword animation 'workspaces, 1, 1.0, md3_decel, slidefadevert 15%') || (hyprctl keyword scrolling:direction 'right' & hyprctl keyword animation 'workspaces, 1, 1.0, md3_decel, slidefade 15%')"
 
 [templates.kitty]
 input_path = '~/.config/matugen/templates/kitty-colors.conf'
