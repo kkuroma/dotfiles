@@ -12,7 +12,7 @@ PRESERVE_FILES=(
 
 RICE_CONFIGS=(
     # Main rice
-    # "hypr"
+    "hypr"
     "waybar"
     "swaync"
     "swayosd"
