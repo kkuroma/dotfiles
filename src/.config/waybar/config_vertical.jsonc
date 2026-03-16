@@ -3,7 +3,7 @@
         "name": "minimal-bar-horizontal",
         "output": "HDMI-A-1",
         "layer": "top",
-        "position": "top",
+        "position": "bottom",
         "height": 10,
         "spacing": 0,
         "reload_style_on_change": true,
@@ -26,14 +26,14 @@
             "exec": "~/.config/waybar/scripts/memory-gpu.sh 0",
             "format": "{}",
             "return-type": "json",
-            "interval": 2,
+            "interval": 5,
             "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
         },
         "custom/disk": {
             "exec": "~/.config/waybar/scripts/disk.sh 0",
             "format": "󰋊 {}",
             "return-type": "json",
-            "interval": 2,
+            "interval": 10,
             "on-click": "kitty --class floating --title floating -e watch duf"
         },
         "custom/wallpaper": {
@@ -67,7 +67,7 @@
             "exec": "pgrep -x hypridle > /dev/null && echo 󰈈 || echo 󰈉",
             "tooltip-format": "<b><span color='#fab387'><big> Quick Actions</big></span></b>\n<span color='#cdd6f4'>Click to open menu</span>",
             "on-click": "walker -m menus:quick-actions -t grid-actions",
-            "interval": 2
+            "interval": 5
         },
         "clock": {
             "format": "{:%m/%d  %H:%M}",
@@ -92,7 +92,7 @@
         "custom/ime": {
             "exec": "~/.config/waybar/scripts/ime-status.sh",
             "return-type": "json",
-            "interval": 1,
+            "interval": 2,
             "format": "󰇧 {}",
             "on-click": "~/.config/waybar/scripts/ime-switch.sh",
             "tooltip": true
@@ -100,7 +100,7 @@
         "custom/weather": {
             "exec": "~/.config/waybar/scripts/weather.sh 0",
             "return-type": "json",
-            "interval": 10,
+            "interval": 120,
             "format": "{}",
             "on-click": "~/.config/waybar/scripts/weather.sh toggle",
             "signal": 8
@@ -202,7 +202,7 @@
             "exec": "~/.config/waybar/scripts/memory-gpu.sh 1",
             "format": "{}",
             "return-type": "json",
-            "interval": 2,
+            "interval": 5,
             "on-click": "kitty --class floating --title floating -e sh -c 'while true; do btop; sleep 0.1; done' &"
         },
 
@@ -211,7 +211,7 @@
             "exec": "~/.config/waybar/scripts/disk.sh 1",
             "format": "{}",
             "return-type": "json",
-            "interval": 2,
+            "interval": 10,
             "on-click": "kitty --class floating --title floating -e watch duf"
         },
 
@@ -234,7 +234,6 @@
             "status-icons": {
                 "paused": ""
             },
-            "interval":2,
             "tooltip-format": " {player}\n {artist}\n {album} {title}\n [{position}/{length}]"
         },
 
@@ -302,13 +301,13 @@
             "exec": "pgrep -x hypridle > /dev/null && echo 󰈈 || echo 󰈉",
             "tooltip-format": "<b><span color='#fab387'><big> Quick Actions</big></span></b>\n<span color='#cdd6f4'>Click to open menu</span>",
             "on-click": "walker -m menus:quick-actions -t grid-actions",
-            "interval": 2
+            "interval": 5
         },
 
         "custom/ime": {
             "exec": "~/.config/waybar/scripts/ime-status.sh",
             "return-type": "json",
-            "interval": 1,
+            "interval": 2,
             "format": "{}",
             "on-click": "~/.config/waybar/scripts/ime-switch.sh",
             "tooltip": true
@@ -338,7 +337,7 @@
         "custom/weather": {
             "exec": "~/.config/waybar/scripts/weather.sh 1",
             "return-type": "json",
-            "interval": 10,
+            "interval": 120,
             "format": "{}",
             "on-click": "~/.config/waybar/scripts/weather.sh toggle",
             "signal": 8

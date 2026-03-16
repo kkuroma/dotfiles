@@ -9,7 +9,7 @@ mem_percent=$(free | awk '/^Mem:/ {printf "%.0f", $3/$2 * 100}')
 
 # Try to get NVIDIA GPU info
 if command -v nvidia-smi &> /dev/null; then
-    gpu_info=$(nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu,power.draw,power.limit --format=csv,noheader,nounits 2>/dev/null)
+    gpu_info=$(timeout 2 nvidia-smi --query-gpu=utilization.gpu,memory.used,memory.total,temperature.gpu,power.draw,power.limit --format=csv,noheader,nounits 2>/dev/null)
 
     if [ -n "$gpu_info" ]; then
         IFS=',' read -r gpu_util vram_used vram_total temp power_draw power_limit <<< "$gpu_info"

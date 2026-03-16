@@ -2,20 +2,20 @@
 -- Colors derived from matugen palette with forced hues (matching ANSI/kitty)
 
 local colors = {
-  red      = '#da9b9b',
-  green    = '#94e994',
-  yellow   = '#e4e461',
-  blue     = '#6161e4',
-  magenta  = '#e8c0e8',
-  cyan     = '#94e9e9',
-  orange   = '#e4a361',
-  pink     = '#e8c0d4',
+  red      = '#de6464',
+  green    = '#77e377',
+  yellow   = '#ffff7b',
+  blue     = '#7b7bff',
+  magenta  = '#e78ee7',
+  cyan     = '#77e3e3',
+  orange   = '#ffbd7b',
+  pink     = '#e78ebb',
 
-  fg       = '#dce4e9',
-  fg_dim   = '#bac9d1',
-  comment  = '#84939b',
-  primary  = '#e4c461',
-  secondary = '#cfc0e8',
+  fg       = '#f6decd',
+  fg_dim   = '#d9c2b2',
+  comment  = '#a18d7e',
+  primary  = '#ffb77b',
+  secondary = '#e7c08e',
 }
 
 -- Helper
@@ -35,33 +35,33 @@ vim.api.nvim_set_hl(0, 'MsgArea', { fg = colors.fg, bg = 'NONE' })
 
 -- Selection / cursor (these need bg to be readable)
 vim.api.nvim_set_hl(0, 'Visual', {
-  bg = '#574500',
+  bg = '#6d3a00',
 })
 vim.api.nvim_set_hl(0, 'CursorLine', {
-  bg = '#232b2f',
+  bg = '#35271c',
 })
 vim.api.nvim_set_hl(0, 'Search', {
-  bg = '#4d4162',
-  fg = '#ebddff',
+  bg = '#5c421a',
+  fg = '#ffddb3',
 })
 vim.api.nvim_set_hl(0, 'IncSearch', {
-  bg = '#e4c461',
-  fg = '#3c2f00',
+  bg = '#ffb77b',
+  fg = '#4d2700',
 })
 vim.api.nvim_set_hl(0, 'PmenuSel', {
-  bg = '#e4c461',
-  fg = '#3c2f00',
+  bg = '#ffb77b',
+  fg = '#4d2700',
 })
 
 -- Pmenu (needs bg to float above content)
 vim.api.nvim_set_hl(0, 'Pmenu', {
-  bg = '#232b2f',
+  bg = '#35271c',
   fg = colors.fg,
 })
 
 -- StatusLine (needs bg to separate from content)
 vim.api.nvim_set_hl(0, 'StatusLine', {
-  bg = '#192124',
+  bg = '#2a1d13',
   fg = colors.fg,
 })
 

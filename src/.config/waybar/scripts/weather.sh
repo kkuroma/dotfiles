@@ -32,7 +32,7 @@ else
 fi
 
 # Fetch weather data from Open-Meteo API
-weather_data=$(curl -s "https://api.open-meteo.com/v1/forecast?latitude=$latitude&longitude=$longitude&current_weather=true&temperature_unit=$temp_unit&windspeed_unit=mph&hourly=relativehumidity_2m,apparent_temperature,precipitation,surface_pressure&timezone=auto" 2>/dev/null)
+weather_data=$(curl -s --max-time 5 "https://api.open-meteo.com/v1/forecast?latitude=$latitude&longitude=$longitude&current_weather=true&temperature_unit=$temp_unit&windspeed_unit=mph&hourly=relativehumidity_2m,apparent_temperature,precipitation,surface_pressure&timezone=auto" 2>/dev/null)
 
 # Parse JSON response using jq if available, otherwise use grep/sed
 if command -v jq &> /dev/null; then
@@ -101,7 +101,11 @@ else
 fi
 
 if [ "$temperature" = "null" ]; then
-    temp_display="TE\nMP"
+    if [ "$MODE" -eq 0 ]; then
+        temp_display="TEMP"
+    else
+        temp_display="TE\nMP"
+    fi
     temp_tooltip="N/A"
     feels_like="N/A"
     condition="N/A"
