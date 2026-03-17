@@ -2,6 +2,17 @@
 
 As mentioned in the preface, my desktop configuration has been specifically tailored to suit my workflow. Several components of my desktop were deliberately put in such a way that exploited my muscle memory while making the most use of the screen real estate. My configuration can be broken down into following (intertwined) components:
 
+## Software selection
+
+I'll quickly run through my (arguably insane) thought process to justify why I picked these software for my workflow
+
+- **Terminal**: Kitty. GPU accelerated and allows images to be displayed. Essentially a bloated alacritty, in a good way. Not recommended for old hardware
+- **Text editor**: VSCodium and Neovim, stripped of all Microsoft's telemetry of course. I find the former better suited for large projects and the latter convenient for editing individual files.
+- **Browser**: Zen. Heavy on the memory but feature rich. Tab workspaces is a must.
+- **File manager**: Dolphin. Feature rich, natively supports split view, tabs, and built-in terminals for quick scripting.
+
+I find feature richness more important than minimalism for these essential tools.
+
 ## Status Bar
 
 > What do I expect from a bar?

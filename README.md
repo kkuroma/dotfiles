@@ -1,6 +1,8 @@
 # My Hyprland Desktop Configs
 
-This repository contains my Arch Linux Hyprland configuration as well as corresponding install scripts.
+> Unleash upon thee the bloat I have amassed!
+
+This repository contains my Arch Linux Hyprland configuration as well as useful scripts for installation and configuration.
 
 ![thumbnail](images/thumbnail.png)
 

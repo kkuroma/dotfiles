@@ -51,31 +51,22 @@ RICE_CONFIGS=(
 )
 
 for config in "${RICE_CONFIGS[@]}"; do
-    if [ -e "$CONFIG_SOURCE/$config" ]; then
-        if [ -d "$CONFIG_SOURCE/$config" ]; then
-            mkdir -p "$CONFIG_TARGET/$config"
-            # Build --exclude flags for files that should be preserved
-            EXCLUDES=()
-            for entry in "${PRESERVE_FILES[@]}"; do
-                prefix="${entry%%:*}"
-                file="${entry#*:}"
-                if [ "$prefix" = "$config" ] && [ -e "$CONFIG_TARGET/$config/$file" ]; then
-                    EXCLUDES+=(--exclude "$file")
-                    echo "  ~ Preserving $config/$file"
-                fi
-            done
-            rsync -a --delete "${EXCLUDES[@]}" "$CONFIG_SOURCE/$config/" "$CONFIG_TARGET/$config/" || {
-                echo "  ✗ Failed to sync $config"
-                continue
-            }
-        else
-            cp "$CONFIG_SOURCE/$config" "$CONFIG_TARGET/$config" || {
-                echo "  ✗ Failed to copy $config"
-                continue
-            }
-        fi
-        echo "  ✓ Copied $config"
-        ((SYNCED_COUNT++))
+    SOURCE_PATH="$CONFIG_SOURCE/$config"
+    TARGET_PATH="$CONFIG_TARGET/$config"
+    if [ -d "$SOURCE_PATH" ]; then
+        mkdir -p "$TARGET_PATH"
+        EXCLUDES=()
+        for entry in "${PRESERVE_FILES[@]}"; do
+            prefix="${entry%%:*}"
+            file="${entry#*:}"
+            if [ "$prefix" = "$config" ]; then
+                EXCLUDES+=(--exclude="/$file")
+            fi
+        done
+        rsync -a --delete "${EXCLUDES[@]}" "$SOURCE_PATH/" "$TARGET_PATH/"
+        echo "  ✓ Synced $config (Preserved files ignored)"
+    elif [ -f "$SOURCE_PATH" ]; then
+        cp "$SOURCE_PATH" "$TARGET_PATH"
     fi
 done
 
