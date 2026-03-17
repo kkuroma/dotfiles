@@ -1,16 +1,22 @@
+command = "~/.config/elephant/scripts/websearch-hack.sh"
+
 [[entries]]
 default = true
 name = "Search With DuckDuckGo"
+icon = "web-browser"
 url = "https://duckduckgo.com/?q=%TERM%"
 
 [[entries]]
 name = "Search With SearXNG"
+icon = "web-browser"
 url = "https://searx.kuroma.dev/search?q=%TERM%"
 
 [[entries]]
 name = "Search With YouTube"
+icon = "youtube"
 url = "https://www.youtube.com/results?search_query=%TERM%"
 
 [[entries]]
 name = "Search With GitHub"
+icon = "github"
 url = "https://github.com/search?q=%TERM%"

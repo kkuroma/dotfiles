@@ -11,7 +11,8 @@ local schemes = {
     "scheme-expressive",
     "scheme-vibrant",
     "scheme-tonal-spot",
-    "scheme-monochrome",
+    "scheme-rainbow",
+    "scheme-fruit-salad",
 }
 
 local function read_file(path)

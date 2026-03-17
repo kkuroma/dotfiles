@@ -3,7 +3,7 @@
 /* 5-col color swatch grid */
 .item-box {
   margin: 3px;
-  padding: 10px 12px;
+  padding: 8px 8px;
   border: 2px solid transparent;
 }
 
@@ -37,22 +37,22 @@ row:selected .item-image-text {
 
 child:selected .item-image,
 row:selected .item-image {
-  -gtk-icon-size: 80px;
+  -gtk-icon-size: 60px;
   border-radius: 6px;
 }
 
 .large-icons {
-  -gtk-icon-size: 80px;
+  -gtk-icon-size: 60px;
 }
 
 .normal-icons {
-  -gtk-icon-size: 80px;
+  -gtk-icon-size: 60px;
 }
 
 .item-image-text {
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .item-subtext {
-  font-size: 14px;
+  font-size: 13px;
 }

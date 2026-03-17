@@ -86,18 +86,18 @@
         "terminal.background": "{{colors.surface_container_lowest.default.hex}}",
         "terminal.ansiBlack": "{{colors.surface_container_high.default.hex}}",
         "terminal.ansiBrightBlack": "{{colors.surface_container_highest.default.hex}}",
-        "terminal.ansiRed": "{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}",
-        "terminal.ansiBrightRed": "{{colors.secondary_container.default.hex | set_hue: 0 | lighten: -10}}",
-        "terminal.ansiGreen": "{{colors.tertiary.default.hex | set_hue: 120}}",
-        "terminal.ansiBrightGreen": "{{colors.tertiary_container.default.hex | set_hue: 120}}",
+        "terminal.ansiRed": "{{colors.primary.default.hex | set_hue: 0 | lighten: -10}}",
+        "terminal.ansiBrightRed": "{{colors.primary_container.default.hex | set_hue: 0 | lighten: -10}}",
+        "terminal.ansiGreen": "{{colors.primary.default.hex | set_hue: 120}}",
+        "terminal.ansiBrightGreen": "{{colors.primary_container.default.hex | set_hue: 120}}",
         "terminal.ansiYellow": "{{colors.primary.default.hex | set_hue: 60}}",
         "terminal.ansiBrightYellow": "{{colors.primary_container.default.hex | set_hue: 60}}",
         "terminal.ansiBlue": "{{colors.primary.default.hex | set_hue: 240}}",
         "terminal.ansiBrightBlue": "{{colors.primary_container.default.hex | set_hue: 240}}",
-        "terminal.ansiMagenta": "{{colors.secondary.default.hex | set_hue: 300}}",
-        "terminal.ansiBrightMagenta": "{{colors.secondary_container.default.hex | set_hue: 300}}",
-        "terminal.ansiCyan": "{{colors.tertiary.default.hex | set_hue: 180}}",
-        "terminal.ansiBrightCyan": "{{colors.tertiary_container.default.hex | set_hue: 180}}",
+        "terminal.ansiMagenta": "{{colors.primary.default.hex | set_hue: 300}}",
+        "terminal.ansiBrightMagenta": "{{colors.primary_container.default.hex | set_hue: 300}}",
+        "terminal.ansiCyan": "{{colors.primary.default.hex | set_hue: 180}}",
+        "terminal.ansiBrightCyan": "{{colors.primary_container.default.hex | set_hue: 180}}",
         "terminal.ansiWhite": "{{colors.inverse_surface.default.hex}}",
         "terminal.ansiBrightWhite": "{{colors.on_background.default.hex}}",
         "terminal.selectionBackground": "{{colors.primary_container.default.hex}}80",
@@ -108,8 +108,8 @@
     },
     "editor.tokenColorCustomizations": {
         "comments": "{{colors.outline.default.hex}}",
-        "keywords": "{{colors.secondary.default.hex | set_hue: 300}}",
-        "strings": "{{colors.tertiary.default.hex | set_hue: 120}}",
+        "keywords": "{{colors.primary.default.hex | set_hue: 300}}",
+        "strings": "{{colors.primary.default.hex | set_hue: 120}}",
         "numbers": "{{colors.primary.default.hex | set_hue: 30}}",
         "functions": "{{colors.primary.default.hex}}",
         "types": "{{colors.primary.default.hex | set_hue: 60}}",
@@ -137,13 +137,13 @@
             {
                 "scope": ["string", "punctuation.definition.string"],
                 "settings": {
-                    "foreground": "{{colors.tertiary.default.hex | set_hue: 120}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 120}}"
                 }
             },
             {
                 "scope": "constant.character.escape",
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 330}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 330}}"
                 }
             },
             {
@@ -155,13 +155,13 @@
             {
                 "scope": ["keyword", "keyword.operator.word", "keyword.operator.new", "variable.language.super", "support.type.primitive", "storage.type", "storage.modifier", "punctuation.definition.keyword"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 300}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 300}}"
                 }
             },
             {
                 "scope": ["keyword.operator", "punctuation.accessor", "punctuation.definition.generic", "punctuation.separator.key-value"],
                 "settings": {
-                    "foreground": "{{colors.tertiary.default.hex | set_hue: 180}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 180}}"
                 }
             },
             {
@@ -181,13 +181,13 @@
             {
                 "scope": ["variable.other.enummember", "meta.enum variable.other.readwrite"],
                 "settings": {
-                    "foreground": "{{colors.tertiary.default.hex | set_hue: 180}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 180}}"
                 }
             },
             {
                 "scope": ["meta.property.object"],
                 "settings": {
-                    "foreground": "{{colors.tertiary.default.hex | set_hue: 180}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 180}}"
                 }
             },
             {
@@ -206,14 +206,14 @@
             {
                 "scope": ["variable.parameter", "meta.function.parameters"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 0}}",
+                    "foreground": "{{colors.primary.default.hex | set_hue: 0}}",
                     "fontStyle": "italic"
                 }
             },
             {
                 "scope": ["constant.language", "support.function.builtin"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 0 | lighten: -10}}"
                 }
             },
             {
@@ -225,7 +225,7 @@
             {
                 "scope": ["variable.language.this"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 0 | lighten: -10}}"
                 }
             },
             {
@@ -273,21 +273,21 @@
             {
                 "scope": ["markup.heading"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}",
+                    "foreground": "{{colors.primary.default.hex | set_hue: 0 | lighten: -10}}",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["markup.bold"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}",
+                    "foreground": "{{colors.primary.default.hex | set_hue: 0 | lighten: -10}}",
                     "fontStyle": "bold"
                 }
             },
             {
                 "scope": ["markup.italic"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}",
+                    "foreground": "{{colors.primary.default.hex | set_hue: 0 | lighten: -10}}",
                     "fontStyle": "italic"
                 }
             },
@@ -300,20 +300,20 @@
             {
                 "scope": ["markup.inline.raw.string.markdown"],
                 "settings": {
-                    "foreground": "{{colors.tertiary.default.hex | set_hue: 120}}"
+                    "foreground": "{{colors.primary.default.hex | set_hue: 120}}"
                 }
             },
             {
                 "scope": ["variable.language.special.self.python"],
                 "settings": {
-                    "foreground": "{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}",
+                    "foreground": "{{colors.primary.default.hex | set_hue: 0 | lighten: -10}}",
                     "fontStyle": "italic"
                 }
             },
             {
                 "scope": ["support.function.magic.python"],
                 "settings": {
-                    "foreground": "{{colors.tertiary.default.hex | set_hue: 195}}",
+                    "foreground": "{{colors.primary.default.hex | set_hue: 195}}",
                     "fontStyle": "italic"
                 }
             },

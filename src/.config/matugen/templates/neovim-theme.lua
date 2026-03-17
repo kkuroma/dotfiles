@@ -2,14 +2,14 @@
 -- Colors derived from matugen palette with forced hues (matching ANSI/kitty)
 
 local colors = {
-  red      = '{{colors.secondary.default.hex | set_hue: 0 | lighten: -10}}',
-  green    = '{{colors.tertiary.default.hex | set_hue: 120}}',
+  red      = '{{colors.primary.default.hex | set_hue: 0}}',
+  green    = '{{colors.primary.default.hex | set_hue: 120}}',
   yellow   = '{{colors.primary.default.hex | set_hue: 60}}',
   blue     = '{{colors.primary.default.hex | set_hue: 240}}',
-  magenta  = '{{colors.secondary.default.hex | set_hue: 300}}',
-  cyan     = '{{colors.tertiary.default.hex | set_hue: 180}}',
+  magenta  = '{{colors.primary.default.hex | set_hue: 300}}',
+  cyan     = '{{colors.primary.default.hex | set_hue: 180}}',
   orange   = '{{colors.primary.default.hex | set_hue: 30}}',
-  pink     = '{{colors.secondary.default.hex | set_hue: 330}}',
+  pink     = '{{colors.primary.default.hex | set_hue: 330}}',
 
   fg       = '{{colors.on_surface.default.hex}}',
   fg_dim   = '{{colors.on_surface_variant.default.hex}}',

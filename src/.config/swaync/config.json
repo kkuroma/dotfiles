@@ -1,6 +1,8 @@
 {
     "positionX": "right",
-    "positionY": "center",
+    "positionY": "top",
+    "control-center-positionX": "right",
+    "control-center-positionY": "center",
     "timeout": 10,
     "timeout-low": 5,
     "timeout-critical": 0,

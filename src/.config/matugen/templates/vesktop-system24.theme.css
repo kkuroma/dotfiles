@@ -129,17 +129,17 @@ body {
     --button-border: hsl(220, 0%, 100%, 0.1); /* neutral border color of buttons */
 
     /* base colors - derived from matugen palette with forced hues */
-    --red-1: {{colors.secondary.default.hex | set_hue: 0 | lighten: 5}};
-    --red-2: {{colors.secondary.default.hex | set_hue: 0}};
-    --red-3: {{colors.secondary.default.hex | set_hue: 0 | lighten: -5}};
-    --red-4: {{colors.secondary.default.hex | set_hue: 0 | lighten: -10}};
-    --red-5: {{colors.secondary.default.hex | set_hue: 0 | lighten: -15}};
+    --red-1: {{colors.primary.default.hex | set_hue: 0 | lighten: 5}};
+    --red-2: {{colors.primary.default.hex | set_hue: 0}};
+    --red-3: {{colors.primary.default.hex | set_hue: 0 | lighten: -5}};
+    --red-4: {{colors.primary.default.hex | set_hue: 0 | lighten: -10}};
+    --red-5: {{colors.primary.default.hex | set_hue: 0 | lighten: -15}};
 
-    --green-1: {{colors.tertiary.default.hex | set_hue: 120 | lighten: 5}};
-    --green-2: {{colors.tertiary.default.hex | set_hue: 120}};
-    --green-3: {{colors.tertiary.default.hex | set_hue: 120 | lighten: -5}};
-    --green-4: {{colors.tertiary.default.hex | set_hue: 120 | lighten: -10}};
-    --green-5: {{colors.tertiary.default.hex | set_hue: 120 | lighten: -15}};
+    --green-1: {{colors.primary.default.hex | set_hue: 120 | lighten: 5}};
+    --green-2: {{colors.primary.default.hex | set_hue: 120}};
+    --green-3: {{colors.primary.default.hex | set_hue: 120 | lighten: -5}};
+    --green-4: {{colors.primary.default.hex | set_hue: 120 | lighten: -10}};
+    --green-5: {{colors.primary.default.hex | set_hue: 120 | lighten: -15}};
 
     --blue-1: {{colors.primary.default.hex | set_hue: 240 | lighten: 5}};
     --blue-2: {{colors.primary.default.hex | set_hue: 240}};
@@ -153,9 +153,9 @@ body {
     --yellow-4: {{colors.primary.default.hex | set_hue: 60 | lighten: -5}};
     --yellow-5: {{colors.primary.default.hex | set_hue: 60 | lighten: -10}};
 
-    --purple-1: {{colors.secondary.default.hex | set_hue: 300 | lighten: 5}};
-    --purple-2: {{colors.secondary.default.hex | set_hue: 300}};
-    --purple-3: {{colors.secondary.default.hex | set_hue: 300 | lighten: -5}};
-    --purple-4: {{colors.secondary.default.hex | set_hue: 300 | lighten: -10}};
-    --purple-5: {{colors.secondary.default.hex | set_hue: 300 | lighten: -15}};
+    --purple-1: {{colors.primary.default.hex | set_hue: 300 | lighten: 5}};
+    --purple-2: {{colors.primary.default.hex | set_hue: 300}};
+    --purple-3: {{colors.primary.default.hex | set_hue: 300 | lighten: -5}};
+    --purple-4: {{colors.primary.default.hex | set_hue: 300 | lighten: -10}};
+    --purple-5: {{colors.primary.default.hex | set_hue: 300 | lighten: -15}};
 }

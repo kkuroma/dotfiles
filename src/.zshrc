@@ -260,7 +260,7 @@ fi
 # ============================================================================
 # WELCOME MESSAGE
 # ============================================================================
-if [[ "$TERM" == "xterm-kitty" ]]; then
+if [[ "$TERM" == "xterm-kitty" && -z "$KITTY_DRAWER" ]]; then
     echo -e "\e[34m$(figlet -f ansi-shadow "Hi! $USER")\e[0m"  # Blue
     fastfetch
 fi
