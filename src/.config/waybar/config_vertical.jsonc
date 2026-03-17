@@ -380,7 +380,8 @@
 
         "bluetooth": {
             "format": "",
-            "format-disabled": "󰂲",
+            "format-off": "󰂲",
+            "format-disabled": "",
             "format-connected": " {num_connections}",
             "tooltip-format": "<b><span color='#fab387'><big> Bluetooth</big></span></b>\n<span color='#89dceb'>Status:</span> <span color='#cdd6f4'>{status}</span>\n<span color='#89dceb'>Controller:</span> <span color='#cdd6f4'>{controller_alias}</span>",
             "tooltip-format-connected": "<b><span color='#fab387'><big> Connected ({num_connections})</big></span></b>\n<span color='#89dceb'>Controller:</span> <span color='#cdd6f4'>{controller_alias}</span>\n\n<b><span color='#fab387'><big>󰂱 Devices</big></span></b>\n<span color='#cdd6f4'>{device_enumerate}</span>",

@@ -209,10 +209,8 @@ window#waybar.full-bar-vertical #mpris {
 /* Standalone secondary */
 window#waybar.minimal-bar-vertical #custom-disk,
 window#waybar.minimal-bar-vertical #custom-weather,
-window#waybar.minimal-bar-vertical #network.wifi,
 window#waybar.full-bar-vertical #custom-disk,
-window#waybar.full-bar-vertical #custom-weather,
-window#waybar.full-bar-vertical #network.wifi {
+window#waybar.full-bar-vertical #custom-weather {
     background: @on_secondary_fixed;
     color: @secondary;
     border: 2px solid @secondary;
