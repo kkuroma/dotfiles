@@ -1,7 +1,8 @@
 [DetailsMode]
-PreviewSize=32
+PreviewSize=22
 
 [General]
+LockPanels=false
 Version=202
 ViewPropsTimestamp=2025,10,23,0,29,21.628
 

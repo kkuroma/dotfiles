@@ -53,7 +53,7 @@ else
     else
         chars=("󰪞" "󰪟" "󰪠" "󰪡" "󰪢" "󰪣" "󰪤" "󰪥")
         index_ram=$mem_percent*7/100
-        display_text="${chars[$index_ram]}\n"
+        display_text="${chars[$index_ram]}"
     fi
     tooltip="<b><span color='#fab387'><big>󰍛 Memory</big></span></b>\n<span color='#89dceb'>RAM:</span> <span color='#cdd6f4'>${mem_used} / ${mem_total} (${mem_percent}%)</span>"
 fi
