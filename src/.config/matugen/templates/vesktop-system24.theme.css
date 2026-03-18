@@ -131,31 +131,31 @@ body {
     /* base colors - derived from matugen palette with forced hues */
     --red-1: {{colors.primary.default.hex | set_hue: 0 | lighten: 5}};
     --red-2: {{colors.primary.default.hex | set_hue: 0}};
-    --red-3: {{colors.primary.default.hex | set_hue: 0 | lighten: -5}};
-    --red-4: {{colors.primary.default.hex | set_hue: 0 | lighten: -10}};
-    --red-5: {{colors.primary.default.hex | set_hue: 0 | lighten: -15}};
+    --red-3: {{colors.primary.default.hex | set_hue: 0 | set_lightness: 45}};
+    --red-4: {{colors.primary.default.hex | set_hue: 0 | set_lightness: 35}};
+    --red-5: {{colors.primary.default.hex | set_hue: 0 | set_lightness: 25}};
 
     --green-1: {{colors.primary.default.hex | set_hue: 120 | lighten: 5}};
     --green-2: {{colors.primary.default.hex | set_hue: 120}};
-    --green-3: {{colors.primary.default.hex | set_hue: 120 | lighten: -5}};
-    --green-4: {{colors.primary.default.hex | set_hue: 120 | lighten: -10}};
-    --green-5: {{colors.primary.default.hex | set_hue: 120 | lighten: -15}};
+    --green-3: {{colors.primary.default.hex | set_hue: 120 | set_lightness: 45}};
+    --green-4: {{colors.primary.default.hex | set_hue: 120 | set_lightness: 35}};
+    --green-5: {{colors.primary.default.hex | set_hue: 120 | set_lightness: 25}};
 
     --blue-1: {{colors.primary.default.hex | set_hue: 240 | lighten: 5}};
     --blue-2: {{colors.primary.default.hex | set_hue: 240}};
-    --blue-3: {{colors.primary.default.hex | set_hue: 240 | lighten: -5}};
-    --blue-4: {{colors.primary.default.hex | set_hue: 240 | lighten: -10}};
-    --blue-5: {{colors.primary.default.hex | set_hue: 240 | lighten: -15}};
+    --blue-3: {{colors.primary.default.hex | set_hue: 240 | set_lightness: 45}};
+    --blue-4: {{colors.primary.default.hex | set_hue: 240 | set_lightness: 35}};
+    --blue-5: {{colors.primary.default.hex | set_hue: 240 | set_lightness: 25}};
 
     --yellow-1: {{colors.primary.default.hex | set_hue: 60 | lighten: 10}};
     --yellow-2: {{colors.primary.default.hex | set_hue: 60 | lighten: 5}};
-    --yellow-3: {{colors.primary.default.hex | set_hue: 60}};
-    --yellow-4: {{colors.primary.default.hex | set_hue: 60 | lighten: -5}};
-    --yellow-5: {{colors.primary.default.hex | set_hue: 60 | lighten: -10}};
+    --yellow-3: {{colors.primary.default.hex | set_hue: 60 | set_lightness: 45}};
+    --yellow-4: {{colors.primary.default.hex | set_hue: 60 | set_lightness: 35}};
+    --yellow-5: {{colors.primary.default.hex | set_hue: 60 | set_lightness: 25}};
 
     --purple-1: {{colors.primary.default.hex | set_hue: 300 | lighten: 5}};
     --purple-2: {{colors.primary.default.hex | set_hue: 300}};
-    --purple-3: {{colors.primary.default.hex | set_hue: 300 | lighten: -5}};
-    --purple-4: {{colors.primary.default.hex | set_hue: 300 | lighten: -10}};
-    --purple-5: {{colors.primary.default.hex | set_hue: 300 | lighten: -15}};
+    --purple-3: {{colors.primary.default.hex | set_hue: 300 | set_lightness: 45}};
+    --purple-4: {{colors.primary.default.hex | set_hue: 300 | set_lightness: 35}};
+    --purple-5: {{colors.primary.default.hex | set_hue: 300 | set_lightness: 25}};
 }

@@ -50,6 +50,24 @@ function GetEntries()
         end
     end
 
+    -- Fixed themes
+    local fixed_themes = {
+        { name = "Gruvbox",    icon = "📻", value = "gruvbox" },
+        { name = "Catppuccin", icon = "🐱", value = "catppuccin" },
+        { name = "Rosé Pine",  icon = "🌹", value = "rosepine" },
+        { name = "Kanagawa",   icon = "🏯", value = "kanagawa" },
+        { name = "Everforest", icon = "🌲", value = "everforest" },
+        { name = "Ocean",      icon = "🌊", value = "ocean" },
+    }
+    for _, theme in ipairs(fixed_themes) do
+        table.insert(entries, {
+            Text = theme.name,
+            Subtext = "fixed-themes",
+            Value = "fixed|" .. theme.value,
+            Icon = theme.icon,
+        })
+    end
+
     return entries
 end
 

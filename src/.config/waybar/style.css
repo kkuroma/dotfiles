@@ -68,7 +68,7 @@ tooltip label {
 }
 
 #custom-launcher, #custom-quick-actions, #mpris { border-radius: 8px 0px 0px 8px; }
-#custom-wallpaper, #custom-notification, #custom-power { border-radius: 0px 8px 8px 0px; }
+#custom-wallpaper, #custom-notification, #custom-power { border-radius: 0px 9px 9px 0px; }
     
 
 #cpu, #custom-memory-gpu, #network.speed, #temperature, #custom-disk, #custom-ime, #clock, #custom-weather, #pulseaudio, #netbluetooth, #pulseaudio-slider {
@@ -363,7 +363,7 @@ window#waybar.full-bar-vertical #custom-notification {
 
 window#waybar.minimal-bar-vertical #custom-power,
 window#waybar.full-bar-vertical #custom-power {
-    border-radius: 0 0 4px 4px;
+    border-radius: 0 0 8px 8px;
     padding: 4px 2px;
     margin: 0;
 }
