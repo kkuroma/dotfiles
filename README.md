@@ -1,8 +1,10 @@
+!! Disclaimer: due to the controversies regarding systemd's recent push towards age verificaion, I have officially moved my operating system to Artix linux. While the rice remains mostly the same (safe for some systemd-specific features). This desktop is designed specifically for Artix with OpenRC!
+
 # My Hyprland Desktop Configs
 
 > Unleash upon thee the bloat I have amassed!
 
-This repository contains my Arch Linux Hyprland configuration as well as useful scripts for installation and configuration.
+This repository contains my Artix (formerly arch) Linux Hyprland configuration as well as useful scripts for installation and configuration.
 
 ![thumbnail](images/thumbnail.png)
 
@@ -59,7 +61,7 @@ https://github.com/user-attachments/assets/6e62c5ae-b80c-4d13-82e5-a0f5d0adbfe2
 
 ## Installation
 
-[OUTDATED, WILL UPDATE SOON] See more at [my installation documentation](./INSTALLATION.MD)
+[My artix installer script](https://github.com/kkuroma/artix-install) was used to install and configure OpenRC services for both of my devices. This script completly nukes your storage drives and format them in a format I use (LVM on LUKS with BTRFS snapshots), so be warned before running them. Otherwise, grab a minimal Artix OpenRC iso and go wild.
 
 ## Known issues
 
