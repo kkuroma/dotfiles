@@ -2,6 +2,7 @@ Name = "apply-wallpaper"
 NamePretty = "Pick Color & Scheme"
 Icon = "color-select"
 Cache = false
+FixedOrder = true
 
 local state_dir = os.getenv("HOME") .. "/.cache/walker-wallpaper/"
 local color_cache = state_dir .. "colors/"

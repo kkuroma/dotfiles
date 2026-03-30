@@ -23,28 +23,28 @@ function GetEntries()
             Text = "Suspend",
             Value = "suspend",
             Icon = "system-suspend",
-            Subtext = "systemctl suspend",
+            Subtext = "loginctl suspend",
             Actions = { activate = "lua:RunAction" },
         },
         {
             Text = "Hibernate",
             Value = "hibernate",
             Icon = "system-hibernate",
-            Subtext = "systemctl hibernate",
+            Subtext = "loginctl hibernate",
             Actions = { activate = "lua:RunAction" },
         },
         {
             Text = "Shutdown",
             Value = "shutdown",
             Icon = "system-shutdown",
-            Subtext = "systemctl poweroff",
+            Subtext = "loginctl poweroff",
             Actions = { activate = "lua:RunAction" },
         },
         {
             Text = "Reboot",
             Value = "reboot",
             Icon = "system-reboot",
-            Subtext = "systemctl reboot",
+            Subtext = "loginctl reboot",
             Actions = { activate = "lua:RunAction" },
         },
     }
@@ -54,10 +54,10 @@ function RunAction(value)
     local actions = {
         lock = "hyprlock",
         logout = "sleep 0.2 && hyprctl dispatch exit",
-        suspend = "systemctl suspend",
-        hibernate = "systemctl hibernate",
-        shutdown = "systemctl poweroff",
-        reboot = "systemctl reboot",
+        suspend = "loginctl suspend",
+        hibernate = "loginctl hibernate",
+        shutdown = "loginctl poweroff",
+        reboot = "loginctl reboot",
     }
 
     local cmd = actions[value]

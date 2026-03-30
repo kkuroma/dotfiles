@@ -34,10 +34,10 @@ fi
 # Kill any running animated wallpaper
 killall gslapper 2>/dev/null
 
-if pgrep "swww-daemon" > /dev/null; then
+if pgrep "awww-daemon" > /dev/null; then
     echo "Do nothing lol"
 else
-    swww-daemon &
+    awww-daemon &
 fi
 
 if [ "$extension" = "mp4" ]; then
@@ -45,7 +45,7 @@ if [ "$extension" = "mp4" ]; then
     thumbnail_path="$THUMB_DIR/${base}.jpg"
     cp "$thumbnail_path" "$HOME/.cache/last_wallpaper_static.jpg"
 
-    swww img "$thumbnail_path" \
+    awww img "$thumbnail_path" \
         --transition-type grow \
         --transition-pos 0.5,0.5 \
         --transition-duration 1.5 \
@@ -56,8 +56,7 @@ if [ "$extension" = "mp4" ]; then
     gslapper -o "loop fill" "*" "$WALLPAPER_PATH" &
 else
     magick "$WALLPAPER_PATH[0]" +adjoin "$HOME/.cache/last_wallpaper_static.jpg"
-
-    swww img "$WALLPAPER_PATH" \
+    awww img "$WALLPAPER_PATH" \
         --transition-type grow \
         --transition-pos 0.5,0.5 \
         --transition-duration 1.5 \

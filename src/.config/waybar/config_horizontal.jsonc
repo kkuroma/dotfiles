@@ -186,7 +186,7 @@
         },
 
         "temperature": {
-            "hwmon-path": "/sys/class/hwmon/hwmon3/temp3_input",
+            "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
             "format": "{icon} {temperatureC}°C",
             "format-icons": ["", "", "󰈸", ""],
             "tooltip-format": "CPU Temp: {temperatureC}°C",
@@ -317,16 +317,24 @@
             "orientation": "horizontal",
             "modules": [
                 "bluetooth",
+                "network#ethernet",
                 "network#wifi"
             ]
         },
 
+        "network#ethernet": {
+            "interface": "e*",
+            "format-ethernet": " ",
+            "format-disconnected": "",
+            "tooltip-format-ethernet": "<b><span color='#fab387'><big>󰈀 Connected to Ethernet</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Interface:</span> <span color='#cdd6f4'>{ifname}</span>\n<b><span color='#fab387'><big>󰛳 Network</big></span></b>\n<span color='#89dceb'>Down:</span> <span color='#cdd6f4'>{bandwidthDownBits}</span>\n<span color='#89dceb'>Up:</span> <span color='#cdd6f4'>{bandwidthUpBits}</span>",
+            "tooltip-disconnected": "<b><span color='#fab387'><big>󰤭 Network</big></span></b>\n<span color='#f38ba8'>Disconnected</span>",
+            "on-click": "walker -m menus:wifi"
+        },
         "network#wifi": {
-            "format-ethernet": "󰈀 {ifname}",
-            "format-wifi": "󰤨 {signalStrength}%",
-            "format-disconnected": "󰤭 Disconnected",
-            "tooltip-format-wifi": "<b><span color='#fab387'><big>󰤨 Connected to Wifi</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Wifi:</span> <span color='#cdd6f4'>{essid} ({signalStrength}%)</span>",
-            "tooltip-format-ethernet": "<b><span color='#fab387'><big>󰈀 Connected to Ethernet</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Interface:</span> <span color='#cdd6f4'>{ifname}</span>",
+            "interface": "w*",
+            "format-wifi": "󰤨",
+            "format-disconnected": "󰤭",
+            "tooltip-format-wifi": "<b><span color='#fab387'><big>󰤨 Connected to Wifi</big></span></b>\n<span color='#89dceb'>IP:</span> <span color='#cdd6f4'>{ipaddr}</span>\n<span color='#89dceb'>Wifi:</span> <span color='#cdd6f4'>{essid} ({signalStrength}%)</span>\n<b><span color='#fab387'><big>󰛳 Network</big></span></b>\n<span color='#89dceb'>Down:</span> <span color='#cdd6f4'>{bandwidthDownBits}</span>\n<span color='#89dceb'>Up:</span> <span color='#cdd6f4'>{bandwidthUpBits}</span>",
             "tooltip-disconnected": "<b><span color='#fab387'><big>󰤭 Network</big></span></b>\n<span color='#f38ba8'>Disconnected</span>",
             "on-click": "walker -m menus:wifi"
         },

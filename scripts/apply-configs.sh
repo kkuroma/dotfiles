@@ -16,7 +16,6 @@ RICE_CONFIGS=(
     "waybar"
     "swaync"
     "swayosd"
-    "systemd"
     "elephant"
     "walker"
 
