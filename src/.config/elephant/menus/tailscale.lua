@@ -66,7 +66,7 @@ end
 
 function Connect(value)
     local country_city, ip, flag = value:match("^(.-)|([^|]+)|([^|]*)$")
-    os.execute("tailscale set --exit-node='" .. ip .. "' --exit-node-allow-lan-access=true 2>/dev/null")
+    os.execute("tailscale set --exit-node='" .. ip .. "' --accept-dns=true --exit-node-allow-lan-access=true 2>/dev/null")
     os.execute("notify-send -i " .. flag .. " -a 'Tailscale VPN' 'Tailscale VPN' 'Connected to exit node: " .. country_city .. "'")
 end
 

@@ -100,7 +100,7 @@
         "custom/weather": {
             "exec": "~/.config/waybar/scripts/weather.sh 0",
             "return-type": "json",
-            "interval": 120,
+            "interval": 1800,
             "format": "{}",
             "on-click": "~/.config/waybar/scripts/weather.sh toggle",
             "signal": 8
@@ -307,7 +307,7 @@
         "custom/weather": {
             "exec": "~/.config/waybar/scripts/weather.sh 0",
             "return-type": "json",
-            "interval": 120,
+            "interval": 1800,
             "format": "{}",
             "on-click": "~/.config/waybar/scripts/weather.sh toggle",
             "signal": 8

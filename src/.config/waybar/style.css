@@ -54,7 +54,7 @@ tooltip label {
 .modules-center,
 .modules-right {
     background: alpha(@surface_container_lowest, 0.7);
-    margin: 4px 6px 2px 6px;
+    margin: 2px 6px 6px 6px;
     border: 2px solid @primary;
     box-shadow: 0 0 0 2px @shadow;
     border-radius: 12px;
@@ -174,7 +174,7 @@ window#waybar.minimal-bar-vertical .modules-right,
 window#waybar.full-bar-vertical .modules-left,
 window#waybar.full-bar-vertical .modules-center,
 window#waybar.full-bar-vertical .modules-right {
-    margin: 0px 2px 0px 4px;
+    margin: 0px 6px 0px 2px;
     border-radius: 10px;
     box-shadow: 0px 0px 0px 2px @shadow;
     padding: 0;

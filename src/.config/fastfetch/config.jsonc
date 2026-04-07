@@ -90,9 +90,9 @@
       "format": "╭──────────── \u001b[1;34m* Hardware *\u001b[0m ──────────────╮"
     },
     {
-      "type": "host",
-      "key": "\u001b[0m│ \u001b[1;34m󰌢 Host:\u001b[0m",
-      "format": "{2}"
+      "type": "Board",
+      "key": "\u001b[0m│ \u001b[1;34m󰌢 Board:\u001b[0m",
+      "format": "{1}"
     },
     {
       "type": "cpu",

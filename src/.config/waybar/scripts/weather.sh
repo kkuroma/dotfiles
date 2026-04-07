@@ -2,6 +2,8 @@
 MODE=${1:-1} # 0 horizontal 1 vertical
 STATE_FILE="/tmp/waybar_weather_unit"
 LOCATION_FILE="$HOME/.weather_location"
+CACHE_FILE="$HOME/.weather_data"
+CACHE_MAX_AGE=1800  # 30 minutes in seconds
 
 # Handle toggle
 if [ "$1" = "toggle" ]; then
@@ -31,8 +33,29 @@ else
     temp_unit="celsius"
 fi
 
-# Fetch weather data from Open-Meteo API
-weather_data=$(curl -s --max-time 5 "https://api.open-meteo.com/v1/forecast?latitude=$latitude&longitude=$longitude&current_weather=true&temperature_unit=$temp_unit&windspeed_unit=mph&hourly=relativehumidity_2m,apparent_temperature,precipitation,surface_pressure&timezone=auto" 2>/dev/null)
+# Check if cache exists and is fresh enough to skip the curl
+use_cache=false
+if [ -f "$CACHE_FILE" ]; then
+    cache_age=$(( $(date +%s) - $(date -r "$CACHE_FILE" +%s) ))
+    if [ "$cache_age" -lt "$CACHE_MAX_AGE" ]; then
+        use_cache=true
+    fi
+fi
+
+if [ "$use_cache" = true ]; then
+    weather_data=$(cat "$CACHE_FILE")
+else
+    weather_data=$(curl -s --max-time 5 \
+        "https://api.open-meteo.com/v1/forecast?latitude=$latitude&longitude=$longitude&current_weather=true&temperature_unit=$temp_unit&windspeed_unit=mph&hourly=relativehumidity_2m,apparent_temperature,precipitation,surface_pressure&timezone=auto" \
+        2>/dev/null)
+
+    if [ -n "$weather_data" ]; then
+        echo "$weather_data" > "$CACHE_FILE"
+    elif [ -f "$CACHE_FILE" ]; then
+        # Curl failed — fall back to stale cache
+        weather_data=$(cat "$CACHE_FILE")
+    fi
+fi
 
 # Parse JSON response using jq if available, otherwise use grep/sed
 if command -v jq &> /dev/null; then
