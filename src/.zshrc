@@ -1,7 +1,7 @@
 # ============================================================================
 # ZSH CONFIGURATION
 # ============================================================================
-# 
+#
 # KEYBIND CHEATSHEET:
 # -------------------
 # Ctrl+F          - Accept autosuggestion
@@ -22,25 +22,20 @@
 # Shortcuts:      dl (Downloads), doc (Documents), dt (Desktop)
 # ls variants:    ll, la, lah, l
 # git:            g (git shorthand)
-# System:         reload (source ~/.zshrc), backup (system backup script)
-# Tools:          installer (package script), icat (kitty image cat), snvim (sudo nvim)
+# System:         reload (exec zsh), snvim (sudo nvim)
+# Yazi:           y (cd to the directory yazi exits in)
 # ============================================================================
 
 # ============================================================================
 # ENVIRONMENT VARIABLES
 # ============================================================================
 export LC_ALL="en_US.UTF-8"
-export ZSH="$HOME/.oh-my-zsh"
 export PATH="$PATH:/opt/nvim/"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export NVM_DIR="$HOME/.config/nvm"
 
-# ============================================================================
-# OH MY ZSH CONFIGURATION
-# ============================================================================
-plugins=(git)
-source $ZSH/oh-my-zsh.sh
+typeset -U path cdpath fpath manpath
 
 # ============================================================================
 # CUSTOM PROMPT
@@ -55,23 +50,23 @@ preexec() {
 
 precmd() {
     local return_code=$?
-    
+
     if [ -n "$timer" ]; then
         local now=$(($(date +%s%N)/1000000))
         local elapsed=$(($now-$timer))
-        
+
         # Convert milliseconds to minutes and seconds
         local minutes=$((elapsed / 60000))
         local seconds=$(((elapsed % 60000) / 1000))
         local ms=$((elapsed % 1000))
-        
+
         # Color code return code (green for 0, red for non-zero)
         if [ $return_code -eq 0 ]; then
             local code_color="\033[32m"
         else
             local code_color="\033[31m"
         fi
-        
+
         # Only show if command took more than 1 second
         if [ $elapsed -gt 1000 ]; then
             if [ $minutes -gt 0 ]; then
@@ -80,10 +75,10 @@ precmd() {
                 print -P "\033[34m󰁔\033[0m ${code_color}${return_code}\033[0m took ${seconds}.$(printf "%03d" $ms)s"
             fi
         fi
-        
+
         unset timer
     fi
-    
+
     # Add newline before next prompt
     print ""
 }
@@ -95,7 +90,6 @@ RPROMPT=''
 # ============================================================================
 # ZSH OPTIONS
 # ============================================================================
-zstyle ':omz:update' mode auto      # update automatically without asking
 setopt autocd                       # change directory just by typing its name
 setopt interactivecomments          # allow comments in interactive mode
 setopt magicequalsubst              # enable filename expansion for arguments of the form 'anything=expression'
@@ -104,7 +98,6 @@ setopt notify                       # report the status of background jobs immed
 setopt numericglobsort              # sort filenames numerically when it makes sense
 setopt promptsubst                  # enable command substitution in prompt
 
-CASE_SENSITIVE="true"
 WORDCHARS=${WORDCHARS//\/}          # Don't consider certain characters part of the word
 PROMPT_EOL_MARK=""                  # hide EOL sign ('%')
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P' # configure `time` format
@@ -112,16 +105,20 @@ TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S\ncpu\t%P' # configure `time` format
 # ============================================================================
 # HISTORY CONFIGURATION
 # ============================================================================
-HIST_STAMPS="yyyy-mm-dd"
-HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=2000
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE="1000"
+SAVEHIST="2000"
+mkdir -p "$(dirname "$HISTFILE")"
 
-setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
-setopt hist_ignore_dups       # ignore duplicated commands history list
-setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
-alias history="history 0"     # force zsh to show the complete history
+set_opts=(
+  HIST_FCNTL_LOCK HIST_EXPIRE_DUPS_FIRST HIST_IGNORE_DUPS HIST_IGNORE_SPACE
+  SHARE_HISTORY NO_APPEND_HISTORY NO_EXTENDED_HISTORY NO_HIST_FIND_NO_DUPS
+  NO_HIST_IGNORE_ALL_DUPS NO_HIST_SAVE_NO_DUPS
+)
+for opt in "${set_opts[@]}"; do
+  setopt "$opt"
+done
+unset opt set_opts
 
 # ============================================================================
 # KEY BINDINGS
@@ -150,48 +147,43 @@ zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete
 zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' group-name ""
+zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' rehash true
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' select-prompt '%SScrolling active: current selection at %p%s'
 zstyle ':completion:*' verbose true
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+_init-shell() {
+  _arguments \
+    '--python[Python tooling (uv, ruff, pyright), packages managed by uv]' \
+    '--cuda[CUDA packages + LD_LIBRARY_PATH]' \
+    '--npx[Node.js / npx]' \
+    '--networking[Network/security tools]' \
+    '--git[git init + .gitignore + git in devShell]' \
+    '--name[Shell name for the prompt]: :' \
+    '(-h --help)'{-h,--help}'[Show help]'
+}
+compdef _init-shell init-shell
 
 # ============================================================================
 # COLOR SUPPORT
 # ============================================================================
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
+eval "$(dircolors -b)"
+export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
 
-    alias ls='lsd --color=auto'
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-    alias diff='diff --color=auto'
-    alias ip='ip --color=auto'
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
+export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+export LESS_TERMCAP_so=$'\E[01;33m'    # begin reverse video
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 
-    export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
-    export LESS_TERMCAP_md=$'\E[1;36m'     # begin bold
-    export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-    export LESS_TERMCAP_so=$'\E[01;33m'    # begin reverse video
-    export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-    export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-    export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-
-    # Take advantage of $LS_COLORS for completion as well
-    zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-    zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-
-    # More ls aliases
-    alias ll='lsd -l'
-    alias la='lsd -A'
-    alias lah='lsd -lah'
-    alias l='lsd -CF'
-fi
+# Take advantage of $LS_COLORS for completion as well
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 # ============================================================================
 # ALIASES
@@ -208,13 +200,35 @@ alias dl="cd ~/Downloads"
 alias doc="cd ~/Documents"
 alias dt="cd ~/Desktop"
 
+# Colorized tools
+alias ls='lsd --color=auto'
+alias l='lsd -CF'
+alias la='lsd -A'
+alias lah='lsd -lah'
+alias ll='lsd -l'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+
 # Tools and utilities
 alias g="git"
-alias reload="source ~/.zshrc"
-alias backup="sudo /usr/local/bin/system-backup.sh"
-alias installer="~/Scripts/packages.sh"
-alias icat="kitty +kitten icat"
+alias history="history 0"
+alias reload="exec zsh"
 alias snvim="sudo nvim"
+
+# ============================================================================
+# FUNCTIONS
+# ============================================================================
+function y() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
+  command yazi "$@" --cwd-file="$tmp"
+  if cwd="$(<"$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
+}
 
 # ============================================================================
 # PLUGINS & EXTENSIONS
@@ -225,44 +239,40 @@ alias snvim="sudo nvim"
     git clone --depth 1 -- \
         https://github.com/marlonrichert/zsh-snap.git ~/zshRepos/znap
 source ~/zshRepos/znap/znap.zsh  # Start Znap
-znap source marlonrichert/zsh-autocomplete    # Autocomplete
-znap source zsh-users/zsh-autosuggestions     # Autosuggestions
-znap source zsh-users/zsh-syntax-highlighting # Highlighting
 
-# Autosuggestion color (blue)
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
+ZSH_AUTOSUGGEST_STRATEGY=(history)
+znap source zsh-users/zsh-autosuggestions     # Autosuggestions
+
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
+znap source zsh-users/zsh-syntax-highlighting # Highlighting
 
 # ============================================================================
 # EXTERNAL TOOLS
 # ============================================================================
-
-# Python environment tools
-if [[ -f ~/Scripts/py_env_tools.sh ]]; then
-    source ~/Scripts/py_env_tools.sh
-fi
 
 # NVM (Node Version Manager)
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Zoxide (smarter cd)
-eval "$(zoxide init zsh)"
+command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
-# Dart CLI completion
-[[ -f /home/kuroma/.config/.dart-cli-completion/zsh-config.zsh ]] && \
-    . /home/kuroma/.config/.dart-cli-completion/zsh-config.zsh || true
-
-# TheFuck (command correction)
-if command -v thefuck &> /dev/null; then
-    eval $(thefuck --alias)
+# fzf
+if [[ $options[zle] = on ]] && command -v fzf &> /dev/null; then
+  source <(fzf --zsh)
 fi
 
-# ============================================================================
-# WELCOME MESSAGE
-# ============================================================================
-if [[ "$TERM" == "xterm-kitty" && -z "$KITTY_DRAWER" ]]; then
-    echo -e "\e[34m$(figlet -f ansi-shadow "Hi! $USER")\e[0m"  # Blue
-    fastfetch
+# direnv
+command -v direnv &> /dev/null && eval "$(direnv hook zsh)"
+
+# Dart CLI completion
+[[ -f "$HOME/.config/.dart-cli-completion/zsh-config.zsh" ]] && \
+    . "$HOME/.config/.dart-cli-completion/zsh-config.zsh"
+
+# Ghostty shell integration
+if [[ -r "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration ]]; then
+  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
 fi
 
 # ============================================================================
