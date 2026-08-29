@@ -22,8 +22,7 @@
 # Shortcuts:      dl (Downloads), doc (Documents), dt (Desktop)
 # ls variants:    ll, la, lah, l
 # git:            g (git shorthand)
-# System:         reload (exec zsh), snvim (sudo nvim)
-# Yazi:           y (cd to the directory yazi exits in)
+# System:         reload (exec zsh)
 # ============================================================================
 
 # ============================================================================
@@ -216,19 +215,6 @@ alias ip='ip --color=auto'
 alias g="git"
 alias history="history 0"
 alias reload="exec zsh"
-alias snvim="sudo nvim"
-
-# ============================================================================
-# FUNCTIONS
-# ============================================================================
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXX")"
-  command yazi "$@" --cwd-file="$tmp"
-  if cwd="$(<"$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-    builtin cd -- "$cwd"
-  fi
-  rm -f -- "$tmp"
-}
 
 # ============================================================================
 # PLUGINS & EXTENSIONS
@@ -274,11 +260,6 @@ command -v direnv &> /dev/null && eval "$(direnv hook zsh)"
 # Dart CLI completion
 [[ -f "$HOME/.config/.dart-cli-completion/zsh-config.zsh" ]] && \
     . "$HOME/.config/.dart-cli-completion/zsh-config.zsh"
-
-# Ghostty shell integration
-if [[ -r "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration ]]; then
-  source "$GHOSTTY_RESOURCES_DIR"/shell-integration/zsh/ghostty-integration
-fi
 
 # ============================================================================
 # END OF CONFIGURATION
