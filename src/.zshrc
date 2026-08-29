@@ -258,9 +258,14 @@ znap source zsh-users/zsh-syntax-highlighting # Highlighting
 # Zoxide (smarter cd)
 command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
-# fzf
+# fzf (--zsh needs fzf >= 0.48; older distro builds ship shell snippets instead)
 if [[ $options[zle] = on ]] && command -v fzf &> /dev/null; then
-  source <(fzf --zsh)
+  if fzf --zsh &> /dev/null; then
+    source <(fzf --zsh)
+  else
+    [[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ]] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+    [[ -f /usr/share/doc/fzf/examples/completion.zsh ]] && source /usr/share/doc/fzf/examples/completion.zsh
+  fi
 fi
 
 # direnv
